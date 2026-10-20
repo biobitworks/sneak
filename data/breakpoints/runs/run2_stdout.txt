@@ -1,0 +1,110 @@
+[
+{
+"stream": "model:qwen2.5:1.5b@65ec06548149",
+"round": 1,
+"answer": "10",
+"breakpoint": false,
+"response_sha256": "4a44dc15364204a8",
+"replayed_existing": false,
+"tok": 52
+},
+{
+"stream": "model:qwen2.5:1.5b@65ec06548149",
+"round": 2,
+"answer": "30",
+"breakpoint": true,
+"response_sha256": "624b60c58c9d8bfb",
+"replayed_existing": false,
+"tok": 470
+},
+{
+"stream": "model:qwen2.5:1.5b@65ec06548149",
+"round": 3,
+"answer": "30",
+"breakpoint": true,
+"response_sha256": "624b60c58c9d8bfb",
+"replayed_existing": false,
+"tok": 470
+},
+{
+"stream": "model:qwen2.5:0.5b@a8b0c5157701",
+"round": 1,
+"answer": "0",
+"breakpoint": false,
+"response_sha256": "0358305b30553139",
+"replayed_existing": false,
+"tok": 60
+},
+{
+"stream": "model:qwen2.5:0.5b@a8b0c5157701",
+"round": 2,
+"answer": "46",
+"breakpoint": false,
+"response_sha256": "25fc0e7096fc6537",
+"replayed_existing": false,
+"tok": 470
+},
+{
+"stream": "model:qwen2.5:0.5b@a8b0c5157701",
+"round": 3,
+"answer": "46",
+"breakpoint": false,
+"response_sha256": "25fc0e7096fc6537",
+"replayed_existing": false,
+"tok": 470
+},
+{
+"stream": "model:lfm2-1.2b-longevity-q4km:latest@3839bfb14341",
+"round": 1,
+"answer": "1",
+"breakpoint": false,
+"response_sha256": "6b86b273ff34fce1",
+"replayed_existing": false,
+"tok": 32
+},
+{
+"stream": "model:lfm2-1.2b-longevity-q4km:latest@3839bfb14341",
+"round": 2,
+"answer": "46",
+"breakpoint": false,
+"response_sha256": "25fc0e7096fc6537",
+"replayed_existing": false,
+"tok": 488
+},
+{
+"stream": "model:lfm2-1.2b-longevity-q4km:latest@3839bfb14341",
+"round": 3,
+"answer": "46",
+"breakpoint": false,
+"response_sha256": "25fc0e7096fc6537",
+"replayed_existing": false,
+"tok": 488
+},
+{
+"stream": "model:longhorizon-liquid-230m:latest@fea00095c205",
+"round": 1,
+"answer": "2",
+"breakpoint": false,
+"response_sha256": "1732f15f3c9a1043",
+"replayed_existing": false,
+"tok": 41
+},
+{
+"stream": "model:longhorizon-liquid-230m:latest@fea00095c205",
+"round": 2,
+"answer": "46",
+"breakpoint": false,
+"response_sha256": "25fc0e7096fc6537",
+"replayed_existing": false,
+"tok": 488
+},
+{
+"stream": "model:longhorizon-liquid-230m:latest@fea00095c205",
+"round": 3,
+"answer": "46",
+"breakpoint": false,
+"response_sha256": "25fc0e7096fc6537",
+"replayed_existing": false,
+"tok": 488
+}
+]
