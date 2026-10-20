@@ -110,6 +110,9 @@ def generate(out: pathlib.Path = BUILD) -> dict:
         "app.js": "static/app.js",
         "audit.js": "static/audit.js",
         "style.css": "static/style.css",
+        "heatmap.html": "heatmap.html",
+        "heatmap.js": "static/heatmap.js",
+        "heatmap.css": "static/heatmap.css",
     }
     digest = {}
     for src, dest in mapping.items():
@@ -120,6 +123,7 @@ def generate(out: pathlib.Path = BUILD) -> dict:
             if b"LOCAL PREVIEW" not in payload:
                 raise ValueError("source preview marker unexpectedly changed")
             payload = payload.replace(b"LOCAL PREVIEW", b"PROTECTED VERCEL SNAPSHOT")
+            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
         target.write_bytes(payload)
         digest[dest] = sha256(payload)
     data_files = {"data/graph.json": projected, "data/audit.json": audit}
@@ -163,6 +167,10 @@ def generate(out: pathlib.Path = BUILD) -> dict:
         "signed": False,
     }
     (out / "EXPORT_MANIFEST.json").write_bytes(canonical(manifest))
+    if out.resolve() == BUILD.resolve():
+        from scripts import build_evidence_heatmap as heatmap
+        heatmap.main()
+        manifest = json.loads((out / "EXPORT_MANIFEST.json").read_text())
     return manifest
 
 
