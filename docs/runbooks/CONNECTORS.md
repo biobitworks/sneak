@@ -76,6 +76,18 @@ python3 scripts/run_band_planner_runtime.py
 - Verifies Human API `online=true` for `@biobitworks/planner`, chases Tom/Jerry ACK + Chirag #6
 - Receipts: `SNEAK-025_*`
 
+## Lanes wrap-up + Desktop CLI hosts
+
+```bash
+# Read-only status: receipts/connectors/SNEAK-027_LANES_WRAPUP.md
+```
+
+- magicstudio: no `band` CLI / Band.app (operator-observed)
+- magicpro: CLI present, Desktop running, **not signed in** (`band whoami` → record not found) → run `band init`
+- Tom/Jerry chat ACKs cover plan CHECKOFF #3/#4 only; they have **not** weighed in on Desktop host choice
+- Do not post as the human account for red-team status (SNEAK-H01 risk); use a dedicated agent after `band init`
+- Receipts: `SNEAK-027_*`
+
 ## LOMO × merkle breakpoint → @Data → Snyk + score
 
 Operator-approved path (SNEAK-016):
