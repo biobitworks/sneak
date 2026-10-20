@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sneak-security-demo"
+version = "0.1.0"
+description = "Staged scan target for Sneak connector + app-security-score binding"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+sneak-security-demo = "security_demo.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

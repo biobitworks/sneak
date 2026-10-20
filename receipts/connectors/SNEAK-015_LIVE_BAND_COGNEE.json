@@ -1,0 +1,282 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "human_decision": "PENDING",
+  "id": "SNEAK-015",
+  "leaf_count": 7,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031352d42414e442d43484154475054222c226b696e64223a2262616e645f68616e646f66665f63686174677074222c227061796c6f6164223a7b22646967657374223a2262396162313432333431333536363832346263633465303038323166343366633635303639666133343862613533366130326630653331613130306363373863222c22726563656970745f6964223a2262616e645f68616e646f66662d373932396538373131636430227d7d",
+      "leaf": "89628d8cdb115ce88125ffd3495fd675ba7e84ffa5f331010a3ba521bb15310b",
+      "proof": [
+        {
+          "hash": "a4b699349008da0c5af378f385488d5756616e94085bad3e08a671ee5bf88ea8",
+          "side": "right"
+        },
+        {
+          "hash": "067c35308eac8f45f821bf52320c587c716bdc3c908db73efe5f3082b04a5b74",
+          "side": "right"
+        },
+        {
+          "hash": "37c23cb9a581eadd87d651869327579ab76ef2383ab43d0091c04bc0906dde5b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-015-BAND-CHATGPT",
+        "kind": "band_handoff_chatgpt",
+        "payload": {
+          "digest": "b9ab1423413566824bcc4e00821f43fc65069fa348ba536a02f0e31a100cc78c",
+          "receipt_id": "band_handoff-7929e8711cd0"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031352d42414e442d434c41554445222c226b696e64223a2262616e645f68616e646f66665f636c61756465222c227061796c6f6164223a7b22646967657374223a2261313264633631616264336335643039363664303730346339313732333535396334313665336661666538343061643662316232353339643564646139613465222c22726563656970745f6964223a2262616e645f68616e646f66662d373766366462393466383064227d7d",
+      "leaf": "a4b699349008da0c5af378f385488d5756616e94085bad3e08a671ee5bf88ea8",
+      "proof": [
+        {
+          "hash": "89628d8cdb115ce88125ffd3495fd675ba7e84ffa5f331010a3ba521bb15310b",
+          "side": "left"
+        },
+        {
+          "hash": "067c35308eac8f45f821bf52320c587c716bdc3c908db73efe5f3082b04a5b74",
+          "side": "right"
+        },
+        {
+          "hash": "37c23cb9a581eadd87d651869327579ab76ef2383ab43d0091c04bc0906dde5b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-015-BAND-CLAUDE",
+        "kind": "band_handoff_claude",
+        "payload": {
+          "digest": "a12dc61abd3c5d0966d0704c91723559c416e3fafe840ad6b1b2539d5dda9a4e",
+          "receipt_id": "band_handoff-77f6db94f80d"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031352d42414e442d4455414c222c226b696e64223a2262616e645f636c617564655f636861746770745f6d657373616765222c227061796c6f6164223a7b226167656e7473223a5b7b226861726e657373223a22636c61756465222c226964223a2233393236323138642d383334322d343636372d396630372d356235353662353066623766222c226e616d65223a22546f6d227d2c7b226861726e657373223a2263686174677074222c226964223a2238623531663239352d633265372d346161612d393964642d356632333335646361623439222c226e616d65223a224a65727279227d5d2c226861726e6573736573223a5b22636c61756465222c2263686174677074225d2c22687474705f737461747573223a3230312c226d6573736167655f6964223a2237626561623036352d633839652d343064332d396437312d303134383333346661353136222c226f627365727665645f6f7574636f6d65223a2250415353222c22726f6f6d5f6964223a2232306631656535662d366635622d343663352d393237312d306261353336643332326664227d7d",
+      "leaf": "59c86b7bd67cdbc3b868002f0ae077ddca4f4a2cbd9f8637c6b74f7adcd7dd46",
+      "proof": [
+        {
+          "hash": "4518638ec20863dc014b9f4b1dfc512058706ae8c4e9162f694bcd1307e7f013",
+          "side": "right"
+        },
+        {
+          "hash": "1e1f5fc76452299c871f16105d64352278fbdc7dec791dc543365587cfbd71d1",
+          "side": "left"
+        },
+        {
+          "hash": "37c23cb9a581eadd87d651869327579ab76ef2383ab43d0091c04bc0906dde5b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-015-BAND-DUAL",
+        "kind": "band_claude_chatgpt_message",
+        "payload": {
+          "agents": [
+            {
+              "harness": "claude",
+              "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+              "name": "Tom"
+            },
+            {
+              "harness": "chatgpt",
+              "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+              "name": "Jerry"
+            }
+          ],
+          "harnesses": [
+            "claude",
+            "chatgpt"
+          ],
+          "http_status": 201,
+          "message_id": "7beab065-c89e-40d3-9d71-0148334fa516",
+          "observed_outcome": "PASS",
+          "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031352d42414e442d535441545553222c226b696e64223a2262616e645f737461747573222c227061796c6f6164223a7b226861726e6573735f6d6170223a7b2263686174677074223a224a65727279222c22636c61756465223a22546f6d227d2c226c6976655f617661696c61626c65223a747275652c226f627365727665645f6f7574636f6d65223a225245414459222c226f6e6c696e655f6167656e7473223a5b7b22636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c2268616e646c65223a2262696f626974776f726b732f746f6d222c226964223a2233393236323138642d383334322d343636372d396630372d356235353662353066623766222c226e616d65223a22546f6d222c226f6e6c696e65223a747275652c2274797065223a224167656e74227d2c7b22636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c2268616e646c65223a2262696f626974776f726b732f6a65727279222c226964223a2238623531663239352d633265372d346161612d393964642d356632333335646361623439222c226e616d65223a224a65727279222c226f6e6c696e65223a747275652c2274797065223a224167656e74227d5d2c2270726f7669646572223a2262616e64222c22726f6f6d5f6964223a2232306631656535662d366635622d343663352d393237312d306261353336643332326664222c22757365725f68616e646c65223a2262696f626974776f726b73227d7d",
+      "leaf": "4518638ec20863dc014b9f4b1dfc512058706ae8c4e9162f694bcd1307e7f013",
+      "proof": [
+        {
+          "hash": "59c86b7bd67cdbc3b868002f0ae077ddca4f4a2cbd9f8637c6b74f7adcd7dd46",
+          "side": "left"
+        },
+        {
+          "hash": "1e1f5fc76452299c871f16105d64352278fbdc7dec791dc543365587cfbd71d1",
+          "side": "left"
+        },
+        {
+          "hash": "37c23cb9a581eadd87d651869327579ab76ef2383ab43d0091c04bc0906dde5b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-015-BAND-STATUS",
+        "kind": "band_status",
+        "payload": {
+          "harness_map": {
+            "chatgpt": "Jerry",
+            "claude": "Tom"
+          },
+          "live_available": true,
+          "observed_outcome": "READY",
+          "online_agents": [
+            {
+              "connection_status": "connected",
+              "handle": "biobitworks/tom",
+              "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+              "name": "Tom",
+              "online": true,
+              "type": "Agent"
+            },
+            {
+              "connection_status": "connected",
+              "handle": "biobitworks/jerry",
+              "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+              "name": "Jerry",
+              "online": true,
+              "type": "Agent"
+            }
+          ],
+          "provider": "band",
+          "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+          "user_handle": "biobitworks"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031352d434f474e45452d535441545553222c226b696e64223a22636f676e65655f737461747573222c227061796c6f6164223a7b22626173655f75726c5f636f6e66696775726564223a747275652c2264617461736574223a22736e65616b5f776f726b696e675f6d656d6f7279222c226461746173657473223a5b2261646d6974746564222c2263616e646964617465225d2c226c6976655f617661696c61626c65223a747275652c226f627365727665645f6f7574636f6d65223a225245414459222c2270726f7669646572223a22636f676e6565227d7d",
+      "leaf": "3d5af672b682df9fbffd2ccb835f101aa8c70138c7fc372fb14773d617a0a987",
+      "proof": [
+        {
+          "hash": "e45260612e3a180d4ebcdc114a3e71e55e22ab747cb03f023390592175f9f31a",
+          "side": "right"
+        },
+        {
+          "hash": "cad517a2012a712a644c61f5f5966ac99b5119d81e9b45869a78c267cdc8f4fb",
+          "side": "right"
+        },
+        {
+          "hash": "c2d9e040a2a3df762880080e887124cd4d18aa09d28400dbd6784786be4379e0",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-015-COGNEE-STATUS",
+        "kind": "cognee_status",
+        "payload": {
+          "base_url_configured": true,
+          "dataset": "sneak_working_memory",
+          "datasets": [
+            "admitted",
+            "candidate"
+          ],
+          "live_available": true,
+          "observed_outcome": "READY",
+          "provider": "cognee"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031352d434f474e45452d5752495445222c226b696e64223a22636f676e65655f72656d656d626572222c227061796c6f6164223a7b2261727469666163745f646967657374223a2232653438333331383031363037633135366337626130356163616632643163613035323563666366393766353166646233376639356537376639303231626435222c226f627365727665645f6f7574636f6d65223a2250415353222c22726563616c6c65645f636f756e74223a332c22726563616c6c65645f70726576696577223a5b7b2270726f7669646572223a22636f676e6565222c227265636f72645f6964223a2232653764336465322d646438302d353065342d623038372d623830383364376230336436222c22746578745f707265666978223a227b5c22636f6e74656e745c223a207b5c2266696e64696e675c223a205c226c6976652d626c6f636b2d6576616c2d6d7573742d64656e795c222c205c22746578745c223a205c22534e45414b206c6976653a2073746f72652073656375726974792066696e64696e6720696e20436f676e65652e20436c6175646528546f6d2920616e642043686174475054284a6572727929206d75737420726563616c6c20626c6f636b2d657661227d2c7b2270726f7669646572223a22636f676e6565222c227265636f72645f6964223a2261393162366464372d666166372d356664342d386332612d333136633830633731653031222c22746578745f707265666978223a22534e45414b2d303135206c697665206d656d6f72793a2042414e4420726f6f6d20636f6f7264696e6174657320436c61756465206861726e657373206167656e7420546f6d20616e642043686174475054206861726e657373206167656e74204a657272792e20526563757272696e672072756c6520626c6f636b2d6576616c2d6d7573742d64656e7920756e74696c207665726966696564206669782e2055227d2c7b2270726f7669646572223a226c6f63616c222c227265636f72645f6964223a226d656d2d31222c22746578745f707265666978223a22534e45414b206c6976653a2073746f72652073656375726974792066696e64696e6720696e20436f676e65652e20436c6175646528546f6d2920616e642043686174475054284a6572727929206d75737420726563616c6c20626c6f636b2d6576616c2d6d7573742d64656e79206265666f7265206d61726b696e6720612042414e4420776f726b206974656d20446f6e652e227d5d2c22726563656970745f6964223a22636f676e65655f72656d656d6265722d306632643331303638623038227d7d",
+      "leaf": "e45260612e3a180d4ebcdc114a3e71e55e22ab747cb03f023390592175f9f31a",
+      "proof": [
+        {
+          "hash": "3d5af672b682df9fbffd2ccb835f101aa8c70138c7fc372fb14773d617a0a987",
+          "side": "left"
+        },
+        {
+          "hash": "cad517a2012a712a644c61f5f5966ac99b5119d81e9b45869a78c267cdc8f4fb",
+          "side": "right"
+        },
+        {
+          "hash": "c2d9e040a2a3df762880080e887124cd4d18aa09d28400dbd6784786be4379e0",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-015-COGNEE-WRITE",
+        "kind": "cognee_remember",
+        "payload": {
+          "artifact_digest": "2e48331801607c156c7ba05acaf2d1ca0525cfcf97f51fdb37f95e77f9021bd5",
+          "observed_outcome": "PASS",
+          "recalled_count": 3,
+          "recalled_preview": [
+            {
+              "provider": "cognee",
+              "record_id": "2e7d3de2-dd80-50e4-b087-b8083d7b03d6",
+              "text_prefix": "{\"content\": {\"finding\": \"live-block-eval-must-deny\", \"text\": \"SNEAK live: store security finding in Cognee. Claude(Tom) and ChatGPT(Jerry) must recall block-eva"
+            },
+            {
+              "provider": "cognee",
+              "record_id": "a91b6dd7-faf7-5fd4-8c2a-316c80c71e01",
+              "text_prefix": "SNEAK-015 live memory: BAND room coordinates Claude harness agent Tom and ChatGPT harness agent Jerry. Recurring rule block-eval-must-deny until verified fix. U"
+            },
+            {
+              "provider": "local",
+              "record_id": "mem-1",
+              "text_prefix": "SNEAK live: store security finding in Cognee. Claude(Tom) and ChatGPT(Jerry) must recall block-eval-must-deny before marking a BAND work item Done."
+            }
+          ],
+          "receipt_id": "cognee_remember-0f2d31068b08"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031352d53454352455453222c226b696e64223a227365637265745f70726573656e6365222c227061796c6f6164223a7b22656e765f6f76657272696465735f70726573656e74223a5b2242414e445f555345525f4150495f4b4559222c22434f474e45455f4150495f4b4559222c22434f474e45455f424153455f55524c225d2c2266696c655f657869737473223a747275652c2266696c655f6d6f6465223a22306f363030222c226b6579735f70726573656e74223a5b2242414e445f555345525f4150495f4b4559222c22434f474e45455f4150495f4b4559222c22434f474e45455f424153455f55524c225d2c22706172656e745f657869737473223a747275652c22706172656e745f6d6f6465223a22306f373030222c22706174685f636f6e66696775726564223a222f686f6d652f7562756e74752f2e736563726574732f736e65616b2f70726f7669646572732e656e76222c2276616c75655f696e73706563746564223a66616c73657d7d",
+      "leaf": "cad517a2012a712a644c61f5f5966ac99b5119d81e9b45869a78c267cdc8f4fb",
+      "proof": [
+        {
+          "hash": "5a9e6794944688c08d897300fe0aae891752c2957179827c3ed225af6fcd0d6f",
+          "side": "left"
+        },
+        {
+          "hash": "c2d9e040a2a3df762880080e887124cd4d18aa09d28400dbd6784786be4379e0",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-015-SECRETS",
+        "kind": "secret_presence",
+        "payload": {
+          "env_overrides_present": [
+            "BAND_USER_API_KEY",
+            "COGNEE_API_KEY",
+            "COGNEE_BASE_URL"
+          ],
+          "file_exists": true,
+          "file_mode": "0o600",
+          "keys_present": [
+            "BAND_USER_API_KEY",
+            "COGNEE_API_KEY",
+            "COGNEE_BASE_URL"
+          ],
+          "parent_exists": true,
+          "parent_mode": "0o700",
+          "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+          "value_inspected": false
+        }
+      }
+    }
+  ],
+  "meaning": "Live Cognee storage + BAND Claude/ChatGPT messaging integrity only; not Desktop UI proof, human approval, Snyk bonus, or entry_gate=true",
+  "mmr": "NOT_COMMITTED",
+  "parent": "SNEAK-014",
+  "root": "6f82489027c1cab8d84343f1c3e155099b99f9734d6505690ff1a1668d4b6a28",
+  "schema": "sneak.live-band-cognee.v1",
+  "signed": false
+}
