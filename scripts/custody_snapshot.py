@@ -1,6 +1,25 @@
 #!/usr/bin/env python3
 """Versioned Git snapshot integrity. Hash identity is not semantic truth."""
-import argparse,hashlib,json,pathlib,subprocess,sys
+import argparse,hashlib,json,pathlib,re,subprocess,sys
+SAFE_REL=re.compile(r"[\x20-\x7e]+")
+COMMIT=re.compile(r"[0-9a-f]{40}|[0-9a-f]{64}")
+def safe_relpath(rel):
+    """Reject absolute, parent/empty/dot segments, backslash and non-printable-ASCII paths."""
+    if not isinstance(rel,str) or not SAFE_REL.fullmatch(rel) or "\\" in rel or rel.startswith("/"):raise ValueError("unsafe path encoding")
+    if any(part in ("",".","..") for part in rel.split("/")):raise ValueError("unsafe path segment")
+    return rel
+def contained(repo,rel,must_exist=True):
+    """Resolve rel under repo with no symlink in any component and no escape from repo."""
+    base=pathlib.Path(repo).resolve();cur=base
+    for part in safe_relpath(rel).split("/"):
+        cur=cur/part
+        if cur.is_symlink():raise ValueError("symlink in path")
+        if not cur.exists():
+            if must_exist:raise ValueError("missing path")
+            break
+    target=(base/rel).resolve(strict=must_exist)
+    if target!=base/rel or base not in target.parents:raise ValueError("path escapes repository")
+    return target
 def canonical(x):
     return json.dumps(x,sort_keys=True,ensure_ascii=True,separators=(",",":")).encode("ascii")
 def h(x):return hashlib.sha256(x).digest()
@@ -55,21 +74,30 @@ def snapshot(repo,ref):
       "meaning":"Integrity only; not source truth, rights, security, signatures or canonical admission",
       "mmr":"NOT_COMMITTED","signed":False}
 def check(repo,receipt):
+    if not isinstance(receipt.get("snapshot_commit"),str) or not COMMIT.fullmatch(receipt["snapshot_commit"]):
+        return {"pass":False,"errors":["invalid snapshot_commit"],"root":receipt.get("root"),"leaf_count":receipt.get("leaf_count"),"snapshot_commit":None}
     actual=snapshot(repo,receipt["snapshot_commit"])
     errors=[]
     for key in ("schema","snapshot_commit","construction","leaf_count","root","leaves"):
         if actual[key]!=receipt[key]:errors.append("snapshot mismatch: "+key)
     expected=bytes.fromhex(receipt["root"])
     for item in receipt["leaves"]:
-        r=item["record"];p=repo/r["path"]
+        r=item["record"]
+        try:safe_relpath(r["path"])
+        except ValueError:errors.append("unsafe path rejected");continue
         if not verify(leaf(r),item["proof"],expected):errors.append("bad proof: "+r["path"])
-        if not p.is_file() or p.is_symlink():errors.append("missing/nonregular: "+r["path"]);continue
+        try:p=contained(repo,r["path"])
+        except (ValueError,OSError):errors.append("missing/nonregular: "+r["path"]);continue
+        if not p.is_file():errors.append("missing/nonregular: "+r["path"]);continue
         b=p.read_bytes()
         if len(b)!=r["size_bytes"] or hashlib.sha256(b).hexdigest()!=r["sha256"]:errors.append("working bytes differ: "+r["path"])
     return {"pass":not errors,"errors":errors,"root":receipt["root"],"leaf_count":receipt["leaf_count"],"snapshot_commit":receipt["snapshot_commit"]}
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("action",choices=["create","verify"]);ap.add_argument("receipt");ap.add_argument("--ref",default="HEAD");args=ap.parse_args()
-    repo=pathlib.Path(__file__).resolve().parents[1];path=repo/args.receipt
+    repo=pathlib.Path(__file__).resolve().parents[1]
+    if args.ref.startswith("-"):ap.error("invalid --ref")
+    try:path=contained(repo,args.receipt,must_exist=args.action=="verify")
+    except (ValueError,OSError) as e:ap.error("receipt path rejected: "+str(e))
     if args.action=="create":
         r=snapshot(repo,args.ref);path.parent.mkdir(parents=True,exist_ok=True)
         with path.open("x") as f:json.dump(r,f,indent=2);f.write("\n")

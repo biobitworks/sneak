@@ -1,0 +1,22 @@
+const $=s=>document.querySelector(s);const el=(t,c,s)=>{let x=document.createElement(t);if(c)x.className=c;if(s!==undefined)x.textContent=String(s);return x};function val(v){return v==null?"UNKNOWN":String(v)};function card(parent,title,items){let box=el("article","convo-card"),h=el("h3","",title);box.append(h);for(let [k,v] of items){box.append(el("small","",k),el("div","code-value",val(v)))}parent.append(box)};function fcoRow(e){let box=el("article","event-card");box.append(el("h3","",e.index+1+". "+e.actor+" · "+e.id));let meta=el("div","event-meta");meta.append(el("span","",e.captured_status),el("span","",e.observed_at),el("span","",e.semantic_verdict+" verdict"),el("span","",e.cognee_recall+" Cognee recall"));box.append(meta);let flow=el("div","workflow");for(let [k,v] of [["INPUT SHA-256",e.input_sha256],["SCRIPT SHA-256",e.steps[0].script_sha256],["OUTPUT SHA-256",e.output_sha256]]){let part=el("div");part.append(el("strong","",k),el("span","code-value",v));flow.append(part)}box.append(flow);box.append(el("p","caveat","Parent event: "+e.parent_global_fco+" · Parent actor event: "+val(e.parent_actor_fco)+" · Evidence integrity verified: "+String(e.history_integrity)));$("#events").append(box)}async function main(){try{const r=await fetch("/data/conversation-lineage.json");if(!r.ok)throw Error("lineage projection unavailable");const d=await r.json();if(d.history_linkage!=="VERIFIED")throw Error("source verification failed");const summary=(k,v)=>{let b=el("div","pill");b.append(el("span","",k+" "),el("strong","",String(v)));$("#overview").append(b)};summary("Captured messages",d.source.message_count);summary("Actor streams",Object.keys(d.actor_mmr).length);summary("Verified model identities",Object.keys(d.model_mmr).length);summary("All conversations",d.all_conversations_imported?"YES":"NO");$("#root-question").textContent=d.question.description;card($("#commitments"),"Root-question MMR",[["FCO",d.question.id],["Root",d.question_mmr.root],["Leaves",d.question_mmr.leaves],["Verdict",d.question.verdict]]);card($("#commitments"),"Global conversation MMR",[["Root",d.global_mmr.root],["Leaves",d.global_mmr.leaves],["Source receipt SHA-256",d.source.source_sha256]]);for(const [,a]of Object.entries(d.actor_mmr))card($("#actor-lanes"),a.actor+" — actor MMR",[["Root",a.mmr.root],["Captured events",a.event_count],["Quality Δ",a.quality_delta],["Root-question verdict",a.claim_vs_question]]);for(const b of d.breakpoints)card($("#breakpoints"),"Breakpoint "+b.event_ordinal+" · "+b.actor,[
+ ["MMR after update",b.question_mmr.root],
+ ["Question Merkle",b.question_merkle_tree_root],
+ ["Actor MMR",b.actor_mmr.root],
+ ["Model MMR",b.model_mmr.root],
+ ["Root-question verdict",val(b.root_question_true_false)],
+ ["Custody replay",b.custody_replay_bool?"TRUE":"FALSE"],
+ ["Performance Δ",b.quality_delta]]);
+ if(Object.keys(d.model_mmr).length===0)$("#model-lanes").append(el("p","notverified","Per-model MMR: NOT_COMPUTED. Historical BAND messages identify agents, not their underlying model and version. No model identity has been inferred."));else for(const [,m] of Object.entries(d.model_mmr))card($("#model-lanes"),m.model_id+" / "+m.model_version,[["MMR root",m.mmr.root],["Quality delta",m.evaluation_delta],["Verdict",m.verdict]]);try{const response=await fetch("/data/conversation-cognee-bridge.json");
+  if(response.ok){const b=await response.json();
+    card($("#cognee-bridge"),"Cognee OSS read/write",[
+      ["Write",b.write_status],["Separate-process recall",b.recall_status],
+      ["Root found",b.root_found],["Changed next action",b.changed_action],
+      ["Planner consumed",b.planner_consumed]]);
+    card($("#cognee-bridge"),"Question MMR successor",[
+      ["Previous root",b.parent_question_mmr_root],
+      ["After Cognee FCO updates",b.updated_question_mmr.root],
+      ["Committed leaves",b.updated_question_mmr.leaves],
+      ["BAND send",b.band_room_send]]);
+   }else{$("#cognee-bridge").textContent="Cognee write/recall: NOT_VERIFIED in this snapshot"}
+  }catch(err){$("#cognee-bridge").textContent="Cognee proof unavailable: "+err.message}
+  for(const e of d.events)fcoRow(e)}catch(e){$("#events").textContent="Evidence unavailable: "+e.message}}main();

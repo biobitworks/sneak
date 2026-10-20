@@ -1,0 +1,90 @@
+{
+  "DECISIONS": [
+    "keep complete predecessor receipts and finding reports immutable",
+    "security gate remains BLOCKED with two residual scanner findings",
+    "require BAND human account sign-in before creating/verifying agent room",
+    "source-verified findings do not prove exploitability"
+  ],
+  "EVIDENCE_SHA256": {
+    "cognee_successor": "b53a8eaa2abf50d6b9e0c0b705e783c9ebfb344701684fd49906b6ad4c8c8c1c",
+    "node_suite_log": "35fd9631256edeca65091a56fa6b0ba4dcb5f6b0212855ef66b8534170966ce5",
+    "python_suite_log": "249f06c0460e7390f04b28f52dd5f00dc0c0cdf380e1c3a0210cf09a84e8e400",
+    "snyk_first": "29b18df95df86f7e4f77c267e82ad16209755e473b8d8782e693e3e047c9c551",
+    "snyk_second": "a7171a528b6bb216342258ce15da8ce1c2aef409a76e2efc2c3a27f303047c20"
+  },
+  "EXECUTED": [
+    "Claude initial implementation partial; exited max-turns",
+    "Codex MVP implementation complete; original sandbox failed HTTP bind",
+    "independent host HTTP tests and Python/Node suites",
+    "Cognee OSS demo then real write/recall including earlier false-negative interpretation preserved",
+    "real Snyk code test initial and rescan after path-validation patch"
+  ],
+  "FAILURES": [
+    "Claude implementation max turns 24",
+    "initial Codex unsupported model",
+    "Codex sandbox HTTP port prohibited",
+    "Cognee missing s3fs then LLM probe timed out",
+    "initial literal-matching recall parser false-negative",
+    "Claude security max turns 16; independent tests executed after",
+    "Snyk 2 low scanner findings persist after repair"
+  ],
+  "ID": "SNEAK-MVP-20261020-BP-001",
+  "NEXT_ACTION": "Operator signs into BAND Desktop on magicPRObox; create one real shared room and confirm plan/board. Independently review residual Snyk 2 low findings, then append successor scans; do not promote mandatory atoms without actual proof.",
+  "NOT_TESTED": [
+    "BAND room/board/real human approval",
+    "BAND token and cost screenshots",
+    "BAND-to-Cognee-to-Snyk end-to-end across agents",
+    "Flexprice",
+    "video submission",
+    "independent scanner result exploitability"
+  ],
+  "OBSERVED": {
+    "aok_candidate_root": "a0bcc0e65e88322c9c70aaf0b221545cf20b9ced0bcd1c15efa5a467143dc5d5",
+    "aok_leaves": 9,
+    "aok_verified": true,
+    "band_account": "NOT_AUTHENTICATED",
+    "band_desktop": "INSTALLED_0.4.16",
+    "band_plugin": "INSTALLED_0.5.33",
+    "cognee_actual_band_action": "NOT_EXECUTED",
+    "cognee_cross_process_recall": "OBSERVED",
+    "cognee_next_action_selected": "REQUEST_BAND_HUMAN_RESCAN_APPROVAL",
+    "mandatory_atoms_total": 30,
+    "mandatory_atoms_verified": 0,
+    "mmr": "NOT_COMPUTED",
+    "scanned_first_commit": "b86a2e423c4510affd4fd7bbf6ab49a6b38d4ac2",
+    "scanned_second_commit": "eaf0a3964e782e7ce34e776dd256f8ede1c195f2",
+    "snyk_first_findings": 4,
+    "snyk_gate": "BLOCKED",
+    "snyk_second_findings": 2
+  },
+  "PARENT": {
+    "custody_breakpoint": "IP-20261020-006",
+    "git_commit": "eaf0a3964e782e7ce34e776dd256f8ede1c195f2",
+    "source_frozen_plan_commit": "979a4f7af5821e197a71eb960ca2ff2722f2e0e3"
+  },
+  "PROPOSED": [
+    "BAND shared room planner/Claude/Codex/Snyk reviewer, direct @mentions, tasks and approvals",
+    "Cognee write-read within BAND agent sessions",
+    "review remaining 2 Snyk findings and retest",
+    "2-3 minute required demo video, optional Flexprice"
+  ],
+  "ROOT": "NOT_COMPUTED",
+  "SIGNED": false,
+  "UNRESOLVED": [
+    "BAND web-app authentication and human verification",
+    "residual path traversal Snyk claims",
+    "live room and approval event",
+    "deployed product public URL",
+    "deadline/submission URL and video"
+  ],
+  "VERIFIED_NEW": [
+    "MVP HTTP locally served and /,/audit,/api/graph,/api/audit HTTP 200",
+    "10/10 MVP unit tests PASS",
+    "24/24 combined Python tests PASS",
+    "4/4 independent Node tests PASS",
+    "AoK candidate verification PASS",
+    "Cognee OSS real policy write and separate-process read (logs bound)",
+    "Snyk Code real scans 4 then 2 low path traversal findings; gating BLOCKED"
+  ],
+  "timestamp_utc": "2026-10-20T19:38:12.630217+00:00"
+}

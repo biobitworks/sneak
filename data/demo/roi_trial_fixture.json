@@ -1,0 +1,16 @@
+{
+  "schema": "sneak.roi.fixture.v1",
+  "evidence_class": "SIMULATED_NOT_OBSERVED",
+  "purpose": "Demonstrate Flexprice event attribution and ROI arithmetic; not live customer savings",
+  "human_rate_usd_per_hour_assumed": "50",
+  "token_rate_usd_per_million_assumed": "1.20",
+  "matched_task_ids": ["demo-task-A", "demo-task-B"],
+  "rows": [
+    {"scenario":"baseline","task_id":"demo-task-A","agent_id":"planner","model_id":"qwen2.5:1.5b","human_id":"reviewer-pseudo-1","prompt_tokens":1800,"completion_tokens":1200,"human_minutes":"3"},
+    {"scenario":"baseline","task_id":"demo-task-A","agent_id":"research","model_id":"lfm2.5:1.2b","human_id":"reviewer-pseudo-1","prompt_tokens":2600,"completion_tokens":1400,"human_minutes":"5"},
+    {"scenario":"baseline","task_id":"demo-task-B","agent_id":"scorer","model_id":"qwen2.5:0.5b","human_id":"reviewer-pseudo-2","prompt_tokens":500,"completion_tokens":500,"human_minutes":"3"},
+    {"scenario":"sneak","task_id":"demo-task-A","agent_id":"planner","model_id":"qwen2.5:1.5b","human_id":"reviewer-pseudo-1","prompt_tokens":1200,"completion_tokens":700,"human_minutes":"1"},
+    {"scenario":"sneak","task_id":"demo-task-A","agent_id":"research","model_id":"lfm2.5:1.2b","human_id":"reviewer-pseudo-1","prompt_tokens":1500,"completion_tokens":850,"human_minutes":"2"},
+    {"scenario":"sneak","task_id":"demo-task-B","agent_id":"scorer","model_id":"qwen2.5:0.5b","human_id":"reviewer-pseudo-2","prompt_tokens":450,"completion_tokens":300,"human_minutes":"1"}
+  ]
+}

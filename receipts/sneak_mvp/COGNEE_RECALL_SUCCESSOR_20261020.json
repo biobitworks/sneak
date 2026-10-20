@@ -1,0 +1,43 @@
+{
+  "claims": {
+    "agent_action_dispatch": "NOT_TESTED",
+    "cognee_oss_cross_process_recall": "OBSERVED",
+    "cognee_oss_write": "OBSERVED",
+    "mandatory_acceptance": "NOT_VERIFIED",
+    "next_step_selection": "OBSERVED"
+  },
+  "decision_successor": {
+    "actual_BAND_request": "NOT_EXECUTED",
+    "changes_next_step": true,
+    "no_recall_control": "HALT_MISSING_MEMORY_AND_REQUEST_POLICY_REVIEW",
+    "selected_action": "REQUEST_BAND_HUMAN_RESCAN_APPROVAL",
+    "status": "EXECUTED_DETERMINISTIC_SELECTION"
+  },
+  "parent": "COGNEE_MEM_PROBE_RAW_RETRY2",
+  "prior_parser": {
+    "changed": false,
+    "decision": "ABSTAIN",
+    "status": "FALSE_NEGATIVE_PRESERVED"
+  },
+  "read": {
+    "duration_s": 44.69,
+    "excerpt": "The release gate should block the release and request a human-approved rescan.",
+    "executed": true,
+    "results": 1,
+    "separate_process": true
+  },
+  "root": "NOT_COMPUTED",
+  "schema": "sneak.cognee-read-decision.v1",
+  "signed": false,
+  "source": {
+    "policy_text_sha256": "4d3aa930bbd907ffc4d9e96145251da1f10eeb0e4331f11d04eded5836759000",
+    "recall_log_sha256": "ac137a41d7e705d80ca470e97511c47df4961853c99aaf79f42d3e0f04f46309",
+    "write_log_sha256": "3ef2f56c917e52e556d3044e68adaab881560a350592745b2c4999f08a902f92"
+  },
+  "time_utc": "2026-10-20T19:31:58.775853+00:00",
+  "write": {
+    "duration_s": 21.37,
+    "executed": true,
+    "result_type": "RememberResult"
+  }
+}

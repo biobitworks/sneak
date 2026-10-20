@@ -1,0 +1,307 @@
+{
+  "claims": [
+    {
+      "claim": "Snyk clean scan / score zero",
+      "evidence": "Exit 2 authentication failure; findings UNKNOWN; security app score NOT_COMPUTED. SCA and Code coverage of successor NOT_TESTED.",
+      "status": "FAILED",
+      "where": "receipts/integrations/SNEAK_SPONSOR_TRAVERSAL_V1_20261020.json \u2192 snyk.scan"
+    },
+    {
+      "claim": "History actor",
+      "evidence": "Export intentionally removes actor; UI now displays source or UNKNOWN. Regression test executed. All predecessor actions shown.",
+      "status": "IMPLEMENTED",
+      "where": "apps/sneak_mvp/web/app.js; scripts/build_vercel_preview.py"
+    },
+    {
+      "claim": "Band exact digest",
+      "evidence": "Stored receipt digest and linkage verified offline; live provider recheck NOT_TESTED this turn. Human API readback does not establish autonomous participation.",
+      "status": "SUPPORTED",
+      "where": "receipts/integrations/SNEAK_SPONSOR_TRAVERSAL_V1_20261020.json \u2192 band"
+    },
+    {
+      "claim": "Cognee exact digest",
+      "evidence": "Separate hosted search recorded; custody reverified offline. Agent-owned OSS recall and behavior change NOT_VERIFIED.",
+      "status": "SUPPORTED",
+      "where": "receipts/integrations/SNEAK_SPONSOR_TRAVERSAL_V2_20261020.json"
+    },
+    {
+      "claim": "Human decision",
+      "evidence": "No actual decision receipt verified. Original event retained.",
+      "status": "NOT_TESTED",
+      "where": "EV-020-HUMAN-DECISION"
+    },
+    {
+      "claim": "EV-030 / EV-040 proposal status",
+      "evidence": "Historical proposal leaves unchanged. Later hosted Cognee receipt and Snyk failure are separate attempt evidence on /trace.",
+      "status": "PROPOSED",
+      "where": "receipts/sneak_mvp/AOK_MVP_20261020.json"
+    },
+    {
+      "claim": "Mandatory acceptance",
+      "evidence": "0 of 30 accepted. Every source requirement and blocker is listed below.",
+      "status": "NEGATIVE",
+      "where": "receipts/requirements/SNEAK_AOK_M01_M30_CLOSEOUT_20261020.json"
+    },
+    {
+      "claim": "Measured savings / Flexprice",
+      "evidence": "Historical token usage is UNATTRIBUTED_NOT_SNEAK_ROI; economics fixture simulated. Live Flexprice billing NOT_TESTED.",
+      "status": "NOT_TESTED",
+      "where": "receipts/flexprice/SNEAK_BAND_REAL_USAGE_UNATTRIBUTED_20261020.json"
+    },
+    {
+      "claim": "Merkle / MMR",
+      "evidence": "Local attempt custody replay passes. Export roots apply only to declared static file bytes. Project/model global MMR, Anticube and delta G*: NOT_COMPUTED.",
+      "status": "SUPPORTED",
+      "where": "scripts/verify_closeout_evidence.py; data/export-custody.json"
+    },
+    {
+      "claim": "Live application / production release",
+      "evidence": "Protected static projection; target preview. Live APIs false. Production release remains BLOCKED.",
+      "status": "DEFERRED",
+      "where": "Vercel project sneak-evidence-preview"
+    },
+    {
+      "claim": "Public judge repository",
+      "evidence": "biobitworks/sneak is private; no visibility change authorized or executed.",
+      "status": "NEGATIVE",
+      "where": "GitHub repository metadata"
+    }
+  ],
+  "custody_replay": {
+    "attempt_merkle_root": "f31a9f12fc299383b3942dfc5817d7fd7d3e8200a13b8c84145c629d6ef3dbe9",
+    "band_message_id": "9d21c550-6317-488b-8488-676d4c5e471b",
+    "cognee_hash_exact": true,
+    "mandatory_accepted": 0,
+    "result": "PASS_OFFLINE_CUSTODY_ONLY",
+    "shared_sha256": "5a767b826c15cdf31050e18322c0959a2b24abdd01474fd55b1f983c2b38279e",
+    "snyk": "FAILED_AUTHENTICATION"
+  },
+  "gate": "BLOCKED",
+  "historical_events": [
+    {
+      "id": "EV-001-R5-ATOMS",
+      "status": "OBSERVED"
+    },
+    {
+      "id": "EV-002-R5-ATOMS-JSONL",
+      "status": "OBSERVED"
+    },
+    {
+      "id": "EV-003-R6-CUSTODY",
+      "status": "OBSERVED"
+    },
+    {
+      "id": "EV-010-BAND-BOOTSTRAP",
+      "status": "OBSERVED"
+    },
+    {
+      "id": "EV-011-BAND-HANDOFF",
+      "status": "OBSERVED"
+    },
+    {
+      "id": "EV-012-BAND-VERIFY",
+      "status": "OBSERVED"
+    },
+    {
+      "id": "EV-020-HUMAN-DECISION",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "EV-030-COGNEE-MEMORY",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "EV-040-SNYK-GATE",
+      "status": "PROPOSED"
+    }
+  ],
+  "id": "SNEAK-SHIP-GATE-R1-20261020",
+  "live_provider_recheck": "NOT_TESTED",
+  "parent_commit": "517f630866834ddbe2e4dcee74f1213271055bbc",
+  "requirements": [
+    {
+      "attempt_evidence_status": "FAILED",
+      "id": "REQ-AOK-M01",
+      "note": "Band CLI account unavailable; human API distinct",
+      "requirement": "Use actual Band Desktop."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M02",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Band coordinates the agent team."
+    },
+    {
+      "attempt_evidence_status": "OBSERVED",
+      "id": "REQ-AOK-M03",
+      "note": "Band live room and participant registry (agent activity not observed)",
+      "requirement": "Agents share one actual room."
+    },
+    {
+      "attempt_evidence_status": "NOT_OBSERVED",
+      "id": "REQ-AOK-M04",
+      "note": "Room contains agents but participation is inactive/unverified",
+      "requirement": "At least two agents participate."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M05",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Lead/architect writes the plan in the room."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M06",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Team works from one plan."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M07",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Team uses one shared work board."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M08",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Agents claim work items."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M09",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Actual task transitions include To-do and Done."
+    },
+    {
+      "attempt_evidence_status": "PARTIAL",
+      "id": "REQ-AOK-M10",
+      "note": "Human API mention payload succeeded; agent-owned mentions not attested",
+      "requirement": "Agents address each other with mentions."
+    },
+    {
+      "attempt_evidence_status": "PARTIAL",
+      "id": "REQ-AOK-M11",
+      "note": "Human API handoff delivered; no agent to agent handoff observed",
+      "requirement": "Agents hand context directly to other agents."
+    },
+    {
+      "attempt_evidence_status": "NOT_OBSERVED",
+      "id": "REQ-AOK-M12",
+      "note": "Automated agent-owned independent handoff not proven",
+      "requirement": "Handoff succeeds without human copying."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M13",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "At least one real decision or approval occurs."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M14",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Human receives that decision through Band."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M15",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Decision is not hard-coded."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M16",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Demo shows Band Desktop rooms."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M17",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Demo shows the work board."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M18",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Demo shows per-agent sessions."
+    },
+    {
+      "attempt_evidence_status": "PARTIAL",
+      "id": "REQ-AOK-M19",
+      "note": "Band historical real token usage exists, not native judge demo per-agent sessions",
+      "requirement": "Demo shows token counts."
+    },
+    {
+      "attempt_evidence_status": "PARTIAL",
+      "id": "REQ-AOK-M20",
+      "note": "Band estimates exist but are unattributed, not demonstrated per agent",
+      "requirement": "Demo shows estimated costs."
+    },
+    {
+      "attempt_evidence_status": "PARTIAL",
+      "id": "REQ-AOK-M21",
+      "note": "Earlier local Cognee OSS receipt; current live probe is hosted Cognee, not OSS",
+      "requirement": "Use Cognee Open Source."
+    },
+    {
+      "attempt_evidence_status": "PARTIAL",
+      "id": "REQ-AOK-M22",
+      "note": "Hosted add+cognify+separate hash search; agent use unproven",
+      "requirement": "Cognee serves as working memory."
+    },
+    {
+      "attempt_evidence_status": "NOT_VERIFIED",
+      "id": "REQ-AOK-M23",
+      "note": "Memory retrieval observed; behavior change under live multi-agent conditions not proven",
+      "requirement": "Demonstrate working memory rather than only static storage."
+    },
+    {
+      "attempt_evidence_status": "NOT_OBSERVED",
+      "id": "REQ-AOK-M24",
+      "note": "Human probe writes memory, not agent task execution",
+      "requirement": "Agents write memory while doing the task."
+    },
+    {
+      "attempt_evidence_status": "NOT_OBSERVED",
+      "id": "REQ-AOK-M25",
+      "note": "Independent script queries; not agent-initiated recall",
+      "requirement": "Agents actually recall stored memory."
+    },
+    {
+      "attempt_evidence_status": "NOT_OBSERVED",
+      "id": "REQ-AOK-M26",
+      "note": "No observed agent behavior change",
+      "requirement": "Recalled memory changes a subsequent action."
+    },
+    {
+      "attempt_evidence_status": "PARTIAL",
+      "id": "REQ-AOK-M27",
+      "note": "Separate-process historical OSS recall exists; does not establish agent execution in same room",
+      "requirement": "Demonstrate recall after restart OR between different agents; either is sufficient."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M28",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "BAND is essential: removing it changes required product behavior."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M29",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Cognee is essential: removing it changes required product behavior."
+    },
+    {
+      "attempt_evidence_status": "NOT_TESTED",
+      "id": "REQ-AOK-M30",
+      "note": "No new acceptance-bound execution receipt inspected",
+      "requirement": "Address qualitative deep-integration review; Boolean tests alone do not guarantee qualification."
+    }
+  ],
+  "schema": "sneak.ship-claims.v1",
+  "scope": "OFFLINE_RECEIPT_AUDIT_AND_STATIC_UI_FIX",
+  "security_app_score": "NOT_COMPUTED",
+  "source_commit": "2bc13fee71cb71b4f217eb0d4286f76a4383d9c5"
+}

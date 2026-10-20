@@ -1,0 +1,346 @@
+{
+ "atoms": [
+  {
+   "id": "REQ-AOK-M01",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Use actual Band Desktop.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M02",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Band coordinates the agent team.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M03",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Agents share one actual room.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M04",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "At least two agents participate.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M05",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Lead/architect writes the plan in the room.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M06",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Team works from one plan.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M07",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Team uses one shared work board.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M08",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Agents claim work items.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M09",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Actual task transitions include To-do and Done.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M10",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Agents address each other with mentions.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M11",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Agents hand context directly to other agents.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M12",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Handoff succeeds without human copying.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M13",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "At least one real decision or approval occurs.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M14",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Human receives that decision through Band.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M15",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Decision is not hard-coded.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M16",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demo shows Band Desktop rooms.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M17",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demo shows the work board.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M18",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demo shows per-agent sessions.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M19",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demo shows token counts.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M20",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demo shows estimated costs.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M21",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Use Cognee Open Source.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M22",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Cognee serves as working memory.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M23",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demonstrate working memory rather than only static storage.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M24",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Agents write memory while doing the task.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M25",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Agents actually recall stored memory.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M26",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Recalled memory changes a subsequent action.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M27",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demonstrate recall after restart OR between different agents; either is sufficient.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M28",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "BAND is essential: removing it changes required product behavior.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M29",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Cognee is essential: removing it changes required product behavior.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-M30",
+   "level": "mandatory",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Address qualitative deep-integration review; Boolean tests alone do not guarantee qualification.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-E01",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Use different agent harnesses for higher-scoring collaboration.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-E02",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demonstrate improve OR forget OR graph-backend connection; preserve this alternative choice.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-F01",
+   "level": "bonus_selected",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Send and read back actual usage events in Flexprice test mode.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-F02",
+   "level": "bonus_selected",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Connect those events to a configured test pricing model.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-F03",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demonstrate product behavior driven by metering.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-F04",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Optional example: credits gate a feature.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-F05",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Optional alternative example: observed BAND costs pass through to test billing.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S01",
+   "level": "bonus_selected",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Use a real Snyk scanning product; alternatives are not all mandatory.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S02",
+   "level": "bonus_selected",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Scan the exact artifact built by the agents.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S03",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Give security review an actual team role.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S04",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Security reviewer participates in the BAND room.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S05",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Security reviewer runs Snyk scans.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S06",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Security reviewer posts actual findings.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S07",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "A finding actually blocks completion until a verified fix.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S08",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Store recurring issue evidence in Cognee working memory.",
+   "verified": false
+  },
+  {
+   "id": "REQ-AOK-S09",
+   "level": "scoring_enrichment",
+   "observed_outcome": "NOT_TESTED",
+   "requirement": "Demonstrate recalled security memory changes behavior on a repeated task.",
+   "verified": false
+  }
+ ],
+ "integrations": {
+  "band_desktop": {
+   "account": "NOT_AUTHENTICATED",
+   "daemon": "RUNNING_REPORTED",
+   "human_verification": "NOT_TESTED",
+   "installed": "0.4.16",
+   "plugin": "0.5.33"
+  },
+  "cognee": {
+   "oss_cli_demo": "PASSED_REPORTED_47_NODES_86_EDGES",
+   "sneak_cross_session": "NOT_TESTED"
+  },
+  "snyk": {
+   "app_scan": "NOT_TESTED",
+   "cli": "1.1307.2",
+   "whoami": "byron"
+  }
+ },
+ "predecessor": "data/rules/atomic_acceptance_r5.jsonl",
+ "schema": "sneak.atom-status.v1"
+}

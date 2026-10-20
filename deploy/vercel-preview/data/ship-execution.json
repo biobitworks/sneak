@@ -1,0 +1,54 @@
+{
+  "executed": [
+    "58 Python tests PASS",
+    "JavaScript DOM regression PASS",
+    "offline closeout custody verifier PASS",
+    "scan runner clean-checkout refusal PASS",
+    "scan runner OSS and Code preflights"
+  ],
+  "failures": [
+    "Original authentication exit 2 preserved",
+    "Initial receipt collision reproduced; successor fix verified",
+    "Intermediate suite failed due test-created scan receipt; preserved in local-runs/ship-gate-debug; clean rerun 58 PASS",
+    "Git clone authentication unavailable; pinned source recovered through GitHub API"
+  ],
+  "id": "SNEAK-SHIP-GATE-EXECUTION-R1-20261020",
+  "local_recovery_git_is_not_upstream_identity": true,
+  "not_tested": [
+    "live provider readback this turn",
+    "authenticated exact-commit SCA and Code",
+    "browser visual QA",
+    "human approval",
+    "live multi-agent behavior",
+    "production release"
+  ],
+  "observed": {
+    "authenticated_scan": "NOT_EXECUTED",
+    "code": "NOT_AVAILABLE",
+    "oss": "NOT_AVAILABLE",
+    "reason": "snyk CLI not found",
+    "score": "NOT_COMPUTED"
+  },
+  "parent": "SNEAK-SHIP-GATE-R1-20261020",
+  "scan_attempts": [
+    {
+      "gate": "BLOCKED",
+      "mode": "code",
+      "outcome": "NOT_AVAILABLE",
+      "reason": "snyk CLI not found",
+      "schema": "sneak.snyk-receipt.v1",
+      "started_at": "2026-10-20T22:27:35.042691+00:00",
+      "target": null
+    },
+    {
+      "gate": "BLOCKED",
+      "mode": "oss",
+      "outcome": "NOT_AVAILABLE",
+      "reason": "snyk CLI not found",
+      "schema": "sneak.snyk-receipt.v1",
+      "started_at": "2026-10-20T22:27:35.042258+00:00",
+      "target": null
+    }
+  ],
+  "source_commit": "2bc13fee71cb71b4f217eb0d4286f76a4383d9c5"
+}

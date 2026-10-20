@@ -1,0 +1,9 @@
+{
+  "gate": "BLOCKED",
+  "mode": "code",
+  "outcome": "NOT_AVAILABLE",
+  "reason": "snyk CLI not found",
+  "schema": "sneak.snyk-receipt.v1",
+  "started_at": "2026-10-20T22:27:35.042691+00:00",
+  "target": null
+}

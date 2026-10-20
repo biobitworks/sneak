@@ -1,0 +1,55 @@
+{
+ "argv": [
+  "code",
+  "test",
+  "--json"
+ ],
+ "exit_code": 1,
+ "finding_count": 4,
+ "findings": [
+  {
+   "id": "javascript/PT",
+   "severity": "low",
+   "where": "scripts/verify_custody_snapshot.mjs"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  }
+ ],
+ "finished_at": "2026-10-20T19:28:32.201098+00:00",
+ "gate": "BLOCKED",
+ "local_run_dir": "local-runs/snyk/20261020T192814Z",
+ "mode": "code",
+ "outcome": "FINDINGS",
+ "reason": "4 issue(s)",
+ "redactions": 0,
+ "schema": "sneak.snyk-receipt.v1",
+ "severity_counts": {
+  "critical": 0,
+  "high": 0,
+  "low": 4,
+  "medium": 0
+ },
+ "snyk_cli_version": "1.1307.2",
+ "started_at": "2026-10-20T19:28:12.333325+00:00",
+ "stdout_bytes": 21932,
+ "stdout_sha256": "cbaffce458cd4ecdd6141a201bcc82b6971c225507c905c3491011096c548dca",
+ "target": {
+  "commit": "b86a2e423c4510affd4fd7bbf6ab49a6b38d4ac2",
+  "dirty": false,
+  "name": "sneak",
+  "tree": "9d15fbc502c53f2b0d260fcc8a45224e8268a876"
+ }
+}
