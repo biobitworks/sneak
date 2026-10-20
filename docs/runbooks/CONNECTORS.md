@@ -56,6 +56,24 @@ Desktop UI board/cost views still need operator checkpoints.
 
 Local adapters fail closed: missing credentials stay `NOT_TESTED` / `BLOCKED`. Never export `SNYK_TOKEN` into candidate environments, git, notebooks, or receipts.
 
+## FlexPrice actor audit (FCO / FCG / deterministic ROI)
+
+Upstream: https://github.com/flexprice/flexprice
+
+```bash
+# Optional live ingest:
+# FLEXPRICE_API_KEY=... in ~/.secrets/sneak/providers.env
+python3 scripts/run_flexprice_actor_audit.py
+```
+
+Each actor action becomes an `ActorEventFCO` with `fco_candidate_sha256`. Typed
+`FCGEdge`s link actors, sequence, and ROI. A candidate Merkle root over those
+FCOs is recorded with **`mmr: NOT_COMMITTED`**. Deterministic ROI =
+
+`(benefit_units − cost_units) / cost_units` with `ROUND_HALF_EVEN` to 6 dp.
+
+Receipts: `SNEAK-020_*`.
+
 ## MagicStudio Ollama via Desktop Commander
 
 Cloud agents cannot reach `magicSTUDIObox.local` without Desktop Commander MCP.
