@@ -11,7 +11,7 @@ from collections import Counter
 from . import REPO_ROOT
 from .sanitize import redact
 
-MANIFEST = REPO_ROOT / "receipts/sneak_mvp/TEAMMATE_IMPORT_20261020_R4.json"
+MANIFEST = REPO_ROOT / "receipts/sneak_mvp/TEAMMATE_IMPORT_20261020_R5.json"
 BAND_RECEIPT = REPO_ROOT / "receipts/band/SNEAK-013_INDEPENDENT_VERIFY.json"
 COGNEE_RECEIPT = REPO_ROOT / "receipts/sneak_mvp/COGNEE_RECALL_SUCCESSOR_20261020.json"
 FLEX_RECEIPT = REPO_ROOT / "receipts/integrations/SNEAK-014_TURN_BREAKPOINT.json"
@@ -65,7 +65,7 @@ def imported_files():
         "source_counts":dict(Counter(row.get("source_branch","UNKNOWN") for row in rows)),
         "transformation_counts":dict(Counter(row.get("transformation","UNKNOWN") for row in rows)),
         "errors":errors[:5],
-        "source_commit_validation":"ORIGINAL_IMPORT_VERIFIER_PASSED_NOT_REEXECUTED",
+        "source_commit_validation":"INTEGRATED_R5_LOCAL_BYTES_VERIFIED_ORIGINAL_SOURCE_NOT_REEXECUTED",
         "mmr":manifest.get("mmr","NOT_COMPUTED"),
     }
 
