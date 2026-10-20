@@ -17,6 +17,7 @@ Store credentials **outside** the repo:
 ```bash
 mkdir -p ~/.secrets/sneak && chmod 700 ~/.secrets ~/.secrets/sneak
 # providers.env mode 0600 with BAND_USER_API_KEY, COGNEE_BASE_URL, COGNEE_API_KEY
+# Optional for live scans: SNYK_TOKEN=...
 python3 scripts/live_band_cognee.py
 ```
 
@@ -24,7 +25,25 @@ python3 scripts/live_band_cognee.py
 - BAND Human API messages Claude harness agent **Tom** and ChatGPT harness agent **Jerry** in room `20f1ee5f-…`.
 - Receipts: `receipts/connectors/SNEAK-015_*` (no secret values).
 
-Desktop UI board/cost views and human approval still need operator checkpoints.
+## LOMO × merkle breakpoint → @Data → Snyk + score
+
+Operator-approved path (SNEAK-016):
+
+```bash
+export SNYK_CLI=/path/to/snyk   # optional if snyk is on PATH
+python3 scripts/run_lomo_snyk_breakpoints.py
+```
+
+After **each** LOMO merkle root breakpoint the pipeline:
+
+1. Writes the breakpoint into Cognee dataset **`Data`** (alias **@Data**)
+2. Notifies BAND Claude/ChatGPT on ablated successors
+3. Runs Snyk SCA+SAST when `SNYK_TOKEN` + CLI are present (otherwise `NOT_TESTED`, never a fake clean 10/10)
+4. Computes Javier app-security-score with coverage rejection
+
+Receipts: `receipts/connectors/SNEAK-016_*`.
+
+Desktop UI board/cost views still need operator checkpoints.
 
 ## Live providers (atom verified=true)
 

@@ -8,6 +8,7 @@ Never place SNYK_TOKEN in prompts, logs, receipts, or candidate environments.
 from __future__ import annotations
 
 import hashlib
+import json
 import os
 import shutil
 from dataclasses import dataclass, field
@@ -139,16 +140,34 @@ def token_present_outside_process_env_file(secret_path: Path) -> dict[str, Any]:
     return result
 
 
+def resolve_snyk_cli() -> Optional[str]:
+    """Locate snyk CLI without requiring a global install."""
+    env_cli = os.environ.get("SNYK_CLI")
+    if env_cli and Path(env_cli).is_file():
+        return env_cli
+    which = shutil.which("snyk")
+    if which:
+        return which
+    for candidate in (
+        Path("/tmp/snyk-cli/node_modules/.bin/snyk"),
+        Path.home() / ".local/bin/snyk",
+    ):
+        if candidate.is_file():
+            return str(candidate)
+    return None
+
+
 def live_scan_availability() -> dict[str, Any]:
+    from .secrets import export_to_environ
+
+    export_to_environ()
+    cli = resolve_snyk_cli()
+    token = bool(os.environ.get("SNYK_TOKEN"))
     return {
-        "snyk_cli": shutil.which("snyk"),
+        "snyk_cli": cli,
         "docker": shutil.which("docker"),
-        "token_in_env": bool(os.environ.get("SNYK_TOKEN")),
-        "observed_outcome": (
-            "READY"
-            if shutil.which("snyk") and os.environ.get("SNYK_TOKEN")
-            else "NOT_TESTED"
-        ),
+        "token_in_env": token,
+        "observed_outcome": "READY" if cli and token else "NOT_TESTED",
     }
 
 
@@ -202,6 +221,13 @@ def scan(
         )
 
     avail = live_scan_availability()
+    if avail["observed_outcome"] == "READY":
+        return _run_live_snyk_scan(
+            candidate_digest=candidate_digest or actual,
+            staged_path=staged_path,
+            snyk_cli=str(avail["snyk_cli"]),
+        )
+
     sca = ScanStage("sca", False, None, None, error="live_scan_not_executed")
     sast = ScanStage("sast", False, None, None, error="live_scan_not_executed")
     result = normalize_scan(
@@ -210,9 +236,114 @@ def scan(
         sca=sca,
         sast=sast,
     )
-    result.observed_outcome = "NOT_TESTED" if avail["observed_outcome"] == "NOT_TESTED" else "BLOCKED"
+    result.observed_outcome = "NOT_TESTED"
     result.reasons.append(f"live_availability:{avail['observed_outcome']}")
+    if not avail.get("token_in_env"):
+        result.reasons.append("SNYK_TOKEN_missing")
+    if not avail.get("snyk_cli"):
+        result.reasons.append("snyk_cli_missing")
     return result
+
+
+def _run_live_snyk_scan(
+    *,
+    candidate_digest: str,
+    staged_path: str,
+    snyk_cli: str,
+) -> ScanResult:
+    """Execute SCA + SAST via Snyk CLI. Token stays in env for subprocess only."""
+    import subprocess
+    import tempfile
+
+    path = Path(staged_path)
+    env = os.environ.copy()
+    # Never log token. Subprocess inherits SNYK_TOKEN from operator env.
+
+    def run_json(args: list[str]) -> tuple[int, Any, Optional[str]]:
+        try:
+            proc = subprocess.run(
+                [snyk_cli, *args],
+                cwd=str(path),
+                capture_output=True,
+                text=True,
+                timeout=300,
+                env=env,
+                check=False,
+            )
+        except (OSError, subprocess.TimeoutExpired) as exc:
+            return 3, None, f"{type(exc).__name__}:{exc}"
+        raw_txt = (proc.stdout or "").strip()
+        if not raw_txt:
+            return proc.returncode, None, (proc.stderr or "no_output")[:300]
+        try:
+            parsed = json.loads(raw_txt)
+        except json.JSONDecodeError:
+            return proc.returncode, None, "invalid_json"
+        if isinstance(parsed, dict) and parsed.get("ok") is False and "vulnerabilities" not in parsed:
+            return proc.returncode, None, str(parsed.get("error") or "ok:false")
+        return proc.returncode, parsed, None
+
+    from .score import ZERO as Z
+
+    sca_code, sca_raw, sca_err = run_json(["test", "--json"])
+    sast_code, sast_raw, sast_err = run_json(["code", "test", "--json"])
+
+    sca_counts = dict(Z)
+    sast_counts = dict(Z)
+    if isinstance(sca_raw, dict):
+        for v in sca_raw.get("vulnerabilities") or []:
+            sev = str(v.get("severity", "low")).lower()
+            if sev in sca_counts:
+                sca_counts[sev] += 1
+    elif isinstance(sca_raw, list):
+        for proj in sca_raw:
+            for v in (proj or {}).get("vulnerabilities") or []:
+                sev = str(v.get("severity", "low")).lower()
+                if sev in sca_counts:
+                    sca_counts[sev] += 1
+
+    # SARIF or code JSON
+    if isinstance(sast_raw, dict) and "runs" in sast_raw:
+        level_map = {"note": "low", "warning": "medium", "error": "high"}
+        for run in sast_raw.get("runs") or []:
+            for res in run.get("results") or []:
+                sev = level_map.get(str(res.get("level", "note")).lower(), "low")
+                sast_counts[sev] += 1
+
+    # Persist raw reports outside git under local-runs/ (gitignored).
+    runs = Path("local-runs")
+    runs.mkdir(parents=True, exist_ok=True)
+    raw_dir = Path(tempfile.mkdtemp(prefix="sneak-snyk-", dir=str(runs.resolve())))
+    sca_ref = raw_dir / "sca.json"
+    sast_ref = raw_dir / "sast.json"
+    sca_ref.write_text(json.dumps(sca_raw, indent=2) if sca_raw is not None else json.dumps({"error": sca_err}))
+    sast_ref.write_text(json.dumps(sast_raw, indent=2) if sast_raw is not None else json.dumps({"error": sast_err}))
+
+    sca = ScanStage(
+        name="sca",
+        completed=sca_err is None and sca_code in (0, 1),
+        exit_code=sca_code,
+        schema="snyk.test.v1",
+        counts=sca_counts,
+        raw_ref=str(sca_ref),
+        error=sca_err,
+    )
+    sast = ScanStage(
+        name="sast",
+        completed=sast_err is None and sast_code in (0, 1),
+        exit_code=sast_code,
+        schema="snyk.code.sarif.v1",
+        counts=sast_counts,
+        raw_ref=str(sast_ref),
+        error=sast_err,
+    )
+    return normalize_scan(
+        candidate_digest=candidate_digest,
+        staged_path=staged_path,
+        sca=sca,
+        sast=sast,
+        scanner_identity=f"snyk-cli+javier-score@6e1f276",
+    )
 
 
 ZERO_COUNTS = {"critical": 0, "high": 0, "medium": 0, "low": 0}

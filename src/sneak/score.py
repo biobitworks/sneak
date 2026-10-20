@@ -15,7 +15,7 @@ UPSTREAM_COMMIT = "6e1f27605fe278eed347b10dab6f39b3501f1486"
 UPSTREAM_REPO = "https://github.com/javiergarza-snyk/app-security-score"
 WEIGHTS = {"critical": 3.0, "high": 1.0, "medium": 0.3, "low": 0.1}
 NON_LOW_CUTOFF = 10
-ZERO = {"critical": 0, "high": 0, "medium": 0, "low": 0}
+ZERO = {"critical": 0, "high": 0, "medium": 0, "low": 0}  # noqa: shared empty tallies
 
 
 @dataclass(frozen=True)
