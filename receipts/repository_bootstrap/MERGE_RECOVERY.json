@@ -1,0 +1,15 @@
+{
+  "id": "SNEAK-011-MERGE",
+  "parent_local": "369cc24b5a0d167258895678992589f5c1c03b01",
+  "parent_remote": "d421d174fe48cacea864bca1ec9eef56fad290d5",
+  "reason": "Concurrent initial repo creation while local package prepared; normal push rejected",
+  "resolution": "Merge both histories; retain original predecessor README bytes and preserve remote README at docs/handoff/REMOTE_INITIAL_README.md; all other remote files retained",
+  "force_push": false,
+  "remote_initial_files": [
+    "README.md",
+    "docs/handoff/BAND_ROOM_STARTER_PLAN.md",
+    "docs/handoff/COGNEE_MEMORY_PROVENANCE_POLICY.md",
+    "docs/handoff/DEMO_EVIDENCE_STORYBOARD.md",
+    "docs/requirements/HACKATHON_REQUIREMENTS.md"
+  ]
+}
