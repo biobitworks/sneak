@@ -57,3 +57,9 @@ Hashes establish byte identity and an inclusion proof establishes ledger integri
 - Security successor receipt: `receipts/evaluations/LMEV2_20261020_SECURITY_SUCCESSOR.json` (sha256 `8b61c27f209ab0f37296a3318407fb20c184f2e12d024e7aecd47af274d96195`).
 - Verified 77 FCO, 85 edges, 150 MMR nodes, root `be4fdb841cef03c132f5606f6673c7ac8c957b33c738b209be07eb513d260ef3`. Pilot root and receipt remain unchanged.
 - No BAND or Cognee remote acknowledgment observed; their pilot statuses remain NOT_TESTED.
+
+## Current-branch rescan successor
+
+- Commit `a548ee491d8382e107dfce7b41df7626f12ea46e` was scanned with Snyk Code; command exit 2 due to `snyk auth` required. Therefore finding count UNKNOWN and accepted app score NULL for that commit. Do not inherit the five-findings count or raw 9.5 score from the previous commit.
+- Append-only failed-scan receipt: `receipts/evaluations/LMEV2_20261020_SNYK_AUTH_FAILURE.json`.
+- Actual successor: 79 FCOs, 153 MMR nodes, `5f7116cd7d568b61f2abeb67adf8b71f1780171e69c07836a9126f643fa20eec`.
