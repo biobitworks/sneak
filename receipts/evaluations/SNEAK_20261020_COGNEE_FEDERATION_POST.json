@@ -1,0 +1,13 @@
+{
+  "add_http": 200,
+  "cognify_http": 200,
+  "conversation_completeness": false,
+  "data_dataset": "Data",
+  "exact_digest_recalled": false,
+  "full_agent_adoption": "NOT_OBSERVED",
+  "packet_sha256": "5d732ab86d50b90f9513aa739c0232de0e672585cd5985874c90268b5aefa5d4",
+  "recall_http": 200,
+  "schema": "sneak.cognee-federation-update.v1",
+  "source_root": "2ff9f1a8d530278dc953bb14297d00314734e0d87a6b325995fbbdfb48c123e4",
+  "state": "PENDING"
+}
