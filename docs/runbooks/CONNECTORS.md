@@ -99,6 +99,17 @@ python3 scripts/verify_aok_mvp_ledger.py
 - Band Desktop atoms (M01, M16–M20) stay NOT_TESTED until Desktop is signed in
 - Receipts: `SNEAK-028_*`; JSONL: `data/verification/requirements_sneak_028.jsonl`
 
+## MVP hash travel (sponsors + optionals + agent→Snyk)
+
+```bash
+python3 scripts/run_mvp_hash_travel.py
+```
+
+- One leaf per sponsor **REQ-AOK-M01–M15**, each optional E/F/S atom, and each agent→Snyk binding
+- Single `mvp_root`; every leaf has a merkle proof (`hash_travels`) that verifies to that root
+- BAND @mentions Tom/Jerry/Planner: every agent connects to the shared Snyk connector digest (live scan still NOT_TESTED)
+- Receipts: `SNEAK-029_*`; JSONL: `data/verification/mvp_hash_travel_sneak_029.jsonl`
+
 ## LOMO × merkle breakpoint → @Data → Snyk + score
 
 Operator-approved path (SNEAK-016):
