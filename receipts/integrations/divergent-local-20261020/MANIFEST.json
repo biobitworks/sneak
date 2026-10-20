@@ -1,0 +1,23 @@
+{
+  "meaning": "Preserved byte-distinct untracked files; do not replace existing R14 receipts or promote previous roots.",
+  "schema": "sneak.r14.local-variant-custody.v1",
+  "source_before_ff": "27e326b54f319ee7e9bba7777fc0e119297d0166",
+  "source_checkout": "magicPRObox /Users/byron/projects/active/sneak",
+  "target_parent_ref": "origin/integration/cognee-flexprice-r14",
+  "variants": [
+    {
+      "existing_remote_sha256": "227cef2c27f5dafcfddf694ac599e6ac30f376ef5ffc8c35fdc2895ed630389c",
+      "name": "09_cognee_band_snyk_r14_r1.executed.ipynb",
+      "same_bytes": false,
+      "status": "UNRECONCILED_NOT_CANONICAL",
+      "variant_sha256": "a4c62c5aa641908ed04e9d2250450c0f50efe24cf3fbdafd8316ef039c476987"
+    },
+    {
+      "existing_remote_sha256": "5382b77ee103f84164d6c450eedbc5cf44ad84814fbff43464631798be12aec4",
+      "name": "SNEAK-014_CUSTODY.json",
+      "same_bytes": false,
+      "status": "UNRECONCILED_NOT_CANONICAL",
+      "variant_sha256": "c0a87fc257e49c92b0edfdb78e82ad03d57fe514fcbd8207430d29298c6241b8"
+    }
+  ]
+}
