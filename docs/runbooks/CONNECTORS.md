@@ -79,6 +79,8 @@ Receipts: `SNEAK-020_*`.
 Cloud agents cannot reach `magicSTUDIObox.local` without Desktop Commander MCP.
 Self-hosted MacBook Pro workers are visible; MagicStudio still needs Desktop Commander or BAND shell approval.
 
+**Baseline models: Liquid AI LFM + OpenJev. Qwen 2.5 is retired.**
+
 ```bash
 # On MagicStudio (Desktop Commander or approved agent shell):
 python3 scripts/probe_magicstudio_ollama.py
@@ -86,3 +88,18 @@ python3 scripts/probe_magicstudio_ollama.py
 ```
 
 Receipts: `SNEAK-017_*`, `SNEAK-017B_*`.
+
+## Liquid AI + OpenJev × LongMemEval (conversation FCOs)
+
+```bash
+# Optional live keys in ~/.secrets/sneak/providers.env:
+# LIQUID_API_KEY=...  OPENJEV_API_KEY=...  OPENJEV_BASE_URL=https://api.codiv.ai/v1
+python3 scripts/run_liquid_openjev_longmemeval.py
+```
+
+- Each model conversation → `ConversationFCO`
+- Each answer vs LongMemEval gold → `LongMemEvalDiffFCO`
+- Per-token ROI for each model/agent/scenario (deterministic unit costs)
+- Fixture: `data/fixtures/longmemeval_oracle_sample.json` (full corpus stays under `sources/`, gitignored)
+
+Receipts: `SNEAK-021_*`.

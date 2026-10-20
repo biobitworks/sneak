@@ -1,0 +1,1055 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-021",
+  "leaf_count": 18,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22434f4e562d666978747572655f6c6d655f62696b655f3030322d6c69717569642d6c69717569642d6167656e74222c226b696e64223a22436f6e766572736174696f6e46434f222c227061796c6f6164223a7b226167656e745f6964223a226c69717569642d6167656e74222c2266636f5f63616e6469646174655f736861323536223a2261373663353061643735623062306661303832646431663530313862626230626537376361376363323262396238343437343362616338393262613131626664222c226d6f64656c5f70726f7669646572223a226c6971756964222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227363656e6172696f5f6964223a22666978747572655f6c6d655f62696b655f303032222c22746f74616c5f746f6b656e73223a39327d7d",
+      "leaf": "1dc41b6ae0807a28e486c96f2fac7c0ff6fea3a27121d373d2eb35c734cfabe7",
+      "proof": [
+        {
+          "hash": "1569a41e2026ba04dce9f79f6e0fcafc9dafed555e6491dfc3197e844243d1e0",
+          "side": "right"
+        },
+        {
+          "hash": "dd03866ad06921186cea750cee86540c152123548d9f3819ec77dfd795535b28",
+          "side": "right"
+        },
+        {
+          "hash": "ddd6e2886ba33564d05cd077101efe4adc82782435363919a9d3ded688bef8fa",
+          "side": "right"
+        },
+        {
+          "hash": "f77207feb66cbb985d3248b2f3f694f4085d0383eb20767afa0348ad95d1121d",
+          "side": "right"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CONV-fixture_lme_bike_002-liquid-liquid-agent",
+        "kind": "ConversationFCO",
+        "payload": {
+          "agent_id": "liquid-agent",
+          "fco_candidate_sha256": "a76c50ad75b0b0fa082dd1f5018bbb0be77ca7cc22b9b844743bac892ba11bfd",
+          "model_provider": "liquid",
+          "observed_outcome": "NOT_TESTED",
+          "scenario_id": "fixture_lme_bike_002",
+          "total_tokens": 92
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22434f4e562d666978747572655f6c6d655f62696b655f3030322d6f70656e6a65762d6f70656e6a65762d6167656e74222c226b696e64223a22436f6e766572736174696f6e46434f222c227061796c6f6164223a7b226167656e745f6964223a226f70656e6a65762d6167656e74222c2266636f5f63616e6469646174655f736861323536223a2232343434376464363334373134386333363561313839613733383862636135313365346261346539393763636364663837326535623466346533653134366431222c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c226f627365727665645f6f7574636f6d65223a224641494c222c227363656e6172696f5f6964223a22666978747572655f6c6d655f62696b655f303032222c22746f74616c5f746f6b656e73223a32387d7d",
+      "leaf": "1569a41e2026ba04dce9f79f6e0fcafc9dafed555e6491dfc3197e844243d1e0",
+      "proof": [
+        {
+          "hash": "1dc41b6ae0807a28e486c96f2fac7c0ff6fea3a27121d373d2eb35c734cfabe7",
+          "side": "left"
+        },
+        {
+          "hash": "dd03866ad06921186cea750cee86540c152123548d9f3819ec77dfd795535b28",
+          "side": "right"
+        },
+        {
+          "hash": "ddd6e2886ba33564d05cd077101efe4adc82782435363919a9d3ded688bef8fa",
+          "side": "right"
+        },
+        {
+          "hash": "f77207feb66cbb985d3248b2f3f694f4085d0383eb20767afa0348ad95d1121d",
+          "side": "right"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CONV-fixture_lme_bike_002-openjev-openjev-agent",
+        "kind": "ConversationFCO",
+        "payload": {
+          "agent_id": "openjev-agent",
+          "fco_candidate_sha256": "24447dd6347148c365a189a7388bca513e4ba4e997cccdf872e5b4f4e3e146d1",
+          "model_provider": "openjev",
+          "observed_outcome": "FAIL",
+          "scenario_id": "fixture_lme_bike_002",
+          "total_tokens": 28
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22434f4e562d666978747572655f6c6d655f6770735f3030312d6c69717569642d6c69717569642d6167656e74222c226b696e64223a22436f6e766572736174696f6e46434f222c227061796c6f6164223a7b226167656e745f6964223a226c69717569642d6167656e74222c2266636f5f63616e6469646174655f736861323536223a2237396435353439386131373137313562313662323762336232356636346638316130383535313735613363636437313364646566326135663439363164356261222c226d6f64656c5f70726f7669646572223a226c6971756964222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227363656e6172696f5f6964223a22666978747572655f6c6d655f6770735f303031222c22746f74616c5f746f6b656e73223a3131307d7d",
+      "leaf": "ec480b2d50a5ab0c9dbfe6087f6aa7f3f1cdf37429db1609efa354ee1c7adda3",
+      "proof": [
+        {
+          "hash": "ba96b55f15965393bfcd774c0b8f69d759e83689429e0c19baa90ac2264d87c2",
+          "side": "right"
+        },
+        {
+          "hash": "9980538f417914a1ad8e1e951c08393ea944237062eb2f8fccd7336dd3c422ba",
+          "side": "left"
+        },
+        {
+          "hash": "ddd6e2886ba33564d05cd077101efe4adc82782435363919a9d3ded688bef8fa",
+          "side": "right"
+        },
+        {
+          "hash": "f77207feb66cbb985d3248b2f3f694f4085d0383eb20767afa0348ad95d1121d",
+          "side": "right"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CONV-fixture_lme_gps_001-liquid-liquid-agent",
+        "kind": "ConversationFCO",
+        "payload": {
+          "agent_id": "liquid-agent",
+          "fco_candidate_sha256": "79d55498a171715b16b27b3b25f64f81a0855175a3ccd713ddef2a5f4961d5ba",
+          "model_provider": "liquid",
+          "observed_outcome": "NOT_TESTED",
+          "scenario_id": "fixture_lme_gps_001",
+          "total_tokens": 110
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22434f4e562d666978747572655f6c6d655f6770735f3030312d6f70656e6a65762d6f70656e6a65762d6167656e74222c226b696e64223a22436f6e766572736174696f6e46434f222c227061796c6f6164223a7b226167656e745f6964223a226f70656e6a65762d6167656e74222c2266636f5f63616e6469646174655f736861323536223a2262663363653862383036636533643630323664323631303838646638383966316330356133396432623264376638613330656339396236356631613565663333222c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c226f627365727665645f6f7574636f6d65223a224641494c222c227363656e6172696f5f6964223a22666978747572655f6c6d655f6770735f303031222c22746f74616c5f746f6b656e73223a33367d7d",
+      "leaf": "ba96b55f15965393bfcd774c0b8f69d759e83689429e0c19baa90ac2264d87c2",
+      "proof": [
+        {
+          "hash": "ec480b2d50a5ab0c9dbfe6087f6aa7f3f1cdf37429db1609efa354ee1c7adda3",
+          "side": "left"
+        },
+        {
+          "hash": "9980538f417914a1ad8e1e951c08393ea944237062eb2f8fccd7336dd3c422ba",
+          "side": "left"
+        },
+        {
+          "hash": "ddd6e2886ba33564d05cd077101efe4adc82782435363919a9d3ded688bef8fa",
+          "side": "right"
+        },
+        {
+          "hash": "f77207feb66cbb985d3248b2f3f694f4085d0383eb20767afa0348ad95d1121d",
+          "side": "right"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CONV-fixture_lme_gps_001-openjev-openjev-agent",
+        "kind": "ConversationFCO",
+        "payload": {
+          "agent_id": "openjev-agent",
+          "fco_candidate_sha256": "bf3ce8b806ce3d6026d261088df889f1c05a39d2b2d7f8a30ec99b65f1a5ef33",
+          "model_provider": "openjev",
+          "observed_outcome": "FAIL",
+          "scenario_id": "fixture_lme_gps_001",
+          "total_tokens": 36
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22434f4e562d666978747572655f6c6d655f70686f6e655f3030332d6c69717569642d6c69717569642d6167656e74222c226b696e64223a22436f6e766572736174696f6e46434f222c227061796c6f6164223a7b226167656e745f6964223a226c69717569642d6167656e74222c2266636f5f63616e6469646174655f736861323536223a2237316238623333623831356433633435653835613131393333616665396561366665353963343965373166313233393663343734646435636233663733653864222c226d6f64656c5f70726f7669646572223a226c6971756964222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227363656e6172696f5f6964223a22666978747572655f6c6d655f70686f6e655f303033222c22746f74616c5f746f6b656e73223a38367d7d",
+      "leaf": "6436bee508d6b42f3a4e2ff64b1dbad10fc3523755f95cd0a1b56d684ac71a3a",
+      "proof": [
+        {
+          "hash": "d26d39ccc4a4c2b4c22b4d56c9078beabee248f934f037c6bd120e32c596e6a8",
+          "side": "right"
+        },
+        {
+          "hash": "0b0390398bddeb49b94d1fcf7a9ca095dbd824a3cbe58e893402646893220134",
+          "side": "right"
+        },
+        {
+          "hash": "0b79f46b0854a5503abf1eb3c7d2c7138a2307e5ca708b4b277495d6313be3a2",
+          "side": "left"
+        },
+        {
+          "hash": "f77207feb66cbb985d3248b2f3f694f4085d0383eb20767afa0348ad95d1121d",
+          "side": "right"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CONV-fixture_lme_phone_003-liquid-liquid-agent",
+        "kind": "ConversationFCO",
+        "payload": {
+          "agent_id": "liquid-agent",
+          "fco_candidate_sha256": "71b8b33b815d3c45e85a11933afe9ea6fe59c49e71f12396c474dd5cb3f73e8d",
+          "model_provider": "liquid",
+          "observed_outcome": "NOT_TESTED",
+          "scenario_id": "fixture_lme_phone_003",
+          "total_tokens": 86
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22434f4e562d666978747572655f6c6d655f70686f6e655f3030332d6f70656e6a65762d6f70656e6a65762d6167656e74222c226b696e64223a22436f6e766572736174696f6e46434f222c227061796c6f6164223a7b226167656e745f6964223a226f70656e6a65762d6167656e74222c2266636f5f63616e6469646174655f736861323536223a2234353338643538363534666234383264633835656166383138373063626236356662393866373062393564356465346234326665666165363931663664653337222c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c226f627365727665645f6f7574636f6d65223a224641494c222c227363656e6172696f5f6964223a22666978747572655f6c6d655f70686f6e655f303033222c22746f74616c5f746f6b656e73223a33327d7d",
+      "leaf": "d26d39ccc4a4c2b4c22b4d56c9078beabee248f934f037c6bd120e32c596e6a8",
+      "proof": [
+        {
+          "hash": "6436bee508d6b42f3a4e2ff64b1dbad10fc3523755f95cd0a1b56d684ac71a3a",
+          "side": "left"
+        },
+        {
+          "hash": "0b0390398bddeb49b94d1fcf7a9ca095dbd824a3cbe58e893402646893220134",
+          "side": "right"
+        },
+        {
+          "hash": "0b79f46b0854a5503abf1eb3c7d2c7138a2307e5ca708b4b277495d6313be3a2",
+          "side": "left"
+        },
+        {
+          "hash": "f77207feb66cbb985d3248b2f3f694f4085d0383eb20767afa0348ad95d1121d",
+          "side": "right"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CONV-fixture_lme_phone_003-openjev-openjev-agent",
+        "kind": "ConversationFCO",
+        "payload": {
+          "agent_id": "openjev-agent",
+          "fco_candidate_sha256": "4538d58654fb482dc85eaf81870cbb65fb98f70b95d5de4b42fefae691f6de37",
+          "model_provider": "openjev",
+          "observed_outcome": "FAIL",
+          "scenario_id": "fixture_lme_phone_003",
+          "total_tokens": 32
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22444946462d666978747572655f6c6d655f62696b655f3030322d6c69717569642d6c69717569642d6167656e74222c226b696e64223a224c6f6e674d656d4576616c4469666646434f222c227061796c6f6164223a7b2266636f5f63616e6469646174655f736861323536223a2230633362303066663037313339653834323366666365663334363566653334613966376532346665393239376637343365613764356238623432303136303532222c226d61746368223a7b2262656e656669745f756e697473223a2230222c226578616374223a66616c73652c22676f6c645f696e5f63616e646964617465223a66616c73652c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22746f6b656e5f6f7665726c6170223a2230227d2c226d6f64656c5f70726f7669646572223a226c6971756964222c227363656e6172696f5f6964223a22666978747572655f6c6d655f62696b655f303032227d7d",
+      "leaf": "76f835a7fd7715f59ad79b16abc3d20b6a7c0acfc64dd3d8b882017883ae1be8",
+      "proof": [
+        {
+          "hash": "95713eba8ab1151ba27ede580027bef25d7b757b46b1ce07a86c50ebebe07ec4",
+          "side": "right"
+        },
+        {
+          "hash": "29b309fc81fa9c28fa9d39f27f922481aa8b85c3dd34c6a7586d84a885dc9a1b",
+          "side": "left"
+        },
+        {
+          "hash": "0b79f46b0854a5503abf1eb3c7d2c7138a2307e5ca708b4b277495d6313be3a2",
+          "side": "left"
+        },
+        {
+          "hash": "f77207feb66cbb985d3248b2f3f694f4085d0383eb20767afa0348ad95d1121d",
+          "side": "right"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "DIFF-fixture_lme_bike_002-liquid-liquid-agent",
+        "kind": "LongMemEvalDiffFCO",
+        "payload": {
+          "fco_candidate_sha256": "0c3b00ff07139e8423ffcef3465fe34a9f7e24fe9297f743ea7d5b8b42016052",
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "NOT_TESTED",
+            "token_overlap": "0"
+          },
+          "model_provider": "liquid",
+          "scenario_id": "fixture_lme_bike_002"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22444946462d666978747572655f6c6d655f62696b655f3030322d6f70656e6a65762d6f70656e6a65762d6167656e74222c226b696e64223a224c6f6e674d656d4576616c4469666646434f222c227061796c6f6164223a7b2266636f5f63616e6469646174655f736861323536223a2234646563383462336261353863656538326364303131313038346336393264316334383263343166636465303433653061616164396366613830343761336165222c226d61746368223a7b2262656e656669745f756e697473223a2230222c226578616374223a66616c73652c22676f6c645f696e5f63616e646964617465223a66616c73652c226f627365727665645f6f7574636f6d65223a224641494c222c22746f6b656e5f6f7665726c6170223a2230227d2c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c227363656e6172696f5f6964223a22666978747572655f6c6d655f62696b655f303032227d7d",
+      "leaf": "95713eba8ab1151ba27ede580027bef25d7b757b46b1ce07a86c50ebebe07ec4",
+      "proof": [
+        {
+          "hash": "76f835a7fd7715f59ad79b16abc3d20b6a7c0acfc64dd3d8b882017883ae1be8",
+          "side": "left"
+        },
+        {
+          "hash": "29b309fc81fa9c28fa9d39f27f922481aa8b85c3dd34c6a7586d84a885dc9a1b",
+          "side": "left"
+        },
+        {
+          "hash": "0b79f46b0854a5503abf1eb3c7d2c7138a2307e5ca708b4b277495d6313be3a2",
+          "side": "left"
+        },
+        {
+          "hash": "f77207feb66cbb985d3248b2f3f694f4085d0383eb20767afa0348ad95d1121d",
+          "side": "right"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "DIFF-fixture_lme_bike_002-openjev-openjev-agent",
+        "kind": "LongMemEvalDiffFCO",
+        "payload": {
+          "fco_candidate_sha256": "4dec84b3ba58cee82cd0111084c692d1c482c41fcde043e0aaad9cfa8047a3ae",
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "FAIL",
+            "token_overlap": "0"
+          },
+          "model_provider": "openjev",
+          "scenario_id": "fixture_lme_bike_002"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22444946462d666978747572655f6c6d655f6770735f3030312d6c69717569642d6c69717569642d6167656e74222c226b696e64223a224c6f6e674d656d4576616c4469666646434f222c227061796c6f6164223a7b2266636f5f63616e6469646174655f736861323536223a2231396331396161333831373563663263333832343832663064303966343733316363336364633031613363373334303935326632316464326437366437633331222c226d61746368223a7b2262656e656669745f756e697473223a2230222c226578616374223a66616c73652c22676f6c645f696e5f63616e646964617465223a66616c73652c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22746f6b656e5f6f7665726c6170223a2230227d2c226d6f64656c5f70726f7669646572223a226c6971756964222c227363656e6172696f5f6964223a22666978747572655f6c6d655f6770735f303031227d7d",
+      "leaf": "8a3172fe872c36848ac491a5ad5ecac70720f3f4cb86b0c78d40069dc7b7f086",
+      "proof": [
+        {
+          "hash": "2361e243a5c94da2630887351c17b7dd78fa5d874d308dee6bea96657ca56fc4",
+          "side": "right"
+        },
+        {
+          "hash": "67c79d441e2166c0eb34bbb1198ed51c0d805d5450eb0af4ca3496bdc567d389",
+          "side": "right"
+        },
+        {
+          "hash": "9356073457ceabc88d63ebba853f8142a1022d9fe5d5db94593480d38c701baa",
+          "side": "right"
+        },
+        {
+          "hash": "65272a69212d04b0b2784951bfc8af665f3ccfd54303aa0057aeca59e856a9cd",
+          "side": "left"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "DIFF-fixture_lme_gps_001-liquid-liquid-agent",
+        "kind": "LongMemEvalDiffFCO",
+        "payload": {
+          "fco_candidate_sha256": "19c19aa38175cf2c382482f0d09f4731cc3cdc01a3c7340952f21dd2d76d7c31",
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "NOT_TESTED",
+            "token_overlap": "0"
+          },
+          "model_provider": "liquid",
+          "scenario_id": "fixture_lme_gps_001"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22444946462d666978747572655f6c6d655f6770735f3030312d6f70656e6a65762d6f70656e6a65762d6167656e74222c226b696e64223a224c6f6e674d656d4576616c4469666646434f222c227061796c6f6164223a7b2266636f5f63616e6469646174655f736861323536223a2235333435653433346535613734643033346634383665623461303533366431316534613738363866626138303761636133386266303737373331636536346138222c226d61746368223a7b2262656e656669745f756e697473223a2230222c226578616374223a66616c73652c22676f6c645f696e5f63616e646964617465223a66616c73652c226f627365727665645f6f7574636f6d65223a224641494c222c22746f6b656e5f6f7665726c6170223a2230227d2c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c227363656e6172696f5f6964223a22666978747572655f6c6d655f6770735f303031227d7d",
+      "leaf": "2361e243a5c94da2630887351c17b7dd78fa5d874d308dee6bea96657ca56fc4",
+      "proof": [
+        {
+          "hash": "8a3172fe872c36848ac491a5ad5ecac70720f3f4cb86b0c78d40069dc7b7f086",
+          "side": "left"
+        },
+        {
+          "hash": "67c79d441e2166c0eb34bbb1198ed51c0d805d5450eb0af4ca3496bdc567d389",
+          "side": "right"
+        },
+        {
+          "hash": "9356073457ceabc88d63ebba853f8142a1022d9fe5d5db94593480d38c701baa",
+          "side": "right"
+        },
+        {
+          "hash": "65272a69212d04b0b2784951bfc8af665f3ccfd54303aa0057aeca59e856a9cd",
+          "side": "left"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "DIFF-fixture_lme_gps_001-openjev-openjev-agent",
+        "kind": "LongMemEvalDiffFCO",
+        "payload": {
+          "fco_candidate_sha256": "5345e434e5a74d034f486eb4a0536d11e4a7868fba807aca38bf077731ce64a8",
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "FAIL",
+            "token_overlap": "0"
+          },
+          "model_provider": "openjev",
+          "scenario_id": "fixture_lme_gps_001"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22444946462d666978747572655f6c6d655f70686f6e655f3030332d6c69717569642d6c69717569642d6167656e74222c226b696e64223a224c6f6e674d656d4576616c4469666646434f222c227061796c6f6164223a7b2266636f5f63616e6469646174655f736861323536223a2237626361363466323366343037366535343966393033636635336130353866306263646630643562306563333363383461633464353838333830373761343664222c226d61746368223a7b2262656e656669745f756e697473223a2230222c226578616374223a66616c73652c22676f6c645f696e5f63616e646964617465223a66616c73652c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22746f6b656e5f6f7665726c6170223a2230227d2c226d6f64656c5f70726f7669646572223a226c6971756964222c227363656e6172696f5f6964223a22666978747572655f6c6d655f70686f6e655f303033227d7d",
+      "leaf": "385354ee46b311435ac5d87505ff055da455ffb14395c721ce7d56e5118acdb5",
+      "proof": [
+        {
+          "hash": "ca6b583fce8ca4b521ca1aa05d402fcc991c458c67fea37a3c23d295e3a98fe9",
+          "side": "right"
+        },
+        {
+          "hash": "8d227ad3bbe2ab50e695ec7ca8f4a37c5cb837418f228e41fe9ca67e540b4988",
+          "side": "left"
+        },
+        {
+          "hash": "9356073457ceabc88d63ebba853f8142a1022d9fe5d5db94593480d38c701baa",
+          "side": "right"
+        },
+        {
+          "hash": "65272a69212d04b0b2784951bfc8af665f3ccfd54303aa0057aeca59e856a9cd",
+          "side": "left"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "DIFF-fixture_lme_phone_003-liquid-liquid-agent",
+        "kind": "LongMemEvalDiffFCO",
+        "payload": {
+          "fco_candidate_sha256": "7bca64f23f4076e549f903cf53a058f0bcdf0d5b0ec33c84ac4d58838077a46d",
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "NOT_TESTED",
+            "token_overlap": "0"
+          },
+          "model_provider": "liquid",
+          "scenario_id": "fixture_lme_phone_003"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22444946462d666978747572655f6c6d655f70686f6e655f3030332d6f70656e6a65762d6f70656e6a65762d6167656e74222c226b696e64223a224c6f6e674d656d4576616c4469666646434f222c227061796c6f6164223a7b2266636f5f63616e6469646174655f736861323536223a2266616135343365323162626539356131383662343361353037313037653031636537366336663262653332373064666164363862613039386133366665376332222c226d61746368223a7b2262656e656669745f756e697473223a2230222c226578616374223a66616c73652c22676f6c645f696e5f63616e646964617465223a66616c73652c226f627365727665645f6f7574636f6d65223a224641494c222c22746f6b656e5f6f7665726c6170223a2230227d2c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c227363656e6172696f5f6964223a22666978747572655f6c6d655f70686f6e655f303033227d7d",
+      "leaf": "ca6b583fce8ca4b521ca1aa05d402fcc991c458c67fea37a3c23d295e3a98fe9",
+      "proof": [
+        {
+          "hash": "385354ee46b311435ac5d87505ff055da455ffb14395c721ce7d56e5118acdb5",
+          "side": "left"
+        },
+        {
+          "hash": "8d227ad3bbe2ab50e695ec7ca8f4a37c5cb837418f228e41fe9ca67e540b4988",
+          "side": "left"
+        },
+        {
+          "hash": "9356073457ceabc88d63ebba853f8142a1022d9fe5d5db94593480d38c701baa",
+          "side": "right"
+        },
+        {
+          "hash": "65272a69212d04b0b2784951bfc8af665f3ccfd54303aa0057aeca59e856a9cd",
+          "side": "left"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "DIFF-fixture_lme_phone_003-openjev-openjev-agent",
+        "kind": "LongMemEvalDiffFCO",
+        "payload": {
+          "fco_candidate_sha256": "faa543e21bbe95a186b43a507107e01ce76c6f2be3270dfad68ba098a36fe7c2",
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "FAIL",
+            "token_overlap": "0"
+          },
+          "model_provider": "openjev",
+          "scenario_id": "fixture_lme_phone_003"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d303030302d6c69717569642d666978747572655f6c6d655f6770735f303031222c226b696e64223a22546f6b656e524f49222c227061796c6f6164223a7b226167656e745f6964223a226c69717569642d6167656e74222c22636f6e766572736174696f6e5f66636f5f6964223a22434f4e562d666978747572655f6c6d655f6770735f3030312d6c69717569642d6c69717569642d6167656e74222c22646966665f66636f5f6964223a22444946462d666978747572655f6c6d655f6770735f3030312d6c69717569642d6c69717569642d6167656e74222c226d6f64656c5f70726f7669646572223a226c6971756964222c227363656e6172696f5f6964223a22666978747572655f6c6d655f6770735f303031222c22746f6b656e5f726f69223a7b2262656e656669745f7065725f746f6b656e223a22302e303030303030222c2262656e656669745f756e697473223a2230222c22636f73745f756e697473223a22302e3030303030333330222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a222d312e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f695f7065725f746f6b656e5f6261736973223a226167677265676174655f726f695f7370726561645f6163726f73735f746f6b656e735f7669615f756e69745f636f7374222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470222c22746f74616c5f746f6b656e73223a3131302c22756e69745f636f73745f7065725f746f6b656e223a2233452d38227d7d7d",
+      "leaf": "0ac17fa5dfd4e2e3c514f9b6574ed329a812e2a0eb7a870c21e5276251c67e71",
+      "proof": [
+        {
+          "hash": "05e7d00358d6dbeca30527b612f9b4b719fac95d09c227dabe4e5b9fae0a99b6",
+          "side": "right"
+        },
+        {
+          "hash": "8946ce1ca5285fc96173190106e61fdf2af681ee4cb90393d65eb1b0bdb1adf5",
+          "side": "right"
+        },
+        {
+          "hash": "6dcbbd994d7470d0889be019a75de84cf3e6ed5e51f06d4fe68cc2726928f971",
+          "side": "left"
+        },
+        {
+          "hash": "65272a69212d04b0b2784951bfc8af665f3ccfd54303aa0057aeca59e856a9cd",
+          "side": "left"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ROI-0000-liquid-fixture_lme_gps_001",
+        "kind": "TokenROI",
+        "payload": {
+          "agent_id": "liquid-agent",
+          "conversation_fco_id": "CONV-fixture_lme_gps_001-liquid-liquid-agent",
+          "diff_fco_id": "DIFF-fixture_lme_gps_001-liquid-liquid-agent",
+          "model_provider": "liquid",
+          "scenario_id": "fixture_lme_gps_001",
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "0.00000330",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 110,
+            "unit_cost_per_token": "3E-8"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d303030312d6f70656e6a65762d666978747572655f6c6d655f6770735f303031222c226b696e64223a22546f6b656e524f49222c227061796c6f6164223a7b226167656e745f6964223a226f70656e6a65762d6167656e74222c22636f6e766572736174696f6e5f66636f5f6964223a22434f4e562d666978747572655f6c6d655f6770735f3030312d6f70656e6a65762d6f70656e6a65762d6167656e74222c22646966665f66636f5f6964223a22444946462d666978747572655f6c6d655f6770735f3030312d6f70656e6a65762d6f70656e6a65762d6167656e74222c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c227363656e6172696f5f6964223a22666978747572655f6c6d655f6770735f303031222c22746f6b656e5f726f69223a7b2262656e656669745f7065725f746f6b656e223a22302e303030303030222c2262656e656669745f756e697473223a2230222c22636f73745f756e697473223a22372e32452d37222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a222d312e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f695f7065725f746f6b656e5f6261736973223a226167677265676174655f726f695f7370726561645f6163726f73735f746f6b656e735f7669615f756e69745f636f7374222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470222c22746f74616c5f746f6b656e73223a33362c22756e69745f636f73745f7065725f746f6b656e223a2232452d38227d7d7d",
+      "leaf": "05e7d00358d6dbeca30527b612f9b4b719fac95d09c227dabe4e5b9fae0a99b6",
+      "proof": [
+        {
+          "hash": "0ac17fa5dfd4e2e3c514f9b6574ed329a812e2a0eb7a870c21e5276251c67e71",
+          "side": "left"
+        },
+        {
+          "hash": "8946ce1ca5285fc96173190106e61fdf2af681ee4cb90393d65eb1b0bdb1adf5",
+          "side": "right"
+        },
+        {
+          "hash": "6dcbbd994d7470d0889be019a75de84cf3e6ed5e51f06d4fe68cc2726928f971",
+          "side": "left"
+        },
+        {
+          "hash": "65272a69212d04b0b2784951bfc8af665f3ccfd54303aa0057aeca59e856a9cd",
+          "side": "left"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ROI-0001-openjev-fixture_lme_gps_001",
+        "kind": "TokenROI",
+        "payload": {
+          "agent_id": "openjev-agent",
+          "conversation_fco_id": "CONV-fixture_lme_gps_001-openjev-openjev-agent",
+          "diff_fco_id": "DIFF-fixture_lme_gps_001-openjev-openjev-agent",
+          "model_provider": "openjev",
+          "scenario_id": "fixture_lme_gps_001",
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "7.2E-7",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 36,
+            "unit_cost_per_token": "2E-8"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d303030322d6c69717569642d666978747572655f6c6d655f62696b655f303032222c226b696e64223a22546f6b656e524f49222c227061796c6f6164223a7b226167656e745f6964223a226c69717569642d6167656e74222c22636f6e766572736174696f6e5f66636f5f6964223a22434f4e562d666978747572655f6c6d655f62696b655f3030322d6c69717569642d6c69717569642d6167656e74222c22646966665f66636f5f6964223a22444946462d666978747572655f6c6d655f62696b655f3030322d6c69717569642d6c69717569642d6167656e74222c226d6f64656c5f70726f7669646572223a226c6971756964222c227363656e6172696f5f6964223a22666978747572655f6c6d655f62696b655f303032222c22746f6b656e5f726f69223a7b2262656e656669745f7065725f746f6b656e223a22302e303030303030222c2262656e656669745f756e697473223a2230222c22636f73745f756e697473223a22302e3030303030323736222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a222d312e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f695f7065725f746f6b656e5f6261736973223a226167677265676174655f726f695f7370726561645f6163726f73735f746f6b656e735f7669615f756e69745f636f7374222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470222c22746f74616c5f746f6b656e73223a39322c22756e69745f636f73745f7065725f746f6b656e223a2233452d38227d7d7d",
+      "leaf": "d017ac11cf102981027c0bffe3dc589c97c05c38c3bfaf9bd011089abe7c996f",
+      "proof": [
+        {
+          "hash": "9c365c09ca31b5c7fc2b6c6ada4f7f4b0718e145b5b2c12a0d365a9895e41474",
+          "side": "right"
+        },
+        {
+          "hash": "6b75dd1cc229fdcc635272e07537d5d9c20e7eb7cea91f7772350f1197cb955c",
+          "side": "left"
+        },
+        {
+          "hash": "6dcbbd994d7470d0889be019a75de84cf3e6ed5e51f06d4fe68cc2726928f971",
+          "side": "left"
+        },
+        {
+          "hash": "65272a69212d04b0b2784951bfc8af665f3ccfd54303aa0057aeca59e856a9cd",
+          "side": "left"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ROI-0002-liquid-fixture_lme_bike_002",
+        "kind": "TokenROI",
+        "payload": {
+          "agent_id": "liquid-agent",
+          "conversation_fco_id": "CONV-fixture_lme_bike_002-liquid-liquid-agent",
+          "diff_fco_id": "DIFF-fixture_lme_bike_002-liquid-liquid-agent",
+          "model_provider": "liquid",
+          "scenario_id": "fixture_lme_bike_002",
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "0.00000276",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 92,
+            "unit_cost_per_token": "3E-8"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d303030332d6f70656e6a65762d666978747572655f6c6d655f62696b655f303032222c226b696e64223a22546f6b656e524f49222c227061796c6f6164223a7b226167656e745f6964223a226f70656e6a65762d6167656e74222c22636f6e766572736174696f6e5f66636f5f6964223a22434f4e562d666978747572655f6c6d655f62696b655f3030322d6f70656e6a65762d6f70656e6a65762d6167656e74222c22646966665f66636f5f6964223a22444946462d666978747572655f6c6d655f62696b655f3030322d6f70656e6a65762d6f70656e6a65762d6167656e74222c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c227363656e6172696f5f6964223a22666978747572655f6c6d655f62696b655f303032222c22746f6b656e5f726f69223a7b2262656e656669745f7065725f746f6b656e223a22302e303030303030222c2262656e656669745f756e697473223a2230222c22636f73745f756e697473223a22352e36452d37222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a222d312e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f695f7065725f746f6b656e5f6261736973223a226167677265676174655f726f695f7370726561645f6163726f73735f746f6b656e735f7669615f756e69745f636f7374222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470222c22746f74616c5f746f6b656e73223a32382c22756e69745f636f73745f7065725f746f6b656e223a2232452d38227d7d7d",
+      "leaf": "9c365c09ca31b5c7fc2b6c6ada4f7f4b0718e145b5b2c12a0d365a9895e41474",
+      "proof": [
+        {
+          "hash": "d017ac11cf102981027c0bffe3dc589c97c05c38c3bfaf9bd011089abe7c996f",
+          "side": "left"
+        },
+        {
+          "hash": "6b75dd1cc229fdcc635272e07537d5d9c20e7eb7cea91f7772350f1197cb955c",
+          "side": "left"
+        },
+        {
+          "hash": "6dcbbd994d7470d0889be019a75de84cf3e6ed5e51f06d4fe68cc2726928f971",
+          "side": "left"
+        },
+        {
+          "hash": "65272a69212d04b0b2784951bfc8af665f3ccfd54303aa0057aeca59e856a9cd",
+          "side": "left"
+        },
+        {
+          "hash": "0fdffedafb8fb4fdaecd7c5312535ff2c7e83b8810198326cedb3797b48e3801",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ROI-0003-openjev-fixture_lme_bike_002",
+        "kind": "TokenROI",
+        "payload": {
+          "agent_id": "openjev-agent",
+          "conversation_fco_id": "CONV-fixture_lme_bike_002-openjev-openjev-agent",
+          "diff_fco_id": "DIFF-fixture_lme_bike_002-openjev-openjev-agent",
+          "model_provider": "openjev",
+          "scenario_id": "fixture_lme_bike_002",
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "5.6E-7",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 28,
+            "unit_cost_per_token": "2E-8"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d303030342d6c69717569642d666978747572655f6c6d655f70686f6e655f303033222c226b696e64223a22546f6b656e524f49222c227061796c6f6164223a7b226167656e745f6964223a226c69717569642d6167656e74222c22636f6e766572736174696f6e5f66636f5f6964223a22434f4e562d666978747572655f6c6d655f70686f6e655f3030332d6c69717569642d6c69717569642d6167656e74222c22646966665f66636f5f6964223a22444946462d666978747572655f6c6d655f70686f6e655f3030332d6c69717569642d6c69717569642d6167656e74222c226d6f64656c5f70726f7669646572223a226c6971756964222c227363656e6172696f5f6964223a22666978747572655f6c6d655f70686f6e655f303033222c22746f6b656e5f726f69223a7b2262656e656669745f7065725f746f6b656e223a22302e303030303030222c2262656e656669745f756e697473223a2230222c22636f73745f756e697473223a22302e3030303030323538222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a222d312e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f695f7065725f746f6b656e5f6261736973223a226167677265676174655f726f695f7370726561645f6163726f73735f746f6b656e735f7669615f756e69745f636f7374222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470222c22746f74616c5f746f6b656e73223a38362c22756e69745f636f73745f7065725f746f6b656e223a2233452d38227d7d7d",
+      "leaf": "3556408d7a1e1fdb9e73e48578dd2fc2fea0542275d74c5f8a93f15c76b0629a",
+      "proof": [
+        {
+          "hash": "c6d4a5717aa89a08b70e7234e6f87cee147d7e62f175768e0c60f712b75a17a7",
+          "side": "right"
+        },
+        {
+          "hash": "41bef6fa8ecc66122ddc889c0f0fca01209fb9baf6c7bd807832c58924fb37f7",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "ROI-0004-liquid-fixture_lme_phone_003",
+        "kind": "TokenROI",
+        "payload": {
+          "agent_id": "liquid-agent",
+          "conversation_fco_id": "CONV-fixture_lme_phone_003-liquid-liquid-agent",
+          "diff_fco_id": "DIFF-fixture_lme_phone_003-liquid-liquid-agent",
+          "model_provider": "liquid",
+          "scenario_id": "fixture_lme_phone_003",
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "0.00000258",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 86,
+            "unit_cost_per_token": "3E-8"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d303030352d6f70656e6a65762d666978747572655f6c6d655f70686f6e655f303033222c226b696e64223a22546f6b656e524f49222c227061796c6f6164223a7b226167656e745f6964223a226f70656e6a65762d6167656e74222c22636f6e766572736174696f6e5f66636f5f6964223a22434f4e562d666978747572655f6c6d655f70686f6e655f3030332d6f70656e6a65762d6f70656e6a65762d6167656e74222c22646966665f66636f5f6964223a22444946462d666978747572655f6c6d655f70686f6e655f3030332d6f70656e6a65762d6f70656e6a65762d6167656e74222c226d6f64656c5f70726f7669646572223a226f70656e6a6576222c227363656e6172696f5f6964223a22666978747572655f6c6d655f70686f6e655f303033222c22746f6b656e5f726f69223a7b2262656e656669745f7065725f746f6b656e223a22302e303030303030222c2262656e656669745f756e697473223a2230222c22636f73745f756e697473223a22362e34452d37222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a222d312e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f695f7065725f746f6b656e5f6261736973223a226167677265676174655f726f695f7370726561645f6163726f73735f746f6b656e735f7669615f756e69745f636f7374222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470222c22746f74616c5f746f6b656e73223a33322c22756e69745f636f73745f7065725f746f6b656e223a2232452d38227d7d7d",
+      "leaf": "c6d4a5717aa89a08b70e7234e6f87cee147d7e62f175768e0c60f712b75a17a7",
+      "proof": [
+        {
+          "hash": "3556408d7a1e1fdb9e73e48578dd2fc2fea0542275d74c5f8a93f15c76b0629a",
+          "side": "left"
+        },
+        {
+          "hash": "41bef6fa8ecc66122ddc889c0f0fca01209fb9baf6c7bd807832c58924fb37f7",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "ROI-0005-openjev-fixture_lme_phone_003",
+        "kind": "TokenROI",
+        "payload": {
+          "agent_id": "openjev-agent",
+          "conversation_fco_id": "CONV-fixture_lme_phone_003-openjev-openjev-agent",
+          "diff_fco_id": "DIFF-fixture_lme_phone_003-openjev-openjev-agent",
+          "model_provider": "openjev",
+          "scenario_id": "fixture_lme_phone_003",
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "6.4E-7",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 32,
+            "unit_cost_per_token": "2E-8"
+          }
+        }
+      }
+    }
+  ],
+  "meaning": "Liquid AI + OpenJev conversations as FCOs; LongMemEval answer-diff FCOs; per-token ROI per model/agent/scenario; Qwen 2.5 retired; mmr NOT_COMMITTED",
+  "mmr": "NOT_COMMITTED",
+  "models_baseline": [
+    "liquid",
+    "openjev"
+  ],
+  "parent": "SNEAK-020",
+  "qwen25_retired": true,
+  "root": "fec8ca93aa7f7638c881a6627cb729cd86c651680801e60505e7b1851653ced7",
+  "scenarios": [
+    {
+      "models": {
+        "liquid": {
+          "conversation_fco": "CONV-fixture_lme_gps_001-liquid-liquid-agent",
+          "diff_fco": "DIFF-fixture_lme_gps_001-liquid-liquid-agent",
+          "live": false,
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "NOT_TESTED",
+            "token_overlap": "0"
+          },
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "0.00000330",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 110,
+            "unit_cost_per_token": "3E-8"
+          }
+        },
+        "openjev": {
+          "conversation_fco": "CONV-fixture_lme_gps_001-openjev-openjev-agent",
+          "diff_fco": "DIFF-fixture_lme_gps_001-openjev-openjev-agent",
+          "judged_liquid_candidate": false,
+          "live": false,
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "FAIL",
+            "token_overlap": "0"
+          },
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "7.2E-7",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 36,
+            "unit_cost_per_token": "2E-8"
+          }
+        }
+      },
+      "scenario_id": "fixture_lme_gps_001"
+    },
+    {
+      "models": {
+        "liquid": {
+          "conversation_fco": "CONV-fixture_lme_bike_002-liquid-liquid-agent",
+          "diff_fco": "DIFF-fixture_lme_bike_002-liquid-liquid-agent",
+          "live": false,
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "NOT_TESTED",
+            "token_overlap": "0"
+          },
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "0.00000276",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 92,
+            "unit_cost_per_token": "3E-8"
+          }
+        },
+        "openjev": {
+          "conversation_fco": "CONV-fixture_lme_bike_002-openjev-openjev-agent",
+          "diff_fco": "DIFF-fixture_lme_bike_002-openjev-openjev-agent",
+          "judged_liquid_candidate": false,
+          "live": false,
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "FAIL",
+            "token_overlap": "0"
+          },
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "5.6E-7",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 28,
+            "unit_cost_per_token": "2E-8"
+          }
+        }
+      },
+      "scenario_id": "fixture_lme_bike_002"
+    },
+    {
+      "models": {
+        "liquid": {
+          "conversation_fco": "CONV-fixture_lme_phone_003-liquid-liquid-agent",
+          "diff_fco": "DIFF-fixture_lme_phone_003-liquid-liquid-agent",
+          "live": false,
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "NOT_TESTED",
+            "token_overlap": "0"
+          },
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "0.00000258",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 86,
+            "unit_cost_per_token": "3E-8"
+          }
+        },
+        "openjev": {
+          "conversation_fco": "CONV-fixture_lme_phone_003-openjev-openjev-agent",
+          "diff_fco": "DIFF-fixture_lme_phone_003-openjev-openjev-agent",
+          "judged_liquid_candidate": false,
+          "live": false,
+          "match": {
+            "benefit_units": "0",
+            "exact": false,
+            "gold_in_candidate": false,
+            "observed_outcome": "FAIL",
+            "token_overlap": "0"
+          },
+          "token_roi": {
+            "benefit_per_token": "0.000000",
+            "benefit_units": "0",
+            "cost_units": "6.4E-7",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+            "rounding": "ROUND_HALF_EVEN_to_6dp",
+            "total_tokens": 32,
+            "unit_cost_per_token": "2E-8"
+          }
+        }
+      },
+      "scenario_id": "fixture_lme_phone_003"
+    }
+  ],
+  "schema": "sneak.liquid-openjev-longmemeval.v1",
+  "signed": false,
+  "token_roi_rows": [
+    {
+      "agent_id": "liquid-agent",
+      "conversation_fco_id": "CONV-fixture_lme_gps_001-liquid-liquid-agent",
+      "diff_fco_id": "DIFF-fixture_lme_gps_001-liquid-liquid-agent",
+      "model_provider": "liquid",
+      "scenario_id": "fixture_lme_gps_001",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "0.00000330",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 110,
+        "unit_cost_per_token": "3E-8"
+      }
+    },
+    {
+      "agent_id": "openjev-agent",
+      "conversation_fco_id": "CONV-fixture_lme_gps_001-openjev-openjev-agent",
+      "diff_fco_id": "DIFF-fixture_lme_gps_001-openjev-openjev-agent",
+      "model_provider": "openjev",
+      "scenario_id": "fixture_lme_gps_001",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "7.2E-7",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 36,
+        "unit_cost_per_token": "2E-8"
+      }
+    },
+    {
+      "agent_id": "liquid-agent",
+      "conversation_fco_id": "CONV-fixture_lme_bike_002-liquid-liquid-agent",
+      "diff_fco_id": "DIFF-fixture_lme_bike_002-liquid-liquid-agent",
+      "model_provider": "liquid",
+      "scenario_id": "fixture_lme_bike_002",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "0.00000276",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 92,
+        "unit_cost_per_token": "3E-8"
+      }
+    },
+    {
+      "agent_id": "openjev-agent",
+      "conversation_fco_id": "CONV-fixture_lme_bike_002-openjev-openjev-agent",
+      "diff_fco_id": "DIFF-fixture_lme_bike_002-openjev-openjev-agent",
+      "model_provider": "openjev",
+      "scenario_id": "fixture_lme_bike_002",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "5.6E-7",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 28,
+        "unit_cost_per_token": "2E-8"
+      }
+    },
+    {
+      "agent_id": "liquid-agent",
+      "conversation_fco_id": "CONV-fixture_lme_phone_003-liquid-liquid-agent",
+      "diff_fco_id": "DIFF-fixture_lme_phone_003-liquid-liquid-agent",
+      "model_provider": "liquid",
+      "scenario_id": "fixture_lme_phone_003",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "0.00000258",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 86,
+        "unit_cost_per_token": "3E-8"
+      }
+    },
+    {
+      "agent_id": "openjev-agent",
+      "conversation_fco_id": "CONV-fixture_lme_phone_003-openjev-openjev-agent",
+      "diff_fco_id": "DIFF-fixture_lme_phone_003-openjev-openjev-agent",
+      "model_provider": "openjev",
+      "scenario_id": "fixture_lme_phone_003",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "6.4E-7",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 32,
+        "unit_cost_per_token": "2E-8"
+      }
+    }
+  ]
+}

@@ -28,7 +28,7 @@ class MagicStudioProbeTests(unittest.TestCase):
                 return False
 
         with mock.patch("urllib.request.urlopen", return_value=Resp()):
-            r = ollama_generate("qwen2.5:0.5b")
+            r = ollama_generate("lfm2.5:1.2b-instruct")
         self.assertTrue(r["ok"])
         self.assertEqual(r["observed_outcome"], "PASS")
 

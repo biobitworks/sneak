@@ -1,0 +1,154 @@
+{
+  "artifact_digest": "d8db0cf60916b93a01319dd3c710914b786c10eb47c25d367de0f26fdf8412cb",
+  "candidate_root": "fec8ca93aa7f7638c881a6627cb729cd86c651680801e60505e7b1851653ced7",
+  "conversation_fco_count": 6,
+  "diff_fco_count": 6,
+  "fixture": "data/fixtures/longmemeval_oracle_sample.json",
+  "id": "SNEAK-021-LIQUID-OPENJEV-LONGMEMEVAL",
+  "liquid_available": false,
+  "meaning": "Each conversation is an FCO; each LongMemEval answer diff is an FCO; ROI shown per token for each model/agent/scenario",
+  "mmr": "NOT_COMMITTED",
+  "models_baseline": [
+    "liquid",
+    "openjev"
+  ],
+  "openjev_base": "https://api.codiv.ai/v1",
+  "parent": "SNEAK-020",
+  "qwen25_retired": true,
+  "scenario_count": 3,
+  "secrets": {
+    "env_overrides_present": [
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "file_exists": true,
+    "file_mode": "0o600",
+    "keys_present": [
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "parent_exists": true,
+    "parent_mode": "0o700",
+    "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+    "value_inspected": false
+  },
+  "signed": false,
+  "token_roi_rows": [
+    {
+      "agent_id": "liquid-agent",
+      "conversation_fco_id": "CONV-fixture_lme_gps_001-liquid-liquid-agent",
+      "diff_fco_id": "DIFF-fixture_lme_gps_001-liquid-liquid-agent",
+      "model_provider": "liquid",
+      "scenario_id": "fixture_lme_gps_001",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "0.00000330",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 110,
+        "unit_cost_per_token": "3E-8"
+      }
+    },
+    {
+      "agent_id": "openjev-agent",
+      "conversation_fco_id": "CONV-fixture_lme_gps_001-openjev-openjev-agent",
+      "diff_fco_id": "DIFF-fixture_lme_gps_001-openjev-openjev-agent",
+      "model_provider": "openjev",
+      "scenario_id": "fixture_lme_gps_001",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "7.2E-7",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 36,
+        "unit_cost_per_token": "2E-8"
+      }
+    },
+    {
+      "agent_id": "liquid-agent",
+      "conversation_fco_id": "CONV-fixture_lme_bike_002-liquid-liquid-agent",
+      "diff_fco_id": "DIFF-fixture_lme_bike_002-liquid-liquid-agent",
+      "model_provider": "liquid",
+      "scenario_id": "fixture_lme_bike_002",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "0.00000276",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 92,
+        "unit_cost_per_token": "3E-8"
+      }
+    },
+    {
+      "agent_id": "openjev-agent",
+      "conversation_fco_id": "CONV-fixture_lme_bike_002-openjev-openjev-agent",
+      "diff_fco_id": "DIFF-fixture_lme_bike_002-openjev-openjev-agent",
+      "model_provider": "openjev",
+      "scenario_id": "fixture_lme_bike_002",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "5.6E-7",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 28,
+        "unit_cost_per_token": "2E-8"
+      }
+    },
+    {
+      "agent_id": "liquid-agent",
+      "conversation_fco_id": "CONV-fixture_lme_phone_003-liquid-liquid-agent",
+      "diff_fco_id": "DIFF-fixture_lme_phone_003-liquid-liquid-agent",
+      "model_provider": "liquid",
+      "scenario_id": "fixture_lme_phone_003",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "0.00000258",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 86,
+        "unit_cost_per_token": "3E-8"
+      }
+    },
+    {
+      "agent_id": "openjev-agent",
+      "conversation_fco_id": "CONV-fixture_lme_phone_003-openjev-openjev-agent",
+      "diff_fco_id": "DIFF-fixture_lme_phone_003-openjev-openjev-agent",
+      "model_provider": "openjev",
+      "scenario_id": "fixture_lme_phone_003",
+      "token_roi": {
+        "benefit_per_token": "0.000000",
+        "benefit_units": "0",
+        "cost_units": "6.4E-7",
+        "observed_outcome": "COMPUTED",
+        "roi": "-1.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "roi_per_token_basis": "aggregate_roi_spread_across_tokens_via_unit_cost",
+        "rounding": "ROUND_HALF_EVEN_to_6dp",
+        "total_tokens": 32,
+        "unit_cost_per_token": "2E-8"
+      }
+    }
+  ]
+}

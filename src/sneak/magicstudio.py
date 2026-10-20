@@ -1,6 +1,7 @@
 """MagicStudio / Ollama probe helpers.
 
 Desktop Commander on magicSTUDIObox.local is the intended transport.
+Baseline models are Liquid AI LFM + OpenJev (Qwen 2.5 retired).
 This module never invents inference success: unreachable hosts stay NOT_TESTED.
 """
 
@@ -16,7 +17,9 @@ from typing import Any, Optional
 # From SNEAK-009 inventory
 MAGICSTUDIO_DEVICE_ID = "00925fd7-ab95-4c88-89a5-963739392fc2"
 MAGICSTUDIO_HOSTNAME = "magicSTUDIObox.local"
-BASELINE_MODELS = ("qwen2.5:0.5b", "qwen2.5:1.5b")
+# Ollama tag aliases if operators mirror Liquid/OpenJev locally — never Qwen 2.5.
+BASELINE_MODELS = ("lfm2.5:1.2b-instruct", "openjev:latest")
+RETIRED_MODELS = ("qwen2.5:0.5b", "qwen2.5:1.5b", "qwen2.5")
 
 
 def ollama_tags(base_url: str = "http://127.0.0.1:11434", timeout: float = 5.0) -> dict[str, Any]:
@@ -91,11 +94,14 @@ def probe_local_ollama(base_url: Optional[str] = None) -> dict[str, Any]:
     host = local_hostname()
     tags = ollama_tags(url)
     tests = []
+    retired_seen = []
     if tags.get("ok"):
         names = {m.get("name") for m in tags.get("models") or []}
+        for name in names:
+            if name and any(str(name).startswith(r) for r in RETIRED_MODELS):
+                retired_seen.append(name)
         for wanted in BASELINE_MODELS:
-            # allow tag variants
-            match = next((n for n in names if n == wanted or n.startswith(wanted.split(":")[0])), None)
+            match = next((n for n in names if n == wanted or (n and n.startswith(wanted.split(":")[0]))), None)
             if match is None:
                 tests.append(
                     {
@@ -114,6 +120,9 @@ def probe_local_ollama(base_url: Optional[str] = None) -> dict[str, Any]:
         "is_magicstudio": host.lower().startswith("magicstudio") or host == MAGICSTUDIO_HOSTNAME,
         "expected_device_id": MAGICSTUDIO_DEVICE_ID,
         "expected_hostname": MAGICSTUDIO_HOSTNAME,
+        "baseline_models": list(BASELINE_MODELS),
+        "retired_models_policy": list(RETIRED_MODELS),
+        "retired_models_present": retired_seen,
         "ollama": tags,
         "inference_tests": tests,
         "desktop_commander": {
@@ -125,7 +134,10 @@ def probe_local_ollama(base_url: Optional[str] = None) -> dict[str, Any]:
             if tags.get("ok") and any(t.get("ok") for t in tests)
             else ("PARTIAL" if tags.get("ok") else "NOT_TESTED")
         ),
-        "meaning": "Local Ollama probe only; not application acceptance or BAND Desktop proof",
+        "meaning": (
+            "Local Ollama probe for Liquid/OpenJev tags only; Qwen 2.5 retired; "
+            "not application acceptance or BAND Desktop proof"
+        ),
     }
 
 
@@ -135,7 +147,8 @@ echo "HOSTNAME=$(hostname)"
 echo "UNAME=$(uname -a)"
 command -v ollama >/dev/null && ollama list || echo "OLLAMA_CLI=MISSING"
 curl -fsS --max-time 5 http://127.0.0.1:11434/api/tags | head -c 4000 || echo "OLLAMA_HTTP=DOWN"
-for m in qwen2.5:0.5b qwen2.5:1.5b; do
+echo "POLICY=qwen2.5_retired_use_liquid_openjev"
+for m in lfm2.5:1.2b-instruct openjev:latest; do
   if ollama list 2>/dev/null | awk '{print $1}' | grep -qx "$m"; then
     out=$(ollama run "$m" "Reply with exactly: OLLAMA_OK" 2>/dev/null | tr -d '\n' | head -c 200 || true)
     echo "INFER_$m=$out"
