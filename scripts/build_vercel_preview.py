@@ -113,6 +113,9 @@ def generate(out: pathlib.Path = BUILD) -> dict:
         "heatmap.html": "heatmap.html",
         "heatmap.js": "static/heatmap.js",
         "heatmap.css": "static/heatmap.css",
+        "conversations.html": "conversations.html",
+        "conversations.js": "static/conversations.js",
+        "conversations.css": "static/conversations.css",
     }
     digest = {}
     for src, dest in mapping.items():
@@ -123,7 +126,7 @@ def generate(out: pathlib.Path = BUILD) -> dict:
             if b"LOCAL PREVIEW" not in payload:
                 raise ValueError("source preview marker unexpectedly changed")
             payload = payload.replace(b"LOCAL PREVIEW", b"PROTECTED VERCEL SNAPSHOT")
-            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
+            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
         target.write_bytes(payload)
         digest[dest] = sha256(payload)
     data_files = {"data/graph.json": projected, "data/audit.json": audit}
@@ -168,6 +171,18 @@ def generate(out: pathlib.Path = BUILD) -> dict:
     }
     (out / "EXPORT_MANIFEST.json").write_bytes(canonical(manifest))
     if out.resolve() == BUILD.resolve():
+        from scripts import sneak_conversation_ledger as conversations
+        conversations.write_snapshot()
+        bridge_path=REPO_ROOT/"receipts/conversations/SNEAK_CONVERSATION_COGNEE_BP001_20261020.json"
+        if bridge_path.is_file():
+            record=json.loads(bridge_path.read_text())
+            public={k:record[k] for k in (
+                "schema","id","parent_question_mmr_root","root_question_fco",
+                "updated_question_mmr","updated_question_merkle_root",
+                "write_status","recall_status","retrieved_entries","root_found",
+                "changed_action","scope","band_room_send","planner_consumed",
+                "quality_delta","live_model_mmr")}
+            (out/"data/conversation-cognee-bridge.json").write_bytes(canonical(public))
         from scripts import build_evidence_heatmap as heatmap
         heatmap.main()
         manifest = json.loads((out / "EXPORT_MANIFEST.json").read_text())
