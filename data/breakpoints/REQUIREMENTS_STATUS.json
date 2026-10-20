@@ -1,8 +1,8 @@
 {
  "summary": {
   "ledger_pass": true,
-  "entries": 98,
-  "global_root": "87440974369090a7769f4275fd688e8c05744b3ea75932bde21a37c6b65457e7",
+  "entries": 150,
+  "global_root": "d971b736134c1e532c21c6efaa85092d9f89b01e6112431bb942eb1aaca1a125",
   "counts": {
    "EXECUTED": 8,
    "FAILED": 1,
@@ -15,28 +15,28 @@
    "id": "BPR-01",
    "requirement": "Every conversation turn and step has a unique Merkle breakpoint",
    "state": "EXECUTED",
-   "evidence": "98 entries, all ids unique and recomputed; this chat session recorded (9 messages). BAND conversations not yet captured",
+   "evidence": "150 entries, all ids unique and recomputed; this chat session recorded (9 messages). BAND conversations not yet captured",
    "optional": false
   },
   {
    "id": "BPR-02",
    "requirement": "A breakpoint can be TRUE or FALSE",
    "state": "OBSERVED",
-   "evidence": "23 TRUE, 33 FALSE step breakpoints",
+   "evidence": "72 TRUE, 33 FALSE step breakpoints",
    "optional": false
   },
   {
    "id": "BPR-03",
    "requirement": "Each model has its own MMR",
    "state": "EXECUTED",
-   "evidence": "failure:F1 size 1; failure:F2 size 7; failure:F3 size 7; failure:F4 size 8; failure:F5 size 10; failure:F6 size 4; failure:F7 size 1; failure:F8 size 8; failure:F9 size 4; model:lfm2-1.2b-longevity-q4km:latest@3839bfb14341 size 16; model:longhorizon-liquid-230m:latest@fea00095c205 size 16; model:qwen2.5:0.5b@a8b0c5157701 size 16; model:qwen2.5:1.5b@65ec06548149 size 16",
+   "evidence": "agent-failures:claude size 15; agent-failures:codex-or-byron size 71; agent-failures:cursor size 7; failure:F1 size 1; failure:F2 size 7; failure:F3 size 7; failure:F4 size 8; failure:F5 size 10; failure:F6 size 4; failure:F7 size 1; failure:F8 size 8; failure:F9 size 4; model:lfm2-1.2b-longevity-q4km:latest@3839bfb14341 size 16; model:longhorizon-liquid-230m:latest@fea00095c205 size 16; model:qwen2.5:0.5b@a8b0c5157701 size 16; model:qwen2.5:1.5b@65ec06548149 size 16",
    "optional": false
   },
   {
    "id": "BPR-04",
    "requirement": "Each model is compared to the root question",
    "state": "EXECUTED",
-   "evidence": "10 root question(s): BP-c1fa73944d419246, BP-5592f180180f98fb, BP-8a6d9d45bd2a1545, BP-9553e5eb8b552fad, BP-a30685a49c2d9449, BP-def113f6828405f2, BP-2d211f7c649ed9c0, BP-3ac60ddd92338576, BP-d72873e20d736104, BP-b729c4021b34ff1d",
+   "evidence": "13 root question(s): BP-c1fa73944d419246, BP-5592f180180f98fb, BP-8a6d9d45bd2a1545, BP-9553e5eb8b552fad, BP-a30685a49c2d9449, BP-def113f6828405f2, BP-2d211f7c649ed9c0, BP-3ac60ddd92338576, BP-d72873e20d736104, BP-b729c4021b34ff1d, BP-9e4797400dd7ace6, BP-028fe7b94dba46ef, BP-ba8c5001147f5296",
    "optional": false
   },
   {
@@ -50,7 +50,7 @@
    "id": "BPR-06",
    "requirement": "Input is hashed",
    "state": "EXECUTED",
-   "evidence": "68 steps with input_sha256",
+   "evidence": "117 steps with input_sha256",
    "optional": false
   },
   {
@@ -99,7 +99,7 @@
    "id": "BPR-13",
    "requirement": "Cognee captures everything",
    "state": "NOT_TESTED",
-   "evidence": "75 memory item(s) queued, 0 sent (Cognee OSS not yet running)",
+   "evidence": "127 memory item(s) queued, 0 sent (Cognee OSS not yet running)",
    "optional": false
   },
   {
@@ -120,7 +120,7 @@
    "id": "BPR-16",
    "requirement": "Everything connects at the end (one project root)",
    "state": "EXECUTED",
-   "evidence": "global MMR root now 87440974369090a7769f4275fd688e8c05744b3ea75932bde21a37c6b65457e7 over 98 entries; final project root NOT_COMPUTED until project end",
+   "evidence": "global MMR root now d971b736134c1e532c21c6efaa85092d9f89b01e6112431bb942eb1aaca1a125 over 150 entries; final project root NOT_COMPUTED until project end",
    "optional": false
   },
   {
