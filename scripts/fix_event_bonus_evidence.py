@@ -7,6 +7,7 @@ EVIDENCE_PREPARED. Tool score scale remains 0–10 (10=clean); bonus is up to +1
 
 from __future__ import annotations
 
+import importlib.util
 import json
 import sys
 from pathlib import Path
@@ -20,9 +21,28 @@ from sneak.evidence import EvidenceStore, digest_payload, utc_now
 from sneak.lomo import matrix_connector_trials
 from sneak.lomo_score_pipeline import score_after_breakpoint
 from sneak.merkle import breakpoint_receipt, leaf, root
-from sneak.score import UPSTREAM_COMMIT, compute_score, score_with_coverage
+from sneak.score import (
+    UPSTREAM_COMMIT,
+    UPSTREAM_REPO,
+    compute_score,
+    score_with_coverage,
+)
 from sneak.scanner import digest_tree, live_scan_availability
 from sneak.secrets import export_to_environ, presence_receipt
+
+
+def _load_verify_javier_pin():
+    """Load Javier GitHub pin verifier from setup_and_review_score (same scripts/)."""
+    path = ROOT / "scripts" / "setup_and_review_score.py"
+    spec = importlib.util.spec_from_file_location("setup_and_review_score", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot_load_javier_pin_verifier:{path}")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.verify_javier_pin
+
+
+verify_javier_pin = _load_verify_javier_pin()
 
 
 BONUS_CRITERIA = [
@@ -69,6 +89,23 @@ def main() -> int:
     demo_digest = digest_tree(staged)
     avail = live_scan_availability()
     parent = "SNEAK-018"
+
+    # 0) Bind Javier GitHub app-security-score pin before any Snyk scoring
+    javier_pin = verify_javier_pin()
+    if not javier_pin.get("commit_matches_pin"):
+        print(
+            json.dumps(
+                {
+                    "error": "javier_pin_mismatch",
+                    "required": UPSTREAM_COMMIT,
+                    "observed": javier_pin.get("local_commit"),
+                    "repo": UPSTREAM_REPO,
+                },
+                indent=2,
+            ),
+            file=sys.stderr,
+        )
+        return 2
 
     # 1) LOMO trials → merkle breakpoints → Javier score bind + @Data + BAND
     data = DataBackend(store, live=True)
@@ -159,6 +196,16 @@ def main() -> int:
         "event_bonus_awarded": False,
         "max_event_bonus_percent": 10,
         "javier_pin": UPSTREAM_COMMIT,
+        "javier_repo": UPSTREAM_REPO,
+        "javier_pin_verification": {
+            "commit_matches_pin": javier_pin.get("commit_matches_pin"),
+            "local_commit": javier_pin.get("local_commit"),
+            "node_helper_match": javier_pin.get("node_helper_match"),
+            "upstream_repo": javier_pin.get("upstream_repo"),
+            "scale": javier_pin.get("scale"),
+            "event_bonus": javier_pin.get("event_bonus"),
+        },
+        "snyk_scoring_source": "javiergarza-snyk/app-security-score pin + local Python reimplementation",
         "tool_score_scale": "0-10",
         "tool_score_target": 10,
         "demo_digest": demo_digest,
@@ -172,6 +219,7 @@ def main() -> int:
         "observed_at": utc_now(),
         "meaning": (
             "Evidence package for judges regarding Snyk/+10% bonus path. "
+            "Snyk findings are scored with Javier GitHub app-security-score. "
             "Does not award the bonus. Live 10/10 still requires SNYK_TOKEN + full coverage."
         ),
     }
@@ -214,12 +262,20 @@ def main() -> int:
             f"Hashed message leaf={msg_leaf}\n"
             f"Hashed message root={msg_root}\n"
             f"Bonus evidence digest={package_digest}\n"
-            f"Javier pin={UPSTREAM_COMMIT}; LOMO×merkle breakpoints scored={len(scored_rows)}\n"
+            f"Javier GitHub app-security-score pin={UPSTREAM_COMMIT} "
+            f"(repo={UPSTREAM_REPO}; node_match={javier_pin.get('node_helper_match')})\n"
+            f"LOMO×merkle breakpoints={len(scored_rows)}: each binds a Javier score receipt "
+            f"(live Snyk={avail.get('observed_outcome')}; NOT_TESTED means no live SCA/SAST, "
+            "score still computed/rejected under coverage rules).\n"
             f"Staged app digest={demo_digest}\n"
-            f"Live Snyk={avail.get('observed_outcome')}; application 10/10 not claimed.\n"
+            "Application 10/10 not claimed. "
             "Claim status=EVIDENCE_PREPARED (NOT awarded). Judges may grant up to +10%.\n"
+            "Scoring source rule: docs/runbooks/APP_SECURITY_SCORE.md + "
+            "receipts/connectors/SNEAK-018_JAVIER_PIN.json + src/sneak/score.py "
+            f"(UPSTREAM_COMMIT={UPSTREAM_COMMIT}).\n"
             "Please: (1) ACK leaf/root, (2) independently recompute leaf from the fields above if you can, "
-            "(3) list any missing SNYK-001/002 evidence, (4) do not print secrets.\n"
+            "(3) note the scoring-source citation above (cannot read git from BAND), "
+            "(4) list any missing SNYK-001/002 evidence, (5) do not print secrets.\n"
             f"Cognee @Data receipts: lesson={data_lesson.external_id}, package={data_pkg.external_id}."
         )
 
@@ -239,6 +295,10 @@ def main() -> int:
                     "package_digest": package_digest,
                     "message_leaf": msg_leaf,
                     "message_root": msg_root,
+                    "javier_pin": UPSTREAM_COMMIT,
+                    "javier_repo": UPSTREAM_REPO,
+                    "javier_commit_matches_pin": javier_pin.get("commit_matches_pin"),
+                    "javier_node_helper_match": javier_pin.get("node_helper_match"),
                 },
             },
             {
@@ -318,7 +378,9 @@ def main() -> int:
         f"- Package digest: `{package_digest}`",
         f"- BAND message leaf/root: `{msg_leaf}`",
         f"- Event bonus claim: **EVIDENCE_PREPARED** (awarded=false)",
-        f"- Javier pin: `{UPSTREAM_COMMIT}`",
+        f"- Javier scoring source: `{UPSTREAM_REPO}` @ `{UPSTREAM_COMMIT}`",
+        f"- Javier pin match: **{javier_pin.get('commit_matches_pin')}** "
+        f"(node_helper_match={javier_pin.get('node_helper_match')})",
         f"- LOMO breakpoints scored: **{len(scored_rows)}**",
         f"- Live Snyk: **{avail.get('observed_outcome')}**",
         f"- Staged digest: `{demo_digest}`",

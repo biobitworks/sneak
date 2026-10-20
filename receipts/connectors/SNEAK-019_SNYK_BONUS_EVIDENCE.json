@@ -13,19 +13,19 @@
   "leaf_count": 5,
   "leaves": [
     {
-      "canonical_hex": "7b226964223a22534e45414b2d3031392d42414e44222c226b696e64223a2262616e645f726576696577222c227061796c6f6164223a7b2262616e645f6f7574636f6d65223a2250415353222c2262616e645f72656365697074223a2262616e645f6475616c5f6861726e6573735f6d6573736167652d643866643234633066343961222c226d6573736167655f6c656166223a2232316466613839343863666239313364363666373365353663383766653231366132646265363731616537653233626161353762623963653334663262386438222c226d6573736167655f726f6f74223a2232316466613839343863666239313364363666373365353663383766653231366132646265363731616537653233626161353762623963653334663262386438227d7d",
-      "leaf": "bd7652b08e7655f2747d3d91cc018e9266fbb13633f65ecbcc3b8ba5bb27e2cf",
+      "canonical_hex": "7b226964223a22534e45414b2d3031392d42414e44222c226b696e64223a2262616e645f726576696577222c227061796c6f6164223a7b2262616e645f6f7574636f6d65223a2250415353222c2262616e645f72656365697074223a2262616e645f6475616c5f6861726e6573735f6d6573736167652d636234323761326366393933222c226d6573736167655f6c656166223a2231316430353538616566306462346231663136316133653765306263306365306535316639346561643937636336353661366662366566306130616561313032222c226d6573736167655f726f6f74223a2231316430353538616566306462346231663136316133653765306263306365306535316639346561643937636336353661366662366566306130616561313032227d7d",
+      "leaf": "e06518d1d51b9e351129091359f15f923b08434d9c25d5c42185e7d6319cc33b",
       "proof": [
         {
           "hash": "5ba65e61d55f0ebdbeae10cc6220b44baa7e5a3079b555640af7c9ceb986c3a3",
           "side": "right"
         },
         {
-          "hash": "1042d560c37e06e2cb302e4c6d99dcf0dcea098252c913d11d4a4ff135b144de",
+          "hash": "7b90206dac6b34cf71d0239c9aaebcda37ac3dba29da9f5ed6e4b25eebeef558",
           "side": "right"
         },
         {
-          "hash": "a1c688dccbd1cac889c63fa83349fd7ca377008709ac899425d1dbf84381e7ce",
+          "hash": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
           "side": "right"
         }
       ],
@@ -34,9 +34,9 @@
         "kind": "band_review",
         "payload": {
           "band_outcome": "PASS",
-          "band_receipt": "band_dual_harness_message-d8fd24c0f49a",
-          "message_leaf": "21dfa8948cfb913d66f73e56c87fe216a2dbe671ae7e23baa57bb9ce34f2b8d8",
-          "message_root": "21dfa8948cfb913d66f73e56c87fe216a2dbe671ae7e23baa57bb9ce34f2b8d8"
+          "band_receipt": "band_dual_harness_message-cb427a2cf993",
+          "message_leaf": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+          "message_root": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102"
         }
       }
     },
@@ -45,15 +45,15 @@
       "leaf": "5ba65e61d55f0ebdbeae10cc6220b44baa7e5a3079b555640af7c9ceb986c3a3",
       "proof": [
         {
-          "hash": "bd7652b08e7655f2747d3d91cc018e9266fbb13633f65ecbcc3b8ba5bb27e2cf",
+          "hash": "e06518d1d51b9e351129091359f15f923b08434d9c25d5c42185e7d6319cc33b",
           "side": "left"
         },
         {
-          "hash": "1042d560c37e06e2cb302e4c6d99dcf0dcea098252c913d11d4a4ff135b144de",
+          "hash": "7b90206dac6b34cf71d0239c9aaebcda37ac3dba29da9f5ed6e4b25eebeef558",
           "side": "right"
         },
         {
-          "hash": "a1c688dccbd1cac889c63fa83349fd7ca377008709ac899425d1dbf84381e7ce",
+          "hash": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
           "side": "right"
         }
       ],
@@ -112,19 +112,19 @@
       }
     },
     {
-      "canonical_hex": "7b226964223a22534e45414b2d3031392d44415441222c226b696e64223a22636f676e65655f64617461222c227061796c6f6164223a7b226c6573736f6e5f6f7574636f6d65223a2250415353222c226c6573736f6e5f72656365697074223a22646174615f627265616b706f696e742d616136343964356439623032222c227061636b6167655f72656365697074223a22646174615f627265616b706f696e742d383164363062343237646234227d7d",
-      "leaf": "f5421dce4577fade16f74df42607a8fb724d2a876b8b1d19cb9273f079cd9e8a",
+      "canonical_hex": "7b226964223a22534e45414b2d3031392d44415441222c226b696e64223a22636f676e65655f64617461222c227061796c6f6164223a7b226c6573736f6e5f6f7574636f6d65223a2250415353222c226c6573736f6e5f72656365697074223a22646174615f627265616b706f696e742d366237393764343230323535222c227061636b6167655f72656365697074223a22646174615f627265616b706f696e742d316363616637353838636232227d7d",
+      "leaf": "126288bcc8cc7bbbe60d092b62e6523ce94d2278d5080ed1b438ff334e823743",
       "proof": [
         {
           "hash": "293d5b09040e721d8fb2b307467bfd3b4ce801521ba1ce5333585cb8ca08b9bc",
           "side": "right"
         },
         {
-          "hash": "2b47ba7b7f463c5586e97cbabdd77c8fd8c2c9ef2f6032b7473d13dd028c8f4b",
+          "hash": "f01f04ef40398f12c6434182fd558bd07eab18e45f27cbffc8b082983fc48f6b",
           "side": "left"
         },
         {
-          "hash": "a1c688dccbd1cac889c63fa83349fd7ca377008709ac899425d1dbf84381e7ce",
+          "hash": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
           "side": "right"
         }
       ],
@@ -133,8 +133,8 @@
         "kind": "cognee_data",
         "payload": {
           "lesson_outcome": "PASS",
-          "lesson_receipt": "data_breakpoint-aa649d5d9b02",
-          "package_receipt": "data_breakpoint-81d60b427db4"
+          "lesson_receipt": "data_breakpoint-6b797d420255",
+          "package_receipt": "data_breakpoint-1ccaf7588cb2"
         }
       }
     },
@@ -143,15 +143,15 @@
       "leaf": "293d5b09040e721d8fb2b307467bfd3b4ce801521ba1ce5333585cb8ca08b9bc",
       "proof": [
         {
-          "hash": "f5421dce4577fade16f74df42607a8fb724d2a876b8b1d19cb9273f079cd9e8a",
+          "hash": "126288bcc8cc7bbbe60d092b62e6523ce94d2278d5080ed1b438ff334e823743",
           "side": "left"
         },
         {
-          "hash": "2b47ba7b7f463c5586e97cbabdd77c8fd8c2c9ef2f6032b7473d13dd028c8f4b",
+          "hash": "f01f04ef40398f12c6434182fd558bd07eab18e45f27cbffc8b082983fc48f6b",
           "side": "left"
         },
         {
-          "hash": "a1c688dccbd1cac889c63fa83349fd7ca377008709ac899425d1dbf84381e7ce",
+          "hash": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
           "side": "right"
         }
       ],
@@ -221,11 +221,11 @@
       }
     },
     {
-      "canonical_hex": "7b226964223a22534e45414b2d3031392d53554d4d415259222c226b696e64223a22626f6e75735f73756d6d617279222c227061796c6f6164223a7b22627265616b706f696e7473223a382c226576656e745f626f6e75735f61776172646564223a66616c73652c226576656e745f626f6e75735f636c61696d223a2245564944454e43455f5052455041524544222c226c6976655f736e796b223a224e4f545f544553544544222c226d6573736167655f6c656166223a2232316466613839343863666239313364363666373365353663383766653231366132646265363731616537653233626161353762623963653334663262386438222c226d6573736167655f726f6f74223a2232316466613839343863666239313364363666373365353663383766653231366132646265363731616537653233626161353762623963653334663262386438222c227061636b6167655f646967657374223a2264653766306439626431643936333336653261373361396262396235613263366164306639316165353433353663343232346137666466656362656430383337227d7d",
-      "leaf": "a1c688dccbd1cac889c63fa83349fd7ca377008709ac899425d1dbf84381e7ce",
+      "canonical_hex": "7b226964223a22534e45414b2d3031392d53554d4d415259222c226b696e64223a22626f6e75735f73756d6d617279222c227061796c6f6164223a7b22627265616b706f696e7473223a382c226576656e745f626f6e75735f61776172646564223a66616c73652c226576656e745f626f6e75735f636c61696d223a2245564944454e43455f5052455041524544222c226a61766965725f636f6d6d69745f6d6174636865735f70696e223a747275652c226a61766965725f6e6f64655f68656c7065725f6d61746368223a747275652c226a61766965725f70696e223a2236653166323736303566653237386565643334376231306461623666333962333530316631343836222c226a61766965725f7265706f223a2268747470733a2f2f6769746875622e636f6d2f6a61766965726761727a612d736e796b2f6170702d73656375726974792d73636f7265222c226c6976655f736e796b223a224e4f545f544553544544222c226d6573736167655f6c656166223a2231316430353538616566306462346231663136316133653765306263306365306535316639346561643937636336353661366662366566306130616561313032222c226d6573736167655f726f6f74223a2231316430353538616566306462346231663136316133653765306263306365306535316639346561643937636336353661366662366566306130616561313032222c227061636b6167655f646967657374223a2235646532656431386432303631613735343764653734306435353332393435623565643165353535643930316339353438323262663863363034363965653365227d7d",
+      "leaf": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
       "proof": [
         {
-          "hash": "59a9557a3a12b2857dca87ae2569738b99490f4a15d8711eeb494d5c47b274cb",
+          "hash": "a126795d2772b33aaf131f091cb88e158a35c86dc5caa21b7a60b046f730e7f3",
           "side": "left"
         }
       ],
@@ -236,21 +236,25 @@
           "breakpoints": 8,
           "event_bonus_awarded": false,
           "event_bonus_claim": "EVIDENCE_PREPARED",
+          "javier_commit_matches_pin": true,
+          "javier_node_helper_match": true,
+          "javier_pin": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+          "javier_repo": "https://github.com/javiergarza-snyk/app-security-score",
           "live_snyk": "NOT_TESTED",
-          "message_leaf": "21dfa8948cfb913d66f73e56c87fe216a2dbe671ae7e23baa57bb9ce34f2b8d8",
-          "message_root": "21dfa8948cfb913d66f73e56c87fe216a2dbe671ae7e23baa57bb9ce34f2b8d8",
-          "package_digest": "de7f0d9bd1d96336e2a73a9bb9b5a2c6ad0f91ae54356c4224a7fdfecbed0837"
+          "message_leaf": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+          "message_root": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+          "package_digest": "5de2ed18d2061a7547de740d5532945b5ed1e555d901c954822bf8c60469ee3e"
         }
       }
     }
   ],
   "meaning": "Snyk event-bonus evidence chain via LOMO\u00d7merkle\u00d7Javier + BAND agent review; bonus not awarded by this receipt",
-  "message_leaf": "21dfa8948cfb913d66f73e56c87fe216a2dbe671ae7e23baa57bb9ce34f2b8d8",
-  "message_root": "21dfa8948cfb913d66f73e56c87fe216a2dbe671ae7e23baa57bb9ce34f2b8d8",
+  "message_leaf": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+  "message_root": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
   "mmr": "NOT_COMMITTED",
-  "package_digest": "de7f0d9bd1d96336e2a73a9bb9b5a2c6ad0f91ae54356c4224a7fdfecbed0837",
+  "package_digest": "5de2ed18d2061a7547de740d5532945b5ed1e555d901c954822bf8c60469ee3e",
   "parent": "SNEAK-018",
-  "root": "315aa0f05bc0ff7e0e5c3b6ea29b10939b623b89b60820c266a327d608f918a2",
+  "root": "e630fe1ef0be1d37eb10435aa0ef674119286f9310b48a0cfb72d0622774c097",
   "schema": "sneak.snyk-bonus-evidence.v1",
   "scored_breakpoints": [
     {
@@ -265,7 +269,7 @@
       "raw_score": 10.0,
       "removed_component": "band-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-2bb11362f7a9",
+      "score_receipt_id": "breakpoint_snyk_score-ab012344d379",
       "trial_id": "LOMO-CONN-01"
     },
     {
@@ -280,7 +284,7 @@
       "raw_score": 10.0,
       "removed_component": "band-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-ab844c06f04c",
+      "score_receipt_id": "breakpoint_snyk_score-3bcd53447a18",
       "trial_id": "LOMO-CONN-01"
     },
     {
@@ -295,7 +299,7 @@
       "raw_score": 10.0,
       "removed_component": "cognee-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-d5030ae6a959",
+      "score_receipt_id": "breakpoint_snyk_score-26d6f81a4528",
       "trial_id": "LOMO-CONN-02"
     },
     {
@@ -310,7 +314,7 @@
       "raw_score": 10.0,
       "removed_component": "cognee-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-250742784154",
+      "score_receipt_id": "breakpoint_snyk_score-19cdc65ffb53",
       "trial_id": "LOMO-CONN-02"
     },
     {
@@ -325,7 +329,7 @@
       "raw_score": 10.0,
       "removed_component": "snyk-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-c69ca3b3586d",
+      "score_receipt_id": "breakpoint_snyk_score-485653ece56f",
       "trial_id": "LOMO-CONN-03"
     },
     {
@@ -340,7 +344,7 @@
       "raw_score": 10.0,
       "removed_component": "snyk-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-f025dc6d8006",
+      "score_receipt_id": "breakpoint_snyk_score-c6ea8c8a7195",
       "trial_id": "LOMO-CONN-03"
     },
     {
@@ -355,7 +359,7 @@
       "raw_score": 10.0,
       "removed_component": "flex-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-b7b7612f9530",
+      "score_receipt_id": "breakpoint_snyk_score-f1456a53dac8",
       "trial_id": "LOMO-CONN-04"
     },
     {
@@ -370,7 +374,7 @@
       "raw_score": 10.0,
       "removed_component": "flex-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-dfcab4000128",
+      "score_receipt_id": "breakpoint_snyk_score-9525f422caf2",
       "trial_id": "LOMO-CONN-04"
     }
   ],

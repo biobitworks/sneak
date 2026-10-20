@@ -1,5 +1,5 @@
 {
-  "artifact_digest": "de7f0d9bd1d96336e2a73a9bb9b5a2c6ad0f91ae54356c4224a7fdfecbed0837",
+  "artifact_digest": "5de2ed18d2061a7547de740d5532945b5ed1e555d901c954822bf8c60469ee3e",
   "breakpoint_score_count": 8,
   "criteria": [
     {
@@ -68,11 +68,20 @@
   },
   "id": "SNEAK-019-SNYK-BONUS-EVIDENCE",
   "javier_pin": "6e1f27605fe278eed347b10dab6f39b3501f1486",
-  "lesson_data_receipt": "data_breakpoint-aa649d5d9b02",
+  "javier_pin_verification": {
+    "commit_matches_pin": true,
+    "event_bonus": "up_to_plus_10_percent_NOT_AWARDED_BY_TOOL_SCORE",
+    "local_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+    "node_helper_match": true,
+    "scale": "0_to_10_tool_score_where_10_is_clean",
+    "upstream_repo": "https://github.com/javiergarza-snyk/app-security-score"
+  },
+  "javier_repo": "https://github.com/javiergarza-snyk/app-security-score",
+  "lesson_data_receipt": "data_breakpoint-6b797d420255",
   "live_snyk": "NOT_TESTED",
   "max_event_bonus_percent": 10,
-  "meaning": "Evidence package for judges regarding Snyk/+10% bonus path. Does not award the bonus. Live 10/10 still requires SNYK_TOKEN + full coverage.",
-  "observed_at": "2026-10-20T20:26:03.160025+00:00",
+  "meaning": "Evidence package for judges regarding Snyk/+10% bonus path. Snyk findings are scored with Javier GitHub app-security-score. Does not award the bonus. Live 10/10 still requires SNYK_TOKEN + full coverage.",
+  "observed_at": "2026-10-20T20:31:59.073328+00:00",
   "parent": "SNEAK-018",
   "scored_breakpoints": [
     {
@@ -87,7 +96,7 @@
       "raw_score": 10.0,
       "removed_component": "band-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-2bb11362f7a9",
+      "score_receipt_id": "breakpoint_snyk_score-ab012344d379",
       "trial_id": "LOMO-CONN-01"
     },
     {
@@ -102,7 +111,7 @@
       "raw_score": 10.0,
       "removed_component": "band-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-ab844c06f04c",
+      "score_receipt_id": "breakpoint_snyk_score-3bcd53447a18",
       "trial_id": "LOMO-CONN-01"
     },
     {
@@ -117,7 +126,7 @@
       "raw_score": 10.0,
       "removed_component": "cognee-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-d5030ae6a959",
+      "score_receipt_id": "breakpoint_snyk_score-26d6f81a4528",
       "trial_id": "LOMO-CONN-02"
     },
     {
@@ -132,7 +141,7 @@
       "raw_score": 10.0,
       "removed_component": "cognee-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-250742784154",
+      "score_receipt_id": "breakpoint_snyk_score-19cdc65ffb53",
       "trial_id": "LOMO-CONN-02"
     },
     {
@@ -147,7 +156,7 @@
       "raw_score": 10.0,
       "removed_component": "snyk-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-c69ca3b3586d",
+      "score_receipt_id": "breakpoint_snyk_score-485653ece56f",
       "trial_id": "LOMO-CONN-03"
     },
     {
@@ -162,7 +171,7 @@
       "raw_score": 10.0,
       "removed_component": "snyk-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-f025dc6d8006",
+      "score_receipt_id": "breakpoint_snyk_score-c6ea8c8a7195",
       "trial_id": "LOMO-CONN-03"
     },
     {
@@ -177,7 +186,7 @@
       "raw_score": 10.0,
       "removed_component": "flex-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-b7b7612f9530",
+      "score_receipt_id": "breakpoint_snyk_score-f1456a53dac8",
       "trial_id": "LOMO-CONN-04"
     },
     {
@@ -192,7 +201,7 @@
       "raw_score": 10.0,
       "removed_component": "flex-connector",
       "scan_outcome": "NOT_TESTED",
-      "score_receipt_id": "breakpoint_snyk_score-dfcab4000128",
+      "score_receipt_id": "breakpoint_snyk_score-9525f422caf2",
       "trial_id": "LOMO-CONN-04"
     }
   ],
@@ -214,6 +223,7 @@
     "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
     "value_inspected": false
   },
+  "snyk_scoring_source": "javiergarza-snyk/app-security-score pin + local Python reimplementation",
   "tool_score_scale": "0-10",
   "tool_score_target": 10
 }

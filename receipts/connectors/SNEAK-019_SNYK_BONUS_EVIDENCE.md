@@ -1,11 +1,14 @@
 # SNEAK-019 Snyk event-bonus evidence (LOMO × merkle × Javier × BAND)
 
-- Chain root: `315aa0f05bc0ff7e0e5c3b6ea29b10939b623b89b60820c266a327d608f918a2`
-- Package digest: `de7f0d9bd1d96336e2a73a9bb9b5a2c6ad0f91ae54356c4224a7fdfecbed0837`
-- BAND message leaf/root: `21dfa8948cfb913d66f73e56c87fe216a2dbe671ae7e23baa57bb9ce34f2b8d8`
-- Event bonus claim: **EVIDENCE_PREPARED** (awarded=False)
+- Chain root: `e630fe1ef0be1d37eb10435aa0ef674119286f9310b48a0cfb72d0622774c097`
+- Package digest: `5de2ed18d2061a7547de740d5532945b5ed1e555d901c954822bf8c60469ee3e`
+- BAND message leaf/root: `11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102`
+- Event bonus claim: **EVIDENCE_PREPARED** (awarded=false)
+- Javier scoring source: `https://github.com/javiergarza-snyk/app-security-score` @ `6e1f27605fe278eed347b10dab6f39b3501f1486`
+- Javier pin match: **True** (node_helper_match=True)
 - LOMO breakpoints scored: **8**
 - Live Snyk: **NOT_TESTED**
+- Staged digest: `9ec4bcb4838610330c72e2017950bbfbb197e471c1349cb0023f5b490f05984a`
 - BAND review: **PASS**
 - Cognee lesson: **PASS**
 
@@ -20,4 +23,4 @@
 | REQ-AOK-S02 | PASS | STAGED_DIGEST_BOUND |
 
 Judges decide any +10%. This package only prepares custody-bound evidence.
-
+Add `SNYK_TOKEN` to complete live SCA/SAST toward tool score 10/10.
