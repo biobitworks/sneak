@@ -1,0 +1,31 @@
+{
+  "id": "SNEAK-013-INDEPENDENT",
+  "parent": "SNEAK-013",
+  "implementation": "Independent pure JavaScript SHA-256 in functions V8; not Python hashlib or Node crypto",
+  "known_sha256_vectors_passed": 3,
+  "canonical_bytes": "PASS",
+  "leaves": "PASS",
+  "proofs": "PASS",
+  "root": "29002d5e05b18b58dceec7d1492a1300efc9bbf7d33e0fdafed755f43561895f",
+  "leaf_count": 3,
+  "tampered_leaf_accepted": false,
+  "wrong_root_accepted": false,
+  "removed_leaf_preserves_root": false,
+  "jupyter_execution": "UNKNOWN: remote connection timed out before completion observed",
+  "node_notebook_execution": "UNKNOWN",
+  "visual_inspection": "NOT_EXECUTED",
+  "human_decision": "PENDING",
+  "failures": [
+    "Remote Desktop Commander connection timed out; subsequent device listing returned internal error"
+  ],
+  "supported_requirement_evidence": [
+    "REQ-AOK-M03",
+    "REQ-AOK-M04",
+    "REQ-AOK-M10",
+    "REQ-AOK-M11",
+    "REQ-AOK-M12"
+  ],
+  "application_acceptance": "NOT_PROMOTED; remaining requirements and human response unverified",
+  "notebook_path": "notebooks/07_band_handoff_sneak_013.ipynb",
+  "next_action": "Human answers Tom's SNEAK-H01 question in BAND; recover notebook completion and apply evidence-bound verdict successors"
+}
