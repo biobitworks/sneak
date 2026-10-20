@@ -1,0 +1,12 @@
+[project]
+name = "sneak-agent-evidence"
+version = "0.1.0"
+description = "Evidence-governed BAND agent runners and Snyk/Cognee adapters"
+requires-python = ">=3.12"
+dependencies = [
+  "band-sdk[langgraph]",
+  "langchain-openai",
+]
+
+[tool.uv]
+package = false
