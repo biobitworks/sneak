@@ -7,6 +7,9 @@ matrix, not as a single universal dual license.
 Merge of this lane into the public default branch is deferred until after the
 hackathon window unless an operator explicitly merges earlier.
 
+Timed commit/push of this lane: **after 16:30 America/Los_Angeles (PDT)** —
+see `receipts/licensing/TIMED_AFTER_1630_PDT.md` (observed 2026-10-20T16:31:33-07:00).
+
 | Artifact class | Preferred license | SPDX | Notes |
 |---|---|---|---|
 | Original software (`src/`, `apps/`, `scripts/`, `tests/`, packaging) | Apache License 2.0 | `Apache-2.0` | See `LICENSE-APACHE-2.0` |

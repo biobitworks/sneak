@@ -1,0 +1,20 @@
+{
+  "id": "LICENSING-TIMED-AFTER-1630-PDT",
+  "parent": "cursor/licensing-cc-apache-0c2f",
+  "preferred_split": {
+    "software": "Apache-2.0",
+    "non_code_creative": "CC-BY-NC-ND-4.0",
+    "third_party_inherited": "HOLD"
+  },
+  "timing": {
+    "requirement": "commit_and_push_after_16:30_America/Los_Angeles",
+    "observed_at_pdt": "2026-10-20T16:31:33-07:00",
+    "observed_at_utc": "2026-10-20T23:31:33Z",
+    "after_1630_pdt": true
+  },
+  "merge_posture": "draft_PR_defer_merge_until_after_hackathon",
+  "pr": "https://github.com/biobitworks/sneak/pull/22",
+  "signed": false,
+  "mmr": "NOT_COMMITTED",
+  "secrets_inspected": false
+}
