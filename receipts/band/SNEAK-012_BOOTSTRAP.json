@@ -1,0 +1,99 @@
+{
+  "id": "SNEAK-012",
+  "parent": "SNEAK-011-REMOTE",
+  "bootstrap_source": {
+    "repository": "band-ai/add-band",
+    "path": "claude/bootstrap-prompt.md",
+    "blob": "f63b0cc760ea9f96a8e066ad75857709b56577bd"
+  },
+  "host": "magicPRObox.local",
+  "project_path": "/Users/byron/projects/active/tom-jerry-agents",
+  "adapter": "claude_sdk",
+  "auth_observed": "existing claude.ai login; no ANTHROPIC_API_KEY override",
+  "runtime": {
+    "python": "3.12.12",
+    "band_sdk": "6.0.1",
+    "claude_agent_sdk": "0.2.168",
+    "model_reported_by_adapter": "claude-sonnet-5-5"
+  },
+  "agents": [
+    {
+      "name": "Tom",
+      "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+      "process_id": 61365,
+      "connection": "OBSERVED",
+      "real_token_reply": "PASS"
+    },
+    {
+      "name": "Jerry",
+      "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+      "process_id": 61385,
+      "connection": "OBSERVED",
+      "real_token_reply": "NOT_TESTED"
+    }
+  ],
+  "manifest": [
+    {
+      "path": "tom_agent.py",
+      "size_bytes": 1205,
+      "sha256": "f456290aa9662562f23a12466419f238d94ef742e9652c73138f20023152c56b"
+    },
+    {
+      "path": "jerry_agent.py",
+      "size_bytes": 1226,
+      "sha256": "28ef1936830d12201d206a359f239b45a7950bd993ea8c9e44f3377627d09685"
+    },
+    {
+      "path": "characters.py",
+      "size_bytes": 14681,
+      "sha256": "cb00217b370b3bcf5924f4bd0d39b56f74fdde79550592c1ff33fe94845b56fa"
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 166,
+      "sha256": "f9e7811a72e844ea078da010350f739570733322b6e52e33401f70bd37295106"
+    },
+    {
+      "path": ".python-version",
+      "size_bytes": 5,
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 43,
+      "sha256": "126f1a19f035b7edbce05cf5307f40403cad92ce0ab007c357029e6a7f0e773a"
+    },
+    {
+      "path": "uv.lock",
+      "size_bytes": 138936,
+      "sha256": "6ed17f31e91bf4c4e76fa0ffc7809ea1d7a0e71d0fe56aecf38eef68077a4b0b"
+    }
+  ],
+  "verification": {
+    "agent": "Tom",
+    "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+    "exit": 0,
+    "stdout": "verify: Tom replied: @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]] Connectivity check received, loud and clear! 🐱 Token: 3d06a07d98cf\n",
+    "stderr": "",
+    "checker_blob": "59a30d84e88458679931ce2573f403463e277590"
+  },
+  "credentials_mode": "0o600",
+  "env_mode": "0o600",
+  "user_api_key_persistence": "NOT_WRITTEN_TO_DISK",
+  "scaffold_source_archival": "Kept local per predecessor AGENTS external-source constraint; hashes recorded",
+  "test_room": "deleted by official checker after success",
+  "persistent_work_room": "NOT_CREATED",
+  "human_chase": "NOT_EXECUTED",
+  "desktop_acceptance": "NOT_TESTED",
+  "cognee": "NOT_TESTED",
+  "redteam": "NOT_EXECUTED",
+  "merkle_root": "NOT_COMPUTED_FOR_THIS_BOOTSTRAP",
+  "mmr": "NOT_COMMITTED",
+  "next_action": "Human opens BAND Chats, adds Tom only and sends @Tom catch jerry",
+  "limitations": [
+    "Cartoon onboarding agents, not yet Sneak builder/reviewer roles",
+    "No claim that requirement memory or code-review authority is connected",
+    "MagicStudio login absent; used verified MagicPro login",
+    "runtime chooser returned no answer; selected Claude SDK from explicit user intent"
+  ]
+}
