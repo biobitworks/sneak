@@ -39,6 +39,18 @@ python3 scripts/verify_band_identities.py
 - Files a shared board task via `POST {subject, detail}` when the board is empty.
 - Receipts: `SNEAK-022_*`.
 
+## Planner remote agent + plan checkoffs
+
+Form fill + registration notes: [`BAND_PLANNER_REMOTE_AGENT.md`](BAND_PLANNER_REMOTE_AGENT.md).
+
+```bash
+python3 scripts/run_band_planner_checkoffs.py
+```
+
+- Agent: `@biobitworks/planner` in room `7e218ad7-…`
+- Per-role CHECKOFF tasks; overall Done stays false until the correct assignees complete them
+- Receipts: `SNEAK-023_*`
+
 ## LOMO × merkle breakpoint → @Data → Snyk + score
 
 Operator-approved path (SNEAK-016):

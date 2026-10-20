@@ -28,9 +28,17 @@ DEFAULT_AGENTS = {
         "harness": "chatgpt",
         "role": "builder",
     },
+    "planner": {
+        "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+        "name": "Planner",
+        "handle": "biobitworks/planner",
+        "harness": "remote-external",
+        "role": "planner",
+    },
 }
 
 DEFAULT_ROOM_ID = "20f1ee5f-6f5b-46c5-9271-0ba536d322fd"
+PLANNER_ROOM_ID = "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3"
 
 
 class BandClient:

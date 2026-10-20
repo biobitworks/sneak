@@ -1,0 +1,100 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-023",
+  "leaf_count": 3,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032332d504c414e4e4552222c226b696e64223a2272656d6f74655f6167656e74222c227061796c6f6164223a7b2268616e646c65223a2262696f626974776f726b732f706c616e6e6572222c226964223a2236346632346139302d333933372d343763382d626337632d663033636237393830643439222c22696e5f726f6f6d223a747275652c226f6e6c696e65223a66616c73657d7d",
+      "leaf": "ac499a9b66196ce5baede1e16b29273fecf4710a2864b3ef23993b95d3b55119",
+      "proof": [
+        {
+          "hash": "4ba30dad804ff4cfc509374ace72769c8cc61d37775a7b92f5efa8e2f4e6ca6d",
+          "side": "right"
+        },
+        {
+          "hash": "f3b5563baa6b9087775639be693659b9e9477c02fca634fbe46abb394c3cf8eb",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-023-PLANNER",
+        "kind": "remote_agent",
+        "payload": {
+          "handle": "biobitworks/planner",
+          "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+          "in_room": true,
+          "online": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032332d5441534b53222c226b696e64223a22636865636b6f66665f7461736b73222c227061796c6f6164223a7b22636f756e74223a372c226e756d62657273223a5b312c322c332c342c352c362c375d7d7d",
+      "leaf": "4ba30dad804ff4cfc509374ace72769c8cc61d37775a7b92f5efa8e2f4e6ca6d",
+      "proof": [
+        {
+          "hash": "ac499a9b66196ce5baede1e16b29273fecf4710a2864b3ef23993b95d3b55119",
+          "side": "left"
+        },
+        {
+          "hash": "f3b5563baa6b9087775639be693659b9e9477c02fca634fbe46abb394c3cf8eb",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-023-TASKS",
+        "kind": "checkoff_tasks",
+        "payload": {
+          "count": 7,
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032332d545241434b222c226b696e64223a22706c616e5f747261636b222c227061796c6f6164223a7b226279726f6e5f68756d616e5f7461736b5f37223a2270656e64696e67222c226279726f6e5f7461736b5f355f706c616e6e65725f6d697374616b656e223a22636f6d706c65746564222c226368697261675f7461736b5f36223a2270656e64696e67222c226a657272795f7461736b5f34223a2270656e64696e67222c226f766572616c6c5f706c616e5f646f6e65223a66616c73652c22706c616e6e65725f7461736b5f32223a22636f6d706c65746564222c22726561736f6e223a22546f6d2f4a65727279206861726e6573736573206c61636b205461736b7320626f61726420746f6f6c732028424f4152445f544f4f4c5f4d495353494e47292e2048756d616e2067617465732023372f2336207374696c6c2070656e64696e672e20446f206e6f74206465636c61726520446f6e652e222c22746f6d5f6a657272795f626f6172645f746f6f6c73223a224d495353494e475f434841545f41434b5f4f4e4c59222c22746f6d5f7461736b5f33223a2270656e64696e67227d7d",
+      "leaf": "f3b5563baa6b9087775639be693659b9e9477c02fca634fbe46abb394c3cf8eb",
+      "proof": [
+        {
+          "hash": "bbf55d6f9fae311154ca710e96147be73bb8a85deadd794599baf18bccd95baa",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-023-TRACK",
+        "kind": "plan_track",
+        "payload": {
+          "byron_human_task_7": "pending",
+          "byron_task_5_planner_mistaken": "completed",
+          "chirag_task_6": "pending",
+          "jerry_task_4": "pending",
+          "overall_plan_done": false,
+          "planner_task_2": "completed",
+          "reason": "Tom/Jerry harnesses lack Tasks board tools (BOARD_TOOL_MISSING). Human gates #7/#6 still pending. Do not declare Done.",
+          "tom_jerry_board_tools": "MISSING_CHAT_ACK_ONLY",
+          "tom_task_3": "pending"
+        }
+      }
+    }
+  ],
+  "meaning": "Planner connected to room; plan checkoffs tracked; not overall Done",
+  "mmr": "NOT_COMMITTED",
+  "package_digest": "f31834f48a8a35fa37f6d5362bbd58de026289d0f70980115c2c4d3cd9a8d5cb",
+  "parent": "SNEAK-022",
+  "root": "1cd3909365f93069265d03445480ad7151223f2f0a4bfd7cd1f5bfbe2fb08c8f",
+  "schema": "sneak.band-planner-plan-track.v1",
+  "signed": false
+}

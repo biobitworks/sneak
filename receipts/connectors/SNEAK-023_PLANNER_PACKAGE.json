@@ -1,0 +1,294 @@
+{
+  "active_tasks": [
+    {
+      "assignments": [],
+      "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+      "created_by": {
+        "handle": "biobitworks",
+        "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+        "name": "Byron Lee",
+        "type": "User"
+      },
+      "detail": "Filed by cloud agent after Human API auth. Empty board observed; verifying identities.",
+      "id": "f288f997-3bd5-4ee2-8519-1f136a6b7bf0",
+      "inserted_at": "2026-10-20T20:57:11.694702Z",
+      "number": 1,
+      "overall_status": "pending",
+      "state": "active",
+      "subject": "SNEAK-022 authenticate and verify room/board/agents",
+      "updated_at": "2026-10-20T20:57:11.694702Z"
+    },
+    {
+      "assignments": [
+        {
+          "active_form": "",
+          "assignee": {
+            "handle": "biobitworks/planner",
+            "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+            "name": "Planner",
+            "type": "Agent"
+          },
+          "status": "completed",
+          "updated_at": "2026-10-20T21:03:56.888645Z"
+        }
+      ],
+      "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+      "created_by": {
+        "handle": "biobitworks",
+        "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+        "name": "Byron Lee",
+        "type": "User"
+      },
+      "detail": "Confirm plan posted; list open tasks; do not mark Done without evidence.",
+      "id": "cb6be260-8f3c-4a3a-8c36-9608d33733a0",
+      "inserted_at": "2026-10-20T21:03:56.251606Z",
+      "number": 2,
+      "overall_status": "completed",
+      "state": "active",
+      "subject": "CHECKOFF Planner: post versioned plan + keep board current",
+      "updated_at": "2026-10-20T21:03:56.892539Z"
+    },
+    {
+      "assignments": [],
+      "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+      "created_by": {
+        "handle": "biobitworks",
+        "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+        "name": "Byron Lee",
+        "type": "User"
+      },
+      "detail": "Reply ACK with agent id/handle; note any blockers; join relevant tasks.",
+      "id": "5e011592-ef75-4770-bc46-d46acab61441",
+      "inserted_at": "2026-10-20T21:03:56.338415Z",
+      "number": 3,
+      "overall_status": "pending",
+      "state": "active",
+      "subject": "CHECKOFF Tom: ACK plan and claim architecture review items",
+      "updated_at": "2026-10-20T21:05:38.437832Z"
+    },
+    {
+      "assignments": [],
+      "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+      "created_by": {
+        "handle": "biobitworks",
+        "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+        "name": "Byron Lee",
+        "type": "User"
+      },
+      "detail": "Reply ACK with agent id/handle; claim builder tasks; report status.",
+      "id": "f0103fa5-d2f7-4250-a687-9c0736723402",
+      "inserted_at": "2026-10-20T21:03:56.413926Z",
+      "number": 4,
+      "overall_status": "pending",
+      "state": "active",
+      "subject": "CHECKOFF Jerry: ACK plan and claim implementation items",
+      "updated_at": "2026-10-20T21:05:38.515501Z"
+    },
+    {
+      "assignments": [
+        {
+          "active_form": "verifying plan track",
+          "assignee": {
+            "handle": "biobitworks/planner",
+            "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+            "name": "Planner",
+            "type": "Agent"
+          },
+          "status": "completed",
+          "updated_at": "2026-10-20T21:03:56.750760Z"
+        }
+      ],
+      "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+      "created_by": {
+        "handle": "biobitworks",
+        "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+        "name": "Byron Lee",
+        "type": "User"
+      },
+      "detail": "Human decision PENDING\u2192APPROVE when plan/tasks look correct. Not auto-approved.",
+      "id": "024e3cfc-ce0b-403a-b257-1d4c5ededa64",
+      "inserted_at": "2026-10-20T21:03:56.511838Z",
+      "number": 5,
+      "overall_status": "completed",
+      "state": "active",
+      "subject": "CHECKOFF Byron: human gate \u2014 approve plan track",
+      "updated_at": "2026-10-20T21:03:56.758794Z"
+    },
+    {
+      "assignments": [],
+      "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+      "created_by": {
+        "handle": "biobitworks",
+        "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+        "name": "Byron Lee",
+        "type": "User"
+      },
+      "detail": "Confirm both planners/agents visible; note duplicate biobitworks vs cmanjesh identities if needed.",
+      "id": "78827c9c-9f52-4501-b162-bc1d3052a6da",
+      "inserted_at": "2026-10-20T21:03:56.616061Z",
+      "number": 6,
+      "overall_status": "pending",
+      "state": "active",
+      "subject": "CHECKOFF Chirag: teammate confirm roster + planner online",
+      "updated_at": "2026-10-20T21:05:38.588625Z"
+    },
+    {
+      "assignments": [],
+      "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+      "created_by": {
+        "handle": "biobitworks",
+        "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+        "name": "Byron Lee",
+        "type": "User"
+      },
+      "detail": "#5 was completed under Planner assignment by mistake. This successor requires human @biobitworks approval. Chat ACKs from Tom/Jerry recorded with BOARD_TOOL_MISSING.",
+      "id": "9953d89f-c9ef-4421-abbe-bcddaca3001d",
+      "inserted_at": "2026-10-20T21:05:38.366875Z",
+      "number": 7,
+      "overall_status": "pending",
+      "state": "active",
+      "subject": "CHECKOFF Byron (human): approve plan track \u2014 still PENDING",
+      "updated_at": "2026-10-20T21:05:38.366875Z"
+    }
+  ],
+  "artifact_digest": "f31834f48a8a35fa37f6d5362bbd58de026289d0f70980115c2c4d3cd9a8d5cb",
+  "auth": {
+    "me": {
+      "handle": "biobitworks",
+      "http_status": 200,
+      "ok": true,
+      "user_id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1"
+    },
+    "planner_api_key_present": true
+  },
+  "chat_count": 5,
+  "form_fill": {
+    "agent_id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+    "agent_name": "Planner",
+    "already_registered": true,
+    "automatic_contacts_all_own_agents": true,
+    "description": "Room planner/architect for Sneak: writes one shared plan, files board tasks, assigns Tom (Claude) and Jerry (ChatGPT), never marks Done without evidence.",
+    "handle": "planner",
+    "handle_full": "@biobitworks/planner",
+    "public_directory": false,
+    "tag": "planner"
+  },
+  "id": "SNEAK-023-PLANNER-PLAN-TRACK",
+  "meaning": "Planner remote agent + plan-track checkoffs; overall Done remains false",
+  "parent": "SNEAK-022",
+  "participants": [
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/jerry",
+      "id": "0415f9ec-2d1b-4726-934b-8d7362ad69af",
+      "name": "Jerry",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": null,
+      "handle": "biobitworks",
+      "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+      "name": "Byron Lee",
+      "online": false,
+      "type": "User"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "biobitworks/tom",
+      "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+      "name": "Tom",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/tom",
+      "id": "3f8ab94b-e5b4-40a9-b188-0cd2885cc98e",
+      "name": "Tom",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "disconnected",
+      "handle": "biobitworks/planner",
+      "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+      "name": "Planner",
+      "online": false,
+      "type": "Agent"
+    },
+    {
+      "connection_status": null,
+      "handle": "cmanjesh",
+      "id": "7ee7bf0f-fb32-4e11-8eb8-2c7516ca49f6",
+      "name": "Chirag Manjeshwar",
+      "online": true,
+      "type": "User"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "biobitworks/jerry",
+      "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+      "name": "Jerry",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/planner",
+      "id": "ca71b60f-97be-4b03-8ed8-8b95f8b805ed",
+      "name": "Planner",
+      "online": true,
+      "type": "Agent"
+    }
+  ],
+  "plan_track": {
+    "byron_human_task_7": "pending",
+    "byron_task_5_planner_mistaken": "completed",
+    "chirag_task_6": "pending",
+    "jerry_task_4": "pending",
+    "overall_plan_done": false,
+    "planner_task_2": "completed",
+    "reason": "Tom/Jerry harnesses lack Tasks board tools (BOARD_TOOL_MISSING). Human gates #7/#6 still pending. Do not declare Done.",
+    "tom_jerry_board_tools": "MISSING_CHAT_ACK_ONLY",
+    "tom_task_3": "pending"
+  },
+  "planner_live_record": {
+    "handle": null,
+    "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+    "is_external": true,
+    "name": "Planner",
+    "slug": "planner"
+  },
+  "planner_participant": {
+    "connection_status": "disconnected",
+    "handle": "biobitworks/planner",
+    "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+    "name": "Planner",
+    "online": false,
+    "type": "Agent"
+  },
+  "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+  "secrets": {
+    "env_overrides_present": [
+      "BAND_PLANNER_AGENT_ID",
+      "BAND_PLANNER_API_KEY",
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "file_exists": true,
+    "file_mode": "0o600",
+    "keys_present": [
+      "BAND_PLANNER_AGENT_ID",
+      "BAND_PLANNER_API_KEY",
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "parent_exists": true,
+    "parent_mode": "0o700",
+    "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+    "value_inspected": false
+  }
+}
