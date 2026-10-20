@@ -1,0 +1,254 @@
+{
+ "bundle_context": {
+  "branch": "feature/sneak-mvp-20261020",
+  "builder": "apps/sneak_mvp/aok.py",
+  "claim_ceiling": "Evidence integrity and declared status only; no REQ-AOK atom is accepted by this bundle.",
+  "fco": "FCO-SNEAK-MVP-20261020",
+  "parent_commit": "979a4f7af5821e197a71eb960ca2ff2722f2e0e3",
+  "project": "SNEAK"
+ },
+ "construction": {
+  "canonical": "UTF-8 JSON, recursively sorted keys, ensure_ascii=true, separators (',',':'), no newline",
+  "hash": "SHA-256",
+  "internal": "SHA256('sneak.aok.v1/node' || 0x00 || left32 || right32)",
+  "leaf": "SHA256('sneak.aok.v1/leaf' || 0x00 || canonical(record))",
+  "odd": "promote unchanged",
+  "ordering": "record id ascending (ASCII); duplicate ids rejected"
+ },
+ "leaf_count": 9,
+ "leaves": [
+  {
+   "leaf": "f37fe5c12fe31fd703d831c4bd8428b707ba1d4ab21536ff00998b68e7396174",
+   "record": {
+    "claim": {
+     "claim_ceiling": "Describes requirements, not their satisfaction.",
+     "text": "R5 acceptance table: 30 mandatory atoms, all verified=FALSE / NOT_TESTED at intake."
+    },
+    "context": {
+     "actor": "operator+assistant intake",
+     "observed_via": "repository file bytes",
+     "parent": null,
+     "project": "SNEAK"
+    },
+    "id": "EV-001-R5-ATOMS",
+    "kind": "requirements_snapshot",
+    "source": {
+     "path": ".planning/ATOMIC_ACCEPTANCE_R5.md",
+     "sha256": "8d7d59429db92d5171b9d1201031609bfcdda09bd1101bc3f850fbf39809ab32",
+     "size_bytes": 6648
+    },
+    "status": "OBSERVED",
+    "supports_atoms": []
+   }
+  },
+  {
+   "leaf": "2d507f1b19cf443069b4da935319aa750b147701f9f776cfbf433d830d96b564",
+   "record": {
+    "claim": {
+     "claim_ceiling": "Describes requirements, not their satisfaction.",
+     "text": "Machine-readable R5 atoms with source occurrence and context hashes."
+    },
+    "context": {
+     "actor": "operator+assistant intake",
+     "observed_via": "repository file bytes",
+     "parent": "EV-001-R5-ATOMS",
+     "project": "SNEAK"
+    },
+    "id": "EV-002-R5-ATOMS-JSONL",
+    "kind": "requirements_snapshot",
+    "source": {
+     "path": "data/rules/atomic_acceptance_r5.jsonl",
+     "sha256": "4cb589a491540df761c741b92954cbbc8637be5617974a62c36041d3634929c1",
+     "size_bytes": 47853
+    },
+    "status": "OBSERVED",
+    "supports_atoms": []
+   }
+  },
+  {
+   "leaf": "c5ae41f00702a63aae54814095e8625ae8d943e81b63ecd0db6e185bfff97ce4",
+   "record": {
+    "claim": {
+     "claim_ceiling": "Integrity of intake bytes only.",
+     "text": "R6 intake custody receipt (verified successor of R5)."
+    },
+    "context": {
+     "actor": "assistant + independent JS verifier",
+     "observed_via": "repository file bytes",
+     "parent": "EV-002-R5-ATOMS-JSONL",
+     "project": "SNEAK"
+    },
+    "id": "EV-003-R6-CUSTODY",
+    "kind": "custody_receipt",
+    "source": {
+     "path": "receipts/INTAKE_MERKLE_R6.json",
+     "sha256": "0d5300b5cbfabaab407b7ba9c73eb6a2a93fd7d4caca91c6bd60889812044fb4",
+     "size_bytes": 70669
+    },
+    "status": "OBSERVED",
+    "supports_atoms": []
+   }
+  },
+  {
+   "leaf": "e00e91acd03c766d9050caff5e7eb72fd9a24ef62f4c3902846554b433dad817",
+   "record": {
+    "claim": {
+     "claim_ceiling": "BAND SDK connection only; Band Desktop UI, board, sessions and costs not observed.",
+     "text": "Two SDK agents (Tom, Jerry) connected to BAND via band_sdk 6.0.1 with claude_sdk adapter."
+    },
+    "context": {
+     "actor": "Tom, Jerry (BAND agents)",
+     "observed_via": "captured receipt",
+     "parent": "EV-003-R6-CUSTODY",
+     "project": "SNEAK"
+    },
+    "id": "EV-010-BAND-BOOTSTRAP",
+    "kind": "band_event_receipt",
+    "source": {
+     "path": "receipts/band/SNEAK-012_BOOTSTRAP.json",
+     "sha256": "63186e63cf6043ef8e6931fcd51d81a17ae6066f0cac23ef7501da06b3fe339d",
+     "size_bytes": 3319
+    },
+    "status": "OBSERVED",
+    "supports_atoms": [
+     "REQ-AOK-M04"
+    ]
+   }
+  },
+  {
+   "leaf": "8562aa968fbcb187b25beb16db7507616d50f16a6e0bdf43ce9c1acc0fd111c0",
+   "record": {
+    "claim": {
+     "claim_ceiling": "Three captured events; human decision NOT_REQUESTED_YET at capture.",
+     "text": "Captured agent-to-agent mention and handoff token acknowledgement in one BAND room."
+    },
+    "context": {
+     "actor": "Tom -> Jerry",
+     "observed_via": "captured receipt",
+     "parent": "EV-010-BAND-BOOTSTRAP",
+     "project": "SNEAK"
+    },
+    "id": "EV-011-BAND-HANDOFF",
+    "kind": "band_event_receipt",
+    "source": {
+     "path": "receipts/band/SNEAK-013_HANDOFF.json",
+     "sha256": "f45d63b9ec97579d2335977e4af8958309e33649e71cc1338c199a4d6360963d",
+     "size_bytes": 12413
+    },
+    "status": "OBSERVED",
+    "supports_atoms": [
+     "REQ-AOK-M03",
+     "REQ-AOK-M04",
+     "REQ-AOK-M10",
+     "REQ-AOK-M11",
+     "REQ-AOK-M12"
+    ]
+   }
+  },
+  {
+   "leaf": "a12b6d953d7d1df6d81323d08e28f7f20d382dd1449a6501707621f5504efce0",
+   "record": {
+    "claim": {
+     "claim_ceiling": "Application acceptance NOT_PROMOTED; Jupyter execution UNKNOWN.",
+     "text": "Independent JS recomputation of the SNEAK-013 event root; tamper and wrong-root negatives rejected."
+    },
+    "context": {
+     "actor": "independent verifier",
+     "observed_via": "captured receipt",
+     "parent": "EV-011-BAND-HANDOFF",
+     "project": "SNEAK"
+    },
+    "id": "EV-012-BAND-VERIFY",
+    "kind": "verification_receipt",
+    "source": {
+     "path": "receipts/band/SNEAK-013_INDEPENDENT_VERIFY.json",
+     "sha256": "253b7ac48dc6a43d6215ac72ca85334f85e67796f8a48a186fb32caf5258f8f2",
+     "size_bytes": 1243
+    },
+    "status": "OBSERVED",
+    "supports_atoms": []
+   }
+  },
+  {
+   "leaf": "d1cf893a28b692acd02ebbd12c6a81c943c4181b72f75bdd4b38823a50ec9966",
+   "record": {
+    "claim": {
+     "claim_ceiling": "Pending; no observation.",
+     "text": "Human receives and answers a real decision (SNEAK-H01) through Band Desktop."
+    },
+    "context": {
+     "actor": "human operator",
+     "observed_via": "none yet",
+     "parent": "EV-011-BAND-HANDOFF",
+     "project": "SNEAK"
+    },
+    "id": "EV-020-HUMAN-DECISION",
+    "kind": "human_decision",
+    "source": null,
+    "status": "NOT_TESTED",
+    "supports_atoms": [
+     "REQ-AOK-M13",
+     "REQ-AOK-M14",
+     "REQ-AOK-M15"
+    ]
+   }
+  },
+  {
+   "leaf": "55205bbb8eb058d247138eb7107ff9857dad84add8f01543ca5d6ccccf642a2a",
+   "record": {
+    "claim": {
+     "claim_ceiling": "Adapter exists; in-room agent use not observed.",
+     "text": "Agents write security memory to Cognee during the task; another agent/restart recalls it and changes its next action."
+    },
+    "context": {
+     "actor": "BAND agents via cognee_adapter",
+     "observed_via": "none yet",
+     "parent": "EV-012-BAND-VERIFY",
+     "project": "SNEAK"
+    },
+    "id": "EV-030-COGNEE-MEMORY",
+    "kind": "memory_receipt",
+    "source": null,
+    "status": "PROPOSED",
+    "supports_atoms": [
+     "REQ-AOK-M21",
+     "REQ-AOK-M22",
+     "REQ-AOK-M24",
+     "REQ-AOK-M25",
+     "REQ-AOK-M26",
+     "REQ-AOK-M27"
+    ]
+   }
+  },
+  {
+   "leaf": "b70f5ea429debc591b3a14b6bbc3fbbceff08278fcf36615125d3c3347b4fe15",
+   "record": {
+    "claim": {
+     "claim_ceiling": "Adapter exists; reviewer-in-room scan not observed.",
+     "text": "Security reviewer runs Snyk on the exact built commit; findings block Done until a verified fix."
+    },
+    "context": {
+     "actor": "security reviewer agent",
+     "observed_via": "none yet",
+     "parent": "EV-030-COGNEE-MEMORY",
+     "project": "SNEAK"
+    },
+    "id": "EV-040-SNYK-GATE",
+    "kind": "planned_check",
+    "source": null,
+    "status": "PROPOSED",
+    "supports_atoms": [
+     "REQ-AOK-S01",
+     "REQ-AOK-S02",
+     "REQ-AOK-S05",
+     "REQ-AOK-S07"
+    ]
+   }
+  }
+ ],
+ "meaning": "Integrity of ordered evidence records and referenced source bytes only. Not truth, acceptance, authorization, signature or canonical admission.",
+ "mmr": "NOT_COMPUTED",
+ "root": "a0bcc0e65e88322c9c70aaf0b221545cf20b9ced0bcd1c15efa5a467143dc5d5",
+ "schema": "sneak.aok.v1",
+ "signed": false
+}

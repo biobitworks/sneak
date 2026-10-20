@@ -1,0 +1,34 @@
+{
+ "argv": [
+  "code",
+  "test",
+  "--json"
+ ],
+ "exit_code": 2,
+ "finding_count": 0,
+ "findings": [],
+ "finished_at": "2026-10-20T20:56:03.083394+00:00",
+ "gate": "BLOCKED",
+ "local_run_dir": "local-runs/snyk/20261020T205601Z",
+ "mode": "code",
+ "outcome": "ERROR",
+ "reason": "snyk exit 2: Use `snyk auth` to authenticate.",
+ "redactions": 0,
+ "schema": "sneak.snyk-receipt.v1",
+ "severity_counts": {
+  "critical": 0,
+  "high": 0,
+  "low": 0,
+  "medium": 0
+ },
+ "snyk_cli_version": "1.1307.2",
+ "started_at": "2026-10-20T20:55:59.699670+00:00",
+ "stdout_bytes": 116,
+ "stdout_sha256": "60e17c158cdc8b86738f8aa0322357ba1c4c48b0dcca4027c5fa36d2a456354c",
+ "target": {
+  "commit": "128dfa6e7151a5762da941110af530c68f3976d6",
+  "dirty": false,
+  "name": "sneak",
+  "tree": "f69a63481f652a36c8b6b4bbe1ee7693a41d9893"
+ }
+}

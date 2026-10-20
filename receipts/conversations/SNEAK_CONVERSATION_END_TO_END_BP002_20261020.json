@@ -1,0 +1,104 @@
+{
+  "decisions": [
+    "Preserve root-question wording as proposed until explicit human ratification",
+    "BAND native at-mention requires real participant ID and returned message ID",
+    "Do not claim all conversations from one source receipt",
+    "No model streams until exact authenticated model IDs and versions",
+    "No release while Snyk auth/dependency errors remain"
+  ],
+  "failures": [
+    "BAND CLI account still absent",
+    "Snyk Code OAuth timeout",
+    "Snyk Open Source manifest resolution error"
+  ],
+  "id": "SNEAK-CONVERSATION-E2E-BP-002",
+  "next_action": "Human approves exact root-question wording and authorizes Band CLI; connect planner and import authorized room receipt pages.",
+  "not_tested": [
+    "live BAND new-room messages",
+    "planner ACK and board transitions",
+    "cross-agent Cognee recall by independent runtime",
+    "model MMR replay",
+    "full corpus coverage"
+  ],
+  "observed": {
+    "actor_mmr": {
+      "Jerry": "f7d1efae6da1959e407aaea1dd35cabb84a9ce4fa980edc37b208a9a103d3503",
+      "Tom": "a12bb0fea343453404da099d1e8d7fe5d7425992ea4c8edd0b998e39cd799073"
+    },
+    "authenticated_html_and_json_http": 200,
+    "band_source_message_count": 3,
+    "cognee_next_action": "REQUEST_BAND_HANDOFF_AND_SNYK_PROOFS",
+    "cognee_question_merkle_successor": "5cfe7403f2730a755da80d6c047bef891e6f560fd34573b968dfdbefb1730381",
+    "cognee_question_mmr_successor": "adbfad2620262d7bb63e8907f84f28def008940a32116d736dfdbf5427e36a3d",
+    "cognee_read_status": "EXECUTED",
+    "cognee_retrieved_entries": 1,
+    "cognee_write_status": "EXECUTED",
+    "deployed_preview_id": "dpl_GjeCYwsrQUUAEDFWZirch3FyjR2b",
+    "deployed_preview_state": "READY",
+    "deployed_preview_url": "https://sneak-evidence-preview-r97pkjmu2-biobitworks.vercel.app/conversations",
+    "deployed_snapshot_byte_equal": true,
+    "export_file_count": 18,
+    "export_merkle_root": "d44d9dd6a21f772b673b9286f75ec27948b6d3da52abea6885165dfb5a1a6d1c",
+    "export_mmr_nodes": 34,
+    "export_mmr_root": "829acc5e8d9499539bfcbd0d14bfaa8bebf27e3c4de0763207cc882ea8f366f1",
+    "fco_breakpoint_count": 3,
+    "global_mmr": "2c267b9a2bf3bd2f67a8c3b2b5b1c47092ea45d02da82a18e9810acdc0f58947",
+    "question_mmr": "0f4cb205de724e3b0eba55afedfd6f165f23399f32da7ac656aadb46c3a114d4",
+    "root_question_fco": "FCO-QUESTION-795f23604e3d197082e297bb",
+    "root_question_sha256": "57346670c2ec5842181e957855831f04c574b0cdb1ea57c18ed6bd94c37836a1",
+    "security_release_gate": "BLOCKED",
+    "snyk_latest": "AUTH_ERROR_OR_DEPENDENCY_ERROR",
+    "source_merkle_root": "29002d5e05b18b58dceec7d1492a1300efc9bbf7d33e0fdafed755f43561895f",
+    "source_room_count": 1,
+    "static_lomo": 80,
+    "tests_node": 10,
+    "tests_python": 46,
+    "unauthenticated_html_http": 302
+  },
+  "parent": {
+    "cognee_parent_receipt_sha256": "456327fa79d3898110f2d92bf5afb762978563f0acb5c46376a117cf66250b0d",
+    "git_head": "5866008a1dbfbe4d373bcdff17fbb9ab9a1061e6",
+    "id": "SNEAK-AUTH-20261020-BP-003",
+    "parent_cognee_id": "SNEAK-CONVERSATION-COGNEE-BP001",
+    "sha256": "29fd2b7b12a5cd46a272bccb6e9e7ab77023ac8baaa6e1ae7fbe8726f431520a"
+  },
+  "proposed": [
+    "Authenticate BAND CLI, verify planner room and native at-mentions",
+    "Import authorized, paginated BAND messages as source-bound FCOs",
+    "Add authenticated per-model runtime receipts, LongMemEval2 evaluation",
+    "Continue Cognee memory sync for every admitted source-bound FCO"
+  ],
+  "root_semantics": "distinct historical question, global, actor, Cognee successor and export roots; no comparison of hash bits as quality",
+  "schema": "sneak.conversation-turn-breakpoint.v1",
+  "signed": false,
+  "source_receipts": {
+    "cognee_bridge_receipt_sha256": "456327fa79d3898110f2d92bf5afb762978563f0acb5c46376a117cf66250b0d",
+    "conversation_snapshot_sha256": "ccd69c3e98c7935f263426a65d05f60eb215f13345ec819db29cbb03ee38e678",
+    "deployed_content_commit": "5866008a1dbfbe4d373bcdff17fbb9ab9a1061e6",
+    "deployment_commit_distinct_from_generation_parent": true,
+    "export_manifest_sha256": "4a948f673c82abcc49a86c38e3da20487b1048a9190374c64614e689641f1194",
+    "generation_parent_commit": "3a7f2b9279477d21925e17295b77e7eeb950e507",
+    "ledger_source_sha256": "f45d63b9ec97579d2335977e4af8958309e33649e71cc1338c199a4d6360963d"
+  },
+  "statuses": {
+    "all_conversations_imported": false,
+    "band_room_send": "NOT_SENT_AUTH_BLOCKED",
+    "band_runtime": "NOT_AUTHENTICATED",
+    "external_hackathon_acceptance": "NOT_OBSERVED",
+    "model_mmr": "NOT_COMPUTED_MODEL_VERSION_UNKNOWN",
+    "planner_memory_consumed": "NOT_TESTED",
+    "real_agent_lomo": "NOT_TESTED",
+    "root_question_claim": "UNKNOWN",
+    "root_question_human_ratification": "PROPOSED",
+    "semantic_quality_delta": "NOT_COMPUTED"
+  },
+  "verified_new": [
+    "Historical BAND 3-message source Merkle root independently replayed",
+    "Three ordered message FCOs with hashed input, deterministic script and hashed output",
+    "Three per-message root-question/agent/global MMR and Merkle breakpoints",
+    "Two per-agent actor MMR streams: Tom two, Jerry one",
+    "Local Cognee OSS write and independent-process recall, exact expected question root found",
+    "Two additional Cognee write/read FCOs with successor question MMR",
+    "Vercel authentication protection and exact-deployed-byte comparison for 3 data files"
+  ]
+}

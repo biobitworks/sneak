@@ -1,0 +1,56 @@
+{
+  "DECISIONS": [
+    "No successful room post claim",
+    "No fabricated successful vulnerability scan",
+    "Preserve predecessor computed roots as referents without recomputing new content root"
+  ],
+  "EXECUTED": [
+    "BAND device authorization attempt expired (no user approval)",
+    "Snyk CLI OAuth interactive authorization attempted"
+  ],
+  "FAILURES": [
+    "BAND device code prior attempt expired",
+    "Snyk OAuth flow timed out"
+  ],
+  "ID": "SNEAK-AUTH-20261020-BP-003",
+  "LOMO_NEW_RUN": "NOT_COMPUTED",
+  "NEW_MERKLE_ROOT": "NOT_COMPUTED",
+  "NEW_MMR_ROOT": "NOT_COMPUTED",
+  "NEXT_ACTION": "Human authorizes BAND device flow; then CLI preflight and room send with exact message hash; independently verify send ID.",
+  "NOT_TESTED": [
+    "live BAND room review",
+    "mandatory full acceptance",
+    "per-breakpoint Snyk scans"
+  ],
+  "OBSERVED": {
+    "band_cli": "NOT_AUTHENTICATED",
+    "band_daemon": "RUNNING",
+    "last_export_merkle_root": "d301c04c3ee66b698a60152fb64c05c20b169b82022c620bb85b59734182ab02",
+    "last_export_mmr_root": "79b6b6ab1af5e601f2ceb57fc0e11021511fa191382429c715239b8539335f27",
+    "security_gate": "BLOCKED",
+    "snyk_code_scan": "ERROR_AUTHENTICATION",
+    "snyk_oauth": "FAILED_TIMEOUT",
+    "snyk_oss_scan": "ERROR_DEPENDENCY_RESOLUTION"
+  },
+  "PARENT": {
+    "git_head": "8b9c57d21d788a7f1b39e72b712bbea5bd8995fd",
+    "id": "SNEAK-EXPORT-HEATMAP-20261020-BP-002",
+    "sha256": "b4aec438a885ea3b0eeee2bce256fcd52fc58e10288fd1d89d87a1ff59009483"
+  },
+  "PROPOSED": [
+    "Complete currently pending BAND device authentication",
+    "Complete Snyk OAuth in browser on magicPRObox then rerun scans"
+  ],
+  "SIGNED": false,
+  "UNRESOLVED": [
+    "BAND current session approval",
+    "Snyk CLI login",
+    "app-security-score zero evidence"
+  ],
+  "VERIFIED_NEW": [
+    "Protected heatmap deployed with independent byte comparison for matrix and JavaScript",
+    "BAND CLI preflight still reports no account",
+    "Snyk interactive OAuth attempted and returned timeout"
+  ],
+  "schema": "sneak.auth-checkpoint.v1"
+}

@@ -1,2 +1,3 @@
 {"decision":"requirements-first private source/data freeze","id":"IP-20261020-004-D1","parent":"IP-20261020-003","source":"user instruction","state":"IMPLEMENTED_DOCUMENTS_ONLY"}
 {"decision":"Separate requirement Boolean from observed UNKNOWN/NOT_TESTED/FAILED; complete atomic intake before integration execution.","id":"IP-20261020-005-D1","parent":"IP-20261020-004-D1"}
+{"decision": "Treat 4 LOW Snyk path-traversal claims as real-but-low (Python reproduced); enforce repo-root containment for CLI receipt and leaf paths; keep hash construction; Snyk rescan and Node execution pending.", "id": "SNEAK-MVP-20261020-PT-D1", "parent": "SNEAK-MVP-20261020-SNYK-CODE", "receipt": "receipts/sneak_mvp/scans/PATH_TRAVERSAL_REPAIR_20261020.json", "status": "needs_review"}

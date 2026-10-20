@@ -1,0 +1,45 @@
+{
+ "argv": [
+  "code",
+  "test",
+  "--json"
+ ],
+ "exit_code": 1,
+ "finding_count": 2,
+ "findings": [
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  }
+ ],
+ "finished_at": "2026-10-20T19:36:35.852155+00:00",
+ "gate": "BLOCKED",
+ "local_run_dir": "local-runs/snyk/20261020T193620Z",
+ "mode": "code",
+ "outcome": "FINDINGS",
+ "reason": "2 issue(s)",
+ "redactions": 0,
+ "schema": "sneak.snyk-receipt.v1",
+ "severity_counts": {
+  "critical": 0,
+  "high": 0,
+  "low": 2,
+  "medium": 0
+ },
+ "snyk_cli_version": "1.1307.2",
+ "started_at": "2026-10-20T19:36:17.899152+00:00",
+ "stdout_bytes": 12701,
+ "stdout_sha256": "1fee2b4e4f17c9c487893abcb39ca09e0cf8003fad00f2d3e679553ef0486b43",
+ "target": {
+  "commit": "eaf0a3964e782e7ce34e776dd256f8ede1c195f2",
+  "dirty": false,
+  "name": "sneak",
+  "tree": "edc2cc08c086872574261db8e7c8669a4f232c17"
+ }
+}

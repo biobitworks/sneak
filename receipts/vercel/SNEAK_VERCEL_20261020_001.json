@@ -1,0 +1,88 @@
+{
+  "anticube": "NOT_COMPUTED",
+  "artifact_identity": {
+    "exported_audit_sha256": "255509676bc73fe4fb961d38b02857cd31f55a680a2f616d32b653a31bedf555",
+    "exported_graph_sha256": "51ae5672e5f9522c15c0beb545944367ea54045a108336b97d633a0db6645296",
+    "manifest_sha256": "a80f5229ee85cf4823fd5b1e943372e7c8f8b2564ec1a38d73be8e7e7c0fd5cf",
+    "source_aok_candidate_root": "a0bcc0e65e88322c9c70aaf0b221545cf20b9ced0bcd1c15efa5a467143dc5d5",
+    "source_record_root_scope": "prior AoK source evidence only, not deployed-artifact Merkle root"
+  },
+  "decisions": [
+    "keep SSO protection across all targets",
+    "do not promote the corrected preview to production",
+    "never mark live agent/memory integration from static export"
+  ],
+  "delta_g_star": "NOT_COMPUTED",
+  "deployment_merkle_root": "NOT_COMPUTED",
+  "deployments": [
+    {
+      "access_without_auth_http": 302,
+      "classification": "UNINTENDED_INITIAL_PRODUCTION_ASSIGNMENT; SSO_PROTECTED",
+      "id": "dpl_GdQc5JG6g81dK3LBTsEmar6LW3F3",
+      "local_and_deployed_graph_sha256": "e2d0d504544bda4489857164720913e332ce568401b6c6d1cc508cd38e746297",
+      "state": "READY",
+      "target": "production",
+      "url": "https://sneak-evidence-preview-28tqhfvpf-biobitworks.vercel.app"
+    },
+    {
+      "access_without_auth_http": 302,
+      "bytes_match": true,
+      "id": "dpl_F67oQSDtKJynf1y9pKmmXoSHmMX1",
+      "local_and_deployed_graph_sha256": "51ae5672e5f9522c15c0beb545944367ea54045a108336b97d633a0db6645296",
+      "node_count": 29,
+      "state": "READY",
+      "target": "preview",
+      "url": "https://sneak-evidence-preview-kthz9mpj1-biobitworks.vercel.app"
+    }
+  ],
+  "failures": [
+    "Initial CLI deployment landed in production instead of preview; corrected successor remains preview"
+  ],
+  "id": "SNEAK-VERCEL-20261020-001",
+  "lomo": "NOT_COMPUTED",
+  "mmr": "NOT_COMPUTED",
+  "next_action": "Authenticate BAND CLI through the device flow, then verify existing room/task/approval identities without fabricating missing evidence.",
+  "not_tested": [
+    "SNEAK live Cognee memory inside Vercel",
+    "BAND Desktop rooms/board/authenticated human decision",
+    "public unprotected launch",
+    "Flexprice billing integration",
+    "LOMO actor-component trials"
+  ],
+  "observed": {
+    "audit_endpoint_http_authenticated": 200,
+    "band_account_cli": "AUTH_PENDING",
+    "graph_endpoint_http_authenticated": 200,
+    "local_unit_tests_pass": 14,
+    "mandatory_atoms_verified": 0,
+    "preview_homepage_http_authenticated": 200,
+    "snyk_gate": "BLOCKED",
+    "snyk_last_observed_low_findings": 2,
+    "static_projection_only": true
+  },
+  "parent": {
+    "current_export_snapshot_commit": "d8ae5479b50ab81b7011192f3afd3d4af9d3243e",
+    "git_parent_head": "965be4859fc361b2e60fe78bddf0aa197dbc52ba",
+    "previous_breakpoint": "SNEAK-MVP-20261020-BP-001",
+    "previous_export_snapshot_commit": "7793cfe684273e55dcadf5ddd98339c6b6ad196a"
+  },
+  "project": {
+    "id": "prj_XbEt0ypz1h72e5XeK9WvNYqaM2Zx",
+    "name": "sneak-evidence-preview",
+    "sso_protection": "ALL",
+    "team_id": "team_TEJ9cyzfQl0o8E4XXaEcs9bk"
+  },
+  "proposed": [
+    "BAND CLI login and real shared work board with Claude/Codex",
+    "Cognee OSS end-to-end live memory",
+    "Snyk source-bound scan of final deploy commit"
+  ],
+  "schema": "sneak.vercel-protected-deployment.v1",
+  "signed": false,
+  "unresolved": [
+    "BAND CLI authentication",
+    "snyk residual findings",
+    "production release authorization",
+    "deployment-specific security scan"
+  ]
+}

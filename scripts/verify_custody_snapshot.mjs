@@ -5,7 +5,23 @@ import {fileURLToPath} from "node:url";
 import {createHash} from "node:crypto";
 import {execFileSync} from "node:child_process";
 const base=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
-const r=JSON.parse(fs.readFileSync(path.join(base,process.argv[2]),"utf8"));
+const baseReal=fs.realpathSync(base);
+// Rejects absolute, parent/empty/dot segments, backslash and non-printable-ASCII paths.
+const safeRel=rel=>{
+ if(typeof rel!=="string"||!/^[\x20-\x7e]+$/.test(rel)||rel.includes("\\")||rel.startsWith("/"))throw Error("unsafe path encoding");
+ if(rel.split("/").some(p=>p===""||p==="."||p===".."))throw Error("unsafe path segment");
+ return rel;
+};
+// Resolves rel under the repository with no symlink in any component and no escape.
+const contained=rel=>{
+ let cur=baseReal;
+ for(const part of safeRel(rel).split("/")){cur=path.join(cur,part);if(fs.lstatSync(cur).isSymbolicLink())throw Error("symlink");}
+ const real=fs.realpathSync(cur);
+ if(real!==path.join(baseReal,rel)||!real.startsWith(baseReal+path.sep))throw Error("path escapes repository");
+ return real;
+};
+const r=JSON.parse(fs.readFileSync(contained(process.argv[2]),"utf8"));
+if(typeof r.snapshot_commit!=="string"||!/^(?:[0-9a-f]{40}|[0-9a-f]{64})$/.test(r.snapshot_commit))throw Error("snapshot_commit encoding");
 const h=b=>createHash("sha256").update(b).digest();
 const hash=b=>h(b).toString("hex");
 const par=(a,b)=>h(Buffer.concat([Buffer.from([1]),a,b]));
@@ -18,10 +34,11 @@ if(r.leaf_count!==r.leaves.length)throw Error("leaf count");
 let xs=r.leaves.map(item=>{
  const rec=item.record;
  if(!/^[\x20-\x7e]+$/.test(rec.path))throw Error("non-ASCII path");
+ safeRel(rec.path);
  const data=git("show",r.snapshot_commit+":"+rec.path);
  if(data.length!==rec.size_bytes||hash(data)!==rec.sha256)throw Error("committed bytes "+rec.path);
- const work=path.join(base,rec.path);
- if(fs.lstatSync(work).isSymbolicLink())throw Error("symlink");
+ const work=contained(rec.path);
+ if(!fs.lstatSync(work).isFile())throw Error("nonregular");
  const wb=fs.readFileSync(work);
  if(wb.length!==rec.size_bytes||hash(wb)!==rec.sha256)throw Error("working bytes "+rec.path);
  const c=Buffer.from(JSON.stringify({path:rec.path,sha256:rec.sha256,size_bytes:rec.size_bytes}),"ascii");

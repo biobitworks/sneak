@@ -1,0 +1,57 @@
+{
+  "decisions": [
+    "No closure without duplicate/superseded source evidence",
+    "All 14 open PRs stay draft pending source review",
+    "Human annotations are unsubmitted and not acceptance",
+    "Do not push diverged local main or publish static website without SSO"
+  ],
+  "id": "SNEAK-JUDGE-REVIEW-20261020-BP-004",
+  "new_global_mmr_root": "NOT_COMPUTED",
+  "new_global_project_merkle_root": "NOT_COMPUTED",
+  "next_action": "Human fills protected review form, completes BAND planner room and uploads independently checked evidence; capture video, rerun security scans.",
+  "not_tested": [
+    "Production public launch",
+    "External organizer acceptance",
+    "Human signed-off per-atom review"
+  ],
+  "observed": {
+    "already_merged": 1,
+    "atomic_requirements": 46,
+    "authenticated_html_http": 200,
+    "authenticated_review_json_http": 200,
+    "deployed_review_json_exact_byte_match": true,
+    "deployment_state": "READY",
+    "draft_open": 14,
+    "export_scope_merkle_root": "8cbaae96850965dba38025f2fdf0727b5f2853f2a9851854f3ef00e1ab237069",
+    "export_scope_mmr_root": "9f0e2d8bfaa41d7be3f1d4851ca5cb7077008c0c8f0980342322dd3c62dd2ed5",
+    "federation_pytests_pass": 6,
+    "machine_mandatory_total": 30,
+    "machine_mandatory_verified": 0,
+    "new_prs": [
+      15,
+      16
+    ],
+    "node_tests_pass": 10,
+    "official_source_statements": 56,
+    "pull_requests_total": 15,
+    "python_tests_pass": 46,
+    "security_pr_converted_to_draft": 10,
+    "source_judge_walkthrough_sha256": "b03e7116298475db470472162c2f79d8f4d3a4f77e8c403b4ac507dd90628403",
+    "source_pr_review_sha256": "7cc4df52477b96ca71b5cf7e2c9023e884b85fdc2a394b11df80155b6ddefef7",
+    "source_review_json_sha256": "4f20315398059e5313f5f3f47727199937b29c9cca0a25aec43f0e06702fc00d",
+    "sso_auth_all": true,
+    "unauthenticated_http": 302,
+    "vercel_id": "dpl_GF3dyZh9mpitxLTJ1oBXWCXpVbv6",
+    "vercel_url": "https://sneak-evidence-preview-3d0qesfwr-biobitworks.vercel.app/judge"
+  },
+  "parent_git_commit": "c368b536fceedea79529de0530a6d0b6a6138519",
+  "parent_pr_receipt_sha256": "da6aa16f945c8ad9aeba21535896c62908e7e5055b5135e4a68195d44f7e7b3a",
+  "schema": "sneak.judge-review-deployment.v1",
+  "signed": false,
+  "unresolved": [
+    "BAND account authentication and live planner room actions",
+    "Cognee cross-agent live adoption",
+    "Snyk Code authentication and OSS dependency resolution",
+    "2-3 min submission video and actual judge acceptance"
+  ]
+}

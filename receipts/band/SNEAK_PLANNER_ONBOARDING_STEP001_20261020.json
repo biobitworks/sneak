@@ -1,0 +1,53 @@
+{
+  "approval": "USER_AUTHORIZED_ORCHESTRATION_WORK_ONLY",
+  "evidence": {
+    "band_room_list": {
+      "diagnostic": "record not found",
+      "exit_code": 1,
+      "outcome": "BLOCKED_AUTH"
+    },
+    "band_whoami": {
+      "diagnostic": "record not found",
+      "exit_code": 1,
+      "outcome": "BLOCKED_AUTH"
+    },
+    "plan_path": "docs/BAND_PLANNER_ROOM_20261020.md",
+    "plan_sha256": "80acd6ae301c9099f9647dafd8b90ffe74f2feb6361d868301c0d80a32b44887"
+  },
+  "failure": "BAND_CLI_ACCOUNT_NOT_CONFIGURED",
+  "id": "SNEAK-BAND-PLANNER-STEP-001",
+  "merkle_root": "NOT_COMPUTED",
+  "mmr_root": "NOT_COMPUTED",
+  "next_action": "Human registers remote agent in Band UI, authorizes CLI device flow, provides exact resulting agent ID and new room identity for live verification.",
+  "parent": "SNEAK-AUTH-20261020-BP-003",
+  "profile": {
+    "auto_contacts": "ALL_OWNED_AGENTS_PROPOSED",
+    "description": "Orchestrates SNEAK agents across BAND, Cognee, Snyk, GitHub, and Vercel. Assigns work, verifies task completion against source-bound evidence, tracks FCO/AoK provenance and Merkle/MMR breakpoints, coordinates security reviews, and escalates failures or missing evidence for human approval. Never treats proposed or untested work as completed.",
+    "field_validation": "PASS_LOCAL_ONLY",
+    "full_expected_handle": "@biobitworks.sneak-planner",
+    "handle_input": "sneak-planner",
+    "name": "SNEAK Planner",
+    "public_directory": "OFF_PROPOSED",
+    "tag": [
+      "orchestration"
+    ]
+  },
+  "schema": "sneak.band-planner-onboarding.v1",
+  "sha256_identity_scope": "profile plan exact bytes only",
+  "steps": {
+    "agent_id": "UNKNOWN",
+    "agent_response_received": "NOT_TESTED",
+    "agent_runtime_connected": "NOT_TESTED",
+    "at_mention_posted": "NOT_SENT",
+    "band_cli_authenticated": "NOT_AUTHENTICATED",
+    "board_created": "NOT_TESTED",
+    "participant_ids_verified": "NOT_TESTED",
+    "plan_uploaded": "NOT_TESTED",
+    "profile_fields": "PROPOSED",
+    "room_created": "NOT_OBSERVED",
+    "room_message_readback": "NOT_TESTED",
+    "server_message_id": "UNKNOWN",
+    "user_clicked_register": "NOT_OBSERVED"
+  },
+  "timestamp_utc": "2026-10-20T21:07:45.213015+00:00"
+}

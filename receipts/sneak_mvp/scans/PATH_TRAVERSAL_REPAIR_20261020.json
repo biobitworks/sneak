@@ -1,0 +1,88 @@
+{
+ "adapter_review_readonly": {
+  "changed": false,
+  "file": "apps/sneak_mvp/snyk_adapter.py",
+  "notes": [
+   "SARIF severity mapped from result.level (note->low); matches the 4 LOW in the predecessor receipt",
+   "if a SARIF result omits level, default 'warning'->medium (over-reports; fail-safe direction)",
+   "receipt 'where' keeps URI only; line numbers live only in local raw SARIF",
+   "exit 1 with zero parsed findings and exit 0 with findings both classify ERROR; gate PASS requires NO_ISSUES and clean bound commit"
+  ]
+ },
+ "additional_hardening": [
+  "snapshot_commit must be 40/64 lowercase hex before reaching git argv (option-injection guard)",
+  "--ref may not start with '-'",
+  "every path component lstat-checked for symlink; realpath must equal repo/rel and lie under repo",
+  "Node working file must be regular"
+ ],
+ "agent": "Claude Opus 5.5 (Claude Code), independent red-team/repair successor",
+ "claim_ceiling": "Scanner findings addressed in code and locally tested (Python). Not Snyk-clean, not vulnerability-free, Node behaviour unverified.",
+ "created_at": "2026-10-20",
+ "hash_construction_changed": false,
+ "id": "SNEAK-MVP-20261020-PT-REPAIR-1",
+ "mmr": "NOT_COMMITTED",
+ "observed_exploitability_pre_patch": {
+  "assessed_severity": "LOW: local CLI; attacker must supply argv or a tampered receipt; no integrity verdict bypass observed",
+  "node_cli_argv_parent": "NOT_TESTED (node blocked in session shell)",
+  "node_tampered_leaf_path": "STATIC: pre-patch coverage check against git ls-tree rejects leaf paths not in snapshot before fs access; not independently executed",
+  "python_cli_create_parent": "OBSERVED: wrote file outside repo (exclusive create, no overwrite)",
+  "python_cli_verify_parent_and_absolute": "OBSERVED: read receipt outside repo, rc 0",
+  "python_tampered_leaf_path": "OBSERVED: ../outside.txt read; errors list omitted 'working bytes differ' for a correct guessed hash -> existence/hash oracle; overall pass stayed false"
+ },
+ "parent_commit": "29032752794c8af9ce1688d2121f5f43122c6556",
+ "patched_files": {
+  "scripts/custody_snapshot.py": {
+   "after_sha256": "b9780e19c9fc3823cce8452e7357a09349ee16f0f8e975e7951c0303241eb63d",
+   "before_sha256": "b4c625427e9ac2bfb35e8909f2b7a2591e0fd5993a8dab3cd255135c842a0ff6"
+  },
+  "scripts/verify_custody_snapshot.mjs": {
+   "after_sha256": "d0001496ac6657130e3e2163e4f49768ddf7c0b1feca3fadd6324d69d921ca64",
+   "before_sha256": "85f0913099b3f4ee6eee1b54ad1be604a5c9c08a63ed78708bfc4fae6feb266d"
+  }
+ },
+ "path_rule": "printable ASCII 0x20-0x7e, no backslash, not absolute, no empty/'.'/'..' segment; all tracked paths at parent commit accept",
+ "predecessor_receipt": {
+  "modified": false,
+  "path": "receipts/sneak_mvp/scans/SNYK_20261020T192812.json",
+  "raw_sarif_local_only": "local-runs/snyk/20261020T192814Z/stdout.json",
+  "scan_target_commit": "b86a2e423c4510affd4fd7bbf6ab49a6b38d4ac2",
+  "sha256": "29b18df95df86f7e4f77c267e82ad16209755e473b8d8782e693e3e047c9c551"
+ },
+ "scanner_claims": [
+  {
+   "rule": "javascript/PT",
+   "sink": "fs.readFileSync(path.join(base,argv[2]))",
+   "where": "scripts/verify_custody_snapshot.mjs:8"
+  },
+  {
+   "rule": "python/PT",
+   "sink": "repo/record.path read in check()",
+   "where": "scripts/custody_snapshot.py:64"
+  },
+  {
+   "rule": "python/PT",
+   "sink": "repo/args.receipt",
+   "where": "scripts/custody_snapshot.py:72"
+  },
+  {
+   "rule": "python/PT",
+   "sink": "path.open('x') write in create",
+   "where": "scripts/custody_snapshot.py:75"
+  }
+ ],
+ "schema": "sneak.security-repair-receipt.v1",
+ "signed": false,
+ "snyk_rescan": "NOT_EXECUTED; no Snyk-clean claim",
+ "tests": {
+  "legacy_cli_parity": "OBSERVED identical stdout+rc old vs new for receipts/repository_bootstrap/SNAPSHOT.json and SNAPSHOT_MERGED.json (both pre-existing pass:false, rc 1, working bytes differ: README.md)",
+  "node_smoke": "NOT_EXECUTED (same blocker)",
+  "node_tests": {
+   "blocker": "session shell defines node() as 'Security: node blocked in workspace'; not bypassed",
+   "file": "tests/test_verify_custody_snapshot.mjs",
+   "sha256": "17b1c7bc4fe1e672853906f5a220581e7b757c99bed1db7fdc5a9a3fa38c10ef",
+   "status": "NOT_EXECUTED"
+  },
+  "python_new_tests_against_parent_script": "OBSERVED FAIL 6/6 (red; partly via missing helper symbols)",
+  "python_unittest_discover": "OBSERVED PASS 24/24 (previous 18 + 6 new PathContainmentTests)"
+ }
+}

@@ -1,0 +1,91 @@
+{
+  "ANTICUBE": "NOT_COMPUTED",
+  "DECISIONS": [
+    "Preserve historical 80 NOT_TESTED agent cases while reporting 80 structural test passes",
+    "Fail-close security gates until OAuth and dependency errors resolved",
+    "Do not claim zero Snyk findings from a failed scan",
+    "Preserve protected Vercel preview; do not expose live keys",
+    "BAND message prepared, NOT SENT"
+  ],
+  "DELTA_G_STAR": "NOT_COMPUTED",
+  "EXECUTED": {
+    "snyk_code": "EXECUTED_ERROR",
+    "snyk_oss": "EXECUTED_ERROR",
+    "structural_lomo_trials": 80,
+    "tests_node": 7,
+    "tests_python": 40
+  },
+  "FAILURES": [
+    "BAND device authorization expired",
+    "Snyk Code auth expired or refused (exit 2)",
+    "Snyk Open Source failed to resolve project dependencies (exit 2)"
+  ],
+  "ID": "SNEAK-EXPORT-HEATMAP-20261020-BP-002",
+  "LOMO_BIOLOGICAL_OR_AGENT_PERFORMANCE": "NOT_COMPUTED",
+  "NEXT_ACTION": "Human completes BAND device code and Snyk CLI login, then revalidate room IDs and send exact hashed handoff; rescan.",
+  "NOT_TESTED": [
+    "80 live actor behavioral ablations",
+    "80 individual Snyk-per-breakpoint real scans",
+    "BAND room delivery",
+    "HITL room decision",
+    "BAND agent sessions tokens/cost",
+    "External event judge acceptance",
+    "Snyk Container without a known image"
+  ],
+  "OBSERVED": {
+    "auth_protection_unauthenticated_http": 302,
+    "band_message_sha256": "dad9ac7dab655ffee3ac9711ab86e17776ea210278fb2fdc097616ca10a3a0b7",
+    "export_leaf_count": 13,
+    "export_merkle_root": "d301c04c3ee66b698a60152fb64c05c20b169b82022c620bb85b59734182ab02",
+    "export_mmr_nodes": 23,
+    "export_mmr_root": "79b6b6ab1af5e601f2ceb57fc0e11021511fa191382429c715239b8539335f27",
+    "human_approval": "AUTHORIZED_WORK_NOT_ACCEPTANCE_PROOF",
+    "manifest_sha256": "3894d3a5f1a0a6b77a36209fba858009fd08fe07a622d17a262a12120f6811b6",
+    "matrix_sha256": "5976f38c2d99de6cac04b41cb87c5b6783dd55ea95f2e4023c2561f553afb022",
+    "preview_deployment_id": "dpl_5ZXnCZ9QeEueMNpkqtPxkva2UaDw",
+    "preview_state": "READY",
+    "preview_url": "https://sneak-evidence-preview-lwpgjst6d-biobitworks.vercel.app/heatmap",
+    "snyk_code_scan": {
+      "exit_code": 2,
+      "gate": "BLOCKED",
+      "reason": "snyk exit 2: Use `snyk auth` to authenticate.",
+      "result": "ERROR",
+      "target_commit": "128dfa6e7151a5762da941110af530c68f3976d6"
+    },
+    "snyk_container": "NOT_TESTED_NO_IMAGE_BOUND",
+    "snyk_oss": {
+      "error": "Failed to get dependencies for all 1 potential projects.\n\nTip: Re-run in debug mode to see more information: DEBUG=*snyk* <COMMAND>\nIf the issue persists contact support@snyk.io",
+      "error_class": "dependency-resolution",
+      "exit_code": 2,
+      "result": "ERROR"
+    }
+  },
+  "PARENT": {
+    "git_head": "128dfa6e7151a5762da941110af530c68f3976d6",
+    "parent_receipt_sha256": "426c89e7976111991d4e61ad695555e0f4ff71710650ee84d25f387a930dc14a",
+    "vercel_receipt": "SNEAK-VERCEL-20261020-001"
+  },
+  "PROPOSED": [
+    "BAND auth, room work board and two-harness handoff",
+    "Reauthenticate Snyk Code and repair OSS resolution, rerun",
+    "Run live actor experiments separately from structural fixture ablations",
+    "Mark each mandatory acceptance atom only with independent evidence"
+  ],
+  "ROOT_SCOPE": "declared Vercel output files, excludes manifests and self-referential custody",
+  "SIGNATURE": "NOT_SIGNED",
+  "UNRESOLVED": [
+    "BAND account authorization on magicPRObox",
+    "Snyk OAuth and trusted manifest",
+    "Full sponsor + mandatory acceptance",
+    "Deployment-specific clean source scan"
+  ],
+  "VERIFIED_NEW": [
+    "13 declared exported files independently SHA256 checked",
+    "Merkle odd-node-promotion root computed over sorted canonical file records",
+    "MMR position-committed leaf-and-parent root computed with explicit peaks",
+    "80 structural LOMO actor\u00d7component ablations computed, fail-closed on missing binding",
+    "Independent Node replay of 80 roots and exact exported 13-file Merkle/MMR",
+    "Corrected Vercel protected preview HTTP200 HTML and byte-equivalent custody JSON"
+  ],
+  "schema": "sneak.turn-breakpoint.export-heatmap.v1"
+}

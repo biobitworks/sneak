@@ -10,3 +10,5 @@ __pycache__/
 local-runs/
 *.egg-info/
 .pytest_cache/
+
+deploy/vercel-preview/.vercel/
