@@ -10,9 +10,10 @@ import json
 import pathlib
 import sys
 import threading
+import uuid
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from apps.sneak_mvp import REPO_ROOT
-from apps.sneak_mvp.snyk_adapter import bind_target, run_scan, persist
+from apps.sneak_mvp.snyk_adapter import bind_target, run_scan
 
 def main():
  ap=argparse.ArgumentParser(description=__doc__)
@@ -40,7 +41,12 @@ def main():
                     'reason':receipt.get('reason'),'exit_code':receipt.get('exit_code')}),flush=True)
  # Persist after BOTH scans, so receipt writes cannot dirty the second scan target.
  for receipt in receipts:
-  print('Receipt: '+str(persist(receipt).relative_to(REPO_ROOT)))
+  out=REPO_ROOT/'receipts/ship_gate'
+  out.mkdir(parents=True,exist_ok=True)
+  path=out/('SNYK_'+receipt['mode']+'_'+uuid.uuid4().hex+'.json')
+  with path.open('x') as f:
+   f.write(json.dumps(receipt,sort_keys=True,indent=2)+'\n')
+  print('Receipt: '+str(path.relative_to(REPO_ROOT)))
  passed=all(r['gate']=='PASS' for r in receipts)
  print(json.dumps({'result':'PASS_SCANS_ONLY' if passed else 'FAIL_BLOCKED',
    'commit':binding['commit'],'security_app_score':'NOT_COMPUTED',
