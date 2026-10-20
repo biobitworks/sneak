@@ -1,0 +1,73 @@
+{
+  "band": {
+    "agent_acknowledgment": "NOT_OBSERVED",
+    "message_id": "d119c566-2b73-41fd-860e-20218b9f5fed",
+    "post_ok": true,
+    "post_status": 201,
+    "recipients": [
+      {
+        "harness": "claude",
+        "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+        "name": "Tom"
+      },
+      {
+        "harness": "chatgpt",
+        "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+        "name": "Jerry"
+      }
+    ],
+    "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd"
+  },
+  "cognee": {
+    "add_ok": true,
+    "add_status": 200,
+    "cognify_ok": true,
+    "cognify_status": 200,
+    "dataset": "Data",
+    "exact_digest_recall": true,
+    "recall_hits": 5
+  },
+  "errors": [],
+  "last_fco_inclusion": true,
+  "parent_commit": "4018d660cc090493b206b2ecd9c8ddc922f8751f",
+  "payload": {
+    "agent_requests": {
+      "Jerry/ChatGPT": "Verify BAND/Cognee receipts, requirements coverage, score NULL treatment, and scoped teammate handoff; never self-award review.",
+      "Tom/Claude": "Independently review FCO/MMR identity, tampering, predecessor linkage, and Snyk source-to-sink findings. Respond in BAND with findings."
+    },
+    "approval_scope": "BAND communication and Cognee @Data storage were operator-approved; no release/security approval implied.",
+    "branch": "integration/sneak-audit-fco-20261020",
+    "commit": "4018d660cc090493b206b2ecd9c8ddc922f8751f",
+    "fcg_edges": 64,
+    "mmr_leaves": 55,
+    "mmr_nodes": 105,
+    "parent_commit": "ba1ba7925137855792fed76d4f7a377fc689b1d2",
+    "repo": "biobitworks/sneak",
+    "schema": "sneak.r15-review-message.v1",
+    "security": {
+      "event_bonus": "NOT_VERIFIED",
+      "javier_application_score": null,
+      "sast": "7 findings; exit 1",
+      "sca": "FAILED dependency resolution; exit 2",
+      "security_gate": "DENY",
+      "snyk_cli": "1.1307.2"
+    },
+    "source_merkle": "72e7a22ae6e2e46be6b09f60af3f5efb13603fd84a4dee08b8706fd11543f6ae",
+    "successor_mmr_root": "089e49c083f1d6170402a366cfa76f3b939cbdcefce262ff39a732061463dadc",
+    "tests": {
+      "jupyter": "PASS_4",
+      "node": "PASS",
+      "python": "PASS_82"
+    }
+  },
+  "payload_sha256": "17c584dc167c2a9264f2ede630834a0ebe200c0ed82b0dbf2a428d427a5ac302",
+  "predecessor_mmr_root": "089e49c083f1d6170402a366cfa76f3b939cbdcefce262ff39a732061463dadc",
+  "schema": "sneak.r15-live-review-receipt.v1",
+  "successor_fcg_mmr": {
+    "fcg_edges": 66,
+    "fco_count": 57,
+    "mmr_root": "9b2bc310380b6d9fd586caf0cbe6b185d7d4c95b41c95c31e31231123861f416",
+    "mmr_size": 110,
+    "verified": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "artifact_digest": "f5afbfe795c4301589d1a69bed6c967650b707f4e7e689b0d90bd25f8f1bcfbf",
+  "id": "data_breakpoint-a720595b3d71",
+  "kind": "data_breakpoint",
+  "observed_at": "2026-10-20T20:48:36.176101+00:00",
+  "parent_id": null,
+  "payload": {
+    "alias": "@Data",
+    "breakpoint_id": "LOMO-CONN-03-ABLATE",
+    "dataset": "Data",
+    "live": null,
+    "merkle_root": "fd316d1d23b42da78881869062152ea99c09e550c46898872ee5f8fe4034633f",
+    "observed_outcome": "LOCAL_CONTRACT_ONLY"
+  }
+}

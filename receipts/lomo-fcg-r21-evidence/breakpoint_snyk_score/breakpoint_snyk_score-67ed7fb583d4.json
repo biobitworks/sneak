@@ -1,0 +1,35 @@
+{
+  "artifact_digest": "ed1e6837ecc21ce32fb812b856db634b78ca2f9961efe11eb22b47a817fdd9b0",
+  "id": "breakpoint_snyk_score-67ed7fb583d4",
+  "kind": "breakpoint_snyk_score",
+  "observed_at": "2026-10-20T20:48:36.253082+00:00",
+  "parent_id": "LOMO-CONN-04-ABLATE",
+  "payload": {
+    "band_receipt_id": null,
+    "breakpoint_id": "LOMO-CONN-04-ABLATE",
+    "candidate_digest": "4022e7c0411e9e802a4e62e7ab1a21bad18f4de405ea8d470f08718167f8a4a5",
+    "clean_ten": false,
+    "data_receipt_id": "data_breakpoint-8733a96d8acf",
+    "meaning": "Score bound to LOMO merkle breakpoint; incomplete coverage cannot be a clean 10/10; not an awarded event bonus",
+    "merkle_root": "3d79f4adef662cecb13f54b7773f27aecdee8de08c49c26184ed833661d221f4",
+    "scan_observed_outcome": "NOT_TESTED",
+    "score": {
+      "application_score": null,
+      "coverage_accepted": false,
+      "license": "UNKNOWN_ROOT_LICENSE_404",
+      "meaning": "Tool score only; not an awarded event bonus or vulnerability-free claim",
+      "raw_score": 10.0,
+      "reject_reason": "incomplete_sca_or_sast_coverage",
+      "sast_coverage": false,
+      "sca_coverage": false,
+      "upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+      "upstream_repo": "https://github.com/javiergarza-snyk/app-security-score"
+    },
+    "score_upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+    "snyk_availability": {
+      "observed_outcome": "NOT_TESTED",
+      "snyk_cli": true,
+      "token_in_env": false
+    }
+  }
+}

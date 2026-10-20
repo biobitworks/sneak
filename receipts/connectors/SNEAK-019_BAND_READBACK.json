@@ -1,0 +1,23 @@
+{
+  "inclusion_verified": true,
+  "last_fco": "FCO-d79f1c759fdcb072558c3053a4776be027004f293cc3eee8f97aa9ba752c76cc",
+  "parent_mmr_root": "9b2bc310380b6d9fd586caf0cbe6b185d7d4c95b41c95c31e31231123861f416",
+  "payload": {
+    "agent_acknowledgment": "NOT_OBSERVED",
+    "canonical_packet_sha256": "17c584dc167c2a9264f2ede630834a0ebe200c0ed82b0dbf2a428d427a5ac302",
+    "message_id": "d119c566-2b73-41fd-860e-20218b9f5fed",
+    "message_id_present": true,
+    "payload_digest_present": true,
+    "returned_message_count": 100,
+    "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+    "schema": "sneak.band-readback.v1"
+  },
+  "payload_sha256": "1ae1d2228aa2d21563937eb9e394cc95ee6b240aa46f6af03df2eaab59cd694e",
+  "successor_mmr": {
+    "fcg_edges": 67,
+    "fco_count": 58,
+    "mmr_root": "f0579f511bccecf09c588f1d564e33a12af3409502a56b7868c4b61eab87587a",
+    "mmr_size": 112,
+    "verified": true
+  }
+}
