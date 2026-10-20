@@ -1,0 +1,344 @@
+{
+  "env": {
+    "python": "3.15.0",
+    "node": "v26.0.0",
+    "git": "git version 2.54.0",
+    "audited_head": "ee7432bf551451fc620df270a86a986a23000d46"
+  },
+  "snapshots": [
+    {
+      "receipt": "receipts/repository_bootstrap/SNAPSHOT.json",
+      "snapshot_commit": "2662f8ed50de3c35113203c171ebc808fce10790",
+      "declared_root": "dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403",
+      "independent_root": "dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403",
+      "declared_leaf_count": 167,
+      "independent_leaf_count": 167,
+      "records_identical": true,
+      "state": "SUPPORTED"
+    },
+    {
+      "receipt": "receipts/repository_bootstrap/SNAPSHOT_MERGED.json",
+      "snapshot_commit": "48e72e9b1a62371fc25f79180196b7fb87ae8da1",
+      "declared_root": "6fcec1a89efd31b0e92df2dba02b6d9ae2e15dc816146945a30b6f790930c94a",
+      "independent_root": "6fcec1a89efd31b0e92df2dba02b6d9ae2e15dc816146945a30b6f790930c94a",
+      "declared_leaf_count": 179,
+      "independent_leaf_count": 179,
+      "records_identical": true,
+      "state": "SUPPORTED"
+    }
+  ],
+  "tamper": [
+    {
+      "python_exit": 0,
+      "node_exit": 0,
+      "python_out": "{\"pass\": true, \"errors\": [], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "{\"result\":\"PASS\",\"implementation\":\"independent Node\",\"root\":\"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\",\"leaves\":167,\"snapshot_commit\":\"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "case": "control_untampered",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 1,
+      "node_exit": 1,
+      "python_out": "{\"pass\": false, \"errors\": [\"working bytes differ: AGENTS.md\"], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "ne/scripts/verify_custody_snapshot.mjs:18:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n",
+      "case": "copied_file_byte",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 1,
+      "node_exit": 1,
+      "python_out": "{\"pass\": false, \"errors\": [\"snapshot mismatch: leaves\"], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "ne/scripts/verify_custody_snapshot.mjs:18:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n",
+      "case": "leaf_hash",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 1,
+      "node_exit": 1,
+      "python_out": "{\"pass\": false, \"errors\": [\"snapshot mismatch: leaves\", \"bad proof: .planning/STATE.md\", \"working bytes differ: .planning/STATE.md\"], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "ne/scripts/verify_custody_snapshot.mjs:18:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n",
+      "case": "record_sha",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 1,
+      "node_exit": 1,
+      "python_out": "d proof: sources/predecessor_intake.zip\", \"bad proof: sources/user_rules_excerpt_20261020.txt\", \"bad proof: tests/test_custody_snapshot.py\"], \"root\": \"0cabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "ne/scripts/verify_custody_snapshot.mjs:18:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n",
+      "case": "root",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 1,
+      "node_exit": 1,
+      "python_out": "{\"pass\": false, \"errors\": [\"snapshot mismatch: leaves\"], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "ne/scripts/verify_custody_snapshot.mjs:16:64\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n",
+      "case": "ordering_swap",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 1,
+      "node_exit": 1,
+      "python_out": "{\"pass\": false, \"errors\": [\"snapshot mismatch: leaves\", \"bad proof: .planning/REQUIREMENTS.md\"], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "ne/scripts/verify_custody_snapshot.mjs:18:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n",
+      "case": "proof_direction",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 1,
+      "node_exit": 1,
+      "python_out": "{\"pass\": false, \"errors\": [\"snapshot mismatch: leaf_count\", \"snapshot mismatch: leaves\"], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 166, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "ne/scripts/verify_custody_snapshot.mjs:16:64\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n",
+      "case": "missing_manifest_member",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 1,
+      "node_exit": 1,
+      "python_out": "{\"pass\": false, \"errors\": [\"snapshot mismatch: leaf_count\", \"snapshot mismatch: root\", \"snapshot mismatch: leaves\"], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"bbd99bead46f47669cf5ff270d60e99a0947b6a2\"}\n",
+      "node_out": "ne/scripts/verify_custody_snapshot.mjs:16:64\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n",
+      "case": "snapshot_commit_swap",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "state": "SUPPORTED"
+    },
+    {
+      "python_exit": 0,
+      "node_exit": 0,
+      "python_out": "{\"pass\": true, \"errors\": [], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "{\"result\":\"PASS\",\"implementation\":\"independent Node\",\"root\":\"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\",\"leaves\":167,\"snapshot_commit\":\"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "case": "claim_signed_true",
+      "expected": "REJECT",
+      "observed": "ACCEPT",
+      "state": "FAILED"
+    },
+    {
+      "python_exit": 0,
+      "node_exit": 0,
+      "python_out": "{\"pass\": true, \"errors\": [], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "{\"result\":\"PASS\",\"implementation\":\"independent Node\",\"root\":\"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\",\"leaves\":167,\"snapshot_commit\":\"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "case": "claim_mmr_committed",
+      "expected": "REJECT",
+      "observed": "ACCEPT",
+      "state": "FAILED"
+    },
+    {
+      "python_exit": 0,
+      "node_exit": 0,
+      "python_out": "{\"pass\": true, \"errors\": [], \"root\": \"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\", \"leaf_count\": 167, \"snapshot_commit\": \"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "node_out": "{\"result\":\"PASS\",\"implementation\":\"independent Node\",\"root\":\"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\",\"leaves\":167,\"snapshot_commit\":\"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+      "case": "rewrite_meaning",
+      "expected": "REJECT",
+      "observed": "ACCEPT",
+      "state": "FAILED"
+    }
+  ],
+  "aok": {
+    "atoms": 46,
+    "true_counts": {
+      "content_ok": 46,
+      "context_ok": 46,
+      "fco_ok": 46,
+      "offsets_ok": 46,
+      "excerpt_hash_ok": 46,
+      "pdf_hash_matches_file": 46,
+      "start_is_first_hit": 46,
+      "pdf_page_supported": 46,
+      "fcg_node_identity_ok": 46,
+      "fcg_edge_context_ok": 46,
+      "fcg_edge_target_is_pdf": 0,
+      "fco_hash_covers_mutable_status": 46
+    },
+    "shared_quote_groups": {
+      "must be essential to the product": [
+        "REQ-AOK-M28",
+        "REQ-AOK-M29"
+      ]
+    },
+    "ambiguous_quotes": [
+      [
+        "REQ-AOK-M19",
+        2
+      ]
+    ],
+    "page_unsupported": [],
+    "extraction_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "fcg_nodes": 47,
+    "fcg_edges": 46,
+    "fcg_edge_targets": [
+      "478045e4cbbdf747547869d44d3ddd049aaaccce8684f5bd307731609e03ed23"
+    ]
+  },
+  "lomo": {
+    "matrix_rows": 80,
+    "actors": [
+      "builder",
+      "canonical-gateway",
+      "claude-redteam",
+      "cognee-memory",
+      "human-owner",
+      "independent-verifier",
+      "intake",
+      "snyk-scanner",
+      "tokenizer-harness",
+      "transport"
+    ],
+    "graph_ablations": [
+      {
+        "removed_component": "source-atom",
+        "fields_probed": [
+          "source_quote",
+          "content_sha256"
+        ],
+        "fields_present_in_graph": [
+          "content_sha256",
+          "source_quote"
+        ],
+        "graph_root_baseline": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_root_ablated": "84b2f4889c3020859836593f4b9c1b59d24bd7cb2aaf57d6c0d089104f4dc619",
+        "graph_changed": true,
+        "graph_state": "EXECUTED",
+        "graph_note": null,
+        "runtime_behavior": "NOT_TESTED",
+        "runtime_note": "No app, agent action or authorization gate exists to observe; a graph change is not runtime evidence.",
+        "matrix_rows_for_component": 10
+      },
+      {
+        "removed_component": "occurrence-context",
+        "fields_probed": [
+          "occurrence",
+          "context_sha256"
+        ],
+        "fields_present_in_graph": [
+          "context_sha256",
+          "occurrence"
+        ],
+        "graph_root_baseline": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_root_ablated": "755e1a0892992fad657a30e09d58bc6fd37f43cab08f16d30285c3806eb87bca",
+        "graph_changed": true,
+        "graph_state": "EXECUTED",
+        "graph_note": null,
+        "runtime_behavior": "NOT_TESTED",
+        "runtime_note": "No app, agent action or authorization gate exists to observe; a graph change is not runtime evidence.",
+        "matrix_rows_for_component": 10
+      },
+      {
+        "removed_component": "rights-binding",
+        "fields_probed": [
+          "rights"
+        ],
+        "fields_present_in_graph": [],
+        "graph_root_baseline": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_root_ablated": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_changed": false,
+        "graph_state": "NOT_TESTED",
+        "graph_note": "Component absent from AoK graph; removal is a no-op and tests nothing.",
+        "runtime_behavior": "NOT_TESTED",
+        "runtime_note": "No app, agent action or authorization gate exists to observe; a graph change is not runtime evidence.",
+        "matrix_rows_for_component": 10
+      },
+      {
+        "removed_component": "policy-binding",
+        "fields_probed": [
+          "verifier_policy"
+        ],
+        "fields_present_in_graph": [
+          "verifier_policy"
+        ],
+        "graph_root_baseline": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_root_ablated": "864dfddf358e87223c61450f29cef8790f3e41051b0eefa65e1a8836506dde5a",
+        "graph_changed": true,
+        "graph_state": "EXECUTED",
+        "graph_note": null,
+        "runtime_behavior": "NOT_TESTED",
+        "runtime_note": "No app, agent action or authorization gate exists to observe; a graph change is not runtime evidence.",
+        "matrix_rows_for_component": 10
+      },
+      {
+        "removed_component": "scan-receipt",
+        "fields_probed": [
+          "scan_receipt"
+        ],
+        "fields_present_in_graph": [],
+        "graph_root_baseline": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_root_ablated": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_changed": false,
+        "graph_state": "NOT_TESTED",
+        "graph_note": "Component absent from AoK graph; removal is a no-op and tests nothing.",
+        "runtime_behavior": "NOT_TESTED",
+        "runtime_note": "No app, agent action or authorization gate exists to observe; a graph change is not runtime evidence.",
+        "matrix_rows_for_component": 10
+      },
+      {
+        "removed_component": "memory-reference",
+        "fields_probed": [
+          "memory_reference"
+        ],
+        "fields_present_in_graph": [],
+        "graph_root_baseline": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_root_ablated": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_changed": false,
+        "graph_state": "NOT_TESTED",
+        "graph_note": "Component absent from AoK graph; removal is a no-op and tests nothing.",
+        "runtime_behavior": "NOT_TESTED",
+        "runtime_note": "No app, agent action or authorization gate exists to observe; a graph change is not runtime evidence.",
+        "matrix_rows_for_component": 10
+      },
+      {
+        "removed_component": "authorization-receipt",
+        "fields_probed": [
+          "authorization_receipt"
+        ],
+        "fields_present_in_graph": [],
+        "graph_root_baseline": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_root_ablated": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_changed": false,
+        "graph_state": "NOT_TESTED",
+        "graph_note": "Component absent from AoK graph; removal is a no-op and tests nothing.",
+        "runtime_behavior": "NOT_TESTED",
+        "runtime_note": "No app, agent action or authorization gate exists to observe; a graph change is not runtime evidence.",
+        "matrix_rows_for_component": 10
+      },
+      {
+        "removed_component": "parent-breakpoint",
+        "fields_probed": [
+          "parent",
+          "predecessor_requirement_id"
+        ],
+        "fields_present_in_graph": [],
+        "graph_root_baseline": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_root_ablated": "350b83e762c9ee54f6949dfc418afe04957fc5c5c40c92d66a5e9299df1212d4",
+        "graph_changed": false,
+        "graph_state": "NOT_TESTED",
+        "graph_note": "Component absent from AoK graph; removal is a no-op and tests nothing.",
+        "runtime_behavior": "NOT_TESTED",
+        "runtime_note": "No app, agent action or authorization gate exists to observe; a graph change is not runtime evidence.",
+        "matrix_rows_for_component": 10
+      }
+    ]
+  }
+}
