@@ -1,0 +1,126 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-026",
+  "leaf_count": 4,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032362d41535349474e4d454e5453222c226b696e64223a22776f726b5f626f6172645f61737369676e6d656e7473222c227061796c6f6164223a7b226c616e6573223a5b22636c617564655f746f6d5f617263686974656374222c22636861746770745f6a657272795f6275696c646572222c22636f676e65655f6d656d6f7279222c22736e796b5f636f64655f6f70656e5f736f75726365222c226d65726b6c655f6d6d725f766572696669636174696f6e225d2c226f766572616c6c5f706c616e5f646f6e65223a66616c73657d7d",
+      "leaf": "cb6f3051277af48390d3a93bb9b641852b353b8138c437baa4d2589c7009abf8",
+      "proof": [
+        {
+          "hash": "86d22a3e40a1d75ed132e55b20a11f45e593fa7016a9b77e81a16d79841ad4c5",
+          "side": "right"
+        },
+        {
+          "hash": "b2b504f118b998d00dc23c9e461716e413fe9b0707a33571d4016917f4471894",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-026-ASSIGNMENTS",
+        "kind": "work_board_assignments",
+        "payload": {
+          "lanes": [
+            "claude_tom_architect",
+            "chatgpt_jerry_builder",
+            "cognee_memory",
+            "snyk_code_open_source",
+            "merkle_mmr_verification"
+          ],
+          "overall_plan_done": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032362d46495253542d5441534b222c226b696e64223a2266697273745f7461736b222c227061796c6f6164223a7b226167656e745f706172616c6c656c5f66697273745f7461736b223a7b226a65727279223a22496d706c656d656e746174696f6e206f6e6c7920616674657220436f676e656520726563616c6c206f6620736e65616b2d3032342d636f6e766572736174696f6e2d637573746f6479222c22746f6d223a22417263686974656374757265207265766965772072656365697074207265636f6d707574696e6720534e45414b2d303234206c6561662f726f6f74206279746573227d2c2265766964656e63655f6e65656465645f746f5f636f6d706c657465223a5b22496e2d726f6f6d2068756d616e207265706c792066726f6d2061737369676e656520286e6f7420706c616e6e65722073656c662d636f6d706c65746529222c22426f617264206f766572616c6c5f73746174757320666c697020627920636f72726563742061737369676e6565222c22506c616e6e65722072656d61696e73206f6e6c696e652028776562736f636b657429207768656e2043686972616720636f6e6669726d73225d2c226964223a22434845434b4f46462d372d7468656e2d36222c2273756d6d617279223a2248756d616e204279726f6e20233720617070726f766520706c616e20747261636b3b2043686972616720233620636f6e6669726d20726f73746572202b20706c616e6e6572206f6e6c696e65227d7d",
+      "leaf": "86d22a3e40a1d75ed132e55b20a11f45e593fa7016a9b77e81a16d79841ad4c5",
+      "proof": [
+        {
+          "hash": "cb6f3051277af48390d3a93bb9b641852b353b8138c437baa4d2589c7009abf8",
+          "side": "left"
+        },
+        {
+          "hash": "b2b504f118b998d00dc23c9e461716e413fe9b0707a33571d4016917f4471894",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-026-FIRST-TASK",
+        "kind": "first_task",
+        "payload": {
+          "agent_parallel_first_task": {
+            "jerry": "Implementation only after Cognee recall of sneak-024-conversation-custody",
+            "tom": "Architecture review receipt recomputing SNEAK-024 leaf/root bytes"
+          },
+          "evidence_needed_to_complete": [
+            "In-room human reply from assignee (not planner self-complete)",
+            "Board overall_status flip by correct assignee",
+            "Planner remains online (websocket) when Chirag confirms"
+          ],
+          "id": "CHECKOFF-7-then-6",
+          "summary": "Human Byron #7 approve plan track; Chirag #6 confirm roster + planner online"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032362d4944454e54495459222c226b696e64223a22706c616e6e65725f6964656e74697479222c227061796c6f6164223a7b2261637475616c5f6167656e745f6964223a2236346632346139302d333933372d343763382d626337632d663033636237393830643439222c2261637475616c5f68616e646c65223a2262696f626974776f726b732f706c616e6e6572222c226e6f7465223a22526567697374657265642068616e646c65206973204062696f626974776f726b732f706c616e6e65723b20736e65616b2d706c616e6e657220616c696173206e6f742072656769737465726564222c227265717565737465645f68616e646c65223a2262696f626974776f726b732e736e65616b2d706c616e6e6572227d7d",
+      "leaf": "a76a942fcb6606a425bb3a63ebb5503ff5e676781945b79e63424c5bf96fee67",
+      "proof": [
+        {
+          "hash": "21927880d5c4e907829ce09ee066f7ec2b3f0e29c20d024111208eaad0992fc3",
+          "side": "right"
+        },
+        {
+          "hash": "9586aed0498f2fadb793793c662a2f397dad0212c599861d5b12b15b6a3b6bea",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-026-IDENTITY",
+        "kind": "planner_identity",
+        "payload": {
+          "actual_agent_id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+          "actual_handle": "biobitworks/planner",
+          "note": "Registered handle is @biobitworks/planner; sneak-planner alias not registered",
+          "requested_handle": "biobitworks.sneak-planner"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032362d524f4f4d222c226b696e64223a22726f6f6d5f7265666572656e6365222c227061796c6f6164223a7b227061727469636970616e745f636f756e74223a392c22726f6f6d5f6964223a2237653231386164372d346434652d346130372d613362322d643464623861303362346333227d7d",
+      "leaf": "21927880d5c4e907829ce09ee066f7ec2b3f0e29c20d024111208eaad0992fc3",
+      "proof": [
+        {
+          "hash": "a76a942fcb6606a425bb3a63ebb5503ff5e676781945b79e63424c5bf96fee67",
+          "side": "left"
+        },
+        {
+          "hash": "9586aed0498f2fadb793793c662a2f397dad0212c599861d5b12b15b6a3b6bea",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-026-ROOM",
+        "kind": "room_reference",
+        "payload": {
+          "participant_count": 9,
+          "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3"
+        }
+      }
+    }
+  ],
+  "meaning": "Planner onboarding verification reply with assignment taxonomy; no false execution claims",
+  "mmr": "NOT_COMMITTED",
+  "package_digest": "7bebd9687c19d6a7541ebd9e3d19561dbe56c027e24d81d7c404811c36a82bb5",
+  "parent": "SNEAK-025",
+  "root": "34435580f3c191c54520061dde3d155fc3bd57932313aa7de97dbcdbb507ecdb",
+  "schema": "sneak.planner-onboarding-verify.v1",
+  "signed": false
+}

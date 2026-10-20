@@ -1,0 +1,246 @@
+{
+  "artifact_digest": "7bebd9687c19d6a7541ebd9e3d19561dbe56c027e24d81d7c404811c36a82bb5",
+  "assignments": [
+    {
+      "assignee_handle": "biobitworks/tom",
+      "assignee_id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+      "executed": false,
+      "failures_or_not_tested": [
+        "BOARD_TOOL_MISSING",
+        "board_task_3_still_pending"
+      ],
+      "implemented": true,
+      "lane": "claude_tom_architect",
+      "observed": "CHAT_ACK #3 in planner room (board overall_status still pending)",
+      "proposed": "Architecture review of custody BPs + plan board ownership",
+      "supported_by": [
+        "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+      ]
+    },
+    {
+      "assignee_handle": "biobitworks/jerry",
+      "assignee_id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+      "executed": false,
+      "failures_or_not_tested": [
+        "BOARD_TOOL_MISSING",
+        "board_task_4_still_pending"
+      ],
+      "implemented": true,
+      "lane": "chatgpt_jerry_builder",
+      "observed": "CHAT_ACK #4 in planner room (board overall_status still pending)",
+      "proposed": "Implementation claims after Cognee recall",
+      "supported_by": [
+        "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+      ]
+    },
+    {
+      "assignee_handle": "cognee",
+      "executed": true,
+      "failures_or_not_tested": [],
+      "implemented": true,
+      "lane": "cognee_memory",
+      "observed": "SNEAK-024 cognee add_ok=True; authority=DATA_ONLY",
+      "proposed": "Admitted @Data capture of custody breakpoints",
+      "supported_by": [
+        "receipts/connectors/SNEAK-024_CONVERSATION_CUSTODY.json"
+      ]
+    },
+    {
+      "assignee_handle": "snyk",
+      "executed": false,
+      "failures_or_not_tested": [
+        "live_SNYK_TOKEN_scan_NOT_TESTED",
+        "bonus_not_awarded"
+      ],
+      "implemented": true,
+      "lane": "snyk_code_open_source",
+      "observed": "Score pin + bonus evidence path prepared in prior SNEAK receipts",
+      "proposed": "Javier-scored scan \u2192 LOMO\u00d7merkle bonus EVIDENCE_PREPARED (not awarded)",
+      "supported_by": [
+        "receipts/connectors/SNEAK-019* or bonus receipts if present"
+      ]
+    },
+    {
+      "assignee_handle": "sneak.custody",
+      "executed": true,
+      "failures_or_not_tested": [
+        "MMR_COMMITTED_NOT_TESTED",
+        "SIGNED_NOT_TESTED"
+      ],
+      "implemented": true,
+      "lane": "merkle_mmr_verification",
+      "observed": "SNEAK-024: 4 BPs (3 pass/1 fail); model trails; project mmr NOT_COMMITTED",
+      "proposed": "Unique true/false BPs + per-model candidate MMR deltas vs root question",
+      "supported_by": [
+        "receipts/connectors/SNEAK-024_CONVERSATION_CUSTODY.json",
+        "data/verification/requirements_sneak_024.jsonl"
+      ]
+    }
+  ],
+  "band_message": {
+    "http_status": 201,
+    "message_id": "13c2c190-ecbd-42f9-afcb-728daa49a828",
+    "ok": true,
+    "recipients": [
+      {
+        "harness": "claude",
+        "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+        "name": "Tom"
+      },
+      {
+        "harness": "chatgpt",
+        "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+        "name": "Jerry"
+      },
+      {
+        "harness": "remote-external",
+        "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+        "name": "Planner"
+      }
+    ]
+  },
+  "board_task": {
+    "assignments": [],
+    "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+    "created_by": {
+      "handle": "biobitworks",
+      "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+      "name": "Byron Lee",
+      "type": "User"
+    },
+    "detail": "Planner identity confirmed. First gate: humans #6/#7. Tom: arch receipt for SNEAK-024. Jerry: build only after Cognee recall. Snyk live NOT_TESTED. MMR NOT_COMMITTED. Overall Done=false.",
+    "id": "e3c9b3a7-fc75-4cff-9ed7-35655118f41c",
+    "number": 10,
+    "overall_status": "pending",
+    "state": "active",
+    "subject": "SNEAK-026 onboarding verify: identity/room/assignments"
+  },
+  "first_task_to_execute": {
+    "agent_parallel_first_task": {
+      "jerry": "Implementation only after Cognee recall of sneak-024-conversation-custody",
+      "tom": "Architecture review receipt recomputing SNEAK-024 leaf/root bytes"
+    },
+    "evidence_needed_to_complete": [
+      "In-room human reply from assignee (not planner self-complete)",
+      "Board overall_status flip by correct assignee",
+      "Planner remains online (websocket) when Chirag confirms"
+    ],
+    "id": "CHECKOFF-7-then-6",
+    "summary": "Human Byron #7 approve plan track; Chirag #6 confirm roster + planner online"
+  },
+  "id": "SNEAK-026-PLANNER-ONBOARDING",
+  "me": {
+    "handle": "biobitworks",
+    "http_status": 200,
+    "ok": true,
+    "user_id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1"
+  },
+  "meaning": "Planner onboarding verification reply with assignment taxonomy; no false execution claims",
+  "mmr": "NOT_COMMITTED",
+  "overall_plan_done": false,
+  "parent": "SNEAK-025",
+  "participants_observed": [
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/jerry",
+      "id": "0415f9ec-2d1b-4726-934b-8d7362ad69af",
+      "name": "Jerry",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": null,
+      "handle": "biobitworks",
+      "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+      "name": "Byron Lee",
+      "online": true,
+      "type": "User"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "biobitworks/tom",
+      "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+      "name": "Tom",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/tom",
+      "id": "3f8ab94b-e5b4-40a9-b188-0cd2885cc98e",
+      "name": "Tom",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/coolagent",
+      "id": "4580aa5b-c325-4097-919b-25a3e857a47a",
+      "name": "CoolAgent",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "biobitworks/planner",
+      "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+      "name": "Planner",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": null,
+      "handle": "cmanjesh",
+      "id": "7ee7bf0f-fb32-4e11-8eb8-2c7516ca49f6",
+      "name": "Chirag Manjeshwar",
+      "online": true,
+      "type": "User"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "biobitworks/jerry",
+      "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+      "name": "Jerry",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/planner",
+      "id": "ca71b60f-97be-4b03-8ed8-8b95f8b805ed",
+      "name": "Planner",
+      "online": true,
+      "type": "Agent"
+    }
+  ],
+  "responding_as": {
+    "actual_agent_id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+    "actual_handle": "biobitworks/planner",
+    "note": "Registered handle is @biobitworks/planner; sneak-planner alias not registered",
+    "requested_handle": "biobitworks.sneak-planner"
+  },
+  "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+  "secrets": {
+    "env_overrides_present": [
+      "BAND_PLANNER_AGENT_ID",
+      "BAND_PLANNER_API_KEY",
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "file_exists": true,
+    "file_mode": "0o600",
+    "keys_present": [
+      "BAND_PLANNER_AGENT_ID",
+      "BAND_PLANNER_API_KEY",
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "parent_exists": true,
+    "parent_mode": "0o700",
+    "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+    "value_inspected": false
+  },
+  "signed": false
+}
