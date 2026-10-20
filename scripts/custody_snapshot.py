@@ -3,6 +3,10 @@
 import argparse,hashlib,json,pathlib,re,subprocess,sys
 SAFE_REL=re.compile(r"[\x20-\x7e]+")
 COMMIT=re.compile(r"[0-9a-f]{40}|[0-9a-f]{64}")
+# Historic snapshot parent labels are frozen and bound to their exact snapshot commit.
+LEGACY_MERGE_COMMIT="48e72e9b1a62371fc25f79180196b7fb87ae8da1"
+def parent_breakpoint(commit):
+    return "SNEAK-011-MERGE" if commit==LEGACY_MERGE_COMMIT else "SNEAK-010"
 def safe_relpath(rel):
     """Reject absolute, parent/empty/dot segments, backslash and non-printable-ASCII paths."""
     if not isinstance(rel,str) or not SAFE_REL.fullmatch(rel) or "\\" in rel or rel.startswith("/"):raise ValueError("unsafe path encoding")
@@ -63,8 +67,8 @@ def snapshot(repo,ref):
         records.append({"path":path,"size_bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()})
     records.sort(key=lambda x:x["path"].encode("utf-8"))
     xs=[leaf(x) for x in records]
-    return {"schema":"sneak.git-snapshot.v1","snapshot_commit":commit,
-      "scope":"ALL_REGULAR_TRACKED_FILES_AT_DECLARED_COMMIT","parent_breakpoint":"SNEAK-010",
+    receipt={"schema":"sneak.git-snapshot.v1","snapshot_commit":commit,
+      "scope":"ALL_REGULAR_TRACKED_FILES_AT_DECLARED_COMMIT","parent_breakpoint":parent_breakpoint(commit),
       "construction":{"hash":"SHA-256","canonical":"ASCII JSON sorted keys ensure_ascii=true compact separators no newline",
       "ordering":"UTF-8 path ascending; ASCII paths required","leaf":"SHA256(0x00 || canonical(record))",
       "internal":"SHA256(0x01 || left || right)","odd":"promote unchanged"},
@@ -73,13 +77,17 @@ def snapshot(repo,ref):
       "exclusions":"Untracked/ignored assets and commits after snapshot_commit; this generated receipt is subsequent to its snapshot",
       "meaning":"Integrity only; not source truth, rights, security, signatures or canonical admission",
       "mmr":"NOT_COMMITTED","signed":False}
+    if commit==LEGACY_MERGE_COMMIT:
+        receipt.update(parent_root="dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403",
+                       parent_snapshot_receipt="receipts/repository_bootstrap/SNAPSHOT.json")
+    return receipt
 def check(repo,receipt):
     if not isinstance(receipt.get("snapshot_commit"),str) or not COMMIT.fullmatch(receipt["snapshot_commit"]):
         return {"pass":False,"errors":["invalid snapshot_commit"],"root":receipt.get("root"),"leaf_count":receipt.get("leaf_count"),"snapshot_commit":None}
     actual=snapshot(repo,receipt["snapshot_commit"])
     errors=[]
-    for key in ("schema","snapshot_commit","construction","leaf_count","root","leaves"):
-        if actual[key]!=receipt[key]:errors.append("snapshot mismatch: "+key)
+    for key in sorted(set(actual) | set(receipt)):
+        if actual.get(key)!=receipt.get(key):errors.append("snapshot mismatch: "+key)
     expected=bytes.fromhex(receipt["root"])
     for item in receipt["leaves"]:
         r=item["record"]

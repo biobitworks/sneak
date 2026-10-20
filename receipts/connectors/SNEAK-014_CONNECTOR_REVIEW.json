@@ -1,0 +1,316 @@
+{
+  "coding_errors": 0,
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "demo_digest": "72ba2e707fdcc01721e8e8e0a33e6378d303d446eee3f75271cfcb98c23c1fc2",
+  "entry_gate": {
+    "entry_gate": false,
+    "mandatory_count": 30,
+    "mandatory_unverified": 30,
+    "mandatory_verified": 0,
+    "meaning": "entry_gate = all(mandatory_atom.verified is True)"
+  },
+  "human_decision": "PENDING",
+  "id": "SNEAK-014",
+  "leaf_count": 7,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031342d41424c4154494f4e222c226b696e64223a22646565705f696e746567726174696f6e5f61626c6174696f6e222c227061796c6f6164223a7b2262616e645f72656d6f76616c5f626c6f636b735f617070726f76616c223a747275652c22626173656c696e655f6e6578745f616374696f6e223a2264656e795f6576616c222c22636f676e65655f6368616e6765735f6265686176696f72223a747275652c226c6976655f70726f76696465725f636c61696d223a66616c73652c226f627365727665645f6f7574636f6d65223a224c4f43414c5f434f4e54524143545f50415353222c22776974686f75745f636f676e65655f6e6578745f616374696f6e223a22636f6e74696e7565227d7d",
+      "leaf": "9037fc3a58fa6fc89991f4ae422ca0aae4a3eca781c7659cbf4749076a1f0c06",
+      "proof": [
+        {
+          "hash": "4eb099ef2c42c3276e0ad6a59fe0a2bc555ed4bf9606ac59cbc280e9f5b079c3",
+          "side": "right"
+        },
+        {
+          "hash": "b82e4eaf9728ceeef79819a56b1694b78b8e7e7c5b44604416783de09be43d25",
+          "side": "right"
+        },
+        {
+          "hash": "136bc94e637328b61ff1ab72832957ba2faf49029de7ed374f3bdb2586f754e5",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-014-ABLATION",
+        "kind": "deep_integration_ablation",
+        "payload": {
+          "band_removal_blocks_approval": true,
+          "baseline_next_action": "deny_eval",
+          "cognee_changes_behavior": true,
+          "live_provider_claim": false,
+          "observed_outcome": "LOCAL_CONTRACT_PASS",
+          "without_cognee_next_action": "continue"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031342d414f4b222c226b696e64223a22616f6b5f656e7472795f67617465222c227061796c6f6164223a7b22656e7472795f67617465223a66616c73652c226d616e6461746f72795f636f756e74223a33302c226d616e6461746f72795f756e7665726966696564223a33302c226d616e6461746f72795f7665726966696564223a302c226d65616e696e67223a22656e7472795f67617465203d20616c6c286d616e6461746f72795f61746f6d2e7665726966696564206973205472756529227d7d",
+      "leaf": "4eb099ef2c42c3276e0ad6a59fe0a2bc555ed4bf9606ac59cbc280e9f5b079c3",
+      "proof": [
+        {
+          "hash": "9037fc3a58fa6fc89991f4ae422ca0aae4a3eca781c7659cbf4749076a1f0c06",
+          "side": "left"
+        },
+        {
+          "hash": "b82e4eaf9728ceeef79819a56b1694b78b8e7e7c5b44604416783de09be43d25",
+          "side": "right"
+        },
+        {
+          "hash": "136bc94e637328b61ff1ab72832957ba2faf49029de7ed374f3bdb2586f754e5",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-014-AOK",
+        "kind": "aok_entry_gate",
+        "payload": {
+          "entry_gate": false,
+          "mandatory_count": 30,
+          "mandatory_unverified": 30,
+          "mandatory_verified": 0,
+          "meaning": "entry_gate = all(mandatory_atom.verified is True)"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031342d42414e442d52454345495054222c226b696e64223a2262616e645f726563656970745f6c6f61646564222c227061796c6f6164223a7b2268756d616e5f6465636973696f6e223a2250454e44494e47222c226c6976655f73657373696f6e223a66616c73652c226f627365727665645f6f7574636f6d65223a224c4f414445445f52454345495054222c22726563656970745f6964223a22534e45414b2d303133222c22726f6f6d5f6964223a2232306631656535662d366635622d343663352d393237312d306261353336643332326664227d7d",
+      "leaf": "ed6606a4d33c601a1650c9535fa59d178bd862b96517332eb2df7d2fc9f4a708",
+      "proof": [
+        {
+          "hash": "8b7e90aa10f264022755998df49f681fe08f05534ab48774d474b0b3fab2e9bf",
+          "side": "right"
+        },
+        {
+          "hash": "a3946c6bb001778ca6156526a60b16695f2e860389533e61c95ded03132b51d8",
+          "side": "left"
+        },
+        {
+          "hash": "136bc94e637328b61ff1ab72832957ba2faf49029de7ed374f3bdb2586f754e5",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-014-BAND-RECEIPT",
+        "kind": "band_receipt_loaded",
+        "payload": {
+          "human_decision": "PENDING",
+          "live_session": false,
+          "observed_outcome": "LOADED_RECEIPT",
+          "receipt_id": "SNEAK-013",
+          "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031342d4359434c45222c226b696e64223a2273656375726974795f7265766965775f6379636c65222c227061796c6f6164223a7b2263616e6469646174655f646967657374223a2237326261326537303766646363303137323165386538653061333365363337386433303364343436656565336637353237316366636239386332336331666332222c22636c65616e5f74656e223a747275652c2267617465223a7b2263616e6469646174655f646967657374223a2237326261326537303766646363303137323165386538653061333365363337386433303364343436656565336637353237316366636239386332336331666332222c226361706162696c697479223a6e756c6c2c226465636973696f6e223a2250454e44494e47222c22706f6c6963795f646967657374223a22706f6c6963792d7631222c22726561736f6e73223a5b2268756d616e5f6465636973696f6e5f70656e64696e67225d7d2c2275736167655f726561646261636b223a7b226f627365727665645f6f7574636f6d65223a22554e4b4e4f574e222c2272756e5f6964223a227265766965772d303134227d7d7d",
+      "leaf": "8b7e90aa10f264022755998df49f681fe08f05534ab48774d474b0b3fab2e9bf",
+      "proof": [
+        {
+          "hash": "ed6606a4d33c601a1650c9535fa59d178bd862b96517332eb2df7d2fc9f4a708",
+          "side": "left"
+        },
+        {
+          "hash": "a3946c6bb001778ca6156526a60b16695f2e860389533e61c95ded03132b51d8",
+          "side": "left"
+        },
+        {
+          "hash": "136bc94e637328b61ff1ab72832957ba2faf49029de7ed374f3bdb2586f754e5",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-014-CYCLE",
+        "kind": "security_review_cycle",
+        "payload": {
+          "candidate_digest": "72ba2e707fdcc01721e8e8e0a33e6378d303d446eee3f75271cfcb98c23c1fc2",
+          "clean_ten": true,
+          "gate": {
+            "candidate_digest": "72ba2e707fdcc01721e8e8e0a33e6378d303d446eee3f75271cfcb98c23c1fc2",
+            "capability": null,
+            "decision": "PENDING",
+            "policy_digest": "policy-v1",
+            "reasons": [
+              "human_decision_pending"
+            ]
+          },
+          "usage_readback": {
+            "observed_outcome": "UNKNOWN",
+            "run_id": "review-014"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031342d4c4f4d4f222c226b696e64223a226c6f6d6f5f636f6e6e6563746f725f747269616c73222c227061796c6f6164223a7b22747269616c73223a5b7b2261626c617465645f726f6f74223a2265313733303430313566656461633433303064323531613465393939366336313432633565613136363462393131343533623866313634613932623265333961222c22617574686f72697a6174696f6e5f656666656374223a224641494c5f434c4f5345445f4e4f5f434f4f5244494e4154494f4e222c22626173656c696e655f726f6f74223a2236373138313134353164646162623966303639613130663230346430646365393039626434633563393030653266353861646337653163396638383935323963222c2272656d6f7665645f636f6d706f6e656e74223a2262616e642d636f6e6e6563746f72222c22726f6f74735f646966666572223a747275652c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3031227d2c7b2261626c617465645f726f6f74223a2235303132633435343030383534323033303062306166663764663735633461303334313035343138616664623266666531653534613762313436356264323438222c22617574686f72697a6174696f6e5f656666656374223a224641494c5f434c4f5345445f4e4f5f4d454d4f52595f434f4e54494e554154494f4e222c22626173656c696e655f726f6f74223a2261393964363030623237616163393934333537646639323030363637333230666465363961626439333363306665656132666239646334646235353132343333222c2272656d6f7665645f636f6d706f6e656e74223a22636f676e65652d636f6e6e6563746f72222c22726f6f74735f646966666572223a747275652c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3032227d2c7b2261626c617465645f726f6f74223a2265333435616337626634313734353362366536666631333764626335353236666639396635386366663365653062326434336262636161323435396266346533222c22617574686f72697a6174696f6e5f656666656374223a2244454e59222c22626173656c696e655f726f6f74223a2237646531316539633231353065326466643563636533646132656265613136363232366230303862643231343239646337366162383132346261626635316461222c2272656d6f7665645f636f6d706f6e656e74223a22736e796b2d636f6e6e6563746f72222c22726f6f74735f646966666572223a747275652c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3033227d2c7b2261626c617465645f726f6f74223a2230383539356239666561613566363636376231643034636139306565656661393637653862386464383163336266653234636164313265353431633239383735222c22617574686f72697a6174696f6e5f656666656374223a224d45544552494e475f554e415641494c41424c455f53454355524954595f554e4348414e474544222c22626173656c696e655f726f6f74223a2232643334343365663161346330386139393835653634303434316130336235653338326638346366343132613238326239396133626266393832393434653631222c2272656d6f7665645f636f6d706f6e656e74223a22666c65782d636f6e6e6563746f72222c22726f6f74735f646966666572223a747275652c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3034227d5d7d7d",
+      "leaf": "02ef6cf0548b1f8659f6dd1ab1aba2f80f83c3dd5d9a1f81630d1c072f1c63e1",
+      "proof": [
+        {
+          "hash": "6d613f1617cee37b70079a2d2efe35b44c47abe94c7904ddac312ff6c072e1b2",
+          "side": "right"
+        },
+        {
+          "hash": "a8a79620e6724435ca8a332afb95e632552950969f3738230c93db5424669952",
+          "side": "right"
+        },
+        {
+          "hash": "d715df2cb9a66dfbaaea8683dcfd66819a39425d6f4ecb5b98b11d478889232e",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-014-LOMO",
+        "kind": "lomo_connector_trials",
+        "payload": {
+          "trials": [
+            {
+              "ablated_root": "e17304015fedac4300d251a4e9996c6142c5ea1664b911453b8f164a92b2e39a",
+              "authorization_effect": "FAIL_CLOSED_NO_COORDINATION",
+              "baseline_root": "671811451ddabb9f069a10f204d0dce909bd4c5c900e2f58adc7e1c9f889529c",
+              "removed_component": "band-connector",
+              "roots_differ": true,
+              "trial_id": "LOMO-CONN-01"
+            },
+            {
+              "ablated_root": "5012c4540085420300b0aff7df75c4a034105418afdb2ffe1e54a7b1465bd248",
+              "authorization_effect": "FAIL_CLOSED_NO_MEMORY_CONTINUATION",
+              "baseline_root": "a99d600b27aac994357df9200667320fde69abd933c0feea2fb9dc4db5512433",
+              "removed_component": "cognee-connector",
+              "roots_differ": true,
+              "trial_id": "LOMO-CONN-02"
+            },
+            {
+              "ablated_root": "e345ac7bf417453b6e6ff137dbc5526ff99f58cff3ee0b2d43bbcaa2459bf4e3",
+              "authorization_effect": "DENY",
+              "baseline_root": "7de11e9c2150e2dfd5cce3da2ebea166226b008bd21429dc76ab8124babf51da",
+              "removed_component": "snyk-connector",
+              "roots_differ": true,
+              "trial_id": "LOMO-CONN-03"
+            },
+            {
+              "ablated_root": "08595b9feaa5f6667b1d04ca90eeefa967e8b8dd81c3bfe24cad12e541c29875",
+              "authorization_effect": "METERING_UNAVAILABLE_SECURITY_UNCHANGED",
+              "baseline_root": "2d3443ef1a4c08a9985e640441a03b5e382f84cf412a282b99a3bbf982944e61",
+              "removed_component": "flex-connector",
+              "roots_differ": true,
+              "trial_id": "LOMO-CONN-04"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031342d53434f5245222c226b696e64223a226170705f73656375726974795f73636f72655f68656c706572222c227061796c6f6164223a7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22656c6576656e5f6d656469756d5f73636f7265223a302e302c22696e636f6d706c6574655f636f766572616765223a7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22636f7665726167655f6163636570746564223a66616c73652c226c6963656e7365223a22554e4b4e4f574e5f524f4f545f4c4943454e53455f343034222c226d65616e696e67223a22546f6f6c2073636f7265206f6e6c793b206e6f7420616e2061776172646564206576656e7420626f6e7573206f722076756c6e65726162696c6974792d6672656520636c61696d222c227261775f73636f7265223a31302e302c2272656a6563745f726561736f6e223a22696e636f6d706c6574655f7363615f6f725f736173745f636f766572616765222c22736173745f636f766572616765223a66616c73652c227363615f636f766572616765223a747275652c22757073747265616d5f636f6d6d6974223a2236653166323736303566653237386565643334376231306461623666333962333530316631343836222c22757073747265616d5f7265706f223a2268747470733a2f2f6769746875622e636f6d2f6a61766965726761727a612d736e796b2f6170702d73656375726974792d73636f7265227d2c226c6963656e7365223a22554e4b4e4f574e5f524f4f545f4c4943454e53455f343034222c226f6e655f686967685f73636f7265223a392e302c22736173745f636f766572616765223a224e4f545f45584543555445445f4c495645222c227363615f636f766572616765223a224e4f545f45584543555445445f4c495645222c22757073747265616d5f636f6d6d6974223a2236653166323736303566653237386565643334376231306461623666333962333530316631343836222c227a65726f5f66696e64696e67735f73636f7265223a31302e307d7d",
+      "leaf": "6d613f1617cee37b70079a2d2efe35b44c47abe94c7904ddac312ff6c072e1b2",
+      "proof": [
+        {
+          "hash": "02ef6cf0548b1f8659f6dd1ab1aba2f80f83c3dd5d9a1f81630d1c072f1c63e1",
+          "side": "left"
+        },
+        {
+          "hash": "a8a79620e6724435ca8a332afb95e632552950969f3738230c93db5424669952",
+          "side": "right"
+        },
+        {
+          "hash": "d715df2cb9a66dfbaaea8683dcfd66819a39425d6f4ecb5b98b11d478889232e",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-014-SCORE",
+        "kind": "app_security_score_helper",
+        "payload": {
+          "application_score": null,
+          "eleven_medium_score": 0.0,
+          "incomplete_coverage": {
+            "application_score": null,
+            "coverage_accepted": false,
+            "license": "UNKNOWN_ROOT_LICENSE_404",
+            "meaning": "Tool score only; not an awarded event bonus or vulnerability-free claim",
+            "raw_score": 10.0,
+            "reject_reason": "incomplete_sca_or_sast_coverage",
+            "sast_coverage": false,
+            "sca_coverage": true,
+            "upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+            "upstream_repo": "https://github.com/javiergarza-snyk/app-security-score"
+          },
+          "license": "UNKNOWN_ROOT_LICENSE_404",
+          "one_high_score": 9.0,
+          "sast_coverage": "NOT_EXECUTED_LIVE",
+          "sca_coverage": "NOT_EXECUTED_LIVE",
+          "upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+          "zero_findings_score": 10.0
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031342d535441545553222c226b696e64223a22636f6e6e6563746f725f737461747573222c227061796c6f6164223a7b22616c6c5f6c697665223a66616c73652c2262616e64223a7b226c6976655f617661696c61626c65223a66616c73652c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c2270726f7669646572223a2262616e64222c22726f6f6d5f6964223a2232306631656535662d366635622d343663352d393237312d306261353336643332326664227d2c22636f676e6565223a7b226461746173657473223a5b2261646d6974746564222c2263616e646964617465225d2c226c6976655f617661696c61626c65223a66616c73652c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c2270726f7669646572223a22636f676e6565227d2c22666c6578223a7b2263726564697473223a302c226c6976655f617661696c61626c65223a66616c73652c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c2270726f7669646572223a22666c65787072696365227d2c22736e796b223a7b22646f636b6572223a6e756c6c2c226c6976655f617661696c61626c65223a66616c73652c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c2270726f7669646572223a22736e796b222c22736e796b5f636c69223a6e756c6c2c22746f6b656e5f696e5f656e76223a66616c73657d7d7d",
+      "leaf": "a8a79620e6724435ca8a332afb95e632552950969f3738230c93db5424669952",
+      "proof": [
+        {
+          "hash": "6f6aa7f3412d2c55f4f4e976c3858100afadbbed6a8ba0cfaa9a8ae45ab7ebe9",
+          "side": "left"
+        },
+        {
+          "hash": "d715df2cb9a66dfbaaea8683dcfd66819a39425d6f4ecb5b98b11d478889232e",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-014-STATUS",
+        "kind": "connector_status",
+        "payload": {
+          "all_live": false,
+          "band": {
+            "live_available": false,
+            "observed_outcome": "NOT_TESTED",
+            "provider": "band",
+            "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd"
+          },
+          "cognee": {
+            "datasets": [
+              "admitted",
+              "candidate"
+            ],
+            "live_available": false,
+            "observed_outcome": "NOT_TESTED",
+            "provider": "cognee"
+          },
+          "flex": {
+            "credits": 0,
+            "live_available": false,
+            "observed_outcome": "NOT_TESTED",
+            "provider": "flexprice"
+          },
+          "snyk": {
+            "docker": null,
+            "live_available": false,
+            "observed_outcome": "NOT_TESTED",
+            "provider": "snyk",
+            "snyk_cli": null,
+            "token_in_env": false
+          }
+        }
+      }
+    }
+  ],
+  "meaning": "Integrity of connector-review records only; not live provider attestation, signatures, human approval, or application acceptance",
+  "mmr": "NOT_COMMITTED",
+  "parent": "SNEAK-013",
+  "root": "47520bd79734519d9f28a7191496818ff6f0ac594e84000140bb8ed11de971a7",
+  "schema": "sneak.connector-review-merkle.v1",
+  "signed": false,
+  "snyk_app_score": "NOT_COMPUTED_LIVE",
+  "tests": {
+    "collected": 48,
+    "failed": 0,
+    "framework": "pytest",
+    "observed_outcome": "PASS"
+  }
+}

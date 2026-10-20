@@ -1,0 +1,34 @@
+[
+  {
+    "ablated_root": "e17304015fedac4300d251a4e9996c6142c5ea1664b911453b8f164a92b2e39a",
+    "authorization_effect": "FAIL_CLOSED_NO_COORDINATION",
+    "baseline_root": "671811451ddabb9f069a10f204d0dce909bd4c5c900e2f58adc7e1c9f889529c",
+    "removed_component": "band-connector",
+    "roots_differ": true,
+    "trial_id": "LOMO-CONN-01"
+  },
+  {
+    "ablated_root": "5012c4540085420300b0aff7df75c4a034105418afdb2ffe1e54a7b1465bd248",
+    "authorization_effect": "FAIL_CLOSED_NO_MEMORY_CONTINUATION",
+    "baseline_root": "a99d600b27aac994357df9200667320fde69abd933c0feea2fb9dc4db5512433",
+    "removed_component": "cognee-connector",
+    "roots_differ": true,
+    "trial_id": "LOMO-CONN-02"
+  },
+  {
+    "ablated_root": "e345ac7bf417453b6e6ff137dbc5526ff99f58cff3ee0b2d43bbcaa2459bf4e3",
+    "authorization_effect": "DENY",
+    "baseline_root": "7de11e9c2150e2dfd5cce3da2ebea166226b008bd21429dc76ab8124babf51da",
+    "removed_component": "snyk-connector",
+    "roots_differ": true,
+    "trial_id": "LOMO-CONN-03"
+  },
+  {
+    "ablated_root": "08595b9feaa5f6667b1d04ca90eeefa967e8b8dd81c3bfe24cad12e541c29875",
+    "authorization_effect": "METERING_UNAVAILABLE_SECURITY_UNCHANGED",
+    "baseline_root": "2d3443ef1a4c08a9985e640441a03b5e382f84cf412a282b99a3bbf982944e61",
+    "removed_component": "flex-connector",
+    "roots_differ": true,
+    "trial_id": "LOMO-CONN-04"
+  }
+]

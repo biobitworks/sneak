@@ -1,0 +1,111 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "human_decision": "APPROVE_TO_USE_WHEN_REACHABLE",
+  "id": "SNEAK-017",
+  "leaf_count": 3,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031372d42414e442d52454c4159222c226b696e64223a2262616e645f70726f62655f72657175657374222c227061796c6f6164223a7b226167656e7473223a5b7b226861726e657373223a22636c61756465222c226964223a2233393236323138642d383334322d343636372d396630372d356235353662353066623766222c226e616d65223a22546f6d227d2c7b226861726e657373223a2263686174677074222c226964223a2238623531663239352d633265372d346161612d393964642d356632333335646361623439222c226e616d65223a224a65727279227d5d2c226861726e6573736573223a5b22636c61756465222c2263686174677074225d2c22687474705f737461747573223a3230312c226d6573736167655f6964223a2237663864663835312d346539392d343962632d393937312d643061303635323966636335222c226f627365727665645f6f7574636f6d65223a2250415353222c22726f6f6d5f6964223a2232306631656535662d366635622d343663352d393237312d306261353336643332326664227d7d",
+      "leaf": "989ad89b921c1342c3ac64e480d162c06fc1ae9d2e2182a6d19ef2ae22ff0b5e",
+      "proof": [
+        {
+          "hash": "389b0a7d8556ff6eb62b9c958f7afc954c509e41e1d75d71c334793b67bb5c5a",
+          "side": "right"
+        },
+        {
+          "hash": "741cf0d4a2e72602eb95fc430ebed59016b87ab1bfe067bd5785873ed4473d0e",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-017-BAND-RELAY",
+        "kind": "band_probe_request",
+        "payload": {
+          "agents": [
+            {
+              "harness": "claude",
+              "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+              "name": "Tom"
+            },
+            {
+              "harness": "chatgpt",
+              "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+              "name": "Jerry"
+            }
+          ],
+          "harnesses": [
+            "claude",
+            "chatgpt"
+          ],
+          "http_status": 201,
+          "message_id": "7f8df851-4e99-49bc-9971-d0a06529fcc5",
+          "observed_outcome": "PASS",
+          "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031372d4445534b544f502d434f4d4d414e444552222c226b696e64223a226465736b746f705f636f6d6d616e6465725f737461747573222c227061796c6f6164223a7b226c616e5f726561636861626c655f66726f6d5f636c6f75645f766d223a66616c73652c226d63705f617661696c61626c655f696e5f636c6f75645f6167656e74223a66616c73652c227072696f725f6465766963655f6964223a2230303932356664372d616239352d346338382d383961352d393633373339333932666332222c227072696f725f686f73746e616d65223a226d6167696353545544494f626f782e6c6f63616c222c2273656c665f686f737465645f776f726b6572735f7365656e223a224d6163426f6f6b2050726f20776f726b657273206c69737465643b204d6167696353747564696f20686f73746e616d65206e6f7420696e20776f726b657220646973706c6179206e616d6573222c227368656c6c5f70726f62655f7363726970745f6279746573223a3733397d7d",
+      "leaf": "389b0a7d8556ff6eb62b9c958f7afc954c509e41e1d75d71c334793b67bb5c5a",
+      "proof": [
+        {
+          "hash": "989ad89b921c1342c3ac64e480d162c06fc1ae9d2e2182a6d19ef2ae22ff0b5e",
+          "side": "left"
+        },
+        {
+          "hash": "741cf0d4a2e72602eb95fc430ebed59016b87ab1bfe067bd5785873ed4473d0e",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-017-DESKTOP-COMMANDER",
+        "kind": "desktop_commander_status",
+        "payload": {
+          "lan_reachable_from_cloud_vm": false,
+          "mcp_available_in_cloud_agent": false,
+          "prior_device_id": "00925fd7-ab95-4c88-89a5-963739392fc2",
+          "prior_hostname": "magicSTUDIObox.local",
+          "self_hosted_workers_seen": "MacBook Pro workers listed; MagicStudio hostname not in worker display names",
+          "shell_probe_script_bytes": 739
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031372d4c4f43414c2d50524f4245222c226b696e64223a226f6c6c616d615f6c6f63616c5f70726f6265222c227061796c6f6164223a7b22686f73746e616d65223a22637572736f72222c22696e666572656e63655f6f6b5f636f756e74223a302c2269735f6d6167696373747564696f223a66616c73652c226d6f64656c5f636f756e74223a302c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c226f6c6c616d615f6f6b223a66616c73657d7d",
+      "leaf": "741cf0d4a2e72602eb95fc430ebed59016b87ab1bfe067bd5785873ed4473d0e",
+      "proof": [
+        {
+          "hash": "41fdbdce9348850bbabf9e58748d675b5413333926eb2329152cf7f44e255031",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-017-LOCAL-PROBE",
+        "kind": "ollama_local_probe",
+        "payload": {
+          "hostname": "cursor",
+          "inference_ok_count": 0,
+          "is_magicstudio": false,
+          "model_count": 0,
+          "observed_outcome": "NOT_TESTED",
+          "ollama_ok": false
+        }
+      }
+    }
+  ],
+  "meaning": "MagicStudio/Ollama/Desktop Commander reachability probe; NOT_TESTED until Desktop Commander executes on magicSTUDIObox.local",
+  "mmr": "NOT_COMMITTED",
+  "observed_outcome": "NOT_TESTED",
+  "parent": "SNEAK-016",
+  "root": "ea8c1cbd4919f26d68f6c9bf967fcb4b9621f7b07ea26e587369bbcb9f20b178",
+  "schema": "sneak.magicstudio-probe.v1",
+  "shell_probe_script": "#!/bin/zsh\nset -euo pipefail\necho \"HOSTNAME=$(hostname)\"\necho \"UNAME=$(uname -a)\"\ncommand -v ollama >/dev/null && ollama list || echo \"OLLAMA_CLI=MISSING\"\ncurl -fsS --max-time 5 http://127.0.0.1:11434/api/tags | head -c 4000 || echo \"OLLAMA_HTTP=DOWN\"\nfor m in qwen2.5:0.5b qwen2.5:1.5b; do\n  if ollama list 2>/dev/null | awk '{print $1}' | grep -qx \"$m\"; then\n    out=$(ollama run \"$m\" \"Reply with exactly: OLLAMA_OK\" 2>/dev/null | tr -d '\\n' | head -c 200 || true)\n    echo \"INFER_$m=$out\"\n  else\n    echo \"INFER_$m=NOT_INSTALLED\"\n  fi\ndone\ncommand -v claude >/dev/null && echo \"CLAUDE_CLI=$(command -v claude)\" || echo \"CLAUDE_CLI=MISSING\"\ncommand -v codex >/dev/null && echo \"CODEX_CLI=$(command -v codex)\" || echo \"CODEX_CLI=MISSING\"\n",
+  "signed": false
+}

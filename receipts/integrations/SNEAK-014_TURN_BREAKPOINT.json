@@ -1,0 +1,69 @@
+{
+  "id": "SNEAK-014-R1",
+  "parent": "SNEAK-014",
+  "predecessor": "SNEAK-013",
+  "verified_new": [
+    "Hosted Cognee 1.6.5 authenticated add, graph completion and exact-text recall",
+    "12 nodes/16 edges in bounded synthetic graph",
+    "BAND supervised UNKNOWN-to-source-cited-proposal exchange",
+    "Snyk CLI saved login and real SAST/SCA outcomes",
+    "Flexprice 2.1.40 import on both Macs",
+    "16 repository tests PASS",
+    "Corrected Jupyter replay 3/3 cells PASS, Python/Node root agreement"
+  ],
+  "executed": [
+    "Scoped Cognee client implementation",
+    "synthetic ingest/cognify/recall",
+    "BAND memory and security-summary messages",
+    "Snyk Code and Snyk Open Source integration-manifest scans",
+    "SDK installation",
+    "test and notebook execution",
+    "topic-branch artifact commits"
+  ],
+  "observed": {
+    "sast": "4 LOW findings; zero ignored",
+    "sca": "12 integration dependencies; zero known vulnerable paths",
+    "root": "89d9c17ace42bd7fbbbc20eb42c572161cc6e9f95ead4202faf63057a5db9276",
+    "leaf_count": 5,
+    "graph": {
+      "nodes": 12,
+      "edges": 16
+    },
+    "notebook": "SUCCESSOR_PASS; failed predecessor retained"
+  },
+  "decisions": [
+    "No source-of-truth admission or zero-vulnerability claim",
+    "Retain hosted-vs-OSS distinction",
+    "Use topic branch; no main merge",
+    "Keep model output separate from executed action"
+  ],
+  "proposed": [
+    "Bounded receipt-path hardening and Snyk rescan",
+    "agent-owned memory tools",
+    "Cognee OSS deployment",
+    "Flexprice test credentials/meter/event readback"
+  ],
+  "not_tested": [
+    "all mandatory acceptance",
+    "Javier scorer",
+    "agent-owned MCP memory invocation",
+    "VM isolation for hostile skill trials",
+    "full dependency corpus",
+    "Flexprice live API",
+    "canonical gateway"
+  ],
+  "failures": [
+    "Initial notebook had missing embedded verifier; corrected successor passed",
+    "Initial baseline collector referenced nonexistent send-response timestamp; recovered without duplicate send"
+  ],
+  "unresolved": [
+    "Four LOW path findings need review/remediation",
+    "FLEXPRICE_API_KEY absent in checked environments",
+    "Human BAND A/B choice pending",
+    "Notebook visual inspection NOT_EXECUTED"
+  ],
+  "next_action": "Human verifies Cognee dataset and BAND results; continue path-boundary remediation and wire agent-owned memory before mandatory acceptance",
+  "mmr": "NOT_COMMITTED",
+  "anticube": "NOT_COMPUTED",
+  "delta_g_star": "NOT_COMPUTED"
+}
