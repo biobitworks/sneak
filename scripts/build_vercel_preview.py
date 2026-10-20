@@ -53,8 +53,11 @@ def snapshot():
         "gate": "BLOCKED",  # preview cannot authorize release or deploy
         "outcome": scan.get("outcome", "NOT_RUN"),
         "reason": scan.get("reason", "missing evidence"),
-        "finding_count": scan.get("finding_count"),
-        "severity_counts": scan.get("severity_counts"),
+        "finding_count": scan.get("finding_count") if scan.get("outcome") in ("FINDINGS", "NO_ISSUES") else None,
+        "severity_counts": scan.get("severity_counts") if scan.get("outcome") in ("FINDINGS", "NO_ISSUES") else None,
+        "security_app_score": "NOT_COMPUTED",
+        "exit_code": scan.get("exit_code"),
+        "remediation": "Authenticate in the scan runner with snyk auth or its protected SNYK_TOKEN; run scripts/recheck_ship_gate.py on a clean checkout. See /claims.",
         "scanned_commit": scan_commit,
         "scan_covers_export_source": scan_commit == commit,
     }
@@ -135,7 +138,7 @@ def generate(out: pathlib.Path = BUILD) -> dict:
             if b"LOCAL PREVIEW" not in payload:
                 raise ValueError("source preview marker unexpectedly changed")
             payload = payload.replace(b"LOCAL PREVIEW", b"PROTECTED VERCEL SNAPSHOT")
-            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/trace">Sponsor traversal</a> | <a href="/judge">Human review</a> | <a href="/economics">Token economics</a> | <a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
+            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/trace">Sponsor traversal</a> | <a href="/claims">Ship gate claims</a> | <a href="/judge">Human review</a> | <a href="/economics">Token economics</a> | <a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
         target.write_bytes(payload)
         digest[dest] = sha256(payload)
     from scripts.flexprice_roi_trial import FIXTURE, measure
