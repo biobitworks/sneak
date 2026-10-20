@@ -47,6 +47,7 @@ class VercelProjectionTests(unittest.TestCase):
             self.assertEqual(routes["/api/audit"], "/data/audit.json")
             for path in ("index.html", "audit.html", "static/app.js", "static/audit.js", "static/style.css"):
                 self.assertTrue((base / path).is_file())
+            self.assertIn(b"PROTECTED VERCEL SNAPSHOT", (base / "index.html").read_bytes())
             self.assertIn(b"Disallow: /", (base/"robots.txt").read_bytes())
 
     def test_verifier_fail_closed(self):

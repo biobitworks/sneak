@@ -116,6 +116,10 @@ def generate(out: pathlib.Path = BUILD) -> dict:
         target = out / dest
         source = WEB / src
         payload = source.read_bytes()
+        if src == "index.html":
+            if b"LOCAL PREVIEW" not in payload:
+                raise ValueError("source preview marker unexpectedly changed")
+            payload = payload.replace(b"LOCAL PREVIEW", b"PROTECTED VERCEL SNAPSHOT")
         target.write_bytes(payload)
         digest[dest] = sha256(payload)
     data_files = {"data/graph.json": projected, "data/audit.json": audit}
