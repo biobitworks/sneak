@@ -1,0 +1,21 @@
+{
+  "band_cli_current": "NO_ACCOUNT",
+  "band_desktop_user_report": "SIGNED_IN_SOME_VIEWS_MISSING",
+  "human_authorized_work": "USER_APPROVED_INTERNAL_EXECUTION_NOT_EXTERNAL_ACCEPTANCE",
+  "human_signin_required": true,
+  "id": "SNEAK-BAND-20261020-HANDOFF-PENDING",
+  "intended_agents": [
+    "Claude",
+    "ChatGPT/Codex",
+    "Snyk Reviewer",
+    "Cognee @Data"
+  ],
+  "message_delivery": "NOT_SENT_AUTH_BLOCKED",
+  "mmr": "NOT_COMPUTED",
+  "schema": "sneak.band-handoff-pending.v1",
+  "signed": false,
+  "source_file": "docs/BAND_HANDOFF_PROPOSAL_20261020.md",
+  "source_sha256": "dad9ac7dab655ffee3ac9711ab86e17776ea210278fb2fdc097616ca10a3a0b7",
+  "target_room_prior_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+  "target_room_status": "UNVERIFIED_CURRENT"
+}
