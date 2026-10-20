@@ -110,6 +110,18 @@ python3 scripts/run_mvp_hash_travel.py
 - BAND @mentions Tom/Jerry/Planner: every agent connects to the shared Snyk connector digest (live scan still NOT_TESTED)
 - Receipts: `SNEAK-029_*`; JSONL: `data/verification/mvp_hash_travel_sneak_029.jsonl`
 
+## Cognee custody chain (over time) + Planner finalize
+
+```bash
+python3 scripts/run_cognee_custody_chain.py
+```
+
+- Live-recalls expected epochs (015 / 016 / 018 / 019 / 024 / 029) from `sneak_working_memory` + `@Data`
+- Shows chain of custody with **gap reasons** when markers are missing
+- Backfills SNEAK-029 when MVP travel notified BAND but never wrote Cognee
+- Finalizes Planner/Tom/Jerry status in the planner room (does not mark human Done)
+- Receipts: `SNEAK-030_*`; JSONL: `data/verification/cognee_custody_chain_sneak_030.jsonl`
+
 ## LOMO × merkle breakpoint → @Data → Snyk + score
 
 Operator-approved path (SNEAK-016):

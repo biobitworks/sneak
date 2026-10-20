@@ -1,0 +1,7 @@
+{"authority": "DATA_ONLY", "dataset": "sneak_working_memory", "gap_reason": null, "id": "REQ-CUSTODY-COGNEE-SNEAK-015", "kind": "custody_epoch", "observed_outcome": "PASS", "verified": true}
+{"authority": "DATA_ONLY", "dataset": "Data", "gap_reason": null, "id": "REQ-CUSTODY-COGNEE-SNEAK-016", "kind": "custody_epoch", "observed_outcome": "PASS", "verified": true}
+{"authority": "DATA_ONLY", "dataset": "Data", "gap_reason": null, "id": "REQ-CUSTODY-COGNEE-SNEAK-018", "kind": "custody_epoch", "observed_outcome": "PASS", "verified": true}
+{"authority": "DATA_ONLY", "dataset": "Data", "gap_reason": null, "id": "REQ-CUSTODY-COGNEE-SNEAK-019", "kind": "custody_epoch", "observed_outcome": "PASS", "verified": true}
+{"authority": "DATA_ONLY", "dataset": "sneak_working_memory", "gap_reason": null, "id": "REQ-CUSTODY-COGNEE-SNEAK-024", "kind": "custody_epoch", "observed_outcome": "PASS", "verified": true}
+{"authority": "DATA_ONLY", "dataset": "sneak_working_memory", "gap_reason": null, "id": "REQ-CUSTODY-COGNEE-SNEAK-029", "kind": "custody_epoch", "observed_outcome": "PASS", "verified": true}
+{"custody_root": "2a89def65e0238d5452d65057e3a90a732586dcf1bb55dfa2dbb43376581ba25", "id": "REQ-CUSTODY-COGNEE-CHAIN", "kind": "custody_chain", "mmr": "NOT_COMMITTED", "observed_outcome": "PASS", "signed": false, "travels_ok": true, "verified": true}

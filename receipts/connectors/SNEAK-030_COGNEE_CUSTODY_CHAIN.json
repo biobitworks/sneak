@@ -1,0 +1,250 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-030",
+  "leaf_count": 7,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22435553544f44592d534e45414b2d303135222c226b696e64223a22636f676e65655f637573746f64795f65706f6368222c227061796c6f6164223a7b226361707475726564223a747275652c2264617461736574223a22736e65616b5f776f726b696e675f6d656d6f7279222c2265706f63685f6964223a22534e45414b2d303135222c22666f756e645f6d61726b657273223a5b226c6976652d626c6f636b2d6576616c2d6d7573742d64656e79222c22534e45414b2d303135222c22626c6f636b2d6576616c225d2c226761705f726561736f6e223a6e756c6c2c226869745f636f756e74223a367d7d",
+      "leaf": "834a75902e9bfaa273720530e016b7a7459aa4d057c9922b278b97acc67308f7",
+      "proof": [
+        {
+          "hash": "bba2cd81d5ff5a68eb3e4df51431fb2fdc78856c94aa7975674d0f1829d15f8d",
+          "side": "right"
+        },
+        {
+          "hash": "ecc8f5a00d4a3c9ddb00d31ed87ef2bc94fed7254d14459b77f7e34da494734b",
+          "side": "right"
+        },
+        {
+          "hash": "aba53f8d7620d7d104f9cdbe1310fcdf8cabaeab7dcbd5f671c4697f25ecfc6d",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CUSTODY-SNEAK-015",
+        "kind": "cognee_custody_epoch",
+        "payload": {
+          "captured": true,
+          "dataset": "sneak_working_memory",
+          "epoch_id": "SNEAK-015",
+          "found_markers": [
+            "live-block-eval-must-deny",
+            "SNEAK-015",
+            "block-eval"
+          ],
+          "gap_reason": null,
+          "hit_count": 6
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22435553544f44592d534e45414b2d303136222c226b696e64223a22636f676e65655f637573746f64795f65706f6368222c227061796c6f6164223a7b226361707475726564223a747275652c2264617461736574223a2244617461222c2265706f63685f6964223a22534e45414b2d303136222c22666f756e645f6d61726b657273223a5b224c4f4d4f2d434f4e4e2d30312d41424c415445222c224044617461222c226d65726b6c655f726f6f74225d2c226761705f726561736f6e223a6e756c6c2c226869745f636f756e74223a387d7d",
+      "leaf": "bba2cd81d5ff5a68eb3e4df51431fb2fdc78856c94aa7975674d0f1829d15f8d",
+      "proof": [
+        {
+          "hash": "834a75902e9bfaa273720530e016b7a7459aa4d057c9922b278b97acc67308f7",
+          "side": "left"
+        },
+        {
+          "hash": "ecc8f5a00d4a3c9ddb00d31ed87ef2bc94fed7254d14459b77f7e34da494734b",
+          "side": "right"
+        },
+        {
+          "hash": "aba53f8d7620d7d104f9cdbe1310fcdf8cabaeab7dcbd5f671c4697f25ecfc6d",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CUSTODY-SNEAK-016",
+        "kind": "cognee_custody_epoch",
+        "payload": {
+          "captured": true,
+          "dataset": "Data",
+          "epoch_id": "SNEAK-016",
+          "found_markers": [
+            "LOMO-CONN-01-ABLATE",
+            "@Data",
+            "merkle_root"
+          ],
+          "gap_reason": null,
+          "hit_count": 8
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22435553544f44592d534e45414b2d303138222c226b696e64223a22636f676e65655f637573746f64795f65706f6368222c227061796c6f6164223a7b226361707475726564223a747275652c2264617461736574223a2244617461222c2265706f63685f6964223a22534e45414b2d303138222c22666f756e645f6d61726b657273223a5b22534e45414b2d303138222c224044617461225d2c226761705f726561736f6e223a6e756c6c2c226869745f636f756e74223a387d7d",
+      "leaf": "631c10723c9a32408988686b37deff20c34e8aa047a2303e585fbf3afe3cb5dd",
+      "proof": [
+        {
+          "hash": "a055f8918d53481a99b720155ea145809b8a813e11933b0dfc62c52eb6fa6b3a",
+          "side": "right"
+        },
+        {
+          "hash": "b716de03581da8791feaa164b0bbdd6fcb3990d3643a5867202089663480d2bc",
+          "side": "left"
+        },
+        {
+          "hash": "aba53f8d7620d7d104f9cdbe1310fcdf8cabaeab7dcbd5f671c4697f25ecfc6d",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CUSTODY-SNEAK-018",
+        "kind": "cognee_custody_epoch",
+        "payload": {
+          "captured": true,
+          "dataset": "Data",
+          "epoch_id": "SNEAK-018",
+          "found_markers": [
+            "SNEAK-018",
+            "@Data"
+          ],
+          "gap_reason": null,
+          "hit_count": 8
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22435553544f44592d534e45414b2d303139222c226b696e64223a22636f676e65655f637573746f64795f65706f6368222c227061796c6f6164223a7b226361707475726564223a747275652c2264617461736574223a2244617461222c2265706f63685f6964223a22534e45414b2d303139222c22666f756e645f6d61726b657273223a5b22534e45414b2d303139222c224044617461225d2c226761705f726561736f6e223a6e756c6c2c226869745f636f756e74223a387d7d",
+      "leaf": "a055f8918d53481a99b720155ea145809b8a813e11933b0dfc62c52eb6fa6b3a",
+      "proof": [
+        {
+          "hash": "631c10723c9a32408988686b37deff20c34e8aa047a2303e585fbf3afe3cb5dd",
+          "side": "left"
+        },
+        {
+          "hash": "b716de03581da8791feaa164b0bbdd6fcb3990d3643a5867202089663480d2bc",
+          "side": "left"
+        },
+        {
+          "hash": "aba53f8d7620d7d104f9cdbe1310fcdf8cabaeab7dcbd5f671c4697f25ecfc6d",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "CUSTODY-SNEAK-019",
+        "kind": "cognee_custody_epoch",
+        "payload": {
+          "captured": true,
+          "dataset": "Data",
+          "epoch_id": "SNEAK-019",
+          "found_markers": [
+            "SNEAK-019",
+            "@Data"
+          ],
+          "gap_reason": null,
+          "hit_count": 8
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22435553544f44592d534e45414b2d303234222c226b696e64223a22636f676e65655f637573746f64795f65706f6368222c227061796c6f6164223a7b226361707475726564223a747275652c2264617461736574223a22736e65616b5f776f726b696e675f6d656d6f7279222c2265706f63685f6964223a22534e45414b2d303234222c22666f756e645f6d61726b657273223a5b22736e65616b2d3032342d636f6e766572736174696f6e2d637573746f6479222c2242502d736e65616b303234222c224e4f545f434f4d4d4954544544225d2c226761705f726561736f6e223a6e756c6c2c226869745f636f756e74223a367d7d",
+      "leaf": "d8b666600a192d663189410b070b197da92f07a8581528da517ef629c6b25a97",
+      "proof": [
+        {
+          "hash": "74a96a39df20187c0274447306dc17ed2a5dac758202305ac7d766abf26909a4",
+          "side": "right"
+        },
+        {
+          "hash": "bf523ec5bcbb4676ab4239372049c05e35536ca074e76bf5ae48e534192db32b",
+          "side": "right"
+        },
+        {
+          "hash": "5aa8465abeb9a7653452aa25210f93746d86583c787fce17f213994e5fe1d0c9",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "CUSTODY-SNEAK-024",
+        "kind": "cognee_custody_epoch",
+        "payload": {
+          "captured": true,
+          "dataset": "sneak_working_memory",
+          "epoch_id": "SNEAK-024",
+          "found_markers": [
+            "sneak-024-conversation-custody",
+            "BP-sneak024",
+            "NOT_COMMITTED"
+          ],
+          "gap_reason": null,
+          "hit_count": 6
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22435553544f44592d534e45414b2d303239222c226b696e64223a22636f676e65655f637573746f64795f65706f6368222c227061796c6f6164223a7b226361707475726564223a747275652c2264617461736574223a22736e65616b5f776f726b696e675f6d656d6f7279222c2265706f63685f6964223a22534e45414b2d303239222c22666f756e645f6d61726b657273223a5b22736e65616b2d3032392d6d76702d686173682d74726176656c222c22534e45414b2d303239222c226d76705f726f6f74222c2238643130333665336262616136343233225d2c226761705f726561736f6e223a6e756c6c2c226869745f636f756e74223a367d7d",
+      "leaf": "74a96a39df20187c0274447306dc17ed2a5dac758202305ac7d766abf26909a4",
+      "proof": [
+        {
+          "hash": "d8b666600a192d663189410b070b197da92f07a8581528da517ef629c6b25a97",
+          "side": "left"
+        },
+        {
+          "hash": "bf523ec5bcbb4676ab4239372049c05e35536ca074e76bf5ae48e534192db32b",
+          "side": "right"
+        },
+        {
+          "hash": "5aa8465abeb9a7653452aa25210f93746d86583c787fce17f213994e5fe1d0c9",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "CUSTODY-SNEAK-029",
+        "kind": "cognee_custody_epoch",
+        "payload": {
+          "captured": true,
+          "dataset": "sneak_working_memory",
+          "epoch_id": "SNEAK-029",
+          "found_markers": [
+            "sneak-029-mvp-hash-travel",
+            "SNEAK-029",
+            "mvp_root",
+            "8d1036e3bbaa6423"
+          ],
+          "gap_reason": null,
+          "hit_count": 6
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22435553544f44592d534e45414b2d3033302d4155444954222c226b696e64223a22636f676e65655f637573746f64795f6175646974222c227061796c6f6164223a7b226261636b66696c6c5f303239223a747275652c22636f676e65655f6c697665223a747275652c226d76705f726f6f74223a2238643130333665336262616136343233316465653065303837336135663365303430313932613134373532393637623566393532366431386162356463366566222c22706f73745f63617074757265645f636f756e74223a362c22706f73745f6761705f636f756e74223a302c227072655f63617074757265645f636f756e74223a352c227072655f6761705f636f756e74223a317d7d",
+      "leaf": "bf523ec5bcbb4676ab4239372049c05e35536ca074e76bf5ae48e534192db32b",
+      "proof": [
+        {
+          "hash": "e17b6430535046a51a849dc85d27d02cd02a2d4785ccac3470da2b8c57540a1f",
+          "side": "left"
+        },
+        {
+          "hash": "5aa8465abeb9a7653452aa25210f93746d86583c787fce17f213994e5fe1d0c9",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "CUSTODY-SNEAK-030-AUDIT",
+        "kind": "cognee_custody_audit",
+        "payload": {
+          "backfill_029": true,
+          "cognee_live": true,
+          "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+          "post_captured_count": 6,
+          "post_gap_count": 0,
+          "pre_captured_count": 5,
+          "pre_gap_count": 1
+        }
+      }
+    }
+  ],
+  "meaning": "Cognee-over-time chain of custody: which epochs remain recallable; why gaps exist; SNEAK-029 backfill when BAND-only awareness left memory empty",
+  "mmr": "NOT_COMMITTED",
+  "parent": "SNEAK-029",
+  "root": "2a89def65e0238d5452d65057e3a90a732586dcf1bb55dfa2dbb43376581ba25",
+  "schema": "sneak.cognee_custody_chain.v1",
+  "signed": false
+}
