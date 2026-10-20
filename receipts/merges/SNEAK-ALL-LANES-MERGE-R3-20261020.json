@@ -1,0 +1,56 @@
+{
+  "schema": "sneak.all-lanes-merge-observed.v1",
+  "id": "SNEAK-ALL-LANES-MERGE-R3-20261020",
+  "parent": "SNEAK-ALL-LANES-MERGE-R2-20261020",
+  "parent_receipt_commit": "381d15d466304195e89cd36897501c6c970582bb",
+  "observed_main_commit": "72341bb96bc71d1acbf6e3bd9d037ab3158da72f",
+  "work_lanes_incorporated": 20,
+  "earlier_lanes_receipt": "receipts/merges/SNEAK-ALL-LANES-MERGE-R2-20261020.json",
+  "late_lane": {
+    "branch": "release/sneak-main-merged-20261020-r5",
+    "original_head": "926b6d9017f757ff47c39cd1d77cba26aa36b83d",
+    "resolved_merge_commit": "72341bb96bc71d1acbf6e3bd9d037ab3158da72f",
+    "pr": 24,
+    "github_pr_status": "CLOSED_INCORPORATED_NOT_MARKED_MERGED",
+    "ancestry": "original release head and previous main are parents of observed main"
+  },
+  "resolution": "Retain canonical R5 and export; archive differing incoming R5/export bytes under receipts/merge_variants/926b6d9017f757ff47c39cd1d77cba26aa36b83d; retain report, script and accurate source-validation label",
+  "verification": {
+    "python_passed": 196,
+    "python_skipped": 2,
+    "python_subtests_passed": 13,
+    "node_passed": 12,
+    "uv_lock_check": "PASS",
+    "release_script_compile": "PASS"
+  },
+  "observed": {
+    "source_integration": "EXECUTED_OBSERVED",
+    "security_ship_gate": "BLOCKED",
+    "security_app_score": "NOT_COMPUTED",
+    "new_deployment_this_turn": "NOT_EXECUTED"
+  },
+  "failures": [
+    "PR #24 merge API returned 405 while mergeability remained UNKNOWN; lease-protected fast-forward of an actual tested merge commit succeeded"
+  ],
+  "not_tested": [
+    "official pinned dataset absent",
+    "BAND SDK absent",
+    "authenticated merged-main Snyk scans and independent teammate score",
+    "live agent acceptance",
+    "new deployment"
+  ],
+  "decisions": [
+    "Retain predecessor R1/R2 receipts",
+    "Preserve all original branches and divergent evidence",
+    "No force pushes"
+  ],
+  "proposed": [
+    "Run authenticated final-main Snyk scans"
+  ],
+  "unresolved": [
+    "Security scan and scoring",
+    "Skipped external prerequisites",
+    "Sponsor acceptance"
+  ],
+  "next_action": "Authenticated Snyk SCA + Code on current main, then independently record security-app-score"
+}
