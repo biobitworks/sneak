@@ -55,3 +55,16 @@ Desktop UI board/cost views still need operator checkpoints.
 | Flexprice | Bonus (F01–F05) | Test-mode usage ingest/readback |
 
 Local adapters fail closed: missing credentials stay `NOT_TESTED` / `BLOCKED`. Never export `SNYK_TOKEN` into candidate environments, git, notebooks, or receipts.
+
+## MagicStudio Ollama via Desktop Commander
+
+Cloud agents cannot reach `magicSTUDIObox.local` without Desktop Commander MCP.
+Self-hosted MacBook Pro workers are visible; MagicStudio still needs Desktop Commander or BAND shell approval.
+
+```bash
+# On MagicStudio (Desktop Commander or approved agent shell):
+python3 scripts/probe_magicstudio_ollama.py
+# or the zsh probe embedded in receipts/connectors/SNEAK-017_MAGICSTUDIO_OLLAMA.json
+```
+
+Receipts: `SNEAK-017_*`, `SNEAK-017B_*`.

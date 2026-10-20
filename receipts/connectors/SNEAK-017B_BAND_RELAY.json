@@ -1,0 +1,100 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "human_decision": "PENDING_SHELL_APPROVAL",
+  "id": "SNEAK-017B",
+  "leaf_count": 3,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d303137422d424c4f434b455253222c226b696e64223a22626c6f636b657273222c227061796c6f6164223a7b2262616e645f7368656c6c5f617070726f76616c223a2250454e44494e47222c226465736b746f705f636f6d6d616e6465725f6d63705f696e5f636c6f75645f6167656e74223a66616c73652c226d6167696373747564696f5f6c616e5f66726f6d5f636c6f7564223a66616c73652c226e657874223a5b22417070726f766520546f6d2f4a65727279207368656c6c20666f7220686f73746e616d65202b206f6c6c616d61206c6973742f72756e206f6e204d6167696353747564696f222c224f5220656e61626c65204465736b746f7020436f6d6d616e646572204d435020666f72206d6167696353545544494f626f782e6c6f63616c20666f72207468697320636c6f7564206167656e74222c224f52207061737465204d6167696353747564696f206f6c6c616d61207374646f757420696e746f2042414e44225d7d7d",
+      "leaf": "f794b0734d6c4f12e100e2fc1c256d0ad15db2d217c92d4632d18a280b91555d",
+      "proof": [
+        {
+          "hash": "def07a61e50e0e7e45285384c31c7fb96f56adf299cfec60e9d2496a5cc2e672",
+          "side": "right"
+        },
+        {
+          "hash": "0a99ab06656371b569be5896505bc219e580c12d7c6f48e0e467b6c1ba485a0b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-017B-BLOCKERS",
+        "kind": "blockers",
+        "payload": {
+          "band_shell_approval": "PENDING",
+          "desktop_commander_mcp_in_cloud_agent": false,
+          "magicstudio_lan_from_cloud": false,
+          "next": [
+            "Approve Tom/Jerry shell for hostname + ollama list/run on MagicStudio",
+            "OR enable Desktop Commander MCP for magicSTUDIObox.local for this cloud agent",
+            "OR paste MagicStudio ollama stdout into BAND"
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d303137422d434841544750542d52454c4159222c226b696e64223a2262616e645f6167656e745f7265706f7274222c227061796c6f6164223a7b226167656e74223a224a65727279222c226861726e657373223a2263686174677074222c22686f73746e616d65223a224d6163426f6f6b50726f222c2269735f6d6167696373747564696f223a66616c73652c226d6573736167655f6174223a22323032362d31302d32305431393a34303a32332e3535313730395a222c226e6f7465223a224167656e7420636f72726563746c79207265667573656420746f207472656174204d6163426f6f6b50726f206f6c6c616d61206173204d6167696353747564696f2065766964656e6365222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c226f6c6c616d61223a22424c4f434b45445f4e454544535f48554d414e5f5348454c4c5f415050524f56414c227d7d",
+      "leaf": "def07a61e50e0e7e45285384c31c7fb96f56adf299cfec60e9d2496a5cc2e672",
+      "proof": [
+        {
+          "hash": "f794b0734d6c4f12e100e2fc1c256d0ad15db2d217c92d4632d18a280b91555d",
+          "side": "left"
+        },
+        {
+          "hash": "0a99ab06656371b569be5896505bc219e580c12d7c6f48e0e467b6c1ba485a0b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-017B-CHATGPT-RELAY",
+        "kind": "band_agent_report",
+        "payload": {
+          "agent": "Jerry",
+          "harness": "chatgpt",
+          "hostname": "MacBookPro",
+          "is_magicstudio": false,
+          "message_at": "2026-10-20T19:40:23.551709Z",
+          "note": "Agent correctly refused to treat MacBookPro ollama as MagicStudio evidence",
+          "observed_outcome": "NOT_TESTED",
+          "ollama": "BLOCKED_NEEDS_HUMAN_SHELL_APPROVAL"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d303137422d434c415544452d52454c4159222c226b696e64223a2262616e645f6167656e745f7265706f7274222c227061796c6f6164223a7b226167656e74223a22546f6d222c226861726e657373223a22636c61756465222c22686f73746e616d65223a22554e4b4e4f574e5f50454e44494e475f5348454c4c5f415050524f56414c222c226d6573736167655f6174223a22323032362d31302d32305431393a34303a32382e3030323238395a222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c226f6c6c616d61223a22424c4f434b45445f4e454544535f48554d414e5f5348454c4c5f415050524f56414c227d7d",
+      "leaf": "0a99ab06656371b569be5896505bc219e580c12d7c6f48e0e467b6c1ba485a0b",
+      "proof": [
+        {
+          "hash": "cfb7f5b3d1e955ab8db5d1392452dabbd54e16399fb3109132ea1f66e1d5985a",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-017B-CLAUDE-RELAY",
+        "kind": "band_agent_report",
+        "payload": {
+          "agent": "Tom",
+          "harness": "claude",
+          "hostname": "UNKNOWN_PENDING_SHELL_APPROVAL",
+          "message_at": "2026-10-20T19:40:28.002289Z",
+          "observed_outcome": "NOT_TESTED",
+          "ollama": "BLOCKED_NEEDS_HUMAN_SHELL_APPROVAL"
+        }
+      }
+    }
+  ],
+  "meaning": "BAND harness relay about MagicStudio/Ollama; still NOT_TESTED for inference",
+  "mmr": "NOT_COMMITTED",
+  "observed_outcome": "NOT_TESTED",
+  "parent": "SNEAK-017",
+  "root": "ad682d5f6fb1f01166cbf68db68d40a4934e6743a3f0c9ce8d72a8d19e5f56eb",
+  "schema": "sneak.magicstudio-probe-successor.v1",
+  "signed": false
+}
