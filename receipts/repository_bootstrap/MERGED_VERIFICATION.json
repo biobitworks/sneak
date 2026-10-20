@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "root": "6fcec1a89efd31b0e92df2dba02b6d9ae2e15dc816146945a30b6f790930c94a",
+  "leaf_count": 179,
+  "snapshot_commit": "48e72e9b1a62371fc25f79180196b7fb87ae8da1",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/custody_snapshot.py",
+        "verify",
+        "receipts/repository_bootstrap/SNAPSHOT_MERGED.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"pass\": true, \"errors\": [], \"root\": \"6fcec1a89efd31b0e92df2dba02b6d9ae2e15dc816146945a30b6f790930c94a\", \"leaf_count\": 179, \"snapshot_commit\": \"48e72e9b1a62371fc25f79180196b7fb87ae8da1\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify_custody_snapshot.mjs",
+        "receipts/repository_bootstrap/SNAPSHOT_MERGED.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"result\":\"PASS\",\"implementation\":\"independent Node\",\"root\":\"6fcec1a89efd31b0e92df2dba02b6d9ae2e15dc816146945a30b6f790930c94a\",\"leaves\":179,\"snapshot_commit\":\"48e72e9b1a62371fc25f79180196b7fb87ae8da1\"}\n",
+      "stderr": ""
+    }
+  ],
+  "observed_at": "2026-10-20T18:50:41.988404+00:00",
+  "claude_review": "NOT_EXECUTED"
+}
