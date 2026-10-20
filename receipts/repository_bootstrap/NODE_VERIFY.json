@@ -1,0 +1,10 @@
+{
+  "command": [
+    "node",
+    "scripts/verify_custody_snapshot.mjs",
+    "receipts/repository_bootstrap/SNAPSHOT.json"
+  ],
+  "returncode": 0,
+  "stdout": "{\"result\":\"PASS\",\"implementation\":\"independent Node\",\"root\":\"dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403\",\"leaves\":167,\"snapshot_commit\":\"2662f8ed50de3c35113203c171ebc808fce10790\"}\n",
+  "stderr": ""
+}

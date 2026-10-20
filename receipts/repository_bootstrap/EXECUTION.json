@@ -1,0 +1,29 @@
+{
+  "id": "SNEAK-011-EXECUTED",
+  "parent": "SNEAK-010",
+  "snapshot_commit": "2662f8ed50de3c35113203c171ebc808fce10790",
+  "root": "dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403",
+  "leaves": 167,
+  "tests": "8/8 PASS; RED predecessor retained",
+  "negative_integrity_cases": "5/5 rejected",
+  "python_verification": "PASS",
+  "node_verification": "PASS",
+  "notebook_execution": {
+    "engine": "Python sequential exec; not an ipykernel/Jupyter execution",
+    "python": "3.15.0 (main, Oct  9 2026, 11:16:41) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "status": "PASS",
+    "code_cells": 3,
+    "executed_at": "2026-10-20T18:48:28.367474+00:00"
+  },
+  "jupyter_kernel": "NOT_TESTED",
+  "claude_redteam": "NOT_EXECUTED",
+  "lomo_actor_behavior_trials": "NOT_TESTED",
+  "application_acceptance": "46 unverified, NOT_TESTED",
+  "signed": false,
+  "mmr": "NOT_COMMITTED",
+  "anticube": "NOT_COMPUTED",
+  "delta_g_star": "NOT_COMPUTED",
+  "human_checkpoint": "H01 REQUESTED; no response recorded",
+  "push_status": "NOT_EXECUTED_AT_THIS_RECEIPT",
+  "created_at": "2026-10-20T18:49:20.921931+00:00"
+}

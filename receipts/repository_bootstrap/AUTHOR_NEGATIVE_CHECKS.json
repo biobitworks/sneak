@@ -1,0 +1,66 @@
+{
+  "scope": "Author-side integrity negative tests, not Claude red-team execution",
+  "cases": [
+    {
+      "case": "wrong_root",
+      "expected_acceptance": false,
+      "observed_acceptance": false,
+      "returncode": 1,
+      "command": [
+        "node",
+        "scripts/verify_custody_snapshot.mjs",
+        "local-runs/sneak-author-negative/wrong_root.json"
+      ],
+      "stderr_tail": "file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:36\n if(v.toString(\"hex\")!==r.root)throw Error(\"proof\");\n                                     ^\n\nError: proof\n    at file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:36:38\n    at Array.map (<anonymous>)\n    at file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:18:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n"
+    },
+    {
+      "case": "wrong_leaf",
+      "expected_acceptance": false,
+      "observed_acceptance": false,
+      "returncode": 1,
+      "command": [
+        "node",
+        "scripts/verify_custody_snapshot.mjs",
+        "local-runs/sneak-author-negative/wrong_leaf.json"
+      ],
+      "stderr_tail": "file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:30\n if(x.toString(\"hex\")!==item.leaf)throw Error(\"leaf\");\n                                        ^\n\nError: leaf\n    at file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:30:41\n    at Array.map (<anonymous>)\n    at file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:18:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n"
+    },
+    {
+      "case": "invalid_direction",
+      "expected_acceptance": false,
+      "observed_acceptance": false,
+      "returncode": 1,
+      "command": [
+        "node",
+        "scripts/verify_custody_snapshot.mjs",
+        "local-runs/sneak-author-negative/invalid_direction.json"
+      ],
+      "stderr_tail": "file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:33\n  if(![\"left\",\"right\"].includes(s.side)||!/^[0-9a-f]{64}$/.test(s.hash))throw Error(\"proof encoding\");\n                                                                              ^\n\nError: proof encoding\n    at file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:33:79\n    at Array.map (<anonymous>)\n    at file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:18:17\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n"
+    },
+    {
+      "case": "missing_manifest_member",
+      "expected_acceptance": false,
+      "observed_acceptance": false,
+      "returncode": 1,
+      "command": [
+        "node",
+        "scripts/verify_custody_snapshot.mjs",
+        "local-runs/sneak-author-negative/missing_manifest_member.json"
+      ],
+      "stderr_tail": "file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:16\nif(JSON.stringify(paths)!==JSON.stringify(expectedPaths))throw Error(\"manifest coverage/order\");\n                                                               ^\n\nError: manifest coverage/order\n    at file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:16:64\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n"
+    },
+    {
+      "case": "reordered_manifest",
+      "expected_acceptance": false,
+      "observed_acceptance": false,
+      "returncode": 1,
+      "command": [
+        "node",
+        "scripts/verify_custody_snapshot.mjs",
+        "local-runs/sneak-author-negative/reordered_manifest.json"
+      ],
+      "stderr_tail": "file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:16\nif(JSON.stringify(paths)!==JSON.stringify(expectedPaths))throw Error(\"manifest coverage/order\");\n                                                               ^\n\nError: manifest coverage/order\n    at file:///Users/byron/projects/active/sneak/scripts/verify_custody_snapshot.mjs:16:64\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v26.0.0\n"
+    }
+  ],
+  "all_rejected": true
+}
