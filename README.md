@@ -23,7 +23,6 @@ R5 successor: [.planning/ATOMIC_ACCEPTANCE_R5.md](.planning/ATOMIC_ACCEPTANCE_R5
 Verified-successor candidate: [R6 notebook](notebooks/03_atomic_requirements_r6.ipynb), [R6 custody receipt](receipts/INTAKE_MERKLE_R6.json). R5 cross-language failure is retained.
 
 ## SNEAK local MVP
-
 With Python 3.12, run from this repository root:
 
 ```sh
@@ -35,3 +34,8 @@ Open `http://127.0.0.1:8773/` for the graph and `/audit` for requirement status.
 Verify with `.venv/bin/python -m unittest discover -s tests -p 'test_sneak_mvp.py' -v`. Cognee's real optional runtime is at `.venv/bin/python -m apps.sneak_mvp.cognee_adapter status`; `demo` runs the official bundled demo without demonstrating SNEAK cross-session memory. Write and recall require an explicitly configured real Cognee runtime; `--allow-llm` opts into configured LLM/embedding provider access. Do not pass sensitive text.
 
 The Snyk adapter is `.venv/bin/python -m apps.sneak_mvp.snyk_adapter scan --target .`. It invokes the authenticated local CLI; scan outputs remain in gitignored `local-runs/`. Source upload with `--mode code` requires `--allow-code-upload`. Only scan a consented target. A clean report on a dirty tree cannot open the completion gate. See [.planning/SNEAK_MVP_20261020.md](.planning/SNEAK_MVP_20261020.md) for the pending human Band Desktop checklist.
+
+## Snyk dashboard view 
+<img width="1589" height="334" alt="snyk" src="https://github.com/user-attachments/assets/bef80890-a064-4c0f-a47f-48df62333177" />
+
+
