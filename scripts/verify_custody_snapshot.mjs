@@ -20,6 +20,8 @@ const contained=rel=>{
  if(real!==path.join(baseReal,rel)||!real.startsWith(baseReal+path.sep))throw Error("path escapes repository");
  return real;
 };
+const argument=process.argv[2]||"";
+if(!/^receipts\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9_.-]+\.json$/.test(argument))throw Error("receipt argument must be under receipts/");
 const r=JSON.parse(fs.readFileSync(contained(process.argv[2]),"utf8"));
 if(typeof r.snapshot_commit!=="string"||!/^(?:[0-9a-f]{40}|[0-9a-f]{64})$/.test(r.snapshot_commit))throw Error("snapshot_commit encoding");
 const h=b=>createHash("sha256").update(b).digest();

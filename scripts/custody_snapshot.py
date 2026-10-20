@@ -103,6 +103,8 @@ def check(repo,receipt):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("action",choices=["create","verify"]);ap.add_argument("receipt");ap.add_argument("--ref",default="HEAD");args=ap.parse_args()
     repo=pathlib.Path(__file__).resolve().parents[1]
+    if not re.fullmatch(r"receipts/(?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_.-]+\.json",args.receipt):
+        ap.error("receipt must be a JSON path under receipts/ without traversal")
     if args.ref.startswith("-"):ap.error("invalid --ref")
     try:path=contained(repo,args.receipt,must_exist=args.action=="verify")
     except (ValueError,OSError) as e:ap.error("receipt path rejected: "+str(e))
