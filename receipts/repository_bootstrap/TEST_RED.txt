@@ -1,0 +1,101 @@
+test_all_proofs (test_custody_snapshot.CustodyTests.test_all_proofs) ... FAIL
+test_canonical_bytes (test_custody_snapshot.CustodyTests.test_canonical_bytes) ... FAIL
+test_committed_and_working_bytes_checked (test_custody_snapshot.CustodyTests.test_committed_and_working_bytes_checked) ... FAIL
+test_empty_rejected (test_custody_snapshot.CustodyTests.test_empty_rejected) ... FAIL
+test_invalid_side_rejected (test_custody_snapshot.CustodyTests.test_invalid_side_rejected) ... FAIL
+test_leaf_removal_changes_root (test_custody_snapshot.CustodyTests.test_leaf_removal_changes_root) ... FAIL
+test_single_leaf (test_custody_snapshot.CustodyTests.test_single_leaf) ... FAIL
+test_tamper_rejected (test_custody_snapshot.CustodyTests.test_tamper_rejected) ... FAIL
+
+======================================================================
+FAIL: test_all_proofs (test_custody_snapshot.CustodyTests.test_all_proofs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 14, in test_all_proofs
+    m=self.require();xs=[m.leaf({"id":i}) for i in range(5)]
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 9, in require
+    self.assertIsNotNone(module,"custody snapshot verifier not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : custody snapshot verifier not implemented
+
+======================================================================
+FAIL: test_canonical_bytes (test_custody_snapshot.CustodyTests.test_canonical_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 12, in test_canonical_bytes
+    m=self.require();self.assertEqual(m.canonical({"size_bytes":1,"path":"a","sha256":"b"}),b'{"path":"a","sha256":"b","size_bytes":1}')
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 9, in require
+    self.assertIsNotNone(module,"custody snapshot verifier not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : custody snapshot verifier not implemented
+
+======================================================================
+FAIL: test_committed_and_working_bytes_checked (test_custody_snapshot.CustodyTests.test_committed_and_working_bytes_checked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 31, in test_committed_and_working_bytes_checked
+    m=self.require()
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 9, in require
+    self.assertIsNotNone(module,"custody snapshot verifier not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : custody snapshot verifier not implemented
+
+======================================================================
+FAIL: test_empty_rejected (test_custody_snapshot.CustodyTests.test_empty_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 28, in test_empty_rejected
+    m=self.require()
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 9, in require
+    self.assertIsNotNone(module,"custody snapshot verifier not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : custody snapshot verifier not implemented
+
+======================================================================
+FAIL: test_invalid_side_rejected (test_custody_snapshot.CustodyTests.test_invalid_side_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 20, in test_invalid_side_rejected
+    m=self.require();x=m.leaf({"id":1})
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 9, in require
+    self.assertIsNotNone(module,"custody snapshot verifier not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : custody snapshot verifier not implemented
+
+======================================================================
+FAIL: test_leaf_removal_changes_root (test_custody_snapshot.CustodyTests.test_leaf_removal_changes_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 25, in test_leaf_removal_changes_root
+    m=self.require();xs=[m.leaf({"id":i}) for i in range(3)]
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 9, in require
+    self.assertIsNotNone(module,"custody snapshot verifier not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : custody snapshot verifier not implemented
+
+======================================================================
+FAIL: test_single_leaf (test_custody_snapshot.CustodyTests.test_single_leaf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 23, in test_single_leaf
+    m=self.require();x=m.leaf({"id":1});self.assertEqual(m.root([x]),x)
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 9, in require
+    self.assertIsNotNone(module,"custody snapshot verifier not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : custody snapshot verifier not implemented
+
+======================================================================
+FAIL: test_tamper_rejected (test_custody_snapshot.CustodyTests.test_tamper_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 17, in test_tamper_rejected
+    m=self.require();xs=[m.leaf({"id":i}) for i in range(3)]
+  File "/Users/byron/projects/active/sneak/tests/test_custody_snapshot.py", line 9, in require
+    self.assertIsNotNone(module,"custody snapshot verifier not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : custody snapshot verifier not implemented
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+FAILED (failures=8)

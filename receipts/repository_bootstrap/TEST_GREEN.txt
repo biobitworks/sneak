@@ -1,0 +1,13 @@
+test_all_proofs (test_custody_snapshot.CustodyTests.test_all_proofs) ... ok
+test_canonical_bytes (test_custody_snapshot.CustodyTests.test_canonical_bytes) ... ok
+test_committed_and_working_bytes_checked (test_custody_snapshot.CustodyTests.test_committed_and_working_bytes_checked) ... ok
+test_empty_rejected (test_custody_snapshot.CustodyTests.test_empty_rejected) ... ok
+test_invalid_side_rejected (test_custody_snapshot.CustodyTests.test_invalid_side_rejected) ... ok
+test_leaf_removal_changes_root (test_custody_snapshot.CustodyTests.test_leaf_removal_changes_root) ... ok
+test_single_leaf (test_custody_snapshot.CustodyTests.test_single_leaf) ... ok
+test_tamper_rejected (test_custody_snapshot.CustodyTests.test_tamper_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.130s
+
+OK

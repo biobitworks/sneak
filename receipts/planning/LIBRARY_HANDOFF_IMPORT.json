@@ -1,0 +1,28 @@
+{
+  "schema": "sneak.library-text-import.v1",
+  "status": "READ_DERIVED_TEXT_COPY_NOT_BYTE_IDENTICAL_DOWNLOAD_CLAIM",
+  "sources": [
+    {
+      "path": "docs/imported/BAND_ROOM_STARTER_PLAN.md",
+      "library_file_id": "libfile_2fa5725caf608191b177b63dc7ca1c7f",
+      "file_id": "file_00000000be4c81f59418ada1d5452d86",
+      "reported_size_bytes": 3627,
+      "version": null,
+      "has_more": false,
+      "warnings": [
+        "Full-text fetch was unavailable; parsed the backing file directly instead."
+      ]
+    },
+    {
+      "path": "docs/imported/COGNEE_MEMORY_PROVENANCE_POLICY.md",
+      "library_file_id": "libfile_ec07f8bc19948191bb08552fc315b279",
+      "file_id": "file_00000000a7e88230a922f379ace9e5b1",
+      "reported_size_bytes": 2286,
+      "version": null,
+      "has_more": false,
+      "warnings": [
+        "Full-text fetch was unavailable; parsed the backing file directly instead."
+      ]
+    }
+  ]
+}

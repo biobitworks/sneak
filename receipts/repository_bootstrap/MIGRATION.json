@@ -1,0 +1,16 @@
+{
+  "id": "SNEAK-011",
+  "parent": "SNEAK-010",
+  "source_repository": "biobitworks/skill-custody-lab",
+  "source_commit": "bbcffb74e558332098a319cbbb2ed851e7121b70",
+  "target_repository": "biobitworks/sneak",
+  "remote_was_empty": true,
+  "target_privacy_observed": "private",
+  "source_history_preserved": true,
+  "secrets_and_unrelated_projects_excluded": true,
+  "created_at": "2026-10-20T18:47:47.084947+00:00",
+  "application_verdict_updates": [],
+  "human_checkpoints": "REQUESTED_NOT_EXECUTED",
+  "claude_redteam": "NOT_EXECUTED",
+  "recovery_note": "DC read_process_output returned no session for clone PID; recovered by fresh git status/HEAD/remotes inspection; clone/fetch completed"
+}
