@@ -28,3 +28,17 @@ class MagicStudioProbeTests(unittest.TestCase):
                 return False
 
         with mock.patch("urllib.request.urlopen", return_value=Resp()):
+            r = ollama_generate("lfm2.5:1.2b-instruct")
+        self.assertTrue(r["ok"])
+        self.assertEqual(r["observed_outcome"], "PASS")
+
+    def test_probe_does_not_claim_magicstudio_on_cloud(self):
+        with mock.patch("sneak.magicstudio.ollama_tags", return_value={"ok": False, "models": []}):
+            with mock.patch("sneak.magicstudio.local_hostname", return_value="cursor"):
+                r = probe_local_ollama()
+        self.assertFalse(r["is_magicstudio"])
+        self.assertEqual(r["observed_outcome"], "NOT_TESTED")
+
+
+if __name__ == "__main__":
+    unittest.main()
