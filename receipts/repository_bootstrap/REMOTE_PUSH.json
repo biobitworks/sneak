@@ -1,0 +1,17 @@
+{
+  "id": "SNEAK-011-REMOTE",
+  "parent": "SNEAK-011-MERGE",
+  "pushed_commit": "ea4cc10dae5ca1e1fe5b931781c0b7c9e96f883a",
+  "remote_main_observed": "ea4cc10dae5ca1e1fe5b931781c0b7c9e96f883a",
+  "visibility": "private",
+  "source_history_preserved": true,
+  "concurrent_remote_intake_preserved": true,
+  "push_exit": 0,
+  "snapshot_root": "6fcec1a89efd31b0e92df2dba02b6d9ae2e15dc816146945a30b6f790930c94a",
+  "snapshot_leaves": 179,
+  "snapshot_commit": "48e72e9b1a62371fc25f79180196b7fb87ae8da1",
+  "all_application_verdicts": "NOT_TESTED",
+  "claude_redteam": "NOT_EXECUTED",
+  "human_checkpoint": "H01 pending actual human response",
+  "observed_at": "2026-10-20T18:50:45.592045+00:00"
+}
