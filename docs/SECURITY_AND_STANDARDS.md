@@ -43,5 +43,9 @@ Pin exact applicable versions before standards-conformance assertions.
 ## Rights
 Inherited research remains background IP. No blanket license is applied to third-party sources.
 Javier root LICENSE returned 404 at the pinned commit; reuse license is UNKNOWN, not assumed permissive.
+
+Preferred **original** authorship terms (split; see root `LICENSE` / `LICENSING.md`):
+software Apache-2.0; docs and other non-code creative works CC BY-NC-ND 4.0.
+Do not apply CC BY-NC-ND as a universal code license.
 Downloaded upstream snapshots remain local and gitignored. Commit only hashes, URLs and review findings.
 Public release remains HOLD pending BAND/event authorization, source rights and dependency review.

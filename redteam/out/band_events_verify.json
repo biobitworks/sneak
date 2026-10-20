@@ -1,0 +1,15 @@
+{
+ "ref": "origin/main",
+ "root": "29002d5e05b18b58dceec7d1492a1300efc9bbf7d33e0fdafed755f43561895f",
+ "leaf_count": 3,
+ "ordering_ok": true,
+ "canonical_ok": true,
+ "leaves_ok": true,
+ "proofs_ok": true,
+ "root_ok": true,
+ "human_request_id": "SNEAK-H01-REQUEST",
+ "human_response": null,
+ "human_decision": "PENDING",
+ "instruction_origin": "Codex acting via user-authorized API, not a human approval",
+ "state": "SUPPORTED"
+}

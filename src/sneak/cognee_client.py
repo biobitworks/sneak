@@ -4,6 +4,10 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import ipaddress
+import urllib.parse
+import uuid
 import time
 import urllib.error
 import urllib.request
@@ -23,8 +27,25 @@ class CogneeClient:
         env_base = os.environ.get("COGNEE_BASE_URL", "")
         env_key = os.environ.get("COGNEE_API_KEY", "")
         self.base_url = (env_base if base_url is None else base_url).rstrip("/")
+        if self.base_url:
+            parsed = urllib.parse.urlsplit(self.base_url)
+            if parsed.scheme not in ("http", "https") or not parsed.netloc or parsed.username or parsed.password or parsed.query or parsed.fragment:
+                raise ValueError("Cognee endpoint must be an absolute HTTPS URL or loopback HTTP URL")
+            if parsed.scheme == "http":
+                host = parsed.hostname or ""
+                try:
+                    loopback = ipaddress.ip_address(host).is_loopback
+                except ValueError:
+                    loopback = host == "localhost"
+                if not loopback:
+                    raise ValueError("Remote Cognee transport requires HTTPS")
         self.api_key = env_key if api_key is None else api_key
         self.dataset = dataset
+
+    @property
+    def base(self) -> str:
+        """Backward-compatible readonly endpoint identity."""
+        return self.base_url
 
     @property
     def available(self) -> bool:
@@ -52,7 +73,10 @@ class CogneeClient:
         )
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
-                raw_body = resp.read().decode("utf-8")
+                raw_response = resp.read(2 * 1024 * 1024 + 1)
+                if len(raw_response) > 2 * 1024 * 1024:
+                    raise ValueError("Cognee response exceeds bounded size")
+                raw_body = raw_response.decode("utf-8")
                 return resp.status, json.loads(raw_body) if raw_body else None
         except urllib.error.HTTPError as e:
             err = e.read().decode("utf-8", errors="replace")
@@ -66,12 +90,35 @@ class CogneeClient:
         status, body = self._request("GET", "/health")
         return {"http_status": status, "body": body, "live": status == 200}
 
-    def add_text(self, texts: list[str], dataset: Optional[str] = None) -> dict[str, Any]:
-        status, body = self._request(
-            "POST",
-            "/api/v1/add_text",
-            data={"datasetName": dataset or self.dataset, "textData": texts},
-        )
+    def add_text(self, texts: list[str] | str, dataset: Optional[str] = None) -> dict[str, Any]:
+        """Support both Cognee JSON add_text and prior multipart /add contracts.
+
+        A scalar is a text file upload; a list uses Cognee's JSON text-ingest API.
+        Remote writes are opt-in at the calling workflow and must contain approved text.
+        """
+        ds = dataset or self.dataset
+        if not re.fullmatch(r"[A-Za-z0-9_-]{1,128}", ds):
+            raise ValueError("unsafe Cognee dataset name")
+        if isinstance(texts, str):
+            if not texts or len(texts.encode("utf-8")) > 1024 * 1024:
+                raise ValueError("empty or oversized Cognee text")
+            boundary = "sneak-" + uuid.uuid4().hex
+            prefix = (
+                f"--{boundary}\r\nContent-Disposition: form-data; name=\"datasetName\"\r\n\r\n"
+                f"{ds}\r\n--{boundary}\r\n"
+                "Content-Disposition: form-data; name=\"data\"; filename=\"synthetic-review.txt\"\r\n"
+                "Content-Type: text/plain; charset=utf-8\r\n\r\n"
+            ).encode("utf-8")
+            raw = prefix + texts.encode("utf-8") + f"\r\n--{boundary}--\r\n".encode("ascii")
+            status, body = self._request(
+                "POST", "/api/v1/add", raw=raw,
+                content_type=f"multipart/form-data; boundary={boundary}")
+        else:
+            if not isinstance(texts, list) or not all(isinstance(t, str) for t in texts):
+                raise ValueError("texts must be a string or list of strings")
+            status, body = self._request(
+                "POST", "/api/v1/add_text",
+                data={"datasetName": ds, "textData": texts})
         return {"http_status": status, "body": body, "ok": status == 200}
 
     def cognify(self, dataset: Optional[str] = None) -> dict[str, Any]:
@@ -85,8 +132,8 @@ class CogneeClient:
     def search(
         self,
         query: str,
-        *,
         dataset: Optional[str] = None,
+        *,
         search_type: str = "CHUNKS",
         top_k: int = 5,
     ) -> dict[str, Any]:

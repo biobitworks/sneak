@@ -7,11 +7,17 @@ name = "sneak"
 version = "0.1.0"
 description = "Sneak custody connectors, score gate, LOMO and AoK helpers"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [{ name = "BiobitWorks and contributors" }]
 dependencies = []
+
+# Packaging SPDX applies to the installable software distribution.
+# Repository non-code creative works use CC-BY-NC-ND-4.0 per LICENSE / LICENSING.md.
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+agent = ["band-sdk[langgraph]", "langchain-openai"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

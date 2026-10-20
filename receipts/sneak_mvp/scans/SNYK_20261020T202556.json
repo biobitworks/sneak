@@ -1,0 +1,33 @@
+{
+ "argv": [
+  "test",
+  "--json"
+ ],
+ "exit_code": 3,
+ "finding_count": 0,
+ "findings": [],
+ "finished_at": "2026-10-20T20:26:02.287144+00:00",
+ "gate": "BLOCKED",
+ "local_run_dir": "local-runs/snyk/20261020T202557Z",
+ "mode": "oss",
+ "outcome": "ERROR",
+ "reason": "snyk exit 3: Could not detect supported target files in /Users/byron/projects/hackathon/sneak-consolidation.\nPlease see our documentation for supported languages and target files: https://snyk.co/udVgQ and make sure you are in the right directory.",
+ "redactions": 0,
+ "schema": "sneak.snyk-receipt.v1",
+ "severity_counts": {
+  "critical": 0,
+  "high": 0,
+  "low": 0,
+  "medium": 0
+ },
+ "snyk_cli_version": "1.1307.2",
+ "started_at": "2026-10-20T20:25:56.206140+00:00",
+ "stdout_bytes": 333,
+ "stdout_sha256": "d780d655a952564bd7afe092d28ce18b4036635bc190e022f4fe8935e92755e4",
+ "target": {
+  "commit": "cd1b308e2aa10d3d8861fc581eaba34e98e601b7",
+  "dirty": true,
+  "name": "sneak-consolidation",
+  "tree": "249149733ef66a2d308cb2d62976f025e6fcf247"
+ }
+}

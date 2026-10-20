@@ -92,11 +92,16 @@ def build_graph() -> dict:
         actions.append({"at": scan.get("started_at"), "actor": "snyk_adapter", "source": scan.get("_source"),
                         "action": "snyk scan", "status": scan["outcome"], "detail": scan.get("reason")})
     actions.extend(_cognee_actions())
+    from .integration_graph import graph_items, stack
+    integration_nodes, integration_edges = graph_items(fco)
+    nodes.extend(integration_nodes)
+    edges.extend(integration_edges)
     return {
         "project": ctx["project"], "fco": fco, "bundle_context": ctx,
         "aok": {"root": bundle["root"], "leaf_count": bundle["leaf_count"], "mmr": bundle["mmr"],
                 "signed": bundle["signed"]},
         "integrity": integrity, "nodes": nodes, "edges": edges, "scan": scan, "actions": actions,
+        "integrations": stack(),
     }
 
 
@@ -116,5 +121,6 @@ def build_audit() -> dict:
         "integrations": atoms.get("integrations"),
         "component_smoke": comp,
         "scan": scan_summary(),
+        "consolidation": __import__("apps.sneak_mvp.integration_graph", fromlist=["imported_files"]).imported_files(),
         "note": "Atoms only change through appended evidence-bound verdict successors.",
     }

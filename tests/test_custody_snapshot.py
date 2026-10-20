@@ -27,6 +27,20 @@ class CustodyTests(unittest.TestCase):
     def test_empty_rejected(self):
         m=self.require()
         with self.assertRaises(ValueError):m.root([])
+    def test_metadata_tampering_rejected(self):
+        m=self.require()
+        import copy
+        with tempfile.TemporaryDirectory() as t:
+            p=pathlib.Path(t)
+            def git(*args):return subprocess.check_output(["git","-C",t,*args],stderr=subprocess.DEVNULL)
+            git("init","-q");git("config","user.name","Test");git("config","user.email","test@example.invalid")
+            (p/"a.txt").write_text("baseline");git("add","a.txt");git("commit","-qm","fixture")
+            receipt=m.snapshot(p,"HEAD")
+            self.assertTrue(m.check(p,receipt)["pass"])
+            for key,value in (("signed",True),("mmr","COMMITTED"),("meaning","verified by authority"),
+                              ("parent_breakpoint","FORGED")):
+                bad=copy.deepcopy(receipt);bad[key]=value
+                with self.subTest(key=key):self.assertFalse(m.check(p,bad)["pass"])
     def test_committed_and_working_bytes_checked(self):
         m=self.require()
         with tempfile.TemporaryDirectory() as t:

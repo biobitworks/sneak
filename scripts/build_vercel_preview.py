@@ -53,8 +53,11 @@ def snapshot():
         "gate": "BLOCKED",  # preview cannot authorize release or deploy
         "outcome": scan.get("outcome", "NOT_RUN"),
         "reason": scan.get("reason", "missing evidence"),
-        "finding_count": scan.get("finding_count"),
-        "severity_counts": scan.get("severity_counts"),
+        "finding_count": scan.get("finding_count") if scan.get("outcome") in ("FINDINGS", "NO_ISSUES") else None,
+        "severity_counts": scan.get("severity_counts") if scan.get("outcome") in ("FINDINGS", "NO_ISSUES") else None,
+        "security_app_score": "NOT_COMPUTED",
+        "exit_code": scan.get("exit_code"),
+        "remediation": "Authenticate in the scan runner with snyk auth or its protected SNYK_TOKEN; run scripts/recheck_ship_gate.py on a clean checkout. See /claims.",
         "scanned_commit": scan_commit,
         "scan_covers_export_source": scan_commit == commit,
     }
@@ -119,12 +122,15 @@ def generate(out: pathlib.Path = BUILD) -> dict:
         "judge.html": "judge.html",
         "judge.css": "static/judge.css",
         "judge.js": "static/judge.js",
-        "tokens.html": "tokens.html",
-        "tokens.js": "static/tokens.js",
-        "tokens.css": "static/tokens.css",
         "economics.html": "economics.html",
         "economics.js": "static/economics.js",
         "economics.css": "static/economics.css",
+        "tokens.html": "tokens.html",
+        "tokens.js": "static/tokens.js",
+        "tokens.css": "static/tokens.css",
+        "trace.html": "trace.html",
+        "trace.js": "static/trace.js",
+        "trace.css": "static/trace.css",
     }
     digest = {}
     for src, dest in mapping.items():
@@ -135,10 +141,36 @@ def generate(out: pathlib.Path = BUILD) -> dict:
             if b"LOCAL PREVIEW" not in payload:
                 raise ValueError("source preview marker unexpectedly changed")
             payload = payload.replace(b"LOCAL PREVIEW", b"PROTECTED VERCEL SNAPSHOT")
-            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/tokens">Question &amp; tokens</a> | <a href="/judge">Human review</a> | <a href="/economics">Economics</a> | <a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
+            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/trace">Sponsor traversal</a> | <a href="/claims">Ship gate claims</a> | <a href="/tokens">Question &amp; tokens</a> | <a href="/judge">Human review</a> | <a href="/economics">Token economics</a> | <a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
         target.write_bytes(payload)
         digest[dest] = sha256(payload)
-    data_files = {"data/graph.json": projected, "data/audit.json": audit}
+    from scripts.flexprice_roi_trial import FIXTURE, measure
+    roi_demo = measure(json.loads(FIXTURE.read_text()))
+    from scripts.verify_closeout_evidence import verify as verify_sponsors
+    verify_sponsors()
+    def load_receipt(name):
+        return json.loads((REPO_ROOT / name).read_bytes())
+    attempt = load_receipt("receipts/integrations/SNEAK_SPONSOR_TRAVERSAL_V1_20261020.json")
+    successor = load_receipt("receipts/integrations/SNEAK_SPONSOR_TRAVERSAL_V2_20261020.json")
+    ledger = load_receipt("receipts/requirements/SNEAK_AOK_M01_M30_CLOSEOUT_20261020.json")
+    usage = load_receipt("receipts/flexprice/SNEAK_BAND_REAL_USAGE_UNATTRIBUTED_20261020.json")
+    sponsor_public = {
+        "schema":"sneak.sponsor-trace.public-allowlist.v1",
+        "evidence_sha256":attempt["evidence_sha256"],
+        "band":{"exact_hash_found":attempt["band"]["exact_hash_found"],"message_id":attempt["band"]["message_id"]},
+        "cognee":{"exact_hash_found":successor["cognee_exact_hash_found"],
+                  "separate_search":successor["cognee_separate_query"]},
+        "snyk":{"status":"FAILED_AUTHENTICATION"},
+        "attempt_merkle_root":attempt["local_attempt_merkle"]["root"],
+        "local_receipt_sha256":attempt["receipt_sha256"],
+        "successor_receipt_sha256":successor["receipt_sha256"],
+        "usage":{"metrics":usage["metrics"],"attribution":usage["attribution"]},
+        "mandatory_verified":ledger["acceptance_verified_count"],
+        "requirements":[{k:v for k,v in item.items() if k in ("id","requirement","attempt_evidence_status","note")}
+                        for item in ledger["records"]],
+    }
+    data_files = {"data/graph.json": projected, "data/audit.json": audit, "data/roi-demo.json": roi_demo,
+                  "data/sponsor-trace.json": sponsor_public}
     for path, obj in data_files.items():
         payload = canonical(obj)
         (out / path).write_bytes(payload)

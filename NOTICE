@@ -1,0 +1,25 @@
+Skill Custody Lab / sneak
+Copyright (c) 2026 BiobitWorks and contributors
+
+This product includes software developed for the Skill Custody Lab (sneak)
+project. Original software is licensed under the Apache License, Version 2.0.
+See `LICENSE` and `LICENSE-APACHE-2.0`.
+
+Original documentation and other non-code creative works authored for this
+project are licensed under Creative Commons Attribution-NonCommercial-
+NoDerivatives 4.0 International (CC BY-NC-ND 4.0). See `LICENSE` and
+`LICENSE-CC-BY-NC-ND-4.0`.
+
+Third-party components retain their own copyrights and licenses. Their terms
+are not modified by this NOTICE. Notable connectors referenced by this project
+include (non-exhaustive; pin actual upstream LICENSE files at use time):
+
+- Cognee — Apache-2.0 (upstream)
+- Band / related SaaS — vendor terms of service (not OSS license clearance)
+- Flexprice — AGPL-3.0 open core / separate commercial components (upstream)
+- Javier app-security-score — license UNKNOWN at previously pinned root (404);
+  do not assume permissive reuse
+- Model weights (Qwen, Liquid, OpenJev, etc.) — see each model card / LICENSE
+
+Inherited research IP and challenge source documents: rights retained by
+original owners; public release HOLD pending clearance.

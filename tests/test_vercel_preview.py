@@ -45,7 +45,7 @@ class VercelProjectionTests(unittest.TestCase):
             routes = {r["source"]: r["destination"] for r in config["rewrites"]}
             self.assertEqual(routes["/api/graph"], "/data/graph.json")
             self.assertEqual(routes["/api/audit"], "/data/audit.json")
-            for path in ("index.html", "audit.html", "heatmap.html", "static/app.js", "static/audit.js", "static/style.css", "static/heatmap.js", "static/heatmap.css", "conversations.html", "static/conversations.js", "static/conversations.css", "judge.html", "static/judge.js", "static/judge.css"):
+            for path in ("index.html", "audit.html", "heatmap.html", "static/app.js", "static/audit.js", "static/style.css", "static/heatmap.js", "static/heatmap.css", "conversations.html", "static/conversations.js", "static/conversations.css", "judge.html", "static/judge.js", "static/judge.css", "economics.html", "static/economics.js", "static/economics.css", "data/roi-demo.json"):
                 self.assertTrue((base / path).is_file())
             self.assertIn(b"PROTECTED VERCEL SNAPSHOT", (base / "index.html").read_bytes())
             self.assertIn(b"Disallow: /", (base/"robots.txt").read_bytes())

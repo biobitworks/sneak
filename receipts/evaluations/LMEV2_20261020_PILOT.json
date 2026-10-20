@@ -1,0 +1,94 @@
+{
+  "benchmark_revision": "2cc8c540bdb87fe6761629b585e727e1c4704520",
+  "dataset_revision": "f152293e235517d504809563c833d7190b8c713b",
+  "official_full_benchmark": "NOT_TESTED",
+  "parent_mmr": {
+    "fcg_edges": 67,
+    "fco_count": 58,
+    "mmr_root": "f0579f511bccecf09c588f1d564e33a12af3409502a56b7868c4b61eab87587a",
+    "mmr_size": 112,
+    "verified": true
+  },
+  "questions_sha256": "0a3ae5ebea938c24d7800e1e0b0828e08ae1646f939a53853b2b8cdc08e292b7",
+  "results": [
+    {
+      "band": "NOT_TESTED",
+      "cognee": "NOT_TESTED",
+      "diagnostic_accuracy": 0.0,
+      "evaluation_type": "UNOFFICIAL_2_QUESTION_NO_RETRIEVAL",
+      "model": "qwen3:1.7b",
+      "packet_sha256": "24657db58e22bbc9f5bb0989bfec6b1b366568dc5c67c6c25947dc9b7b3d89bf",
+      "question_results": [
+        {
+          "correct": false,
+          "domain": "enterprise",
+          "input_tokens": 80,
+          "latency_ms": 16437.27,
+          "output_tokens": 61,
+          "question_id": "01307e07",
+          "question_type": "dynamic-environment",
+          "response_sha256": "fe5be42e29b974e019167a13c5331d225ebbf4202c28056211b33661b6df299a",
+          "score_status": "OBSERVED"
+        },
+        {
+          "correct": false,
+          "domain": "web",
+          "input_tokens": 65,
+          "latency_ms": 1314.28,
+          "output_tokens": 48,
+          "question_id": "00aa905a",
+          "question_type": "dynamic-environment",
+          "response_sha256": "5dc006b1637021ea99f2ea9371aa56751c64391d57f06471e11bf394715715ec",
+          "score_status": "OBSERVED"
+        }
+      ],
+      "questions_attempted": 2,
+      "questions_scored": 2,
+      "score_status": "OBSERVED"
+    },
+    {
+      "band": "NOT_TESTED",
+      "cognee": "NOT_TESTED",
+      "diagnostic_accuracy": 0.5,
+      "evaluation_type": "UNOFFICIAL_2_QUESTION_NO_RETRIEVAL",
+      "model": "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:latest",
+      "packet_sha256": "f05f92a554406f5b83fd383b30a50adaf9270197c23ab901b49779963525c19d",
+      "question_results": [
+        {
+          "correct": false,
+          "domain": "enterprise",
+          "input_tokens": 81,
+          "latency_ms": 6488.26,
+          "output_tokens": 55,
+          "question_id": "01307e07",
+          "question_type": "dynamic-environment",
+          "response_sha256": "2ac8597f1038332c0b0f6a888d30a3efe2e72881d879e7ae4bfdddf7e69de8c5",
+          "score_status": "OBSERVED"
+        },
+        {
+          "correct": true,
+          "domain": "web",
+          "input_tokens": 62,
+          "latency_ms": 812.89,
+          "output_tokens": 52,
+          "question_id": "00aa905a",
+          "question_type": "dynamic-environment",
+          "response_sha256": "1704cdc62bfa9ff44a947c90b5034ae0a99d923dda69cdf53f1ee56e8346f51d",
+          "score_status": "OBSERVED"
+        }
+      ],
+      "questions_attempted": 2,
+      "questions_scored": 2,
+      "score_status": "OBSERVED"
+    }
+  ],
+  "schema": "sneak.lmev2.pilot-receipt.v1",
+  "security_admission": "DENY",
+  "successor_mmr": {
+    "fcg_edges": 82,
+    "fco_count": 74,
+    "mmr_root": "713334f89e48d44ea64b00651dfc1cf577e9aaab1e4b1d7be71d310f3e033f20",
+    "mmr_size": 145,
+    "verified": true
+  }
+}

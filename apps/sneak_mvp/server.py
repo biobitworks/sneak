@@ -21,7 +21,9 @@ STATIC = {
     "/static/audit.js": ("audit.js", "text/javascript; charset=utf-8"),
     "/static/style.css": ("style.css", "text/css; charset=utf-8"),
 }
+from .integration_graph import stack, live_check
 API = {"/api/graph": graph.build_graph, "/api/audit": graph.build_audit,
+       "/api/stack": stack, "/api/check": live_check,
        "/api/health": lambda: {"status": "serving", "service": "sneak-mvp",
                                "evidence_integrity": graph.build_graph().get("integrity")}}
 SECURITY_HEADERS = {

@@ -1,0 +1,354 @@
+{
+  "schema": "sneak.all-lanes-integration.v1",
+  "id": "SNEAK-ALL-LANES-MERGE-R1-20261020",
+  "parent_turn": "SNEAK-SHIP-GATE-DEPLOY-R1-20261020",
+  "parent_receipt_commit": "d4a7286ba7cc905399e8761c3a4a887dde017825",
+  "main_predecessor": "3faae0d8ec89598064806398b75a0a0f4508855f",
+  "tested_source_commit": "d88d71d607f1f756842f94440db2edddd6637a8d",
+  "lanes": [
+    {
+      "branch": "audit/r14-divergent-receipts-20261020",
+      "sha": "e5d1befd3821a9e18f8788c386351833c222b486",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "cursor/connector-custody-review-0c2f",
+      "sha": "e8766554ca393568c39e760b14af71680df9ce07",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "cursor/licensing-cc-apache-0c2f",
+      "sha": "a723c24d7f84360f9ab3a172bb85b47db7026162",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "cursor/snyk-bonus-lomo-band-0c2f",
+      "sha": "2e21b75e7e1ee0cda3cd401bb495cb475bd7034e",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "custody/markdown-exact-20261020",
+      "sha": "d93dc18c74532c6880fb5cd89a313728ec3ff84e",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "deploy/sneak-vercel-preview-20261020",
+      "sha": "31f22435a62ed69cc0947565aca71a028fabb91c",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "docs/merkle-mmr-knowledge-base",
+      "sha": "edf9cbe2e776f47b26e9abcb8fc4f3857298c391",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "evaluation/lmev2-security-20261020",
+      "sha": "6a7b342c0e00bf5e6544ed5672c0b540920892f9",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "feat/breakpoint-mmr-ledger",
+      "sha": "8af402e510d67711e4d3698ebdcc9cc153ca1dbe",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "feature/conversation-federation-mmr-20261020",
+      "sha": "5a9c5a73f6d08bf687d1835ee5f963dac8ccf53b",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "feature/flexprice-roi-20261020",
+      "sha": "517f630866834ddbe2e4dcee74f1213271055bbc",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "feature/sneak-mvp-20261020",
+      "sha": "7793cfe684273e55dcadf5ddd98339c6b6ad196a",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "fix/ship-gate-audit-20261020",
+      "sha": "d4a7286ba7cc905399e8761c3a4a887dde017825",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "integration/band-cognee-snyk-20261020",
+      "sha": "b81526598873c6422630247692766be0b73796b6",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "integration/cognee-flexprice-r14",
+      "sha": "e2b69c1ddd5be62910c56ae467d28787ce45b065",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "integration/sneak-audit-fco-20261020",
+      "sha": "89b96e98f1b6a00b7fb59eb480844590f4ba95bf",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "integration/sneak-consolidation-20261020",
+      "sha": "87349928e19ae78da012b7106037a24cc83219de",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "onboarding/teammate-fco-handoff",
+      "sha": "2e236b745564a005de14cc814c5fa5df188020f8",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "redteam/claude-20261020",
+      "sha": "054a0eb2332bbcd0a8e1c6fcb0dcb529afe64d1a",
+      "ancestor_verified": true
+    }
+  ],
+  "merges": [
+    {
+      "head": "d4a7286ba7cc905399e8761c3a4a887dde017825",
+      "merge": "67627c413de9b86c510146240ea83ddcb3c76829",
+      "resolutions": [
+        {
+          "path": ".gitignore",
+          "method": "union of ignore rules"
+        }
+      ]
+    },
+    {
+      "lane": "feature/sneak-mvp-20261020",
+      "head": "7793cfe684273e55dcadf5ddd98339c6b6ad196a",
+      "status": "ALREADY_ANCESTOR"
+    },
+    {
+      "lane": "feature/flexprice-roi-20261020",
+      "head": "517f630866834ddbe2e4dcee74f1213271055bbc",
+      "status": "ALREADY_ANCESTOR"
+    },
+    {
+      "lane": "deploy/sneak-vercel-preview-20261020",
+      "head": "31f22435a62ed69cc0947565aca71a028fabb91c",
+      "merge": "d1182941923efdf16abde3da9d4d60b6a88329af",
+      "conflicts": [
+        "deploy/vercel-preview/EXPORT_MANIFEST.json",
+        "deploy/vercel-preview/data/export-custody.json",
+        "deploy/vercel-preview/data/graph.json",
+        "deploy/vercel-preview/index.html",
+        "scripts/build_vercel_preview.py"
+      ],
+      "resolution": "Combine tokens and trace/claims source; preserve differing generated JSON variants for regeneration"
+    },
+    {
+      "lane": "integration/sneak-consolidation-20261020",
+      "head": "87349928e19ae78da012b7106037a24cc83219de",
+      "merge": "07a0c01c4c555d81e03657d23c37542f8efcb190",
+      "conflicts": [
+        ".env.example",
+        "apps/sneak_mvp/web/app.js",
+        "docs/runbooks/CONNECTORS.md",
+        "scripts/probe_magicstudio_ollama.py",
+        "src/sneak/band_client.py",
+        "src/sneak/cognee_client.py",
+        "src/sneak/magicstudio.py",
+        "src/sneak/metering.py",
+        "src/sneak/scanner.py",
+        "src/sneak/secrets.py",
+        "tests/test_magicstudio_probe.py",
+        "tests/test_scan_coverage.py"
+      ],
+      "resolution": "Three-way line merge: retain recent planner, Liquid/OpenJev and metering; include Cognee/executable hardening and dynamic graph size"
+    },
+    {
+      "lane": "integration/sneak-audit-fco-20261020",
+      "head": "89b96e98f1b6a00b7fb59eb480844590f4ba95bf",
+      "merge": "f32f25c16abe245b1f73bb12ccf1e6512e74c69e",
+      "conflicts": [
+        ".env.example",
+        ".gitignore",
+        "data/contributions/fco_ledger.jsonl",
+        "docs/runbooks/CONNECTORS.md",
+        "scripts/custody_snapshot.py",
+        "scripts/probe_magicstudio_ollama.py",
+        "scripts/verify_custody_snapshot.mjs",
+        "src/sneak/band_client.py",
+        "src/sneak/cognee_client.py",
+        "src/sneak/connectors.py",
+        "src/sneak/lomo_score_pipeline.py",
+        "src/sneak/magicstudio.py",
+        "src/sneak/metering.py",
+        "src/sneak/scanner.py",
+        "src/sneak/secrets.py",
+        "tests/test_magicstudio_probe.py",
+        "tests/test_scan_coverage.py"
+      ],
+      "resolution": "Retain recent planner/models/metering, strong custody/scanner/Cognee guards and ledger occurrences; add FCG LOMO registration and sandboxed connector receipts; remove secret-file env override"
+    },
+    {
+      "lane": "evaluation/lmev2-security-20261020",
+      "head": "6a7b342c0e00bf5e6544ed5672c0b540920892f9",
+      "merge": "06cd97547513a24ceff1308f272a482740473886",
+      "conflicts": [
+        "data/fcg/sneak-016-replay.jsonl"
+      ],
+      "resolution": "Use evaluation successor replay; retain exact predecessor variant under receipts/merge_variants"
+    },
+    {
+      "lane": "feature/conversation-federation-mmr-20261020",
+      "head": "5a9c5a73f6d08bf687d1835ee5f963dac8ccf53b",
+      "merge": "66133acf88a5c4d9e3f0d8fe08a09e2217e47a98",
+      "changes": 10
+    },
+    {
+      "lane": "integration/band-cognee-snyk-20261020",
+      "head": "b81526598873c6422630247692766be0b73796b6",
+      "merge": "c3834c5a41cdace633e9e84154809c0181059f0e",
+      "conflicts": [
+        "pyproject.toml",
+        "src/sneak/__init__.py",
+        "src/sneak/cognee_client.py"
+      ],
+      "resolution": "Retain installed package metadata and public exports; preserve agent SDK dependencies as optional agent extra; keep current hardened Cognee adapter (legacy adapter retained in parent history)"
+    },
+    {
+      "lane": "redteam/claude-20261020",
+      "head": "054a0eb2332bbcd0a8e1c6fcb0dcb529afe64d1a",
+      "merge": "6f7e0185acbb6ad9bbd47e78f8f40d6bd2aa2d59",
+      "conflicts": [
+        "redteam/findings_SNEAK-013.jsonl"
+      ],
+      "resolution": "Append all byte-distinct red-team findings; preserve predecessor observations and repeated finding IDs rather than replacing them"
+    },
+    {
+      "lane": "integration/cognee-flexprice-r14",
+      "head": "e2b69c1ddd5be62910c56ae467d28787ce45b065",
+      "merge": "bad2e78822fcae01f37779c9348d87b11a599455",
+      "changes": 1
+    },
+    {
+      "lane": "audit/r14-divergent-receipts-20261020",
+      "head": "e5d1befd3821a9e18f8788c386351833c222b486",
+      "merge": "f2e465b8c26ad6f121daeaf249f7682863d46e28",
+      "changes": 3
+    },
+    {
+      "lane": "onboarding/teammate-fco-handoff",
+      "head": "2e236b745564a005de14cc814c5fa5df188020f8",
+      "merge": "851a49b502247fb44855bc541e52f02734d64796",
+      "conflicts": [
+        "data/contributions/fco_ledger.jsonl"
+      ],
+      "resolution": "Union byte-distinct append-only contribution ledger records; retain predecessor status rows"
+    },
+    {
+      "lane": "docs/merkle-mmr-knowledge-base",
+      "head": "edf9cbe2e776f47b26e9abcb8fc4f3857298c391",
+      "merge": "f7dd9c586ea32843f9fe58f00cddedf6b785f64c",
+      "changes": 0
+    },
+    {
+      "lane": "feat/breakpoint-mmr-ledger",
+      "head": "8af402e510d67711e4d3698ebdcc9cc153ca1dbe",
+      "merge": "70fa16c40ceec4c81b2aca19ffadb1a7ed9ae134",
+      "changes": 21
+    },
+    {
+      "lane": "cursor/connector-custody-review-0c2f",
+      "head": "e8766554ca393568c39e760b14af71680df9ce07",
+      "merge": "dbc2a1727003d8b25f59182c005a0499d5ddc186",
+      "conflicts": [
+        "receipts/connectors/SNEAK-019B_BAND_ACK.json",
+        "receipts/connectors/SNEAK-019B_BAND_ACK.md",
+        "receipts/connectors/SNEAK-019_BONUS_PACKAGE.json",
+        "receipts/connectors/SNEAK-019_SNYK_BONUS_EVIDENCE.json",
+        "receipts/connectors/SNEAK-019_SNYK_BONUS_EVIDENCE.md",
+        "scripts/fix_event_bonus_evidence.py"
+      ],
+      "resolution": "Retain current Javier pin-verifying scorer and matching receipts; archive all divergent incoming bytes under receipts/merge_variants"
+    },
+    {
+      "lane": "custody/markdown-exact-20261020",
+      "head": "d93dc18c74532c6880fb5cd89a313728ec3ff84e",
+      "merge": "5ecfd703e6750a2f878526180e47e4b7f9f5eb6a",
+      "changes": 4
+    },
+    {
+      "lane": "main-concurrent-update",
+      "head": "3faae0d8ec89598064806398b75a0a0f4508855f",
+      "merge": "1a1426c8c912c8d243bd0f0ce45f1034d23c8624",
+      "conflicts": [
+        "deploy/vercel-preview/EXPORT_MANIFEST.json",
+        "deploy/vercel-preview/data/export-custody.json",
+        "deploy/vercel-preview/data/graph.json",
+        "docs/runbooks/CONNECTORS.md",
+        "pyproject.toml",
+        "src/sneak/cognee_client.py",
+        "src/sneak/connectors.py",
+        "src/sneak/lomo_score_pipeline.py",
+        "src/sneak/scanner.py",
+        "src/sneak/secrets.py",
+        "tests/test_scan_coverage.py"
+      ],
+      "resolution": "Concurrent main merge contains already integrated deployment ancestry and refresh; retain tested source successors, archive all differing snapshot JSON"
+    },
+    {
+      "lane": "cursor/licensing-cc-apache-0c2f",
+      "head": "a723c24d7f84360f9ab3a172bb85b47db7026162",
+      "merge": "5e47ca0fa0d913b753b82674e595132d7c73269f",
+      "conflicts": [
+        "README.md",
+        "pyproject.toml"
+      ],
+      "resolution": "Combine licensing metadata and README with tested Python 3.12 requirement; retain licensing lane documents exactly"
+    }
+  ],
+  "executed": {
+    "python": {
+      "passed": 196,
+      "skipped": 2,
+      "subtests_passed": 13
+    },
+    "node": {
+      "passed": 12
+    },
+    "export_contract_recheck": {
+      "passed": 9
+    },
+    "uv_lock_check": "PASS",
+    "offline_sponsor_custody": "PASS_OFFLINE_CUSTODY_ONLY"
+  },
+  "observed": {
+    "source_integration": "IMPLEMENTED_TESTED_PUSHED",
+    "main_update": "PROPOSED_NOT_EXECUTED",
+    "security_ship_gate": "BLOCKED",
+    "security_app_score": "NOT_COMPUTED"
+  },
+  "not_tested": [
+    "Official pinned LongMemEval dataset not staged",
+    "BAND SDK availability test skipped: SDK not installed",
+    "authenticated Snyk scan of merged source",
+    "live multi-agent behavior",
+    "new production deployment"
+  ],
+  "failures_preserved": [
+    "Original Snyk authentication exit 2",
+    "Snyk CLI absent in this runner",
+    "First integrated Python run: stale import identities; stale export root; two CLI error contracts",
+    "Intermediate merge-line reconciliation error corrected in successor commit",
+    "Dependency lock initially incompatible with Python 3.10 declaration; reconciled to 3.12",
+    "Direct module invocation failed for heatmap script; python -m scripts.build_evidence_heatmap executed successfully"
+  ],
+  "decisions": [
+    "All original branches retained",
+    "No force push",
+    "Divergent immutable receipt variants retained under receipts/merge_variants",
+    "Append R3, R4, R5 import manifests; preserve all predecessors",
+    "Combine updated planner, Liquid/OpenJev, metering, FCG, token UI, security hardening and licensing"
+  ],
+  "proposed": [
+    "Fast-forward main with expected-head lease"
+  ],
+  "unresolved": [
+    "Snyk authenticated full coverage and teammate score",
+    "official dataset and BAND SDK test skips",
+    "sponsor acceptance and live workflows"
+  ],
+  "next_action": "Lease-protected main fast-forward, then append observed successor receipt"
+}

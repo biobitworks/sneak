@@ -1,0 +1,20 @@
+{
+  "branch_dependency_metadata_at_scan": "ABSENT",
+  "canonical_merkle_root": "NOT_COMPUTED",
+  "id": "SNEAK-20261020-INTEGRATION-002",
+  "interpretation": "DENY; no clean SCA evidence; three of eight SAST results are test-fixture secret-pattern detections; remainder PT rules; triage separately",
+  "observed_at_utc": "2026-10-20T19:18:47.113620+00:00",
+  "parent": "SNEAK-20261020-INTEGRATION-001",
+  "sast_exit": 1,
+  "sast_results": 8,
+  "sast_rule_counts": {
+    "javascript/PT": 1,
+    "python/HardcodedNonCryptoSecret/test": 3,
+    "python/PT": 4
+  },
+  "sast_sarif_sha256": "671652b8807675c61c194975ca95d6ecedf075c3381ee3a1321d45063a42d2a4",
+  "sca_coverage": "UNSUPPORTED",
+  "sca_exit": 3,
+  "scanned_commit": "6a2d5aee406db8428531da3c0df879851dbeaa89",
+  "security_score": "NOT_COMPUTED"
+}

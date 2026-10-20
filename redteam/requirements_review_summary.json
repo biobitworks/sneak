@@ -1,0 +1,26 @@
+{
+  "schema": "sneak.redteam-requirements-review.v1",
+  "as_of": "2026-10-20T22:00Z",
+  "reviewer": "claude-redteam (Claude Opus 5.5) on magicSTUDIObox / magicPRObox",
+  "atoms": 46,
+  "counts_by_level_and_state": {
+    "mandatory": {
+      "OBSERVED": 8,
+      "NOT_TESTED": 22
+    },
+    "scoring_enrichment": {
+      "UNKNOWN": 1,
+      "NOT_TESTED": 11
+    },
+    "bonus_selected": {
+      "NOT_TESTED": 2,
+      "EXECUTED": 2
+    }
+  },
+  "mandatory_supported": 0,
+  "mandatory_total": 30,
+  "entry_gate": false,
+  "security_app_score": "NOT_COMPUTED",
+  "note": "Proposed review states; not verdict successors. entry_gate stays FALSE until every mandatory atom is independently SUPPORTED.",
+  "rows_sha256": "3ae5bec4165d2e631462f207f069da1994c7db69849e5ab33d8296af43ef4713"
+}

@@ -1,0 +1,56 @@
+Copyright (c) 2026 BiobitWorks and contributors
+
+This repository uses a **split** preferred licensing model (most restrictive
+Creative Commons for non-code creative works, Apache for original software).
+It is **not** a universal dual license that lets a single work be taken under
+either term alone.
+
+## 1. Original software — Apache License 2.0
+
+Applies to original project software and build/test scaffolding authored for
+this repository, including without limitation:
+
+- `src/`
+- `apps/`
+- `scripts/`
+- `tests/`
+- `pyproject.toml` and related packaging/config for those packages
+
+SPDX-License-Identifier: Apache-2.0
+
+Full terms: `LICENSE-APACHE-2.0`
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+
+## 2. Original documentation and other non-code works — CC BY-NC-ND 4.0
+
+Applies to original documentation, planning prose, narrative markdown, figures,
+and other non-code creative works authored for this project (for example under
+`docs/`, `.planning/`, `START_HERE_SNEAK.md`, and human-authored narrative in
+`receipts/` / `notebooks/`), **except** where a file expressly states otherwise.
+
+SPDX-License-Identifier: CC-BY-NC-ND-4.0
+
+Full terms: `LICENSE-CC-BY-NC-ND-4.0`
+URI: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+Summary (informational only; legal code controls):
+
+- Attribution required
+- NonCommercial
+- NoDerivatives
+- No additional restrictions beyond the License
+
+Do **not** treat CC BY-NC-ND as a license for original software source code.
+
+## 3. Third-party, inherited, and event materials
+
+Upstream dependencies, vendor connectors, challenge PDFs, inherited research IP,
+pinned third-party clones under `sources/`, and any material marked HOLD retain
+their own rights. Private access is not license clearance. Public release of
+inherited research IP remains **HOLD** until rights clearance is documented.
+
+See also: `NOTICE`, `LICENSING.md`, and `docs/SECURITY_AND_STANDARDS.md`.

@@ -127,7 +127,7 @@ python3 scripts/run_cognee_custody_chain.py
 Operator-approved path (SNEAK-016):
 
 ```bash
-export SNYK_CLI=/path/to/snyk   # optional if snyk is on PATH
+# Scanner executable must resolve from the operator-controlled PATH; SNYK_CLI override is disabled.
 python3 scripts/run_lomo_snyk_breakpoints.py
 ```
 

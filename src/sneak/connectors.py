@@ -136,9 +136,13 @@ class ConnectorRuntime:
             ),
         )
         if gate.decision == "ALLOW":
+            # Never promote a receipt resolved outside the evidence-store sandbox.
+            receipt_path = Path(mem.receipt_path).resolve(strict=True)
+            if not receipt_path.is_relative_to(self.store.root.resolve()):
+                raise ValueError("receipt must be confined to evidence store")
             security_decision = "ALLOW"
             self.memory.promote_candidate(
-                json.loads(Path(mem.receipt_path).read_text())["payload"]["record_id"],
+                json.loads(receipt_path.read_text())["payload"]["record_id"],
                 authorized=True,
             )
         else:

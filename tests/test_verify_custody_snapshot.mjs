@@ -48,3 +48,11 @@ test("symlinked leaf directory and option-like snapshot_commit rejected",()=>{
  fs.rmSync(path.join(repo,"d"),{recursive:true});fs.symlinkSync(path.join(t,"outdir"),path.join(repo,"d"));
  res=verify(repo,"receipts/R.json");assert.notEqual(res.status,0);assert.match(res.stderr,/symlink/);
 });
+
+test("unbound metadata is rejected, including signature and MMR claims",()=>{
+ const {repo}=fixture();const orig=JSON.parse(fs.readFileSync(path.join(repo,"receipts","R.json"),"utf8"));
+ for(const [key,value] of [["signed",true],["mmr","COMMITTED"],["meaning","verified by authority"],["parent_breakpoint","FORGED"]]){
+  const x=structuredClone(orig);x[key]=value;fs.writeFileSync(path.join(repo,"receipts","T.json"),JSON.stringify(x));
+  const res=verify(repo,"receipts/T.json");assert.notEqual(res.status,0,key);assert.match(res.stderr,/metadata mismatch/,key);
+ }
+});

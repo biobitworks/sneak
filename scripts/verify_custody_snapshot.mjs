@@ -20,6 +20,8 @@ const contained=rel=>{
  if(real!==path.join(baseReal,rel)||!real.startsWith(baseReal+path.sep))throw Error("path escapes repository");
  return real;
 };
+const argument=process.argv[2]||"";
+if(!/^receipts\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9_.-]+\.json$/.test(argument))throw Error("receipt argument must be under receipts/");
 const r=JSON.parse(fs.readFileSync(contained(process.argv[2]),"utf8"));
 if(typeof r.snapshot_commit!=="string"||!/^(?:[0-9a-f]{40}|[0-9a-f]{64})$/.test(r.snapshot_commit))throw Error("snapshot_commit encoding");
 const h=b=>createHash("sha256").update(b).digest();
@@ -30,6 +32,35 @@ const all=git("ls-tree","-rz","--full-tree",r.snapshot_commit).toString("utf8").
 const expectedPaths=all.map(x=>x.split("\t")[1]).sort();
 const paths=r.leaves.map(x=>x.record.path);
 if(JSON.stringify(paths)!==JSON.stringify(expectedPaths))throw Error("manifest coverage/order");
+const legacy="48e72e9b1a62371fc25f79180196b7fb87ae8da1";
+const expectedMetadata={
+ schema:"sneak.git-snapshot.v1",
+ scope:"ALL_REGULAR_TRACKED_FILES_AT_DECLARED_COMMIT",
+ parent_breakpoint:r.snapshot_commit===legacy?"SNEAK-011-MERGE":"SNEAK-010",
+ exclusions:"Untracked/ignored assets and commits after snapshot_commit; this generated receipt is subsequent to its snapshot",
+ meaning:"Integrity only; not source truth, rights, security, signatures or canonical admission",
+ mmr:"NOT_COMMITTED",
+ signed:false,
+ construction:{
+  hash:"SHA-256",canonical:"ASCII JSON sorted keys ensure_ascii=true compact separators no newline",
+  ordering:"UTF-8 path ascending; ASCII paths required",
+  leaf:"SHA256(0x00 || canonical(record))",internal:"SHA256(0x01 || left || right)",odd:"promote unchanged"
+ }
+};
+const canonical=o=>JSON.stringify(o,Object.keys(o).sort());
+for(const [k,v] of Object.entries(expectedMetadata)){
+ const a=r[k];
+ if(k==="construction"){
+  if(!a||Object.keys(a).length!==Object.keys(v).length||Object.keys(v).some(z=>a[z]!==v[z]))throw Error("metadata mismatch: "+k);
+ } else if(a!==v)throw Error("metadata mismatch: "+k);
+}
+if(r.snapshot_commit===legacy){
+ expectedMetadata.parent_root="dcabcb5db384588b701b70014546d0afada1dd35e3a8b1b844c75c0bcf53e403";
+ expectedMetadata.parent_snapshot_receipt="receipts/repository_bootstrap/SNAPSHOT.json";
+ if(r.parent_root!==expectedMetadata.parent_root||r.parent_snapshot_receipt!==expectedMetadata.parent_snapshot_receipt)throw Error("legacy parent metadata mismatch");
+}
+const expectedKeys=[...Object.keys(expectedMetadata),"snapshot_commit","leaf_count","root","leaves"].sort();
+if(JSON.stringify(Object.keys(r).sort())!==JSON.stringify(expectedKeys))throw Error("metadata unexpected fields");
 if(r.leaf_count!==r.leaves.length)throw Error("leaf count");
 let xs=r.leaves.map(item=>{
  const rec=item.record;

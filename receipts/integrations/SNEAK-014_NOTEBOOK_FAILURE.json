@@ -1,0 +1,13 @@
+{
+  "id": "SNEAK-014-NOTEBOOK-FAILED",
+  "parent": "SNEAK-014",
+  "notebook": "notebooks/08_cognee_band_snyk_r14.ipynb",
+  "observed": "FAILED",
+  "error": "NameError: name 'undefined' is not defined",
+  "cell_source": "NODE=undefined",
+  "cause": "Generator assumed a verifier string remained in cross-turn ephemeral state; undefined was interpolated into Python source",
+  "retained": "Original notebook and its Git commit preserved",
+  "successor": "notebooks/09_cognee_band_snyk_r14_r1.ipynb",
+  "wrapper_failure": "tee pipeline returned exit zero despite failed Jupyter subprocess; corrected runner enables pipefail",
+  "verification": "Successor must execute fully before PASS"
+}

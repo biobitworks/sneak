@@ -1,0 +1,315 @@
+{
+  "id": "SNEAK-014",
+  "parent": "SNEAK-013",
+  "source_commit": "1199675accec5294d056de16b2538b58850f3bc3",
+  "branch": "integration/cognee-flexprice-r14",
+  "project": "Sneak",
+  "events": [
+    {
+      "id": "R14-COGNEE",
+      "kind": "hosted_memory_probe",
+      "payload": {
+        "tenant_health_observed": "healthy",
+        "version": "1.6.5",
+        "ingest": {
+          "MEMORY_SOURCE": {
+            "dataset": "sneak_custody_r14",
+            "memory": {
+              "id": "SNEAK-MEMORY-014",
+              "kind": "SYNTHETIC_TEST_FIXTURE_NOT_REAL_VULNERABILITY",
+              "fixture": "neutral-skill-r14",
+              "review_label": "REVIEW-4a8a4bd598",
+              "required_next_action": "QUARANTINE_RESCAN",
+              "reason": "This synthetic fixture has no complete scan receipt bound to its exact candidate bytes. Antidote labels and memory recall do not authorize admission.",
+              "source_event": "SNEAK-013",
+              "context": "Sneak integration smoke test; candidate memory, not canonical truth",
+              "cognee_oss_acceptance": "NOT_TESTED"
+            },
+            "identity": {
+              "content_sha256": "423e1dc1d003cb89a9b7a8a9a9c18bf14cf922372e45874ecca43f06c7fb5bfb",
+              "source_id": "SNEAK-MEMORY-014",
+              "context": "Sneak integration smoke test; candidate memory, not canonical truth"
+            }
+          },
+          "ADD_RESPONSE": {
+            "status": "PipelineRunCompleted",
+            "pipeline_run_id": "cc90ad48-1839-4151-9d47-3f8ba3321caa",
+            "dataset_id": "d0f004fb-456f-598c-b9c2-ce1ac8fe14da",
+            "dataset_name": "sneak_custody_r14",
+            "payload": null,
+            "data_ingestion_info": [
+              {
+                "run_info": {
+                  "status": "PipelineRunCompleted",
+                  "pipeline_run_id": "cc90ad48-1839-4151-9d47-3f8ba3321caa",
+                  "dataset_id": "d0f004fb-456f-598c-b9c2-ce1ac8fe14da",
+                  "dataset_name": "sneak_custody_r14",
+                  "payload": null,
+                  "data_ingestion_info": null
+                },
+                "data_id": "115bb500-1be7-48d8-b424-324ba30f9134"
+              }
+            ]
+          },
+          "COGNIFY_RESPONSE": {
+            "d0f004fb-456f-598c-b9c2-ce1ac8fe14da": {
+              "status": "PipelineRunStarted",
+              "pipeline_run_id": "367faf62-03da-418a-b404-d03c73463e72",
+              "dataset_id": "d0f004fb-456f-598c-b9c2-ce1ac8fe14da",
+              "dataset_name": "sneak_custody_r14",
+              "payload": [],
+              "data_ingestion_info": null
+            }
+          },
+          "DATASET": [
+            {
+              "id": "d0f004fb-456f-598c-b9c2-ce1ac8fe14da",
+              "name": "sneak_custody_r14",
+              "createdAt": "2026-10-20T19:25:15.745552Z",
+              "updatedAt": null,
+              "ownerId": "35d285ed-6dba-48ff-a258-adf3f10409f8"
+            }
+          ],
+          "PIPELINE_STATUS": {
+            "d0f004fb-456f-598c-b9c2-ce1ac8fe14da": {
+              "status": "DATASET_PROCESSING_STARTED",
+              "reason": null,
+              "error": null
+            }
+          },
+          "COMPLETE": "ingestion requested; graph/recall not yet verified"
+        },
+        "recall": {
+          "PIPELINE_STATUS": {
+            "d0f004fb-456f-598c-b9c2-ce1ac8fe14da": {
+              "status": "DATASET_PROCESSING_COMPLETED",
+              "reason": null,
+              "error": null
+            }
+          },
+          "RECALL": [
+            {
+              "kind": "chunk",
+              "search_type": "CHUNKS_LEXICAL",
+              "text": "{\"cognee_oss_acceptance\":\"NOT_TESTED\",\"context\":\"Sneak integration smoke test; candidate memory, not canonical truth\",\"fixture\":\"neutral-skill-r14\",\"id\":\"SNEAK-MEMORY-014\",\"kind\":\"SYNTHETIC_TEST_FIXTURE_NOT_REAL_VULNERABILITY\",\"reason\":\"This synthetic fixture has no complete scan receipt bound to its exact candidate bytes. Antidote labels and memory recall do not authorize admission.\",\"required_next_action\":\"QUARANTINE_RESCAN\",\"review_label\":\"REVIEW-4a8a4bd598\",\"source_event\":\"SNEAK-013\"}",
+              "system_prompt": null,
+              "score": null,
+              "dataset_id": "d0f004fb-456f-598c-b9c2-ce1ac8fe14da",
+              "dataset_name": "sneak_custody_r14",
+              "metadata": {},
+              "raw": {
+                "value": "{\"cognee_oss_acceptance\":\"NOT_TESTED\",\"context\":\"Sneak integration smoke test; candidate memory, not canonical truth\",\"fixture\":\"neutral-skill-r14\",\"id\":\"SNEAK-MEMORY-014\",\"kind\":\"SYNTHETIC_TEST_FIXTURE_NOT_REAL_VULNERABILITY\",\"reason\":\"This synthetic fixture has no complete scan receipt bound to its exact candidate bytes. Antidote labels and memory recall do not authorize admission.\",\"required_next_action\":\"QUARANTINE_RESCAN\",\"review_label\":\"REVIEW-4a8a4bd598\",\"source_event\":\"SNEAK-013\"}"
+              },
+              "structured": null,
+              "source": "graph"
+            }
+          ],
+          "GRAPH": {
+            "response_type": "dict",
+            "keys": [
+              "nodes",
+              "edges"
+            ],
+            "nodes": 12,
+            "edges": 16
+          }
+        },
+        "cloud_vs_oss": "Hosted tenant tested; mandatory Cognee OSS runtime NOT_TESTED",
+        "keys": "Omitted; used only for authenticated calls"
+      }
+    },
+    {
+      "id": "R14-BAND",
+      "kind": "supervised_memory_bridge",
+      "payload": {
+        "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+        "messages": [
+          {
+            "id": "a25bcf6c-03aa-47c6-aff9-76171f44c4ad",
+            "sender_id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+            "content": "@[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]] Security summary SNEAK-SCAN-014, as reported by you from orchestrator-run Snyk CLI scans of commit 1199675accec5294d056de16b2538b58850f3bc3. I did not run the scans or inspect the code.\n- Snyk Code: completed. 4 LOW path-traversal findings, 0 ignores. Coverage was 18 Python and 7 MJS files. Locations: scripts/verify_custody_snapshot.mjs:8 and scripts/custody_snapshot.py:64, 72, 75.\n- Snyk Open Source: completed on requirements-integrations.txt. 12 dependencies, 0 known vulnerable paths.\n- Not covered: a complete corpus dependency audit, and an executed Javier app-security-score.\nRelease/security completion: BLOCKED pending triage of the 4 findings, containment fixes if warranted, and a verified rescan. I make no vulnerability-free claim and no bonus claim. No board item state has changed from me.",
+            "inserted_at": "2026-10-20 19:32:08.780794+00:00"
+          },
+          {
+            "id": "126a6486-2f83-4be4-a180-d099ef816ba6",
+            "sender_id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+            "content": "@[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]] Proposal only, not canonical execution. From the retrieved record SNEAK-MEMORY-014 (source_event SNEAK-013), fixture neutral-skill-r14:\n- review_label: REVIEW-4a8a4bd598\n- required_next_action: QUARANTINE_RESCAN\n\nThe record's stated reason is that there is no complete scan receipt bound to the exact candidate bytes. It also says antidote labels and memory recall don't authorize admission. cognee_oss_acceptance is NOT_TESTED, and the record is marked as a synthetic fixture. I did not recompute the SHA-256 (423e1dc1…5bfb), so I'm relying on the hash you gave me and on the record text as pasted.",
+            "inserted_at": "2026-10-20 19:30:26.648722+00:00"
+          },
+          {
+            "id": "fa04e5c5-943b-45a1-8d1a-28ea19f812d4",
+            "sender_id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+            "content": "@[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]] UNKNOWN. I haven't received any Cognee memory for neutral-skill-r14, so I can't say what review_label or required_next_action were stored. To answer, I'd need the stored Cognee record for that fixture (or its exact contents) passed to me in this room.",
+            "inserted_at": "2026-10-20 19:29:04.370387+00:00"
+          }
+        ],
+        "transport": "supervised Cognee API bridge into BAND; no custom model tool installed",
+        "human_decision": "PENDING; no A/B response observed at prior check"
+      }
+    },
+    {
+      "id": "R14-SNYK",
+      "kind": "actual_scan_evidence",
+      "payload": {
+        "cli_version": "1.1307.2",
+        "source_commit": "1199675accec5294d056de16b2538b58850f3bc3",
+        "sast": {
+          "completed": true,
+          "exit": 1,
+          "findings": [
+            {
+              "id": "55afab48-182d-477c-88c4-06c0d3a4fceb",
+              "rule": "javascript/PT",
+              "level": "note",
+              "path": "scripts/verify_custody_snapshot.mjs",
+              "line": 8,
+              "message": "Unsanitized input from a command line argument flows into node:fs.default.readFileSync, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files."
+            },
+            {
+              "id": "73e3f08c-d8af-4933-bf96-7eb78fcc045a",
+              "rule": "python/PT",
+              "level": "note",
+              "path": "scripts/custody_snapshot.py",
+              "line": 64,
+              "message": "Unsanitized input from a command line argument flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files."
+            },
+            {
+              "id": "cff9d8f0-ed18-40c2-aa58-33c1efcdff38",
+              "rule": "python/PT",
+              "level": "note",
+              "path": "scripts/custody_snapshot.py",
+              "line": 72,
+              "message": "Unsanitized input from a command line argument flows into path concatenation, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to read arbitrary files."
+            },
+            {
+              "id": "991024c8-e97b-4460-9a2f-3350881cc961",
+              "rule": "python/PT",
+              "level": "note",
+              "path": "scripts/custody_snapshot.py",
+              "line": 75,
+              "message": "Unsanitized input from a command line argument flows into json.dump, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write arbitrary files."
+            }
+          ],
+          "original_sha256": "0384070a07ae6801e352fb37f8ac8445daad04ad38d4a16e5d0d6641c3cfd8a4",
+          "report_path": "receipts/integrations/SNEAK-014_SAST.sarif.json",
+          "coverage": [
+            {
+              "files": 7,
+              "isSupported": true,
+              "lang": ".mjs",
+              "type": "SUPPORTED"
+            },
+            {
+              "files": 18,
+              "isSupported": true,
+              "lang": ".py",
+              "type": "SUPPORTED"
+            }
+          ],
+          "ignored_reported": 0
+        },
+        "sca": {
+          "completed": true,
+          "exit": 0,
+          "dependency_count": 12,
+          "known_vulnerabilities": 0,
+          "manifest": "requirements-integrations.txt",
+          "original_sha256": "ee737fc56db4fe522ba020d93a439e38cdb272e5f1299822c007335bba7fe3af",
+          "report_path": "receipts/integrations/SNEAK-014_SCA.json"
+        },
+        "javier_score": "NOT_EXECUTED",
+        "full_corpus_sca": "NOT_EXECUTED",
+        "hostile_vm_trials": "NOT_TESTED",
+        "source_truth_gateway": "NOT_IMPLEMENTED"
+      }
+    },
+    {
+      "id": "R14-TESTS",
+      "kind": "test_execution",
+      "payload": {
+        "red": [
+          {
+            "type": "text",
+            "text": "Process started with PID 53533 (shell: /bin/sh)\nInitial output:\n{\"phase\": \"RED\", \"exit\": 1, \"output\": \"================================================\\nFAIL: test_remote_http_denied (test_integrations_bridge.IntegrationTests.test_remote_http_denied)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \\\"/Users/byron/projects/active/sneak/tests/test_integrations_bridge.py\\\", line 34, in test_remote_http_denied\\n    m=self.m()\\n  File \\\"/Users/byron/projects/active/sneak/tests/test_integrations_bridge.py\\\", line 29, in m\\n    def m(self):self.assertIsNotNone(module,\\\"integration bridge not implemented\\\");return module\\n                ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nAssertionError: unexpectedly None : integration bridge not implemented\\n\\n======================================================================\\nFAIL: test_url_credentials_denied (test_integrations_bridge.IntegrationTests.test_url_credentials_denied)\\n----------------------------------------------------------------------\\nTraceback (most recent call last):\\n  File \\\"/Users/byron/projects/active/sneak/tests/test_integrations_bridge.py\\\", line 37, in test_url_credentials_denied\\n    m=self.m()\\n  File \\\"/Users/byron/projects/active/sneak/tests/test_integrations_bridge.py\\\", line 29, in m\\n    def m(self):self.assertIsNotNone(module,\\\"integration bridge not implemented\\\");return module\\n                ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nAssertionError: unexpectedly None : integration bridge not implemented\\n\\n----------------------------------------------------------------------\\nRan 8 tests in 0.512s\\n\\nFAILED (failures=8)\\n\"}\n\n✅ Process 53533 has finished execution"
+          },
+          {
+            "type": "text",
+            "text": "\n[executed on device: Mac (00925fd7-ab95-4c88-89a5-963739392fc2)]"
+          }
+        ],
+        "green": [
+          {
+            "type": "text",
+            "text": "Process started with PID 54506 (shell: /bin/sh)\nInitial output:\n{\"phase\": \"GREEN\", \"exit\": 0, \"output\": \"test_all_proofs (test_custody_snapshot.CustodyTests.test_all_proofs) ... ok\\ntest_canonical_bytes (test_custody_snapshot.CustodyTests.test_canonical_bytes) ... ok\\ntest_committed_and_working_bytes_checked (test_custody_snapshot.CustodyTests.test_committed_and_working_bytes_checked) ... ok\\ntest_empty_rejected (test_custody_snapshot.CustodyTests.test_empty_rejected) ... ok\\ntest_invalid_side_rejected (test_custody_snapshot.CustodyTests.test_invalid_side_rejected) ... ok\\ntest_leaf_removal_changes_root (test_custody_snapshot.CustodyTests.test_leaf_removal_changes_root) ... ok\\ntest_single_leaf (test_custody_snapshot.CustodyTests.test_single_leaf) ... ok\\ntest_tamper_rejected (test_custody_snapshot.CustodyTests.test_tamper_rejected) ... ok\\ntest_add_uses_observed_camel_case_schema (test_integrations_bridge.IntegrationTests.test_add_uses_observed_camel_case_schema) ... ok\\ntest_error_does_not_expose_body_or_key (test_integrations_bridge.IntegrationTests.test_error_does_not_expose_body_or_key) ... ok\\ntest_missing_key_denies (test_integrations_bridge.IntegrationTests.test_missing_key_denies) ... ok\\ntest_recall_is_scoped_context (test_integrations_bridge.IntegrationTests.test_recall_is_scoped_context) ... ok\\ntest_recall_requires_dataset (test_integrations_bridge.IntegrationTests.test_recall_requires_dataset) ... ok\\ntest_redirect_rejected (test_integrations_bridge.IntegrationTests.test_redirect_rejected) ... ok\\ntest_remote_http_denied (test_integrations_bridge.IntegrationTests.test_remote_http_denied) ... ok\\ntest_url_credentials_denied (test_integrations_bridge.IntegrationTests.test_url_credentials_denied) ... ok\\n\\n----------------------------------------------------------------------\\nRan 16 tests in 0.757s\\n\\nOK\\n\"}\n\n✅ Process 54506 has finished execution"
+          },
+          {
+            "type": "text",
+            "text": "\n[executed on device: Mac (00925fd7-ab95-4c88-89a5-963739392fc2)]"
+          }
+        ],
+        "new_tests": 8,
+        "suite_total": 16,
+        "outcome": "PASS"
+      }
+    },
+    {
+      "id": "R14-FLEXPRICE",
+      "kind": "sdk_installation",
+      "payload": {
+        "package": "flexprice",
+        "version": "2.1.40",
+        "hosts": [
+          "MagicStudio",
+          "MagicPro"
+        ],
+        "environment": ".venv Python 3.12",
+        "import": "PASS",
+        "live_api_key": "NOT_CONFIGURED_IN_CHECKED_ENVIRONMENT",
+        "metering": "NOT_EXECUTED",
+        "test_customer": "NOT_CREATED",
+        "billing": "NOT_EXECUTED"
+      }
+    }
+  ],
+  "status": {
+    "hosted_cognee": "WRITE_GRAPH_RECALL_PASS",
+    "memory_relay": "SUPERVISED_PASS",
+    "agent_tool_integration": "NOT_IMPLEMENTED",
+    "sast": "FOUR_LOW_FINDINGS",
+    "sca": "ZERO_KNOWN_VULNERABILITIES_IN_12_INTEGRATION_DEPENDENCIES",
+    "flexprice": "SDK_INSTALLED_ONLY",
+    "canonical_admission": "NOT_EXECUTED",
+    "human_choice": "PENDING"
+  },
+  "failures": [
+    {
+      "kind": "probe_error",
+      "detail": "Initial baseline collection attempted MessageSentResponse.inserted_at, which does not exist; recovered by reading the existing request message; no duplicate baseline sent."
+    },
+    {
+      "kind": "tool_recovery",
+      "detail": "DC output sessions sometimes disappeared after completion; recovered from bounded command logs."
+    },
+    {
+      "kind": "skill_reference_gap",
+      "detail": "Security skill shared guidance resources unavailable; static claims remain bounded needs_review, not exploitability confirmation."
+    }
+  ],
+  "proposed": [
+    "Triage/harden receipt path boundary and rescan",
+    "Bind agent-owned memory tools",
+    "Deploy and verify mandatory Cognee OSS",
+    "Configure Flexprice test credentials and real meters"
+  ],
+  "application_verdict_updates": [],
+  "recovered_predecessor": {
+    "id": "SNEAK-013",
+    "jupyter_execution": "PASS observed on recovery: three code cells with Python and independent Node matched root",
+    "root": "29002d5e05b18b58dceec7d1492a1300efc9bbf7d33e0fdafed755f43561895f",
+    "visual_notebook_inspection": "NOT_EXECUTED"
+  },
+  "merkle": "Separate successor calculation required",
+  "mmr": "NOT_COMMITTED",
+  "anticube": "NOT_COMPUTED",
+  "delta_g_star": "NOT_COMPUTED"
+}

@@ -1,0 +1,1319 @@
+{
+ "schema": "sneak.agent-failures.v1",
+ "script_sha256": "a46420c8f712b78b5a879fc1f437a9169ceec6b223e17c1d669124ca9a3a0c33",
+ "branches_scanned": 18,
+ "attribution_note": "Architect commits use Byron's identity; 'codex-or-byron' cannot be split further from git metadata.",
+ "agents": {
+  "claude": {
+   "root_bp": "BP-9e4797400dd7ace6",
+   "proof_bp": "BP-08c217ed08ec600c",
+   "evidence_root": "410a13775e415bc520485a9ed34a79a8521c323e667f8a434f1efa4f72d8ef76",
+   "verdict": "YES",
+   "failure_count": 7,
+   "by_category": {
+    "wrong": 7,
+    "error": 0,
+    "gate_blocked": 0
+   },
+   "lomo_all_still_yes": true,
+   "failures": [
+    {
+     "branch": "origin/feat/breakpoint-mmr-ledger",
+     "path": "data/breakpoints/FAILURE_PROOFS.json#F2",
+     "blob_sha256": "9c0e3a574c8dcdd2e7262adbd80f8b826adfdf89315996a1683aef56c3631a2f",
+     "agent": "claude",
+     "added_in": "31b858c",
+     "branches": [
+      "origin/feat/breakpoint-mmr-ledger"
+     ],
+     "markers": [
+      [
+       "self-disclosed",
+       "Cognee tenant API called with the pasted key from magicstudio before the owner confirmed key use."
+      ]
+     ],
+     "marker_count": 1,
+     "category": "wrong",
+     "asked": [
+      "Owner request in this session"
+     ]
+    },
+    {
+     "branch": "origin/feat/breakpoint-mmr-ledger",
+     "path": "data/breakpoints/FAILURE_PROOFS.json#F3",
+     "blob_sha256": "5a3823da4a776e48d99af6b55e7da36a088524d9b07d35c5b9b7875a154ff8f0",
+     "agent": "claude",
+     "added_in": "31b858c",
+     "branches": [
+      "origin/feat/breakpoint-mmr-ledger"
+     ],
+     "markers": [
+      [
+       "self-disclosed",
+       "Marked M03/M04/M10-M12 SUPPORTED from a receipt-hash check only."
+      ]
+     ],
+     "marker_count": 1,
+     "category": "wrong",
+     "asked": [
+      "Owner request in this session"
+     ]
+    },
+    {
+     "branch": "origin/feat/breakpoint-mmr-ledger",
+     "path": "data/breakpoints/FAILURE_PROOFS.json#F4",
+     "blob_sha256": "53561ce7640bd8f09ea2b14a6bab862b977e54669c34386101e0e7fade67f4cb",
+     "agent": "claude",
+     "added_in": "31b858c",
+     "branches": [
+      "origin/feat/breakpoint-mmr-ledger"
+     ],
+     "markers": [
+      [
+       "self-disclosed",
+       "Claude's commits carry Byron's name and email, unsigned."
+      ]
+     ],
+     "marker_count": 1,
+     "category": "wrong",
+     "asked": [
+      "Owner request in this session"
+     ]
+    },
+    {
+     "branch": "origin/feat/breakpoint-mmr-ledger",
+     "path": "data/breakpoints/FAILURE_PROOFS.json#F5",
+     "blob_sha256": "e84408082daaef46509cd07a93c28c63aa676e0ae60d0d16f4c442ec11616bab",
+     "agent": "claude",
+     "added_in": "31b858c",
+     "branches": [
+      "origin/feat/breakpoint-mmr-ledger"
+     ],
+     "markers": [
+      [
+       "self-disclosed",
+       "Claude's GitHub comments were posted from the owner's account."
+      ]
+     ],
+     "marker_count": 1,
+     "category": "wrong",
+     "asked": [
+      "Owner request in this session"
+     ]
+    },
+    {
+     "branch": "origin/feat/breakpoint-mmr-ledger",
+     "path": "data/breakpoints/FAILURE_PROOFS.json#F6",
+     "blob_sha256": "89d1832870662539ccae4dcbdb497dfcbe5bb57e49654beff200f81e2550e9cb",
+     "agent": "claude",
+     "added_in": "31b858c",
+     "branches": [
+      "origin/feat/breakpoint-mmr-ledger"
+     ],
+     "markers": [
+      [
+       "self-disclosed",
+       "Proof-of-work labelled SUPPORTED though checker and checked work share one author."
+      ]
+     ],
+     "marker_count": 1,
+     "category": "wrong",
+     "asked": [
+      "Owner request in this session"
+     ]
+    },
+    {
+     "branch": "origin/feat/breakpoint-mmr-ledger",
+     "path": "data/breakpoints/FAILURE_PROOFS.json#F8",
+     "blob_sha256": "f3a96daf3ca067bfb01a423b6ae335478429bc806b6d7a093706e6ffcf0cdb8f",
+     "agent": "claude",
+     "added_in": "31b858c",
+     "branches": [
+      "origin/feat/breakpoint-mmr-ledger"
+     ],
+     "markers": [
+      [
+       "self-disclosed",
+       "Engineering failures: cross-run nondeterminism, secret check hit own test, Flexprice attempt 1 failed, two ledger bugs."
+      ]
+     ],
+     "marker_count": 1,
+     "category": "wrong",
+     "asked": [
+      "Owner request in this session"
+     ]
+    },
+    {
+     "branch": "origin/feat/breakpoint-mmr-ledger",
+     "path": "data/breakpoints/FAILURE_PROOFS.json#F9",
+     "blob_sha256": "30c82dec6328b89f64035c3072ea8403f3c57c50112bcfa6773216fd9cb8c6b7",
+     "agent": "claude",
+     "added_in": "31b858c",
+     "branches": [
+      "origin/feat/breakpoint-mmr-ledger"
+     ],
+     "markers": [
+      [
+       "self-disclosed",
+       "Successor IDs collided with the architect's numbering twice."
+      ]
+     ],
+     "marker_count": 1,
+     "category": "wrong",
+     "asked": [
+      "Owner request in this session"
+     ]
+    }
+   ]
+  },
+  "codex-or-byron": {
+   "root_bp": "BP-028fe7b94dba46ef",
+   "proof_bp": "BP-c12d741ad9d9a7a5",
+   "evidence_root": "9cea790b127dd4dfb614d456cfa6fbac8e82c70f52672fd11a88f54c508be895",
+   "verdict": "YES",
+   "failure_count": 36,
+   "by_category": {
+    "wrong": 1,
+    "error": 28,
+    "gate_blocked": 7
+   },
+   "lomo_all_still_yes": true,
+   "failures": [
+    {
+     "branch": "origin/audit/r14-divergent-receipts-20261020",
+     "path": "receipts/NOTEBOOK_R5_EXECUTION.json",
+     "blob_sha256": "97db945ac65e9ef567497e5a36a565a6c557b57c978524e9c67a673d515384d8",
+     "agent": "codex-or-byron",
+     "added_in": "fc7a6e82527f",
+     "markers": [
+      [
+       ".execution",
+       "FAILED"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "error",
+     "asked": [
+      "AGENTS.md: reproducible notebooks"
+     ],
+     "branches": [
+      "origin/audit/r14-divergent-receipts-20261020",
+      "origin/cursor/connector-custody-review-0c2f",
+      "origin/cursor/snyk-bonus-lomo-band-0c2f",
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/docs/merkle-mmr-knowledge-base",
+      "origin/evaluation/lmev2-security-20261020",
+      "origin/feat/breakpoint-mmr-ledger",
+      "origin/feature/conversation-federation-mmr-20261020",
+      "origin/feature/flexprice-roi-20261020",
+      "origin/feature/sneak-mvp-20261020",
+      "origin/integration/band-cognee-snyk-20261020",
+      "origin/integration/cognee-flexprice-r14",
+      "origin/integration/sneak-audit-fco-20261020",
+      "origin/integration/sneak-consolidation-20261020",
+      "origin/main",
+      "origin/onboarding/teammate-fco-handoff",
+      "origin/redteam/claude-20261020"
+     ]
+    },
+    {
+     "branch": "origin/audit/r14-divergent-receipts-20261020",
+     "path": "receipts/VERIFIER_CORRECTION_R6.json",
+     "blob_sha256": "27f61fa0527fe2eee6aa8a5645845e666008b685643ca6331ee45758a3bd58fd",
+     "agent": "codex-or-byron",
+     "added_in": "fc7a6e82527f",
+     "markers": [
+      [
+       ".predecessor_verification",
+       "FAILED"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "error",
+     "asked": [
+      "AGENTS.md / plan"
+     ],
+     "branches": [
+      "origin/audit/r14-divergent-receipts-20261020",
+      "origin/cursor/connector-custody-review-0c2f",
+      "origin/cursor/snyk-bonus-lomo-band-0c2f",
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/docs/merkle-mmr-knowledge-base",
+      "origin/evaluation/lmev2-security-20261020",
+      "origin/feat/breakpoint-mmr-ledger",
+      "origin/feature/conversation-federation-mmr-20261020",
+      "origin/feature/flexprice-roi-20261020",
+      "origin/feature/sneak-mvp-20261020",
+      "origin/integration/band-cognee-snyk-20261020",
+      "origin/integration/cognee-flexprice-r14",
+      "origin/integration/sneak-audit-fco-20261020",
+      "origin/integration/sneak-consolidation-20261020",
+      "origin/main",
+      "origin/onboarding/teammate-fco-handoff",
+      "origin/redteam/claude-20261020"
+     ]
+    },
+    {
+     "branch": "origin/audit/r14-divergent-receipts-20261020",
+     "path": "receipts/integrations/SNEAK-014_CUSTODY.json",
+     "blob_sha256": "5382b77ee103f84164d6c450eedbc5cf44ad84814fbff43464631798be12aec4",
+     "agent": "codex-or-byron",
+     "added_in": "172928a839d5",
+     "markers": [
+      [
+       ".leaves[3].event.payload.sast.exit",
+       "exit 1"
+      ],
+      [
+       ".leaves[4].event.payload.green[0].text",
+       "Process started with PID 54506 (shell: /bin/sh)\nInitial output:\n{\"phase\": \"GREEN\", \"exit\": 0, \"output\": \"test_all_proofs"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/audit/r14-divergent-receipts-20261020",
+      "origin/integration/cognee-flexprice-r14",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/audit/r14-divergent-receipts-20261020",
+     "path": "receipts/integrations/SNEAK-014_EVIDENCE.json",
+     "blob_sha256": "2bbc73503f31db1c42ec864a56df1e91b48e2abbfe4c7fbea6489c7f801aa2d3",
+     "agent": "codex-or-byron",
+     "added_in": "7e684350e89d",
+     "markers": [
+      [
+       ".events[2].payload.sast.exit",
+       "exit 1"
+      ],
+      [
+       ".events[3].payload.green[0].text",
+       "Process started with PID 54506 (shell: /bin/sh)\nInitial output:\n{\"phase\": \"GREEN\", \"exit\": 0, \"output\": \"test_all_proofs"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/audit/r14-divergent-receipts-20261020",
+      "origin/integration/cognee-flexprice-r14",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/audit/r14-divergent-receipts-20261020",
+     "path": "receipts/integrations/SNEAK-014_NOTEBOOK_FAILURE.json",
+     "blob_sha256": "bf67ea660d5998fe4bbf15bac3a3520333cca15fca4cd5b9f9eb575eb6c93931",
+     "agent": "codex-or-byron",
+     "added_in": "27e326b54f31",
+     "markers": [
+      [
+       ".observed",
+       "FAILED"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "error",
+     "asked": [
+      "AGENTS.md: reproducible notebooks"
+     ],
+     "branches": [
+      "origin/audit/r14-divergent-receipts-20261020",
+      "origin/integration/cognee-flexprice-r14",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/audit/r14-divergent-receipts-20261020",
+     "path": "receipts/integrations/divergent-local-20261020/SNEAK-014_CUSTODY.json",
+     "blob_sha256": "c0a87fc257e49c92b0edfdb78e82ad03d57fe514fcbd8207430d29298c6241b8",
+     "agent": "codex-or-byron",
+     "added_in": "e5d1befd3821",
+     "markers": [
+      [
+       ".leaves[3].event.payload.sast.exit",
+       "exit 1"
+      ],
+      [
+       ".leaves[4].event.payload.green[0].text",
+       "Process started with PID 54506 (shell: /bin/sh)\nInitial output:\n{\"phase\": \"GREEN\", \"exit\": 0, \"output\": \"test_all_proofs"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/audit/r14-divergent-receipts-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/band/SNEAK_PLANNER_ONBOARDING_STEP001_20261020.json",
+     "blob_sha256": "a39a98a36c98688e373a5a45f1a849d8a340e815e19699154005b9a5e7466523",
+     "agent": "codex-or-byron",
+     "added_in": "3a7f2b927947",
+     "markers": [
+      [
+       ".evidence.band_room_list.exit_code",
+       "exit 1"
+      ],
+      [
+       ".evidence.band_room_list.outcome",
+       "BLOCKED_AUTH"
+      ],
+      [
+       ".evidence.band_whoami.exit_code",
+       "exit 1"
+      ],
+      [
+       ".evidence.band_whoami.outcome",
+       "BLOCKED_AUTH"
+      ]
+     ],
+     "marker_count": 4,
+     "category": "error",
+     "asked": [
+      "BAND M01-M20"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/conversations/SNEAK_CANONICAL_HANDOFF_BP003_20261020.json",
+     "blob_sha256": "b80bde14ffb98af74f58ac7ddb37008ceacce6cf7d03c71bcaba2daec28a0ff7",
+     "agent": "codex-or-byron",
+     "added_in": "00ba3a879a4c",
+     "markers": [
+      [
+       ".fco.security_release_gate",
+       "BLOCKED"
+      ],
+      [
+       ".snyk_gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "gate_blocked",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/conversations/SNEAK_CONVERSATION_COGNEE_BP001_20261020.json",
+     "blob_sha256": "456327fa79d3898110f2d92bf5afb762978563f0acb5c46376a117cf66250b0d",
+     "agent": "codex-or-byron",
+     "added_in": "5866008a1dbf",
+     "markers": [
+      [
+       ".fco_transitions[0].snyk_gate",
+       "BLOCKED"
+      ],
+      [
+       ".fco_transitions[1].snyk_gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "gate_blocked",
+     "asked": [
+      "Cognee M21-M27",
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/conversations/SNEAK_CONVERSATION_END_TO_END_BP002_20261020.json",
+     "blob_sha256": "4fd1342879f9f140612de6f95bfc8d60347936f27be4a83ae6f43442a4192074",
+     "agent": "codex-or-byron",
+     "added_in": "fc84c7d15538",
+     "markers": [
+      [
+       ".observed.security_release_gate",
+       "BLOCKED"
+      ],
+      [
+       ".observed.snyk_latest",
+       "AUTH_ERROR_OR_DEPENDENCY_ERROR"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/sneak_mvp/TURN_BREAKPOINT_MVP_20261020_001.json",
+     "blob_sha256": "e4d5d7515567e6e7620fc12ec54665395fa84ee49bf4e3b4932687b565474b36",
+     "agent": "codex-or-byron",
+     "added_in": "7793cfe68427",
+     "markers": [
+      [
+       ".OBSERVED.snyk_gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "gate_blocked",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020",
+      "origin/feature/sneak-mvp-20261020",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/sneak_mvp/scans/SNYK_20261020T192812.json",
+     "blob_sha256": "29b18df95df86f7e4f77c267e82ad16209755e473b8d8782e693e3e047c9c551",
+     "agent": "codex-or-byron",
+     "added_in": "29032752794c",
+     "markers": [
+      [
+       ".exit_code",
+       "exit 1"
+      ],
+      [
+       ".gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020",
+      "origin/feature/sneak-mvp-20261020",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/sneak_mvp/scans/SNYK_20261020T193617.json",
+     "blob_sha256": "a7171a528b6bb216342258ce15da8ce1c2aef409a76e2efc2c3a27f303047c20",
+     "agent": "codex-or-byron",
+     "added_in": "7793cfe68427",
+     "markers": [
+      [
+       ".exit_code",
+       "exit 1"
+      ],
+      [
+       ".gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020",
+      "origin/feature/sneak-mvp-20261020",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/sneak_mvp/scans/SNYK_20261020T205559.json",
+     "blob_sha256": "37b169b6c23dc0705da1f09b87f65ebf41730a81199ab40ee6308d95376a3a28",
+     "agent": "codex-or-byron",
+     "added_in": "8b9c57d21d78",
+     "markers": [
+      [
+       ".exit_code",
+       "exit 2"
+      ],
+      [
+       ".gate",
+       "BLOCKED"
+      ],
+      [
+       ".outcome",
+       "ERROR"
+      ]
+     ],
+     "marker_count": 3,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/vercel/SNEAK_AUTH_RETRY_BP003_20261020.json",
+     "blob_sha256": "29fd2b7b12a5cd46a272bccb6e9e7ab77023ac8baaa6e1ae7fbe8726f431520a",
+     "agent": "codex-or-byron",
+     "added_in": "f1c4e2b1ea0a",
+     "markers": [
+      [
+       ".OBSERVED.security_gate",
+       "BLOCKED"
+      ],
+      [
+       ".OBSERVED.snyk_code_scan",
+       "ERROR_AUTHENTICATION"
+      ],
+      [
+       ".OBSERVED.snyk_oauth",
+       "FAILED_TIMEOUT"
+      ],
+      [
+       ".OBSERVED.snyk_oss_scan",
+       "ERROR_DEPENDENCY_RESOLUTION"
+      ]
+     ],
+     "marker_count": 4,
+     "category": "error",
+     "asked": [
+      "Owner request: deploy preview",
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/vercel/SNEAK_EXPORT_HEATMAP_BP002_20261020.json",
+     "blob_sha256": "b4aec438a885ea3b0eeee2bce256fcd52fc58e10288fd1d89d87a1ff59009483",
+     "agent": "codex-or-byron",
+     "added_in": "8b9c57d21d78",
+     "markers": [
+      [
+       ".OBSERVED.snyk_code_scan.exit_code",
+       "exit 2"
+      ],
+      [
+       ".OBSERVED.snyk_code_scan.gate",
+       "BLOCKED"
+      ],
+      [
+       ".OBSERVED.snyk_code_scan.result",
+       "ERROR"
+      ],
+      [
+       ".OBSERVED.snyk_oss.error",
+       "Failed to get dependencies for all 1 potential projects.\n\nTip: Re-run in debug mode to see more information: DEBUG=*snyk"
+      ],
+      [
+       ".OBSERVED.snyk_oss.exit_code",
+       "exit 2"
+      ],
+      [
+       ".OBSERVED.snyk_oss.result",
+       "ERROR"
+      ]
+     ],
+     "marker_count": 6,
+     "category": "error",
+     "asked": [
+      "Owner request: deploy preview",
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/deploy/sneak-vercel-preview-20261020",
+     "path": "receipts/vercel/SNEAK_VERCEL_20261020_001.json",
+     "blob_sha256": "426c89e7976111991d4e61ad695555e0f4ff71710650ee84d25f387a930dc14a",
+     "agent": "codex-or-byron",
+     "added_in": "d1c627b46115",
+     "markers": [
+      [
+       ".deployments[0].classification",
+       "UNINTENDED_INITIAL_PRODUCTION_ASSIGNMENT; SSO_PROTECTED"
+      ],
+      [
+       ".observed.snyk_gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "wrong",
+     "asked": [
+      "Owner request: deploy preview",
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/deploy/sneak-vercel-preview-20261020",
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/evaluation/lmev2-security-20261020",
+     "path": "receipts/connectors/SNEAK-018_R15_LIVE_REVIEW.json",
+     "blob_sha256": "cd24bf832aa8fc8777a6f207101b640c73b755296a166f4605f0b2e2305a26b7",
+     "agent": "codex-or-byron",
+     "added_in": "5660be64d2cd",
+     "markers": [
+      [
+       ".payload.security.sca",
+       "FAILED dependency resolution; exit 2"
+      ],
+      [
+       ".payload.security.security_gate",
+       "DENY"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/evaluation/lmev2-security-20261020",
+      "origin/feature/conversation-federation-mmr-20261020",
+      "origin/integration/sneak-audit-fco-20261020"
+     ]
+    },
+    {
+     "branch": "origin/evaluation/lmev2-security-20261020",
+     "path": "receipts/evaluations/LMEV2_20261020_PILOT.json",
+     "blob_sha256": "8f65c60c626e784300e615bc0e6babb15bf6f172a2ba1430f8401f6f1cb68985",
+     "agent": "codex-or-byron",
+     "added_in": "a548ee491d83",
+     "markers": [
+      [
+       ".security_admission",
+       "DENY"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "gate_blocked",
+     "asked": [
+      "AGENTS.md / plan"
+     ],
+     "branches": [
+      "origin/evaluation/lmev2-security-20261020",
+      "origin/feature/conversation-federation-mmr-20261020"
+     ]
+    },
+    {
+     "branch": "origin/evaluation/lmev2-security-20261020",
+     "path": "receipts/evaluations/LMEV2_20261020_SECURITY.json",
+     "blob_sha256": "69243f063af5899e04dbb1924ca8c10e5572f08da13b4eaf012df88fe4d78620",
+     "agent": "codex-or-byron",
+     "added_in": "a548ee491d83",
+     "markers": [
+      [
+       ".security_gate",
+       "DENY"
+      ],
+      [
+       ".snyk_code_exit",
+       "exit 1"
+      ],
+      [
+       ".snyk_sca_exit",
+       "exit 2"
+      ]
+     ],
+     "marker_count": 3,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/evaluation/lmev2-security-20261020",
+      "origin/feature/conversation-federation-mmr-20261020"
+     ]
+    },
+    {
+     "branch": "origin/evaluation/lmev2-security-20261020",
+     "path": "receipts/evaluations/LMEV2_20261020_SNYK_AUTH_FAILURE.json",
+     "blob_sha256": "54dc58e5147f050cebf582d93aea64605b8deb216549bdcdd2cbf708834ee5b2",
+     "agent": "codex-or-byron",
+     "added_in": "6a7b342c0e00",
+     "markers": [
+      [
+       ".accepted_security",
+       "DENY"
+      ],
+      [
+       ".scanner_result",
+       "FAILED_AUTH"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/evaluation/lmev2-security-20261020",
+      "origin/feature/conversation-federation-mmr-20261020"
+     ]
+    },
+    {
+     "branch": "origin/feature/conversation-federation-mmr-20261020",
+     "path": "receipts/evaluations/SNEAK_20261020_CONVERSATION_FEDERATION_V1_CORRECTED.json",
+     "blob_sha256": "6fd3da607db7d3eb419dbc8e97b19a30205fdbfcfae88905544dfed96ab3f9a8",
+     "agent": "codex-or-byron",
+     "added_in": "5a9c5a73f6d0",
+     "markers": [
+      [
+       ".security_admission",
+       "DENY"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "gate_blocked",
+     "asked": [
+      "AGENTS.md / plan"
+     ],
+     "branches": [
+      "origin/feature/conversation-federation-mmr-20261020"
+     ]
+    },
+    {
+     "branch": "origin/feature/flexprice-roi-20261020",
+     "path": "receipts/integrations/SNEAK_SPONSOR_TRAVERSAL_V1_20261020.json",
+     "blob_sha256": "dede1500d727652dac81db03cd761a89a723907fa3048453129dc2c764e1a4d0",
+     "agent": "codex-or-byron",
+     "added_in": "517f63086683",
+     "markers": [
+      [
+       ".provider_e2e_verdict",
+       "FAILED_OR_PARTIAL"
+      ],
+      [
+       ".snyk.scan.exit_code",
+       "exit 2"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/feature/flexprice-roi-20261020",
+     "path": "receipts/integrations/SNEAK_SPONSOR_TRAVERSAL_V2_20261020.json",
+     "blob_sha256": "a8af9b2783b8ae02ce1578e015841a967c362d671d7a19ec6d4c65289e4dd6e8",
+     "agent": "codex-or-byron",
+     "added_in": "517f63086683",
+     "markers": [
+      [
+       ".snyk_exact_target_scan",
+       "FAILED_AUTHENTICATION"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/feature/flexprice-roi-20261020",
+     "path": "receipts/requirements/SNEAK_AOK_M01_M30_CLOSEOUT_20261020.json",
+     "blob_sha256": "d9382ec530a108bfbde1e185fd69f8a15eef3556eb129eb7ee76247278e594b2",
+     "agent": "codex-or-byron",
+     "added_in": "517f63086683",
+     "markers": [
+      [
+       ".records[0].attempt_evidence_status",
+       "FAILED"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "error",
+     "asked": [
+      "AGENTS.md / plan"
+     ],
+     "branches": [
+      "origin/feature/flexprice-roi-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/band-cognee-snyk-20261020",
+     "path": "receipts/integration/SNEAK-20261020-INTEGRATION-001.json",
+     "blob_sha256": "315c8a5f1f27e11704ca3aaa22fe0bc9b0a1ae1c675d5f30e150169a8b3a664d",
+     "agent": "codex-or-byron",
+     "added_in": "6a2d5aee406d",
+     "markers": [
+      [
+       ".sast_exit",
+       "exit 1"
+      ],
+      [
+       ".sca_exit",
+       "exit 3"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/band-cognee-snyk-20261020",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/band-cognee-snyk-20261020",
+     "path": "receipts/integration/SNEAK-20261020-INTEGRATION-002.json",
+     "blob_sha256": "0fc3249eb7247b023d59fc025e1f6c3b6292592d808229d24915d70b96d70a66",
+     "agent": "codex-or-byron",
+     "added_in": "16f283374ce9",
+     "markers": [
+      [
+       ".interpretation",
+       "DENY; no clean SCA evidence; three of eight SAST results are test-fixture secret-pattern detections; remainder PT rules;"
+      ],
+      [
+       ".sast_exit",
+       "exit 1"
+      ],
+      [
+       ".sca_exit",
+       "exit 3"
+      ]
+     ],
+     "marker_count": 3,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/band-cognee-snyk-20261020",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/band-cognee-snyk-20261020",
+     "path": "receipts/integration/SNEAK-20261020-INTEGRATION-003.json",
+     "blob_sha256": "99965089638c60a94d79751eeb5a2887a0b715b3d64d598fec08a9c669a4faa9",
+     "agent": "codex-or-byron",
+     "added_in": "b81526598873",
+     "markers": [
+      [
+       ".sast_exit",
+       "exit 1"
+      ],
+      [
+       ".sca_exit",
+       "exit 2"
+      ],
+      [
+       ".security_gate",
+       "DENY"
+      ]
+     ],
+     "marker_count": 3,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/band-cognee-snyk-20261020",
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/sneak-audit-fco-20261020",
+     "path": "receipts/connectors/SNEAK-021_REGISTERED_LOMO.json",
+     "blob_sha256": "7f1e63d0956d18c5e96b2b4e0020b09e3c397d051d90124ad5435cda6e60e2c9",
+     "agent": "codex-or-byron",
+     "added_in": "d630db1978d6",
+     "markers": [
+      [
+       ".security_admission",
+       "DENY"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "gate_blocked",
+     "asked": [
+      "AGENTS.md / plan"
+     ],
+     "branches": [
+      "origin/integration/sneak-audit-fco-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/sneak-audit-fco-20261020",
+     "path": "receipts/connectors/SNEAK-022_SECURITY_REVIEW.json",
+     "blob_sha256": "7034622151b607553c89ade209d34c8374c035379d0d8e2b0ba331fb13da8df6",
+     "agent": "codex-or-byron",
+     "added_in": "d630db1978d6",
+     "markers": [
+      [
+       ".statement.classification.gate",
+       "DENY"
+      ],
+      [
+       ".statement.sast.exit_code",
+       "exit 1"
+      ],
+      [
+       ".statement.sca.exit_code",
+       "exit 2"
+      ],
+      [
+       ".statement.sca.status",
+       "FAILED"
+      ]
+     ],
+     "marker_count": 4,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/sneak-audit-fco-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/sneak-consolidation-20261020",
+     "path": "receipts/sneak_mvp/TURN_BREAKPOINT_MVP_20261020_002.json",
+     "blob_sha256": "e889c8fa0f5be6c0552fea9b089b2385ad447a9241d068903475e2c054ba8f4c",
+     "agent": "codex-or-byron",
+     "added_in": "fd90e97265a1",
+     "markers": [
+      [
+       ".OBSERVED.snyk_code.gate",
+       "BLOCKED"
+      ],
+      [
+       ".OBSERVED.snyk_manifest.exit_code",
+       "exit 2"
+      ],
+      [
+       ".OBSERVED.snyk_manifest.status",
+       "ERROR"
+      ],
+      [
+       ".OBSERVED.snyk_oss.exit_code",
+       "exit 3"
+      ],
+      [
+       ".OBSERVED.snyk_oss.status",
+       "ERROR"
+      ],
+      [
+       ".OBSERVED.snyk_release_gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 6,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/sneak-consolidation-20261020",
+     "path": "receipts/sneak_mvp/TURN_BREAKPOINT_MVP_20261020_003.json",
+     "blob_sha256": "8d25eca90bb4889381c699244f517444bde888a25b46be2e23aa9802576f677a",
+     "agent": "codex-or-byron",
+     "added_in": "87349928e19a",
+     "markers": [
+      [
+       ".OBSERVED.snyk_successor.gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "gate_blocked",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/sneak-consolidation-20261020",
+     "path": "receipts/sneak_mvp/scans/SCA_INTEGRATION_MANIFEST_20261020.json",
+     "blob_sha256": "4066863c7eb4b2c8c15fb97725651dbfb0eb4ecb9666558e8bff34814aaf38e1",
+     "agent": "codex-or-byron",
+     "added_in": "fd90e97265a1",
+     "markers": [
+      [
+       ".exit_code",
+       "exit 2"
+      ],
+      [
+       ".gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/sneak-consolidation-20261020",
+     "path": "receipts/sneak_mvp/scans/SNYK_20261020T202526.json",
+     "blob_sha256": "f8b73aad6d302e539f4106f210224378c948d83fd9cf4e2fa069bf091100cd1c",
+     "agent": "codex-or-byron",
+     "added_in": "fd90e97265a1",
+     "markers": [
+      [
+       ".exit_code",
+       "exit 1"
+      ],
+      [
+       ".gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/sneak-consolidation-20261020",
+     "path": "receipts/sneak_mvp/scans/SNYK_20261020T202556.json",
+     "blob_sha256": "88b53b325759ef30e948653e96d1189e2f2f06d341ec22b721419e2965cc22a2",
+     "agent": "codex-or-byron",
+     "added_in": "fd90e97265a1",
+     "markers": [
+      [
+       ".exit_code",
+       "exit 3"
+      ],
+      [
+       ".gate",
+       "BLOCKED"
+      ],
+      [
+       ".outcome",
+       "ERROR"
+      ]
+     ],
+     "marker_count": 3,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    },
+    {
+     "branch": "origin/integration/sneak-consolidation-20261020",
+     "path": "receipts/sneak_mvp/scans/SNYK_20261020T203453.json",
+     "blob_sha256": "31fb8c53dd6a5b5888e866a6ebce0803ce5da28d8957a5cccf6eb2cc2ebafe12",
+     "agent": "codex-or-byron",
+     "added_in": "87349928e19a",
+     "markers": [
+      [
+       ".exit_code",
+       "exit 1"
+      ],
+      [
+       ".gate",
+       "BLOCKED"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "error",
+     "asked": [
+      "Snyk S01-S09"
+     ],
+     "branches": [
+      "origin/integration/sneak-consolidation-20261020"
+     ]
+    }
+   ]
+  },
+  "cursor": {
+   "root_bp": "BP-ba8c5001147f5296",
+   "proof_bp": "BP-cc01c51e6831dd51",
+   "evidence_root": "aed7ddd4095f0e3e62ef192da4f3b3c3b738f6fa6ae64ed6ea3aea38be13cc4f",
+   "verdict": "YES",
+   "failure_count": 3,
+   "by_category": {
+    "wrong": 1,
+    "error": 0,
+    "gate_blocked": 2
+   },
+   "lomo_all_still_yes": true,
+   "failures": [
+    {
+     "branch": "origin/cursor/connector-custody-review-0c2f",
+     "path": "receipts/connectors/SNEAK-017B_BAND_RELAY.json",
+     "blob_sha256": "bb4b700825671a61dc80c1fec3659dbfba50af2588795c095afd0c878e095561",
+     "agent": "cursor",
+     "added_in": "ba1ba7925137",
+     "markers": [
+      [
+       ".leaves[1].record.payload.ollama",
+       "BLOCKED_NEEDS_HUMAN_SHELL_APPROVAL"
+      ],
+      [
+       ".leaves[2].record.payload.ollama",
+       "BLOCKED_NEEDS_HUMAN_SHELL_APPROVAL"
+      ]
+     ],
+     "marker_count": 2,
+     "category": "gate_blocked",
+     "asked": [
+      "BAND M01-M20",
+      "Owner request: Ollama on magicstudio"
+     ],
+     "branches": [
+      "origin/cursor/connector-custody-review-0c2f",
+      "origin/cursor/snyk-bonus-lomo-band-0c2f",
+      "origin/evaluation/lmev2-security-20261020",
+      "origin/feature/conversation-federation-mmr-20261020",
+      "origin/integration/sneak-audit-fco-20261020",
+      "origin/integration/sneak-consolidation-20261020",
+      "origin/main"
+     ]
+    },
+    {
+     "branch": "origin/cursor/connector-custody-review-0c2f",
+     "path": "scripts/run_lomo_snyk_breakpoints.py",
+     "blob_sha256": "87382d9d2c8f4267b02f200edd3f42012d6c4cfda7bdbf8a9af4004a0aeb3fa0",
+     "agent": "cursor",
+     "added_in": "d440a1301dd8",
+     "markers": [
+      [
+       "source",
+       "hard-coded human APPROVE (RT-30)"
+      ]
+     ],
+     "marker_count": 1,
+     "category": "wrong",
+     "asked": [
+      "Human decision M13-M15"
+     ],
+     "branches": [
+      "origin/cursor/connector-custody-review-0c2f",
+      "origin/cursor/snyk-bonus-lomo-band-0c2f",
+      "origin/evaluation/lmev2-security-20261020",
+      "origin/feature/conversation-federation-mmr-20261020",
+      "origin/integration/sneak-audit-fco-20261020",
+      "origin/integration/sneak-consolidation-20261020",
+      "origin/main"
+     ]
+    },
+    {
+     "branch": "origin/cursor/snyk-bonus-lomo-band-0c2f",
+     "path": "receipts/connectors/SNEAK-028_AOK_MVP_LEDGER.json",
+     "blob_sha256": "881997ba1f45ee14180b45c43e2cf68742070e28bab8818435c427114637c2dd",
+     "agent": "cursor",
+     "added_in": "3166cb9851b9",
+     "markers": [
+      [
+       ".requirements[13].reason",
+       "Blocked on M13: no qualifying human decision to route through Band yet."
+      ]
+     ],
+     "marker_count": 1,
+     "category": "gate_blocked",
+     "asked": [
+      "AGENTS.md / plan"
+     ],
+     "branches": [
+      "origin/cursor/snyk-bonus-lomo-band-0c2f"
+     ]
+    }
+   ]
+  }
+ },
+ "integrations": {
+  "snyk_in_github": {
+   "state": "NOT_TESTED",
+   "github_status_contexts": [
+    "CodeRabbit"
+   ],
+   "note": "No Snyk check/status on any PR head; Snyk ran only as local CLI, with recorded auth and dependency errors."
+  },
+  "snyk_local_cli": {
+   "state": "EXECUTED",
+   "note": "Real snyk code test runs exist (RT-29; PR #3 receipts); SCA never completed; recent runs failed auth."
+  },
+  "band": {
+   "state": "OBSERVED (receipt-level)",
+   "note": "Room 20f1ee5f with Byron/Tom/Jerry captured in SNEAK-013/015 receipts; no human decision; BAND Desktop board NOT_TESTED."
+  },
+  "cognee": {
+   "state": "OBSERVED (receipt-level, Cognee Cloud)",
+   "note": "Cloud writes/recalls in PR #3/#5 receipts; Cognee Open Source (required M21) NOT_TESTED."
+  },
+  "flexprice": {
+   "state": "EXECUTED (self-host up, RT-27)",
+   "note": "No usage event sent and read back; ROI NOT_COMPUTED."
+  },
+  "vercel": {
+   "state": "OBSERVED",
+   "note": "Claude curl: 5 sneak-evidence-preview URLs incl. production alias return 302 to Vercel SSO; content not viewable without login."
+  },
+  "failure_receipts_by_area": {
+   "band": 2,
+   "cognee": 1,
+   "snyk": 28,
+   "flexprice": 0,
+   "human": 1,
+   "vercel": 0
+  }
+ }
+}
