@@ -125,6 +125,9 @@ def generate(out: pathlib.Path = BUILD) -> dict:
         "economics.html": "economics.html",
         "economics.js": "static/economics.js",
         "economics.css": "static/economics.css",
+        "tokens.html": "tokens.html",
+        "tokens.js": "static/tokens.js",
+        "tokens.css": "static/tokens.css",
         "trace.html": "trace.html",
         "trace.js": "static/trace.js",
         "trace.css": "static/trace.css",
@@ -138,7 +141,7 @@ def generate(out: pathlib.Path = BUILD) -> dict:
             if b"LOCAL PREVIEW" not in payload:
                 raise ValueError("source preview marker unexpectedly changed")
             payload = payload.replace(b"LOCAL PREVIEW", b"PROTECTED VERCEL SNAPSHOT")
-            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/trace">Sponsor traversal</a> | <a href="/claims">Ship gate claims</a> | <a href="/judge">Human review</a> | <a href="/economics">Token economics</a> | <a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
+            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/trace">Sponsor traversal</a> | <a href="/claims">Ship gate claims</a> | <a href="/tokens">Question &amp; tokens</a> | <a href="/judge">Human review</a> | <a href="/economics">Token economics</a> | <a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
         target.write_bytes(payload)
         digest[dest] = sha256(payload)
     from scripts.flexprice_roi_trial import FIXTURE, measure
@@ -223,6 +226,18 @@ def generate(out: pathlib.Path = BUILD) -> dict:
                 "changed_action","scope","band_room_send","planner_consumed",
                 "quality_delta","live_model_mmr")}
             (out/"data/conversation-cognee-bridge.json").write_bytes(canonical(public))
+        from scripts import build_judge_tokens as story
+        token_data=story.build()
+        from scripts import flexprice_roi_trial as roi
+        fixture=json.loads(roi.FIXTURE.read_text())
+        comparison=roi.measure(fixture)
+        if comparison["status"]!="SIMULATED_NOT_OBSERVED":
+            raise ValueError("refusing simulated comparison without label")
+        (out/"data/roi-demo.json").write_bytes(canonical(comparison))
+        (out/"data/judge-links.json").write_bytes(canonical({
+           "schema":"sneak.judge-links.v1", "public_repository_status":"JUDGE_KIT_PUBLIC_ONLY_PRIVATE_SOURCE_REMAINS_RESTRICTED",
+           "links":token_data["links"],"security_gate":"BLOCKED",
+           "judge_submission":"NOT_OBSERVED"}))
         from scripts import build_evidence_heatmap as heatmap
         heatmap.main()
         manifest = json.loads((out / "EXPORT_MANIFEST.json").read_text())

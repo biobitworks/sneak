@@ -1,0 +1,87 @@
+{
+  "schema": "sneak.canonical-question-handoff-breakpoint.v1",
+  "id": "SNEAK-CANONICAL-HANDOFF-BP003-20261020",
+  "parent_breakpoint": "SNEAK-CONVERSATION-E2E-BP-002",
+  "source_git_commit": "674a05650791f4589cf5cf452ca896090b114ff3",
+  "source_blob_sha1": "3bf043571bf0acd7a30a3993d91d2009d1e5a9d7",
+  "source_document_sha256": "f86bef1c71f17d83d5974412384db29b0cf7864bceeef3d998dd87c6275c04b4",
+  "canonical_question_v1": "Does every authorized SNEAK agent conversation produce evidence-bound FCO transitions with deterministic inputs and outputs, per-actor and per-model MMR histories, BAND handoffs, and verifiable Cognee recall?",
+  "canonical_question_sha256": "57346670c2ec5842181e957855831f04c574b0cdb1ea57c18ed6bd94c37836a1",
+  "predecessor_question_mmr": {
+    "root": "adbfad2620262d7bb63e8907f84f28def008940a32116d736dfdbf5427e36a3d",
+    "leaves": 6,
+    "nodes": 10,
+    "peaks": [
+      {
+        "height": 2,
+        "sha256": "0f4cb205de724e3b0eba55afedfd6f165f23399f32da7ac656aadb46c3a114d4"
+      },
+      {
+        "height": 1,
+        "sha256": "8454d9e31b7db998b5324481362101313f5a417aa6a0ecd73a42460068ae7b7f"
+      }
+    ]
+  },
+  "successor_question_mmr": {
+    "root": "6444e0924743269cc990f876938c91afed605d7b7b25a40d9710378f2a1e3f08",
+    "leaves": 7,
+    "nodes": 11,
+    "peaks": [
+      {
+        "height": 2,
+        "sha256": "0f4cb205de724e3b0eba55afedfd6f165f23399f32da7ac656aadb46c3a114d4"
+      },
+      {
+        "height": 1,
+        "sha256": "8454d9e31b7db998b5324481362101313f5a417aa6a0ecd73a42460068ae7b7f"
+      },
+      {
+        "height": 0,
+        "sha256": "6303ab757ff82ee3cf3bf4570ddd73380d6c4696fe84622b5051969d7e36a751"
+      }
+    ]
+  },
+  "successor_question_merkle_root": "10c217f489de983bb68f911da82ee1472ec7b9ca25456f97da7d146b4d0dc5db",
+  "verified_event_source": "user requested finalization in current chat; platform message ID unavailable",
+  "fco": {
+    "schema": "sneak.root-question-approval-fco.v1",
+    "decision": "APPROVE_CANONICAL_ROOT_QUESTION_VERSION_1",
+    "decision_scope": "QUESTION_WORDING_AND_HANDOFF_ONLY_NOT_SCIENTIFIC_VALIDITY_OR_JUDGE_ACCEPTANCE",
+    "decision_source": "CURRENT_CHAT_USER_PROMPT",
+    "decision_source_transport_id": "NOT_EXPOSED",
+    "decision_user_message_sha256": "f98fbb10fc49faf5656ea2c486c77db153fe4ad12527a6997cc3d632ab378694",
+    "handoff_git_commit": "674a05650791f4589cf5cf452ca896090b114ff3",
+    "handoff_git_path": "docs/SNEAK_FINAL_PLANNER_HANDOFF_20261020.md",
+    "handoff_git_blob_sha1": "3bf043571bf0acd7a30a3993d91d2009d1e5a9d7",
+    "handoff_exact_sha256": "f86bef1c71f17d83d5974412384db29b0cf7864bceeef3d998dd87c6275c04b4",
+    "root_question_version": "1",
+    "root_question_sha256": "57346670c2ec5842181e957855831f04c574b0cdb1ea57c18ed6bd94c37836a1",
+    "root_question_fco_id": "FCO-QUESTION-795f23604e3d197082e297bb",
+    "parent_fco_id": "FCO-COGNEE_READ-9197b37a62d40781940dddfe",
+    "parent_question_mmr": "adbfad2620262d7bb63e8907f84f28def008940a32116d736dfdbf5427e36a3d",
+    "band_delivery": "NOT_SENT_NOT_VERIFIED",
+    "planner_ack": "NOT_OBSERVED",
+    "security_release_gate": "BLOCKED",
+    "model_mmr": "NOT_COMPUTED",
+    "quality_delta": "NOT_COMPUTED",
+    "observation_date": "2026-10-20",
+    "id": "FCO-QUESTION-APPROVAL-ac23ef9827bc3e3a44218580"
+  },
+  "historical_fco_count": 6,
+  "breakpoint_fco_count": 7,
+  "construction": "SHA256; canonical ASCII JSON, sorted keys, compact separators; MMR position-committed leaves/parents, peaks bagged right-to-left; Merkle 0x00 leaves/0x01 parents and odd promotion",
+  "real_band_delivery": "NOT_SENT_NOT_VERIFIED",
+  "planner_acknowledgment": "NOT_OBSERVED",
+  "snyk_gate": "BLOCKED",
+  "full_hackathon_acceptance": "NOT_ESTABLISHED",
+  "new_model_mmr": "NOT_COMPUTED",
+  "new_quality_delta": "NOT_COMPUTED",
+  "signed": false,
+  "decisions": [
+    "Freeze question version 1",
+    "Preserve prior roots and append approval FCO",
+    "No per-model MMR without model version evidence",
+    "No BAND delivered claim without server message ID",
+    "Security gate blocked until authenticated Snyk checks"
+  ]
+}
