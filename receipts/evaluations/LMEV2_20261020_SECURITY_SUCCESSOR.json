@@ -1,0 +1,23 @@
+{
+  "artifact_fco": "FCO-e7145de48547524fc169245186a60e88dd843b8e6dcdc488ded84c00dd3f7ab3",
+  "notebook_sha256": "657c2b0652efc1177539700777b1a7b6354f95aa572291cc707777832eb655d3",
+  "parent_mmr": {
+    "fcg_edges": 82,
+    "fco_count": 74,
+    "mmr_root": "713334f89e48d44ea64b00651dfc1cf577e9aaab1e4b1d7be71d310f3e033f20",
+    "mmr_size": 145,
+    "verified": true
+  },
+  "predecessor_preserved": true,
+  "scan_fco": "FCO-371559eba164bf7711eff44718f337237e771d80fffeed4ffb37ac1cc82361b9",
+  "schema": "sneak.lmev2.security-successor.v1",
+  "score_fco": "FCO-920f85027717b7f5f201abd924eece61728f382b94ba75bf2de244f48bd29ac7",
+  "security_receipt_sha256": "69243f063af5899e04dbb1924ca8c10e5572f08da13b4eaf012df88fe4d78620",
+  "successor_mmr": {
+    "fcg_edges": 85,
+    "fco_count": 77,
+    "mmr_root": "be4fdb841cef03c132f5606f6673c7ac8c957b33c738b209be07eb513d260ef3",
+    "mmr_size": 150,
+    "verified": true
+  }
+}

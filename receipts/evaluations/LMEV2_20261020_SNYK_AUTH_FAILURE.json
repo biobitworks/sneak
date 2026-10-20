@@ -1,0 +1,24 @@
+{
+  "accepted_security": "DENY",
+  "application_score": null,
+  "parent_mmr": {
+    "fcg_edges": 85,
+    "fco_count": 77,
+    "mmr_root": "be4fdb841cef03c132f5606f6673c7ac8c957b33c738b209be07eb513d260ef3",
+    "mmr_size": 150,
+    "verified": true
+  },
+  "report_sha256": "8fbe5608ade69de4982f80a01dd5c4ccc1e632b7072f2fc8df980e72e7a539b7",
+  "scan_fco": "FCO-577216ea1a9e22909cad8696c1b7cbae97deb5b457985ddd85701c5e3124f98b",
+  "scanner_result": "FAILED_AUTH",
+  "schema": "sneak.lmev2.snyk-auth-failure.v1",
+  "score_fco": "FCO-aed5b90de376987df6465955143a37dc55123a6e806e666f47a94459a024359a",
+  "successor_mmr": {
+    "fcg_edges": 87,
+    "fco_count": 79,
+    "mmr_root": "5f7116cd7d568b61f2abeb67adf8b71f1780171e69c07836a9126f643fa20eec",
+    "mmr_size": 153,
+    "verified": true
+  },
+  "target_commit": "a548ee491d8382e107dfce7b41df7626f12ea46e"
+}

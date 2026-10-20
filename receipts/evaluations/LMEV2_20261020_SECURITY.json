@@ -1,0 +1,48 @@
+{
+  "accepted_application_score": null,
+  "bonus": "NOT_OBSERVED",
+  "findings": [
+    {
+      "line": 12,
+      "path": "scripts/verify_custody_snapshot.mjs",
+      "rule": "javascript/PT",
+      "severity": "note"
+    },
+    {
+      "line": 64,
+      "path": "scripts/custody_snapshot.py",
+      "rule": "python/PT",
+      "severity": "note"
+    },
+    {
+      "line": 79,
+      "path": "scripts/custody_snapshot.py",
+      "rule": "python/PT",
+      "severity": "note"
+    },
+    {
+      "line": 84,
+      "path": "scripts/custody_snapshot.py",
+      "rule": "python/PT",
+      "severity": "note"
+    },
+    {
+      "line": 140,
+      "path": "src/sneak/connectors.py",
+      "rule": "python/PT",
+      "severity": "note"
+    }
+  ],
+  "policy": "javiergarza-snyk/app-security-score@6e1f27605fe278eed347b10dab6f39b3501f1486",
+  "raw_score_from_sast_only": 9.5,
+  "sast_coverage_accepted": true,
+  "sca_coverage_accepted": false,
+  "schema": "sneak.lmev2.security.v1",
+  "security_gate": "DENY",
+  "snyk_code_exit": 1,
+  "snyk_code_report_sha256": "2c53c390fc0f8d7db4a289f3b480839119a66deed667db3329486da4c7e4d103",
+  "snyk_code_version": "1.1307.2",
+  "snyk_sca_error": "Empty first-party runtime requirements manifest; dev SCA requires snyk auth",
+  "snyk_sca_exit": 2,
+  "target_git_commit": "83c70a5407ba4ee65940073e28ab42c8c6e5e37c"
+}
