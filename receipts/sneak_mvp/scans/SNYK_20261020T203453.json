@@ -1,0 +1,75 @@
+{
+ "argv": [
+  "code",
+  "test",
+  "--json"
+ ],
+ "exit_code": 1,
+ "finding_count": 8,
+ "findings": [
+  {
+   "id": "python/HardcodedNonCryptoSecret/test",
+   "severity": "low",
+   "where": "tests/test_cognee_contract.py"
+  },
+  {
+   "id": "python/HardcodedNonCryptoSecret/test",
+   "severity": "low",
+   "where": "tests/test_cognee_contract.py"
+  },
+  {
+   "id": "python/HardcodedNonCryptoSecret/test",
+   "severity": "low",
+   "where": "tests/test_cognee_contract.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "src/sneak/connectors.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "src/sneak/secrets.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "src/sneak/security_gate.py"
+  }
+ ],
+ "finished_at": "2026-10-20T20:35:12.498270+00:00",
+ "gate": "BLOCKED",
+ "local_run_dir": "local-runs/snyk/20261020T203455Z",
+ "mode": "code",
+ "outcome": "FINDINGS",
+ "reason": "8 issue(s)",
+ "redactions": 0,
+ "schema": "sneak.snyk-receipt.v1",
+ "severity_counts": {
+  "critical": 0,
+  "high": 0,
+  "low": 8,
+  "medium": 0
+ },
+ "snyk_cli_version": "1.1307.2",
+ "started_at": "2026-10-20T20:34:53.239341+00:00",
+ "stdout_bytes": 33229,
+ "stdout_sha256": "60a5b6ac6a6f714f7dbdb8c237a9d9a5dbc6ac3cf0c10a8c3b137a8f40299524",
+ "target": {
+  "commit": "3b6902c96186094195c8366e6dec33e3b0aa3440",
+  "dirty": false,
+  "name": "sneak-consolidation",
+  "tree": "5cfc08043d1bf3c00ec1f2ddc8833069e16be4b3"
+ }
+}

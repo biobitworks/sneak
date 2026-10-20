@@ -1,0 +1,88 @@
+{
+  "DECISIONS": [
+    "no findings suppressed",
+    "remaining low findings still block security release",
+    "preserve first and second import/snapshot roots as predecessors",
+    "no main merge",
+    "human approval must occur in actual BAND Desktop"
+  ],
+  "EVIDENCE_SHA256": {
+    "import": "22f4853bcf93c8882696b6e9ac459821ab725a6b92933bee8aad33300a52a7a0",
+    "oldscan": "f8b73aad6d302e539f4106f210224378c948d83fd9cf4e2fa069bf091100cd1c",
+    "prior": "e889c8fa0f5be6c0552fea9b089b2385ad447a9241d068903475e2c054ba8f4c",
+    "scan": "31fb8c53dd6a5b5888e866a6ebce0803ce5da28d8957a5cccf6eb2cc2ebafe12",
+    "snapshot": "97b9b4c88bd20268e824d132eaa6fd9d2be59959209e1fd1e25eb369ca5a3f18"
+  },
+  "EXECUTED": [
+    "scanner CLI executable selection restricted to pinned local paths",
+    "audit DOM construction changed to text-only rendering",
+    "Snyk Code rescanned locked successor commit",
+    "candidate Merkle snapshot computation and independent verification"
+  ],
+  "FAILURES": [
+    "Snyk 8 low findings remain",
+    "Snyk OSS package-manager discovery failed",
+    "BAND device login timed out"
+  ],
+  "ID": "SNEAK-MVP-20261020-BP-003",
+  "MMR": "NOT_COMPUTED",
+  "NEXT_ACTION": "Push updated branch and PR; operator authorizes BAND CLI sign-in; run live room and approval verification; review residual Snyk and SCA.",
+  "NOT_TESTED": [
+    "BAND room live approval and token/cost visibility",
+    "current build real multi-agent handoff",
+    "Flexprice live usage-billing test"
+  ],
+  "OBSERVED": {
+    "band_account": "NOT_AUTHENTICATED_LATEST_CHECK",
+    "git_snapshot_commit": "f0c3350a5551c97e61242ab9e16850eef4e81528",
+    "git_snapshot_leaves": 325,
+    "git_snapshot_root": "556e3ec4aefbdded8174213d099ec2cbedf7cd636b6de2a4a42d3dd6ef6b79dc",
+    "import_leaves": 107,
+    "import_root": "10dc981371ceadd69bb2681e4d08f9b85417de352c046862c125f04535d0a6aa",
+    "mandatory_accepted": 0,
+    "snyk_prior": {
+      "commit": "cd1b308e2aa10d3d8861fc581eaba34e98e601b7",
+      "findings": 10,
+      "medium": 2
+    },
+    "snyk_successor": {
+      "commit": "3b6902c96186094195c8366e6dec33e3b0aa3440",
+      "findings": 8,
+      "gate": "BLOCKED",
+      "low": 8,
+      "medium": 0
+    },
+    "tests_node": 5,
+    "tests_python": 115
+  },
+  "PARENT": {
+    "git_commit": "fd90e97265a1d30114eeaf7c7ea2f904ab3d1043",
+    "id": "SNEAK-MVP-20261020-BP-002",
+    "receipt_sha256": "e889c8fa0f5be6c0552fea9b089b2385ad447a9241d068903475e2c054ba8f4c"
+  },
+  "PROPOSED": [
+    "review residual low path-traversal and synthetic secret warnings",
+    "fix SCA package-manager detection",
+    "BAND sign-in and direct Claude/ChatGPT agent room handoff",
+    "Cognee-to-Snyk-to-BAND end-to-end real actions",
+    "2-3 minute demo and optional Flexprice billing"
+  ],
+  "ROOT": "NOT_COMPUTED",
+  "SIGNED": false,
+  "UNRESOLVED": [
+    "BAND account and human decision",
+    "SCA full coverage",
+    "remaining 8 scanner issues",
+    "hackathon final submission"
+  ],
+  "VERIFIED_NEW": [
+    "Snyk Code scan 10 findings before and 8 after hardening; medium 2 -> 0",
+    "115 Python tests passed",
+    "5 Node tests passed",
+    "append-only import successor 107 files verified",
+    "new 325-file exact-byte snapshot independently verified Python/Node"
+  ],
+  "observed_at_utc": "2026-10-20T20:36:06.575871+00:00",
+  "source_branch": "integration/sneak-consolidation-20261020",
+  "source_git_commit": "3b6902c96186094195c8366e6dec33e3b0aa3440"
+}
