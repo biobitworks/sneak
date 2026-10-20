@@ -1,8 +1,8 @@
 {
  "summary": {
   "ledger_pass": true,
-  "entries": 55,
-  "global_root": "fbada9c110c2a2d6e62b0234b1d1a0afeec10c27da428a8a9d58623a08f3508e",
+  "entries": 57,
+  "global_root": "13f9023d76f9c827f5bf3306287834ecd8d3cdb228ce450e83a3ef7903c265e2",
   "counts": {
    "EXECUTED": 8,
    "FAILED": 1,
@@ -15,7 +15,7 @@
    "id": "BPR-01",
    "requirement": "Every conversation turn and step has a unique Merkle breakpoint",
    "state": "EXECUTED",
-   "evidence": "55 entries, all ids unique and recomputed; this chat session recorded (9 messages). BAND conversations not yet captured",
+   "evidence": "57 entries, all ids unique and recomputed; this chat session recorded (9 messages). BAND conversations not yet captured",
    "optional": false
   },
   {
@@ -78,7 +78,7 @@
    "id": "BPR-10",
    "requirement": "Updates are hashed through FCO tracking",
    "state": "EXECUTED",
-   "evidence": "2 link(s) from breakpoints to contribution FCOs: FCO-8b904d2cf8f265d9, FCO-cb3b6ef299f35553",
+   "evidence": "3 link(s) from breakpoints to contribution FCOs: FCO-8b904d2cf8f265d9, FCO-cb3b6ef299f35553, FCO-4f0478a0b1982b9a",
    "optional": false
   },
   {
@@ -120,7 +120,7 @@
    "id": "BPR-16",
    "requirement": "Everything connects at the end (one project root)",
    "state": "EXECUTED",
-   "evidence": "global MMR root now fbada9c110c2a2d6e62b0234b1d1a0afeec10c27da428a8a9d58623a08f3508e over 55 entries; final project root NOT_COMPUTED until project end",
+   "evidence": "global MMR root now 13f9023d76f9c827f5bf3306287834ecd8d3cdb228ce450e83a3ef7903c265e2 over 57 entries; final project root NOT_COMPUTED until project end",
    "optional": false
   },
   {
