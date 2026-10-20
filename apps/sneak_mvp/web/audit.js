@@ -1,15 +1,62 @@
-const $=s=>document.querySelector(s);function box(t){let n=document.createElement('div');n.className='pill';n.textContent=t;return n}async function main(){try{let r=await fetch('/api/audit'),d=await r.json();if(d.error)throw Error(d.error);$('#audit-summary').append(box(`${d.mandatory_verified} / ${d.mandatory_total} mandatory verified`),box(`Entry gate: ${d.entry_gate?'OPEN':'CLOSED'}`),box(`Scan: ${d.scan.outcome}`));for(let a of d.atoms){let n=document.createElement('div');n.className='atom';for(let v of [a.id,a.requirement,a.verified?'VERIFIED':a.observed_outcome]){let c=document.createElement('span');c.textContent=v;n.append(c)}$('#atoms').append(n)}}catch(e){$('#atoms').textContent='Audit unavailable: '+e.message}}main();
+"use strict";
+const $ = (selector) => document.querySelector(selector);
 
-const control=document.querySelector("#run-check");if(control)control.addEventListener("click",async()=>{
- const output=document.querySelector("#check-result");output.textContent="Checking read-only providers…";
- try{
-  const response=await fetch("/api/check",{cache:"no-store"});const x=await response.json();
-  if(!response.ok)throw Error("Check failed");
-  output.textContent=JSON.stringify({
-    local_import:x.source_import?.status,files:x.source_import?.file_count,
-    band_account:x.band?.runtime_account,band_receipt:x.band?.status,
-    cognee_oss:x.cognee?.status,cognee_band_action:x.cognee?.band_action_dispatch,
-    snyk:x.snyk?.status,snyk_current:x.snyk?.target_current_and_clean,
-    security_gate:x.snyk?.gate,flexprice:x.flexprice?.status,release_gate:x.release_gate},null,2);
- }catch(e){output.textContent="Check failed: "+e.message}
-});
+function textElement(tag, cls, value) {
+  const element = document.createElement(tag);
+  if (cls) element.className = cls;
+  element.textContent = String(value ?? "");
+  return element;
+}
+
+async function loadAudit() {
+  const target = $("#atoms");
+  try {
+    const response = await fetch("/api/audit", {cache:"no-store"});
+    const data = await response.json();
+    if (!response.ok || data.error) throw new Error("Audit unavailable");
+    const summary = $("#audit-summary");
+    summary.appendChild(textElement("div","pill",data.mandatory_verified+" / "+data.mandatory_total+" mandatory verified"));
+    summary.appendChild(textElement("div","pill","Entry gate: "+(data.entry_gate?"OPEN":"CLOSED")));
+    summary.appendChild(textElement("div","pill","Scan: "+(data.scan?.outcome ?? "NOT_RUN")));
+    for (const atom of data.atoms ?? []) {
+      const row = document.createElement("div");
+      row.className = "atom";
+      for (const value of [atom.id, atom.requirement, atom.verified?"VERIFIED":atom.observed_outcome]) {
+        row.appendChild(textElement("span",null,value));
+      }
+      target.appendChild(row);
+    }
+  } catch (error) {
+    target.textContent = "Audit unavailable; read-only service check failed.";
+  }
+}
+
+async function liveCheck() {
+  const output = $("#check-result");
+  output.textContent = "Checking read-only providers…";
+  try {
+    const response = await fetch("/api/check", {cache:"no-store"});
+    const state = await response.json();
+    if (!response.ok) throw new Error("Check failed");
+    const safe = {
+      local_import:state.source_import?.status,
+      files:state.source_import?.file_count,
+      band_account:state.band?.runtime_account,
+      band_receipt:state.band?.status,
+      cognee_oss:state.cognee?.status,
+      cognee_band_action:state.cognee?.band_action_dispatch,
+      snyk:state.snyk?.status,
+      snyk_current:state.snyk?.target_current_and_clean,
+      security_gate:state.snyk?.gate,
+      flexprice:state.flexprice?.status,
+      release_gate:state.release_gate
+    };
+    output.textContent = JSON.stringify(safe,null,2);
+  } catch (error) {
+    output.textContent = "Read-only check unavailable.";
+  }
+}
+
+const control = $("#run-check");
+if (control) control.addEventListener("click",liveCheck);
+loadAudit();

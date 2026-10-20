@@ -141,18 +141,18 @@ def token_present_outside_process_env_file(secret_path: Path) -> dict[str, Any]:
 
 
 def resolve_snyk_cli() -> Optional[str]:
-    """Locate snyk CLI without requiring a global install."""
-    env_cli = os.environ.get("SNYK_CLI")
-    if env_cli and Path(env_cli).is_file():
-        return env_cli
-    which = shutil.which("snyk")
-    if which:
-        return which
+    """Use a predictable installed Snyk CLI; untrusted env cannot select an executable.
+
+    SNYK_CLI override and /tmp executables are intentionally not accepted. This
+    does not establish a vendor signature; the operator must verify installation.
+    """
     for candidate in (
-        Path("/tmp/snyk-cli/node_modules/.bin/snyk"),
+        Path("/opt/homebrew/bin/snyk"),
+        Path("/usr/local/bin/snyk"),
+        Path("/usr/bin/snyk"),
         Path.home() / ".local/bin/snyk",
     ):
-        if candidate.is_file():
+        if candidate.is_file() and os.access(candidate, os.X_OK):
             return str(candidate)
     return None
 
