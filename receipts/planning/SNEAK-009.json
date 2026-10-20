@@ -1,0 +1,54 @@
+{
+  "id": "SNEAK-009",
+  "parent": "SNEAK-008",
+  "verified_new": [
+    "both Desktop Commander devices reachable",
+    "actual hostnames recovered",
+    "Codex/Claude CLI paths found on both hosts"
+  ],
+  "executed": [
+    "list devices",
+    "read-only standard app-folder and PATH inventory on both Macs"
+  ],
+  "observed": {
+    "magicpro": {
+      "device_id": "607bdfaf-c407-4450-86cd-0c5841179ef1",
+      "hostname": "MacBookPro",
+      "band_standard_app_folder": "NOT_FOUND",
+      "band_path": "NOT_FOUND",
+      "jamd_path": "NOT_FOUND"
+    },
+    "magicstudio": {
+      "device_id": "00925fd7-ab95-4c88-89a5-963739392fc2",
+      "hostname": "magicSTUDIObox.local",
+      "band_standard_app_folder": "NOT_FOUND",
+      "band_path": "NOT_FOUND",
+      "jamd_path": "NOT_FOUND"
+    },
+    "browser_control": "NOT_AVAILABLE_IN_CURRENT_TOOLSET"
+  },
+  "decisions": [
+    "follow web UI one step at a time with user",
+    "verify each observable result before dependent action",
+    "use terminal access for host diagnostics"
+  ],
+  "proposed": [
+    "BAND sign-in and Desktop setup"
+  ],
+  "not_tested": [
+    "BAND authentication",
+    "Desktop installation outside standard paths",
+    "runtime sign-in",
+    "Cognee",
+    "Snyk",
+    "Flexprice"
+  ],
+  "failures": [],
+  "unresolved": [
+    "current user BAND screen",
+    "Desktop installation and authenticated state"
+  ],
+  "next_action": "User opens app.band.ai on iPad and reports visible screen; then verify Desktop installation path on selected Mac",
+  "merkle_root": "NOT_COMPUTED",
+  "verdict_updates": []
+}
