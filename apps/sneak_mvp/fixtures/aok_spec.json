@@ -1,0 +1,93 @@
+{
+ "bundle_context": {
+  "project": "SNEAK",
+  "fco": "FCO-SNEAK-MVP-20261020",
+  "parent_commit": "979a4f7af5821e197a71eb960ca2ff2722f2e0e3",
+  "branch": "feature/sneak-mvp-20261020",
+  "builder": "apps/sneak_mvp/aok.py",
+  "claim_ceiling": "Evidence integrity and declared status only; no REQ-AOK atom is accepted by this bundle."
+ },
+ "evidence": [
+  {
+   "id": "EV-001-R5-ATOMS",
+   "kind": "requirements_snapshot",
+   "status": "OBSERVED",
+   "source_path": ".planning/ATOMIC_ACCEPTANCE_R5.md",
+   "claim": {"text": "R5 acceptance table: 30 mandatory atoms, all verified=FALSE / NOT_TESTED at intake.", "claim_ceiling": "Describes requirements, not their satisfaction."},
+   "context": {"project": "SNEAK", "actor": "operator+assistant intake", "parent": null, "observed_via": "repository file bytes"},
+   "supports_atoms": []
+  },
+  {
+   "id": "EV-002-R5-ATOMS-JSONL",
+   "kind": "requirements_snapshot",
+   "status": "OBSERVED",
+   "source_path": "data/rules/atomic_acceptance_r5.jsonl",
+   "claim": {"text": "Machine-readable R5 atoms with source occurrence and context hashes.", "claim_ceiling": "Describes requirements, not their satisfaction."},
+   "context": {"project": "SNEAK", "actor": "operator+assistant intake", "parent": "EV-001-R5-ATOMS", "observed_via": "repository file bytes"},
+   "supports_atoms": []
+  },
+  {
+   "id": "EV-003-R6-CUSTODY",
+   "kind": "custody_receipt",
+   "status": "OBSERVED",
+   "source_path": "receipts/INTAKE_MERKLE_R6.json",
+   "claim": {"text": "R6 intake custody receipt (verified successor of R5).", "claim_ceiling": "Integrity of intake bytes only."},
+   "context": {"project": "SNEAK", "actor": "assistant + independent JS verifier", "parent": "EV-002-R5-ATOMS-JSONL", "observed_via": "repository file bytes"},
+   "supports_atoms": []
+  },
+  {
+   "id": "EV-010-BAND-BOOTSTRAP",
+   "kind": "band_event_receipt",
+   "status": "OBSERVED",
+   "source_path": "receipts/band/SNEAK-012_BOOTSTRAP.json",
+   "claim": {"text": "Two SDK agents (Tom, Jerry) connected to BAND via band_sdk 6.0.1 with claude_sdk adapter.", "claim_ceiling": "BAND SDK connection only; Band Desktop UI, board, sessions and costs not observed."},
+   "context": {"project": "SNEAK", "actor": "Tom, Jerry (BAND agents)", "parent": "EV-003-R6-CUSTODY", "observed_via": "captured receipt"},
+   "supports_atoms": ["REQ-AOK-M04"]
+  },
+  {
+   "id": "EV-011-BAND-HANDOFF",
+   "kind": "band_event_receipt",
+   "status": "OBSERVED",
+   "source_path": "receipts/band/SNEAK-013_HANDOFF.json",
+   "claim": {"text": "Captured agent-to-agent mention and handoff token acknowledgement in one BAND room.", "claim_ceiling": "Three captured events; human decision NOT_REQUESTED_YET at capture."},
+   "context": {"project": "SNEAK", "actor": "Tom -> Jerry", "parent": "EV-010-BAND-BOOTSTRAP", "observed_via": "captured receipt"},
+   "supports_atoms": ["REQ-AOK-M03", "REQ-AOK-M04", "REQ-AOK-M10", "REQ-AOK-M11", "REQ-AOK-M12"]
+  },
+  {
+   "id": "EV-012-BAND-VERIFY",
+   "kind": "verification_receipt",
+   "status": "OBSERVED",
+   "source_path": "receipts/band/SNEAK-013_INDEPENDENT_VERIFY.json",
+   "claim": {"text": "Independent JS recomputation of the SNEAK-013 event root; tamper and wrong-root negatives rejected.", "claim_ceiling": "Application acceptance NOT_PROMOTED; Jupyter execution UNKNOWN."},
+   "context": {"project": "SNEAK", "actor": "independent verifier", "parent": "EV-011-BAND-HANDOFF", "observed_via": "captured receipt"},
+   "supports_atoms": []
+  },
+  {
+   "id": "EV-020-HUMAN-DECISION",
+   "kind": "human_decision",
+   "status": "NOT_TESTED",
+   "source_path": null,
+   "claim": {"text": "Human receives and answers a real decision (SNEAK-H01) through Band Desktop.", "claim_ceiling": "Pending; no observation."},
+   "context": {"project": "SNEAK", "actor": "human operator", "parent": "EV-011-BAND-HANDOFF", "observed_via": "none yet"},
+   "supports_atoms": ["REQ-AOK-M13", "REQ-AOK-M14", "REQ-AOK-M15"]
+  },
+  {
+   "id": "EV-030-COGNEE-MEMORY",
+   "kind": "memory_receipt",
+   "status": "PROPOSED",
+   "source_path": null,
+   "claim": {"text": "Agents write security memory to Cognee during the task; another agent/restart recalls it and changes its next action.", "claim_ceiling": "Adapter exists; in-room agent use not observed."},
+   "context": {"project": "SNEAK", "actor": "BAND agents via cognee_adapter", "parent": "EV-012-BAND-VERIFY", "observed_via": "none yet"},
+   "supports_atoms": ["REQ-AOK-M21", "REQ-AOK-M22", "REQ-AOK-M24", "REQ-AOK-M25", "REQ-AOK-M26", "REQ-AOK-M27"]
+  },
+  {
+   "id": "EV-040-SNYK-GATE",
+   "kind": "planned_check",
+   "status": "PROPOSED",
+   "source_path": null,
+   "claim": {"text": "Security reviewer runs Snyk on the exact built commit; findings block Done until a verified fix.", "claim_ceiling": "Adapter exists; reviewer-in-room scan not observed."},
+   "context": {"project": "SNEAK", "actor": "security reviewer agent", "parent": "EV-030-COGNEE-MEMORY", "observed_via": "none yet"},
+   "supports_atoms": ["REQ-AOK-S01", "REQ-AOK-S02", "REQ-AOK-S05", "REQ-AOK-S07"]
+  }
+ ]
+}
