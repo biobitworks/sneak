@@ -1,2 +1,0 @@
-[console_scripts]
-sneak-security-demo = security_demo.__main__:main
