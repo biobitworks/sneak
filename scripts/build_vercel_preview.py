@@ -119,6 +119,9 @@ def generate(out: pathlib.Path = BUILD) -> dict:
         "judge.html": "judge.html",
         "judge.css": "static/judge.css",
         "judge.js": "static/judge.js",
+        "economics.html": "economics.html",
+        "economics.js": "static/economics.js",
+        "economics.css": "static/economics.css",
     }
     digest = {}
     for src, dest in mapping.items():
@@ -129,10 +132,12 @@ def generate(out: pathlib.Path = BUILD) -> dict:
             if b"LOCAL PREVIEW" not in payload:
                 raise ValueError("source preview marker unexpectedly changed")
             payload = payload.replace(b"LOCAL PREVIEW", b"PROTECTED VERCEL SNAPSHOT")
-            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/judge">Human review</a> | <a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
+            payload = payload.replace(b'<nav><a href="/audit">', b'<nav><a href="/judge">Human review</a> | <a href="/economics">Token economics</a> | <a href="/conversations">Conversation lineage</a> | <a href="/heatmap">LOMO heatmap</a> | <a href="/audit">')
         target.write_bytes(payload)
         digest[dest] = sha256(payload)
-    data_files = {"data/graph.json": projected, "data/audit.json": audit}
+    from scripts.flexprice_roi_trial import FIXTURE, measure
+    roi_demo = measure(json.loads(FIXTURE.read_text()))
+    data_files = {"data/graph.json": projected, "data/audit.json": audit, "data/roi-demo.json": roi_demo}
     for path, obj in data_files.items():
         payload = canonical(obj)
         (out / path).write_bytes(payload)
