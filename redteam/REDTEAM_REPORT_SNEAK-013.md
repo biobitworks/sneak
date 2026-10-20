@@ -81,3 +81,12 @@ This report is on `redteam/claude-20261020`; the PR targets `main` and must not 
 2. Is Cognee Cloud acceptable for M21, or must this run on Cognee OSS?
 3. Should Tom and Jerry stay on `claude_sdk`/magicpro, or move to Ollama/magicstudio?
 4. Make one real approval decision inside a BAND room. Only that can move M13–M15.
+
+## Successor addendum: SNEAK-014-REDTEAM (after origin/main 979a4f7)
+
+While this review ran, the architect (Codex) pushed its own **SNEAK-013**, a BAND handoff. This review is therefore re-identified as **SNEAK-014-REDTEAM** with parent SNEAK-013. RT-01..RT-20 are retained unchanged; RT-21..RT-24 append, and RT-22 and RT-23 supersede RT-19 and RT-13.
+
+- **RT-22 SUPPORTED.** The SNEAK-013 event root `29002d5e…` (3 leaves) reproduces independently (`redteam/verify_band_events.py`). A persistent room, "Sneak — Requirements & Custody", now holds Byron, Tom and Jerry, with a Tom→Jerry @mention handoff and an acknowledgement. Room contents are receipt-only; I did not query BAND.
+- **RT-23: HITL still NOT_TESTED.** Decision SNEAK-H01 (MCP-delivered vs CLI-delivered skill review first?) was posted to you by Tom at 19:00:30Z. `human_response` is null. The request is OBSERVED; the decision does not exist yet.
+- **RT-24 SUPPORTED at receipt level** for M03, M04, M10, M11 and M12. M01 (BAND **Desktop**) remains NOT_TESTED.
+- **Takeover:** the architect is active, with three commits at about 12:10 local, so no takeover is warranted.
