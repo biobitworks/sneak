@@ -18,3 +18,4 @@ Keep source, content identity, occurrence identity, contextual FCO candidates, t
 Model runs, VM isolation, provider integrations, security scans, scored app and actor LOMO trials: NOT_TESTED.
 Anticube/DeltaG*: NOT_COMPUTED pending governing definitions.
 The challenge PDF and original documents retain their rights. Private access is not license clearance.
+Preferred original-project terms: software Apache-2.0; docs/narrative CC BY-NC-ND 4.0 — see `LICENSE` and `LICENSING.md`.
