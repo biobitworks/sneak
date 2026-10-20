@@ -1,0 +1,172 @@
+{
+  "active_checkoffs": [
+    {
+      "number": 1,
+      "overall_status": "pending",
+      "subject": "SNEAK-022 authenticate and verify room/board/agents"
+    },
+    {
+      "number": 2,
+      "overall_status": "completed",
+      "subject": "CHECKOFF Planner: post versioned plan + keep board current"
+    },
+    {
+      "number": 3,
+      "overall_status": "pending",
+      "subject": "CHECKOFF Tom: ACK plan and claim architecture review items"
+    },
+    {
+      "number": 4,
+      "overall_status": "pending",
+      "subject": "CHECKOFF Jerry: ACK plan and claim implementation items"
+    },
+    {
+      "number": 5,
+      "overall_status": "completed",
+      "subject": "CHECKOFF Byron: human gate \u2014 approve plan track"
+    },
+    {
+      "number": 6,
+      "overall_status": "pending",
+      "subject": "CHECKOFF Chirag: teammate confirm roster + planner online"
+    },
+    {
+      "number": 7,
+      "overall_status": "pending",
+      "subject": "CHECKOFF Byron (human): approve plan track \u2014 still PENDING"
+    },
+    {
+      "number": 8,
+      "overall_status": "pending",
+      "subject": "SNEAK-024 conversation custody breakpoints + model MMR deltas"
+    },
+    {
+      "number": 9,
+      "overall_status": "pending",
+      "subject": "SNEAK-024 conversation custody breakpoints + model MMR deltas"
+    }
+  ],
+  "agent": {
+    "handle": "biobitworks/planner",
+    "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+    "name": "Planner"
+  },
+  "artifact_digest": "284e363efc1166eef42e82bb364187eef616653c8638634e1aa42b272e20e1ad",
+  "band_mentions": {
+    "chirag_reminder": {
+      "message_id": "a9ef4b9d-6774-41ac-81aa-78bd63da3a2e",
+      "ok": true
+    },
+    "planner_prompt": {
+      "message_id": "33de70a7-ef99-4cc5-a170-befcfd70c1b7",
+      "ok": true
+    },
+    "tom_jerry_chase": {
+      "message_id": "76629da6-cb83-40d7-97df-cfe620753e8b",
+      "ok": true
+    }
+  },
+  "form_fill_unchanged": true,
+  "id": "SNEAK-025-PLANNER-RUNTIME",
+  "meaning": "Planner Band SDK websocket runtime brought online; plan track posted; overall Done remains false",
+  "mmr": "NOT_COMMITTED",
+  "parent": "SNEAK-024",
+  "participant_after_stop": {
+    "connection_status": "connected",
+    "handle": "biobitworks/planner",
+    "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+    "name": "Planner",
+    "online": true,
+    "type": "Agent"
+  },
+  "participant_during": {
+    "connection_status": "connected",
+    "handle": "biobitworks/planner",
+    "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+    "name": "Planner",
+    "online": true,
+    "type": "Agent"
+  },
+  "plan_track": {
+    "byron_human_task_7": "pending",
+    "chirag_task_6": "pending",
+    "jerry_task_4_board": "pending",
+    "jerry_task_4_chat_ack": {
+      "hits": [
+        {
+          "content_prefix": "CHAT_ACK #4 Jerry \u2014 handle @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]]/jerry. Board tool missing, chat evidence only. Not marked Done \ud83e\uddc0",
+          "message_id": "bbdb63c3-9a3a-48d1-a666-4ad264d4c0df"
+        },
+        {
+          "content_prefix": "{\"name\": \"band_send_message\", \"args\": {\"content\": \"CHAT_ACK #4 Jerry \\u2014 handle @biobitworks/jerry. Board tool missing, chat evidence only. Not marked Done \\",
+          "message_id": "c365b440-6023-42eb-97a5-750bc0632892"
+        }
+      ],
+      "kind": "CHAT_ACK",
+      "observed": true
+    },
+    "overall_plan_done": false,
+    "planner_connection_status": "connected",
+    "planner_online_observed": true,
+    "planner_reply_seen": true,
+    "reason": "Planner websocket runtime exercised. Tom/Jerry chat ACKs recorded (board may stay pending if BOARD_TOOL_MISSING). Human gates #6/#7 remain open. Overall Done false.",
+    "tom_task_3_board": "pending",
+    "tom_task_3_chat_ack": {
+      "hits": [
+        {
+          "content_prefix": "CHAT_ACK #3 Tom \u2014 handle @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]]/tom. Board tool missing, so this is chat-only. Not marked Done.",
+          "message_id": "52eefefe-6c38-4e0e-894f-2f8f5e9a3b15"
+        },
+        {
+          "content_prefix": "{\"name\": \"band_send_message\", \"args\": {\"content\": \"CHAT_ACK #3 Tom \\u2014 handle @biobitworks/tom. Board tool missing, so this is chat-only. Not marked Done.\", ",
+          "message_id": "b27f9bab-5f22-4ad4-9e78-59653466f283"
+        }
+      ],
+      "kind": "CHAT_ACK",
+      "observed": true
+    }
+  },
+  "plan_track_reply_template_digest": "da425c02ea525bc4be4103001b77e8835545853c18a462df81ba2854af6dd08f",
+  "presence_during": {
+    "config_file_configured": true,
+    "connection_status": "connected",
+    "handle": "biobitworks/planner",
+    "name": "Planner",
+    "online": true,
+    "secrets_file_configured": true,
+    "value_inspected": false
+  },
+  "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+  "runtime": {
+    "already_running_elsewhere": false,
+    "last_error": null,
+    "replies_sent": 0,
+    "run_seconds": 13.36,
+    "stop_error": null,
+    "turn_log": [],
+    "turns_seen": 0
+  },
+  "secrets": {
+    "env_overrides_present": [
+      "BAND_PLANNER_AGENT_ID",
+      "BAND_PLANNER_API_KEY",
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "file_exists": true,
+    "file_mode": "0o600",
+    "keys_present": [
+      "BAND_PLANNER_AGENT_ID",
+      "BAND_PLANNER_API_KEY",
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "parent_exists": true,
+    "parent_mode": "0o700",
+    "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+    "value_inspected": false
+  },
+  "signed": false
+}

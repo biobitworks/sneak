@@ -1,0 +1,229 @@
+{
+  "artifact_digest": "5de2ed18d2061a7547de740d5532945b5ed1e555d901c954822bf8c60469ee3e",
+  "breakpoint_score_count": 8,
+  "criteria": [
+    {
+      "evidence_needed": "Real Snyk integration shown to judges; not auto-awarded by tool score",
+      "id": "J-007",
+      "kind": "JUDGING_BONUS",
+      "observed_outcome": "WORKFLOW_INTEGRATED_PENDING_LIVE_SCAN",
+      "statement": "Snyk bonus up to +10%",
+      "status": "EVIDENCE_PREPARED",
+      "verified": false
+    },
+    {
+      "evidence_needed": "Scan bound to staged digest + Javier pin + LOMO breakpoint roots",
+      "id": "SNYK-001",
+      "kind": "BONUS",
+      "observed_outcome": "NOT_TESTED",
+      "statement": "Snyk scan integrated in workflow with versioned receipt",
+      "status": "PARTIAL",
+      "verified": false
+    },
+    {
+      "evidence_needed": "BAND security handoffs + @Data memory of findings/breakpoints",
+      "id": "SNYK-002",
+      "kind": "BONUS",
+      "observed_outcome": "BAND_HANDOFFS_AND_COGNEE_LESSON_RECORDED",
+      "statement": "Security reviewer blocks unsafe work and stores lessons in Cognee",
+      "status": "PARTIAL",
+      "verified": false
+    },
+    {
+      "evidence_needed": "Live SCA/SAST when SNYK_TOKEN present; else NOT_TESTED",
+      "id": "REQ-AOK-S01",
+      "kind": "bonus_selected",
+      "observed_outcome": "NOT_TESTED",
+      "statement": "Use a real Snyk scanning product",
+      "status": "PARTIAL",
+      "verified": false
+    },
+    {
+      "evidence_needed": "apps/security-demo digest bound into score receipts",
+      "id": "REQ-AOK-S02",
+      "kind": "bonus_selected",
+      "observed_outcome": "STAGED_DIGEST_BOUND",
+      "statement": "Scan the exact artifact built by the agents",
+      "status": "PASS",
+      "verified": false
+    }
+  ],
+  "demo_digest": "9ec4bcb4838610330c72e2017950bbfbb197e471c1349cb0023f5b490f05984a",
+  "event_bonus_awarded": false,
+  "event_bonus_claim": "EVIDENCE_PREPARED",
+  "helper_checks": {
+    "incomplete_rejected": {
+      "application_score": null,
+      "coverage_accepted": false,
+      "license": "UNKNOWN_ROOT_LICENSE_404",
+      "meaning": "Tool score only; not an awarded event bonus or vulnerability-free claim",
+      "raw_score": 10.0,
+      "reject_reason": "incomplete_sca_or_sast_coverage",
+      "sast_coverage": false,
+      "sca_coverage": true,
+      "upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+      "upstream_repo": "https://github.com/javiergarza-snyk/app-security-score"
+    },
+    "zero": 10.0
+  },
+  "id": "SNEAK-019-SNYK-BONUS-EVIDENCE",
+  "javier_pin": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+  "javier_pin_verification": {
+    "commit_matches_pin": true,
+    "event_bonus": "up_to_plus_10_percent_NOT_AWARDED_BY_TOOL_SCORE",
+    "local_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+    "node_helper_match": true,
+    "scale": "0_to_10_tool_score_where_10_is_clean",
+    "upstream_repo": "https://github.com/javiergarza-snyk/app-security-score"
+  },
+  "javier_repo": "https://github.com/javiergarza-snyk/app-security-score",
+  "lesson_data_receipt": "data_breakpoint-6b797d420255",
+  "live_snyk": "NOT_TESTED",
+  "max_event_bonus_percent": 10,
+  "meaning": "Evidence package for judges regarding Snyk/+10% bonus path. Snyk findings are scored with Javier GitHub app-security-score. Does not award the bonus. Live 10/10 still requires SNYK_TOKEN + full coverage.",
+  "observed_at": "2026-10-20T20:31:59.073328+00:00",
+  "parent": "SNEAK-018",
+  "scored_breakpoints": [
+    {
+      "application_score": null,
+      "authorization_effect": "FAIL_CLOSED_NO_COORDINATION",
+      "band_outcome": "SKIPPED",
+      "breakpoint_id": "LOMO-CONN-01-BASE",
+      "breakpoint_kind": "baseline_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "c0652eb22bee5f4ac1992d9ee521668d52779a2748c8065167d4ac7d2e41359b",
+      "raw_score": 10.0,
+      "removed_component": "band-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-ab012344d379",
+      "trial_id": "LOMO-CONN-01"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "FAIL_CLOSED_NO_COORDINATION",
+      "band_outcome": "PASS",
+      "breakpoint_id": "LOMO-CONN-01-ABLATE",
+      "breakpoint_kind": "ablated_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "8503319fa00089f61b0db1c49caa17066d0edacf96f3b2936d417b789b6b1168",
+      "raw_score": 10.0,
+      "removed_component": "band-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-3bcd53447a18",
+      "trial_id": "LOMO-CONN-01"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "FAIL_CLOSED_NO_MEMORY_CONTINUATION",
+      "band_outcome": "SKIPPED",
+      "breakpoint_id": "LOMO-CONN-02-BASE",
+      "breakpoint_kind": "baseline_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "06400d66099ae20c539aafaf5140f882a6189c9e0d5c1d07b91d3f0e76a7179c",
+      "raw_score": 10.0,
+      "removed_component": "cognee-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-26d6f81a4528",
+      "trial_id": "LOMO-CONN-02"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "FAIL_CLOSED_NO_MEMORY_CONTINUATION",
+      "band_outcome": "PASS",
+      "breakpoint_id": "LOMO-CONN-02-ABLATE",
+      "breakpoint_kind": "ablated_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "233957ff0489d7154ceb701b6a0e2498e8c37de41ba7bcc13f79f5a8dee92000",
+      "raw_score": 10.0,
+      "removed_component": "cognee-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-19cdc65ffb53",
+      "trial_id": "LOMO-CONN-02"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "DENY",
+      "band_outcome": "SKIPPED",
+      "breakpoint_id": "LOMO-CONN-03-BASE",
+      "breakpoint_kind": "baseline_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "94180a5778f2fd31f8b02c50b0145ef6997d3e12ed72cdcfd7e4cde80489e67b",
+      "raw_score": 10.0,
+      "removed_component": "snyk-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-485653ece56f",
+      "trial_id": "LOMO-CONN-03"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "DENY",
+      "band_outcome": "PASS",
+      "breakpoint_id": "LOMO-CONN-03-ABLATE",
+      "breakpoint_kind": "ablated_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "0615c5f0c3577cba4670b2ac8d56fa231c50b10a79aa2256abc22022f42cf71a",
+      "raw_score": 10.0,
+      "removed_component": "snyk-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-c6ea8c8a7195",
+      "trial_id": "LOMO-CONN-03"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "METERING_UNAVAILABLE_SECURITY_UNCHANGED",
+      "band_outcome": "SKIPPED",
+      "breakpoint_id": "LOMO-CONN-04-BASE",
+      "breakpoint_kind": "baseline_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "6aa151f81d6663fce7c632f70ca2a746e23055b11d0e9a1c9436cf0fe985c5d7",
+      "raw_score": 10.0,
+      "removed_component": "flex-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-f1456a53dac8",
+      "trial_id": "LOMO-CONN-04"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "METERING_UNAVAILABLE_SECURITY_UNCHANGED",
+      "band_outcome": "PASS",
+      "breakpoint_id": "LOMO-CONN-04-ABLATE",
+      "breakpoint_kind": "ablated_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "baf538a4ff5798604edc878101fa8b70b5d270766275ca0274fd3cc56127a9d2",
+      "raw_score": 10.0,
+      "removed_component": "flex-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-9525f422caf2",
+      "trial_id": "LOMO-CONN-04"
+    }
+  ],
+  "secrets": {
+    "env_overrides_present": [
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "file_exists": true,
+    "file_mode": "0o600",
+    "keys_present": [
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "parent_exists": true,
+    "parent_mode": "0o700",
+    "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+    "value_inspected": false
+  },
+  "snyk_scoring_source": "javiergarza-snyk/app-security-score pin + local Python reimplementation",
+  "tool_score_scale": "0-10",
+  "tool_score_target": 10
+}

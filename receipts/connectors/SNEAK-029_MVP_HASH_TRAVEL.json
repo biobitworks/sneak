@@ -1,0 +1,2519 @@
+{
+  "agent_snyk_count": 3,
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "hash_travels": [
+    {
+      "id": "AGENT-SNYK-biobitworks-jerry",
+      "kind": "AgentSnykBinding",
+      "leaf": "a546e717932fe8908ec3f839254f4b561d6d6fa4a9f766df0e5a31e20cc38549",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "6cbc6828e942f0e947c905bfd4670097f5a8adeb970aaa57bca630d5f191aca9",
+          "side": "right"
+        },
+        {
+          "hash": "926e0e0a62661e28ca16c4824bb53ed3faeea34395cc1a87bc5dc7564a6a6e5f",
+          "side": "right"
+        },
+        {
+          "hash": "b4dd5f1f97a58c292e85628929f36c5d4be2b16abb6f53538209315f3b046f36",
+          "side": "right"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "AGENT-SNYK-biobitworks-planner",
+      "kind": "AgentSnykBinding",
+      "leaf": "6cbc6828e942f0e947c905bfd4670097f5a8adeb970aaa57bca630d5f191aca9",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "a546e717932fe8908ec3f839254f4b561d6d6fa4a9f766df0e5a31e20cc38549",
+          "side": "left"
+        },
+        {
+          "hash": "926e0e0a62661e28ca16c4824bb53ed3faeea34395cc1a87bc5dc7564a6a6e5f",
+          "side": "right"
+        },
+        {
+          "hash": "b4dd5f1f97a58c292e85628929f36c5d4be2b16abb6f53538209315f3b046f36",
+          "side": "right"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "AGENT-SNYK-biobitworks-tom",
+      "kind": "AgentSnykBinding",
+      "leaf": "acd856edd0a9707aa4650193ae8846833544754d7253ce7f6fb8a98aa1214be2",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "819bd90a556905f8545aa7cdc637c4ccf75ded03307e5a57beac488e3dee7c1e",
+          "side": "right"
+        },
+        {
+          "hash": "437d4ae568e3e82ee9cd62744f05245202d0cfba0c289c705a5f885e664c9530",
+          "side": "left"
+        },
+        {
+          "hash": "b4dd5f1f97a58c292e85628929f36c5d4be2b16abb6f53538209315f3b046f36",
+          "side": "right"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-E01",
+      "kind": "OptionalBonusAtom",
+      "leaf": "819bd90a556905f8545aa7cdc637c4ccf75ded03307e5a57beac488e3dee7c1e",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "acd856edd0a9707aa4650193ae8846833544754d7253ce7f6fb8a98aa1214be2",
+          "side": "left"
+        },
+        {
+          "hash": "437d4ae568e3e82ee9cd62744f05245202d0cfba0c289c705a5f885e664c9530",
+          "side": "left"
+        },
+        {
+          "hash": "b4dd5f1f97a58c292e85628929f36c5d4be2b16abb6f53538209315f3b046f36",
+          "side": "right"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-E02",
+      "kind": "OptionalBonusAtom",
+      "leaf": "39312237544c0e54d77fa18079851e4b91979dc0882b8889cb7a0fa68d573f23",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "d77b55506b22ffc3f1852008f61dc41cb6bcb6599866b5cb5b6ae283483e7439",
+          "side": "right"
+        },
+        {
+          "hash": "f32fbfcae9f6c5597e79250fb984a0fa250df1349667a2d4528fea52ba2a0614",
+          "side": "right"
+        },
+        {
+          "hash": "333536739041661fc5d907ca7e09dfb2bf4196d3208d1d7d6468969d9f6519ba",
+          "side": "left"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-F01",
+      "kind": "OptionalBonusAtom",
+      "leaf": "d77b55506b22ffc3f1852008f61dc41cb6bcb6599866b5cb5b6ae283483e7439",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "39312237544c0e54d77fa18079851e4b91979dc0882b8889cb7a0fa68d573f23",
+          "side": "left"
+        },
+        {
+          "hash": "f32fbfcae9f6c5597e79250fb984a0fa250df1349667a2d4528fea52ba2a0614",
+          "side": "right"
+        },
+        {
+          "hash": "333536739041661fc5d907ca7e09dfb2bf4196d3208d1d7d6468969d9f6519ba",
+          "side": "left"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-F02",
+      "kind": "OptionalBonusAtom",
+      "leaf": "7cc740c12f2b718ea17ae5daac693cd71796e63505f7bb30a94b9ed2e72c7f39",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "aed82a09af888af6065ae14be5b67d9613165313e4b92d7c500223055acccdee",
+          "side": "right"
+        },
+        {
+          "hash": "5dfa4ff90d51d1b4e8e2284f6e7c4e492ba3e837350a790be549e913f33d113b",
+          "side": "left"
+        },
+        {
+          "hash": "333536739041661fc5d907ca7e09dfb2bf4196d3208d1d7d6468969d9f6519ba",
+          "side": "left"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-F03",
+      "kind": "OptionalBonusAtom",
+      "leaf": "aed82a09af888af6065ae14be5b67d9613165313e4b92d7c500223055acccdee",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "7cc740c12f2b718ea17ae5daac693cd71796e63505f7bb30a94b9ed2e72c7f39",
+          "side": "left"
+        },
+        {
+          "hash": "5dfa4ff90d51d1b4e8e2284f6e7c4e492ba3e837350a790be549e913f33d113b",
+          "side": "left"
+        },
+        {
+          "hash": "333536739041661fc5d907ca7e09dfb2bf4196d3208d1d7d6468969d9f6519ba",
+          "side": "left"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-F04",
+      "kind": "OptionalBonusAtom",
+      "leaf": "92738db619281a6ebb48869c82df7e44dd229c1e98425ac62878ae20bb62329e",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "5c69796b263bc62905266cc32c8a9a6b60aafe58238a5ea434c5feb57e3ca8f4",
+          "side": "right"
+        },
+        {
+          "hash": "2c4308787aa579bb9758f90a3f938cd77176fe4574c119327c0222173fb0c5ef",
+          "side": "right"
+        },
+        {
+          "hash": "5cadffd2e8e6c3b26f535faf3e22080d4d42739c8c93f46f43fc90dd4c0fc38a",
+          "side": "right"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-F05",
+      "kind": "OptionalBonusAtom",
+      "leaf": "5c69796b263bc62905266cc32c8a9a6b60aafe58238a5ea434c5feb57e3ca8f4",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "92738db619281a6ebb48869c82df7e44dd229c1e98425ac62878ae20bb62329e",
+          "side": "left"
+        },
+        {
+          "hash": "2c4308787aa579bb9758f90a3f938cd77176fe4574c119327c0222173fb0c5ef",
+          "side": "right"
+        },
+        {
+          "hash": "5cadffd2e8e6c3b26f535faf3e22080d4d42739c8c93f46f43fc90dd4c0fc38a",
+          "side": "right"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M01",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "3339c917785ff2059ad6bb37b7e7074792da62e98e9798f073cb29db6cab4a00",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "c1f45ab160187ca9e741029a4e8a76bdec95f40475309ff9aceb7a7aa0968ae9",
+          "side": "right"
+        },
+        {
+          "hash": "1b0e422b642704398719ca42715d90d1eb8c4b28cd438cc9e0be4ba4b5cbc352",
+          "side": "left"
+        },
+        {
+          "hash": "5cadffd2e8e6c3b26f535faf3e22080d4d42739c8c93f46f43fc90dd4c0fc38a",
+          "side": "right"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M02",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "c1f45ab160187ca9e741029a4e8a76bdec95f40475309ff9aceb7a7aa0968ae9",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "3339c917785ff2059ad6bb37b7e7074792da62e98e9798f073cb29db6cab4a00",
+          "side": "left"
+        },
+        {
+          "hash": "1b0e422b642704398719ca42715d90d1eb8c4b28cd438cc9e0be4ba4b5cbc352",
+          "side": "left"
+        },
+        {
+          "hash": "5cadffd2e8e6c3b26f535faf3e22080d4d42739c8c93f46f43fc90dd4c0fc38a",
+          "side": "right"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M03",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "f071757e84c788f40eae31dc96921b7bba2d1838cbe48cfa4ed5ccec60374382",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "0b3128823571250f84ae4f629ab469e543942b21a81974a67bff3644cedd6094",
+          "side": "right"
+        },
+        {
+          "hash": "24b899751b225ba8743f24a098d5cd13c8618052d68419c03c93253f1262aca5",
+          "side": "right"
+        },
+        {
+          "hash": "7daa291646414df64a52ba96f7015b3de852a84b2d260f42a5dad570ccf3761b",
+          "side": "left"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M04",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "0b3128823571250f84ae4f629ab469e543942b21a81974a67bff3644cedd6094",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "f071757e84c788f40eae31dc96921b7bba2d1838cbe48cfa4ed5ccec60374382",
+          "side": "left"
+        },
+        {
+          "hash": "24b899751b225ba8743f24a098d5cd13c8618052d68419c03c93253f1262aca5",
+          "side": "right"
+        },
+        {
+          "hash": "7daa291646414df64a52ba96f7015b3de852a84b2d260f42a5dad570ccf3761b",
+          "side": "left"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M05",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "4669550ff7fc1d76b13630f746f85f5f49b45745cfdf13c63d6c7fe501c477e6",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "97ad6904c590ba18d3a57c0b3e1c0ff2faae9c43be9a449d5d3247b7b54f82b7",
+          "side": "right"
+        },
+        {
+          "hash": "3e8a7fd35156c83731fca6d79525891790378ce1f49d2c883688cda840df1b05",
+          "side": "left"
+        },
+        {
+          "hash": "7daa291646414df64a52ba96f7015b3de852a84b2d260f42a5dad570ccf3761b",
+          "side": "left"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M06",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "97ad6904c590ba18d3a57c0b3e1c0ff2faae9c43be9a449d5d3247b7b54f82b7",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "4669550ff7fc1d76b13630f746f85f5f49b45745cfdf13c63d6c7fe501c477e6",
+          "side": "left"
+        },
+        {
+          "hash": "3e8a7fd35156c83731fca6d79525891790378ce1f49d2c883688cda840df1b05",
+          "side": "left"
+        },
+        {
+          "hash": "7daa291646414df64a52ba96f7015b3de852a84b2d260f42a5dad570ccf3761b",
+          "side": "left"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M07",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "be59a7f43ae98713bfa1af60806a2cb37d3abc238c965f152f75b640be6806e3",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "3501198ad636d9e220231b5d3d7663a5659652256005c90da4c63d1446e58b74",
+          "side": "right"
+        },
+        {
+          "hash": "c1f20c553d9b4d9c300d5c55b30385c5f22b50f94b097c00af2a560eb98905fe",
+          "side": "right"
+        },
+        {
+          "hash": "26bf6c5a471470fbf1eae7e016417c2177e60a705a447ea7be8cfe5ade1a6166",
+          "side": "right"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M08",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "3501198ad636d9e220231b5d3d7663a5659652256005c90da4c63d1446e58b74",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "be59a7f43ae98713bfa1af60806a2cb37d3abc238c965f152f75b640be6806e3",
+          "side": "left"
+        },
+        {
+          "hash": "c1f20c553d9b4d9c300d5c55b30385c5f22b50f94b097c00af2a560eb98905fe",
+          "side": "right"
+        },
+        {
+          "hash": "26bf6c5a471470fbf1eae7e016417c2177e60a705a447ea7be8cfe5ade1a6166",
+          "side": "right"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M09",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "933a830fd5326fb565d3d29d7955c80b36fa9aea61ac44f4dcab135a7a63c9f3",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "c73cd1d54553f8d2c6a76d112aa70a56df7ece20344e4cfbe1ea4656ad77042e",
+          "side": "right"
+        },
+        {
+          "hash": "c6fbe057bd297c12bc0b2b13e10f136e132ddb5d48453cba9f00b608518a6ecd",
+          "side": "left"
+        },
+        {
+          "hash": "26bf6c5a471470fbf1eae7e016417c2177e60a705a447ea7be8cfe5ade1a6166",
+          "side": "right"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M10",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "c73cd1d54553f8d2c6a76d112aa70a56df7ece20344e4cfbe1ea4656ad77042e",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "933a830fd5326fb565d3d29d7955c80b36fa9aea61ac44f4dcab135a7a63c9f3",
+          "side": "left"
+        },
+        {
+          "hash": "c6fbe057bd297c12bc0b2b13e10f136e132ddb5d48453cba9f00b608518a6ecd",
+          "side": "left"
+        },
+        {
+          "hash": "26bf6c5a471470fbf1eae7e016417c2177e60a705a447ea7be8cfe5ade1a6166",
+          "side": "right"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M11",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "688772462082ff8a185aa3f4b1dee09b817ac8f7e37187e4929721150627d259",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "3ee7bcca31fdefa713cff40dde0a0a185090640a228fac4448a3c6ead95f88a3",
+          "side": "right"
+        },
+        {
+          "hash": "3ef2fbbef1c638cb531285cf86d7f76e898336b1f519a869f179d05887a5a477",
+          "side": "right"
+        },
+        {
+          "hash": "91b8c8da035c9d2d47d4513b6a77c91440b6458ce581879349bdfbf319516cec",
+          "side": "left"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M12",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "3ee7bcca31fdefa713cff40dde0a0a185090640a228fac4448a3c6ead95f88a3",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "688772462082ff8a185aa3f4b1dee09b817ac8f7e37187e4929721150627d259",
+          "side": "left"
+        },
+        {
+          "hash": "3ef2fbbef1c638cb531285cf86d7f76e898336b1f519a869f179d05887a5a477",
+          "side": "right"
+        },
+        {
+          "hash": "91b8c8da035c9d2d47d4513b6a77c91440b6458ce581879349bdfbf319516cec",
+          "side": "left"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M13",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "d3925ef066a32683fe471635a5aa98d3daab25e4ccfa520c16e6ee57c273b46d",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "dfcf4d2d67a7db145f7a422d6267b07b677a4a6ceeacc4425c7c5c037686d379",
+          "side": "right"
+        },
+        {
+          "hash": "62fe641867b5b0a7257001a126fd7e7486f9de3cfda5d6b713e3e3aed3c63673",
+          "side": "left"
+        },
+        {
+          "hash": "91b8c8da035c9d2d47d4513b6a77c91440b6458ce581879349bdfbf319516cec",
+          "side": "left"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M14",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "dfcf4d2d67a7db145f7a422d6267b07b677a4a6ceeacc4425c7c5c037686d379",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "d3925ef066a32683fe471635a5aa98d3daab25e4ccfa520c16e6ee57c273b46d",
+          "side": "left"
+        },
+        {
+          "hash": "62fe641867b5b0a7257001a126fd7e7486f9de3cfda5d6b713e3e3aed3c63673",
+          "side": "left"
+        },
+        {
+          "hash": "91b8c8da035c9d2d47d4513b6a77c91440b6458ce581879349bdfbf319516cec",
+          "side": "left"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-M15",
+      "kind": "SponsorMandatoryAtom",
+      "leaf": "39d92558b76203c928a1e59e72ba52f1d858da229b778368c20f942067bce452",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "3d1ff63cc0bef32598287dcd15516246e05057159f25bf680946e37a4c576222",
+          "side": "right"
+        },
+        {
+          "hash": "27662b4076c2ba0e95af898650eaa84e2f6c535c18e6de0b0568a8c2b8c31ee4",
+          "side": "right"
+        },
+        {
+          "hash": "b78c85cbbf2302776fc8a85e6cfd6c398b424b3a20d2f3b06c0541e6a908e92d",
+          "side": "right"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S01",
+      "kind": "OptionalBonusAtom",
+      "leaf": "3d1ff63cc0bef32598287dcd15516246e05057159f25bf680946e37a4c576222",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "39d92558b76203c928a1e59e72ba52f1d858da229b778368c20f942067bce452",
+          "side": "left"
+        },
+        {
+          "hash": "27662b4076c2ba0e95af898650eaa84e2f6c535c18e6de0b0568a8c2b8c31ee4",
+          "side": "right"
+        },
+        {
+          "hash": "b78c85cbbf2302776fc8a85e6cfd6c398b424b3a20d2f3b06c0541e6a908e92d",
+          "side": "right"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S02",
+      "kind": "OptionalBonusAtom",
+      "leaf": "e2e092198bcc25a698a96df3736d2be57930fd479469411cb22ea4ccfacb379d",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "6201519c4fa2e3de441c43fecabe106cf275aebd79b8990e7d720ba71a42a27d",
+          "side": "right"
+        },
+        {
+          "hash": "f3750ad0a93de96d80836d1c68393138d35c0df167d4c450cf2d6a9f80bb71a4",
+          "side": "left"
+        },
+        {
+          "hash": "b78c85cbbf2302776fc8a85e6cfd6c398b424b3a20d2f3b06c0541e6a908e92d",
+          "side": "right"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S03",
+      "kind": "OptionalBonusAtom",
+      "leaf": "6201519c4fa2e3de441c43fecabe106cf275aebd79b8990e7d720ba71a42a27d",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "e2e092198bcc25a698a96df3736d2be57930fd479469411cb22ea4ccfacb379d",
+          "side": "left"
+        },
+        {
+          "hash": "f3750ad0a93de96d80836d1c68393138d35c0df167d4c450cf2d6a9f80bb71a4",
+          "side": "left"
+        },
+        {
+          "hash": "b78c85cbbf2302776fc8a85e6cfd6c398b424b3a20d2f3b06c0541e6a908e92d",
+          "side": "right"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S04",
+      "kind": "OptionalBonusAtom",
+      "leaf": "9b5071339f9d7024334e1fbe580d7610e45e28c0dd876cb7c8acbe1a27290826",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "640f96d2fa5cde08f50527fe547120319661992e3d83f2094fc51051033bd24a",
+          "side": "right"
+        },
+        {
+          "hash": "bd67263121e204ad68a70bf8261e3a2b3b8b10d21b1d951247186d95a23a1999",
+          "side": "right"
+        },
+        {
+          "hash": "02a8bed4ddf840eaed3230cd66c504794c8f1fc11958d5f5f272656c164df92a",
+          "side": "left"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S05",
+      "kind": "OptionalBonusAtom",
+      "leaf": "640f96d2fa5cde08f50527fe547120319661992e3d83f2094fc51051033bd24a",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "9b5071339f9d7024334e1fbe580d7610e45e28c0dd876cb7c8acbe1a27290826",
+          "side": "left"
+        },
+        {
+          "hash": "bd67263121e204ad68a70bf8261e3a2b3b8b10d21b1d951247186d95a23a1999",
+          "side": "right"
+        },
+        {
+          "hash": "02a8bed4ddf840eaed3230cd66c504794c8f1fc11958d5f5f272656c164df92a",
+          "side": "left"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S06",
+      "kind": "OptionalBonusAtom",
+      "leaf": "267ad7d14a9c1e8f857a7a43ce679f6c5f353b95fd6f2d615b044bbeb7c9782f",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "05b58e70c7f46380a8f0f9a373fdf3c088efbd4af7b8e4fd475151e8adf6373c",
+          "side": "right"
+        },
+        {
+          "hash": "17d18bed38d205e1ebd77287e3a3a5c14af720d48cf61ee77b314f1ad95d5fa7",
+          "side": "left"
+        },
+        {
+          "hash": "02a8bed4ddf840eaed3230cd66c504794c8f1fc11958d5f5f272656c164df92a",
+          "side": "left"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S07",
+      "kind": "OptionalBonusAtom",
+      "leaf": "05b58e70c7f46380a8f0f9a373fdf3c088efbd4af7b8e4fd475151e8adf6373c",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "267ad7d14a9c1e8f857a7a43ce679f6c5f353b95fd6f2d615b044bbeb7c9782f",
+          "side": "left"
+        },
+        {
+          "hash": "17d18bed38d205e1ebd77287e3a3a5c14af720d48cf61ee77b314f1ad95d5fa7",
+          "side": "left"
+        },
+        {
+          "hash": "02a8bed4ddf840eaed3230cd66c504794c8f1fc11958d5f5f272656c164df92a",
+          "side": "left"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S08",
+      "kind": "OptionalBonusAtom",
+      "leaf": "d85828298ded73ac66b242a5a9253e64b62febd5038aac491a6b54607c1af600",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "e3893e45af5623285fc13859e2992c8bdde10b55c1c26a100d3bd2416ddfcae4",
+          "side": "right"
+        },
+        {
+          "hash": "cee8d1613a0fb04f5b6b79a9f4d54ad08ec925703c928a94964de0a934867b13",
+          "side": "left"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    },
+    {
+      "id": "REQ-AOK-S09",
+      "kind": "OptionalBonusAtom",
+      "leaf": "e3893e45af5623285fc13859e2992c8bdde10b55c1c26a100d3bd2416ddfcae4",
+      "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+      "proof": [
+        {
+          "hash": "d85828298ded73ac66b242a5a9253e64b62febd5038aac491a6b54607c1af600",
+          "side": "left"
+        },
+        {
+          "hash": "cee8d1613a0fb04f5b6b79a9f4d54ad08ec925703c928a94964de0a934867b13",
+          "side": "left"
+        }
+      ],
+      "verifies_to_mvp_root": true
+    }
+  ],
+  "id": "SNEAK-029",
+  "leaf_count": 34,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a224147454e542d534e594b2d62696f626974776f726b732d6a65727279222c226b696e64223a224167656e74536e796b42696e64696e67222c227061796c6f6164223a7b226167656e745f6964223a2238623531663239352d633265372d346161612d393964642d356632333335646361623439222c2261776172656e657373223a2265766572795f6167656e745f636f6e6e656374735f746f5f736e796b222c2268616e646c65223a2262696f626974776f726b732f6a65727279222c226c6976655f736e796b223a224e4f545f544553544544222c226d6d72223a224e4f545f434f4d4d4954544544222c22726f6c65223a226275696c646572222c22736e796b5f62696e64696e675f646967657374223a2234326230393334376339623762363436636265343364616538306339386534343633636138303163323634666131376334393262666661333939326332613637222c22736e796b5f636f6e6e6563746f72223a22736e796b2d636f6e6e6563746f72227d7d",
+      "leaf": "a546e717932fe8908ec3f839254f4b561d6d6fa4a9f766df0e5a31e20cc38549",
+      "proof": [
+        {
+          "hash": "6cbc6828e942f0e947c905bfd4670097f5a8adeb970aaa57bca630d5f191aca9",
+          "side": "right"
+        },
+        {
+          "hash": "926e0e0a62661e28ca16c4824bb53ed3faeea34395cc1a87bc5dc7564a6a6e5f",
+          "side": "right"
+        },
+        {
+          "hash": "b4dd5f1f97a58c292e85628929f36c5d4be2b16abb6f53538209315f3b046f36",
+          "side": "right"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "AGENT-SNYK-biobitworks-jerry",
+        "kind": "AgentSnykBinding",
+        "payload": {
+          "agent_id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+          "awareness": "every_agent_connects_to_snyk",
+          "handle": "biobitworks/jerry",
+          "live_snyk": "NOT_TESTED",
+          "mmr": "NOT_COMMITTED",
+          "role": "builder",
+          "snyk_binding_digest": "42b09347c9b7b646cbe43dae80c98e4463ca801c264fa17c492bffa3992c2a67",
+          "snyk_connector": "snyk-connector"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a224147454e542d534e594b2d62696f626974776f726b732d706c616e6e6572222c226b696e64223a224167656e74536e796b42696e64696e67222c227061796c6f6164223a7b226167656e745f6964223a2236346632346139302d333933372d343763382d626337632d663033636237393830643439222c2261776172656e657373223a2265766572795f6167656e745f636f6e6e656374735f746f5f736e796b222c2268616e646c65223a2262696f626974776f726b732f706c616e6e6572222c226c6976655f736e796b223a224e4f545f544553544544222c226d6d72223a224e4f545f434f4d4d4954544544222c22726f6c65223a22706c616e6e6572222c22736e796b5f62696e64696e675f646967657374223a2234326230393334376339623762363436636265343364616538306339386534343633636138303163323634666131376334393262666661333939326332613637222c22736e796b5f636f6e6e6563746f72223a22736e796b2d636f6e6e6563746f72227d7d",
+      "leaf": "6cbc6828e942f0e947c905bfd4670097f5a8adeb970aaa57bca630d5f191aca9",
+      "proof": [
+        {
+          "hash": "a546e717932fe8908ec3f839254f4b561d6d6fa4a9f766df0e5a31e20cc38549",
+          "side": "left"
+        },
+        {
+          "hash": "926e0e0a62661e28ca16c4824bb53ed3faeea34395cc1a87bc5dc7564a6a6e5f",
+          "side": "right"
+        },
+        {
+          "hash": "b4dd5f1f97a58c292e85628929f36c5d4be2b16abb6f53538209315f3b046f36",
+          "side": "right"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "AGENT-SNYK-biobitworks-planner",
+        "kind": "AgentSnykBinding",
+        "payload": {
+          "agent_id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+          "awareness": "every_agent_connects_to_snyk",
+          "handle": "biobitworks/planner",
+          "live_snyk": "NOT_TESTED",
+          "mmr": "NOT_COMMITTED",
+          "role": "planner",
+          "snyk_binding_digest": "42b09347c9b7b646cbe43dae80c98e4463ca801c264fa17c492bffa3992c2a67",
+          "snyk_connector": "snyk-connector"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a224147454e542d534e594b2d62696f626974776f726b732d746f6d222c226b696e64223a224167656e74536e796b42696e64696e67222c227061796c6f6164223a7b226167656e745f6964223a2233393236323138642d383334322d343636372d396630372d356235353662353066623766222c2261776172656e657373223a2265766572795f6167656e745f636f6e6e656374735f746f5f736e796b222c2268616e646c65223a2262696f626974776f726b732f746f6d222c226c6976655f736e796b223a224e4f545f544553544544222c226d6d72223a224e4f545f434f4d4d4954544544222c22726f6c65223a22617263686974656374222c22736e796b5f62696e64696e675f646967657374223a2234326230393334376339623762363436636265343364616538306339386534343633636138303163323634666131376334393262666661333939326332613637222c22736e796b5f636f6e6e6563746f72223a22736e796b2d636f6e6e6563746f72227d7d",
+      "leaf": "acd856edd0a9707aa4650193ae8846833544754d7253ce7f6fb8a98aa1214be2",
+      "proof": [
+        {
+          "hash": "819bd90a556905f8545aa7cdc637c4ccf75ded03307e5a57beac488e3dee7c1e",
+          "side": "right"
+        },
+        {
+          "hash": "437d4ae568e3e82ee9cd62744f05245202d0cfba0c289c705a5f885e664c9530",
+          "side": "left"
+        },
+        {
+          "hash": "b4dd5f1f97a58c292e85628929f36c5d4be2b16abb6f53538209315f3b046f36",
+          "side": "right"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "AGENT-SNYK-biobitworks-tom",
+        "kind": "AgentSnykBinding",
+        "payload": {
+          "agent_id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+          "awareness": "every_agent_connects_to_snyk",
+          "handle": "biobitworks/tom",
+          "live_snyk": "NOT_TESTED",
+          "mmr": "NOT_COMMITTED",
+          "role": "architect",
+          "snyk_binding_digest": "42b09347c9b7b646cbe43dae80c98e4463ca801c264fa17c492bffa3992c2a67",
+          "snyk_connector": "snyk-connector"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d453031222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a2255736520646966666572656e74206167656e74206861726e657373657320666f72206869676865722d73636f72696e6720636f6c6c61626f726174696f6e2e222c2273706f6e736f725f646967657374223a2231666133616264653233313963616436656362323633316362346661316330646266376431373864633064666134313230633233626439653661316365326637222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "819bd90a556905f8545aa7cdc637c4ccf75ded03307e5a57beac488e3dee7c1e",
+      "proof": [
+        {
+          "hash": "acd856edd0a9707aa4650193ae8846833544754d7253ce7f6fb8a98aa1214be2",
+          "side": "left"
+        },
+        {
+          "hash": "437d4ae568e3e82ee9cd62744f05245202d0cfba0c289c705a5f885e664c9530",
+          "side": "left"
+        },
+        {
+          "hash": "b4dd5f1f97a58c292e85628929f36c5d4be2b16abb6f53538209315f3b046f36",
+          "side": "right"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-E01",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Use different agent harnesses for higher-scoring collaboration.",
+          "sponsor_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d453032222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a2244656d6f6e73747261746520696d70726f7665204f5220666f72676574204f522067726170682d6261636b656e6420636f6e6e656374696f6e3b207072657365727665207468697320616c7465726e61746976652063686f6963652e222c2273706f6e736f725f646967657374223a2266653831366630393635373934336139643639396336613564393962393530636461323734383738653136323739333631626263653438366232333637373232222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "39312237544c0e54d77fa18079851e4b91979dc0882b8889cb7a0fa68d573f23",
+      "proof": [
+        {
+          "hash": "d77b55506b22ffc3f1852008f61dc41cb6bcb6599866b5cb5b6ae283483e7439",
+          "side": "right"
+        },
+        {
+          "hash": "f32fbfcae9f6c5597e79250fb984a0fa250df1349667a2d4528fea52ba2a0614",
+          "side": "right"
+        },
+        {
+          "hash": "333536739041661fc5d907ca7e09dfb2bf4196d3208d1d7d6468969d9f6519ba",
+          "side": "left"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-E02",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Demonstrate improve OR forget OR graph-backend connection; preserve this alternative choice.",
+          "sponsor_digest": "fe816f09657943a9d699c6a5d99b950cda274878e16279361bbce486b2367722",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d463031222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224c4f43414c5f434f4e5452414354222c22726571756972656d656e74223a2253656e6420616e642072656164206261636b2061637475616c207573616765206576656e747320696e20466c657870726963652074657374206d6f64652e222c2273706f6e736f725f646967657374223a2262626136353639376563383039623737663566353935613832363432366133626232343538363932646331363765623865313136636437336239353732663766222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "d77b55506b22ffc3f1852008f61dc41cb6bcb6599866b5cb5b6ae283483e7439",
+      "proof": [
+        {
+          "hash": "39312237544c0e54d77fa18079851e4b91979dc0882b8889cb7a0fa68d573f23",
+          "side": "left"
+        },
+        {
+          "hash": "f32fbfcae9f6c5597e79250fb984a0fa250df1349667a2d4528fea52ba2a0614",
+          "side": "right"
+        },
+        {
+          "hash": "333536739041661fc5d907ca7e09dfb2bf4196d3208d1d7d6468969d9f6519ba",
+          "side": "left"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-F01",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "LOCAL_CONTRACT",
+          "requirement": "Send and read back actual usage events in Flexprice test mode.",
+          "sponsor_digest": "bba65697ec809b77f5f595a826426a3bb2458692dc167eb8e116cd73b9572f7f",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d463032222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224c4f43414c5f434f4e5452414354222c22726571756972656d656e74223a22436f6e6e6563742074686f7365206576656e747320746f206120636f6e6669677572656420746573742070726963696e67206d6f64656c2e222c2273706f6e736f725f646967657374223a2262626136353639376563383039623737663566353935613832363432366133626232343538363932646331363765623865313136636437336239353732663766222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "7cc740c12f2b718ea17ae5daac693cd71796e63505f7bb30a94b9ed2e72c7f39",
+      "proof": [
+        {
+          "hash": "aed82a09af888af6065ae14be5b67d9613165313e4b92d7c500223055acccdee",
+          "side": "right"
+        },
+        {
+          "hash": "5dfa4ff90d51d1b4e8e2284f6e7c4e492ba3e837350a790be549e913f33d113b",
+          "side": "left"
+        },
+        {
+          "hash": "333536739041661fc5d907ca7e09dfb2bf4196d3208d1d7d6468969d9f6519ba",
+          "side": "left"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-F02",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "LOCAL_CONTRACT",
+          "requirement": "Connect those events to a configured test pricing model.",
+          "sponsor_digest": "bba65697ec809b77f5f595a826426a3bb2458692dc167eb8e116cd73b9572f7f",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d463033222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224c4f43414c5f434f4e5452414354222c22726571756972656d656e74223a2244656d6f6e7374726174652070726f64756374206265686176696f722064726976656e206279206d65746572696e672e222c2273706f6e736f725f646967657374223a2262626136353639376563383039623737663566353935613832363432366133626232343538363932646331363765623865313136636437336239353732663766222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "aed82a09af888af6065ae14be5b67d9613165313e4b92d7c500223055acccdee",
+      "proof": [
+        {
+          "hash": "7cc740c12f2b718ea17ae5daac693cd71796e63505f7bb30a94b9ed2e72c7f39",
+          "side": "left"
+        },
+        {
+          "hash": "5dfa4ff90d51d1b4e8e2284f6e7c4e492ba3e837350a790be549e913f33d113b",
+          "side": "left"
+        },
+        {
+          "hash": "333536739041661fc5d907ca7e09dfb2bf4196d3208d1d7d6468969d9f6519ba",
+          "side": "left"
+        },
+        {
+          "hash": "461f7cd2b5b9f1fb4950c6ddf364fa5db1202bc693bf3a84d5db642fa236575f",
+          "side": "right"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-F03",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "LOCAL_CONTRACT",
+          "requirement": "Demonstrate product behavior driven by metering.",
+          "sponsor_digest": "bba65697ec809b77f5f595a826426a3bb2458692dc167eb8e116cd73b9572f7f",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d463034222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224c4f43414c5f434f4e5452414354222c22726571756972656d656e74223a224f7074696f6e616c206578616d706c653a20637265646974732067617465206120666561747572652e222c2273706f6e736f725f646967657374223a2262626136353639376563383039623737663566353935613832363432366133626232343538363932646331363765623865313136636437336239353732663766222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "92738db619281a6ebb48869c82df7e44dd229c1e98425ac62878ae20bb62329e",
+      "proof": [
+        {
+          "hash": "5c69796b263bc62905266cc32c8a9a6b60aafe58238a5ea434c5feb57e3ca8f4",
+          "side": "right"
+        },
+        {
+          "hash": "2c4308787aa579bb9758f90a3f938cd77176fe4574c119327c0222173fb0c5ef",
+          "side": "right"
+        },
+        {
+          "hash": "5cadffd2e8e6c3b26f535faf3e22080d4d42739c8c93f46f43fc90dd4c0fc38a",
+          "side": "right"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-F04",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "LOCAL_CONTRACT",
+          "requirement": "Optional example: credits gate a feature.",
+          "sponsor_digest": "bba65697ec809b77f5f595a826426a3bb2458692dc167eb8e116cd73b9572f7f",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d463035222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224c4f43414c5f434f4e5452414354222c22726571756972656d656e74223a224f7074696f6e616c20616c7465726e6174697665206578616d706c653a206f627365727665642042414e4420636f7374732070617373207468726f75676820746f20746573742062696c6c696e672e222c2273706f6e736f725f646967657374223a2262626136353639376563383039623737663566353935613832363432366133626232343538363932646331363765623865313136636437336239353732663766222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "5c69796b263bc62905266cc32c8a9a6b60aafe58238a5ea434c5feb57e3ca8f4",
+      "proof": [
+        {
+          "hash": "92738db619281a6ebb48869c82df7e44dd229c1e98425ac62878ae20bb62329e",
+          "side": "left"
+        },
+        {
+          "hash": "2c4308787aa579bb9758f90a3f938cd77176fe4574c119327c0222173fb0c5ef",
+          "side": "right"
+        },
+        {
+          "hash": "5cadffd2e8e6c3b26f535faf3e22080d4d42739c8c93f46f43fc90dd4c0fc38a",
+          "side": "right"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-F05",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "LOCAL_CONTRACT",
+          "requirement": "Optional alternative example: observed BAND costs pass through to test billing.",
+          "sponsor_digest": "bba65697ec809b77f5f595a826426a3bb2458692dc167eb8e116cd73b9572f7f",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3031222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a225573652061637475616c2042616e64204465736b746f702e222c2273706f6e736f725f646967657374223a2236333533653334306234363433303035643162643332303464396133656430656235323939326336613535653033303162363434343464303834666131616334222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "3339c917785ff2059ad6bb37b7e7074792da62e98e9798f073cb29db6cab4a00",
+      "proof": [
+        {
+          "hash": "c1f45ab160187ca9e741029a4e8a76bdec95f40475309ff9aceb7a7aa0968ae9",
+          "side": "right"
+        },
+        {
+          "hash": "1b0e422b642704398719ca42715d90d1eb8c4b28cd438cc9e0be4ba4b5cbc352",
+          "side": "left"
+        },
+        {
+          "hash": "5cadffd2e8e6c3b26f535faf3e22080d4d42739c8c93f46f43fc90dd4c0fc38a",
+          "side": "right"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M01",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Use actual Band Desktop.",
+          "sponsor_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3032222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a2242616e6420636f6f7264696e6174657320746865206167656e74207465616d2e222c2273706f6e736f725f646967657374223a2233393538343765376466663064356234613935356161393961616435333564373132333535323338363561663039336339633437366238356165303466636162222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "c1f45ab160187ca9e741029a4e8a76bdec95f40475309ff9aceb7a7aa0968ae9",
+      "proof": [
+        {
+          "hash": "3339c917785ff2059ad6bb37b7e7074792da62e98e9798f073cb29db6cab4a00",
+          "side": "left"
+        },
+        {
+          "hash": "1b0e422b642704398719ca42715d90d1eb8c4b28cd438cc9e0be4ba4b5cbc352",
+          "side": "left"
+        },
+        {
+          "hash": "5cadffd2e8e6c3b26f535faf3e22080d4d42739c8c93f46f43fc90dd4c0fc38a",
+          "side": "right"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M02",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Band coordinates the agent team.",
+          "sponsor_digest": "395847e7dff0d5b4a955aa99aad535d71235523865af093c9c476b85ae04fcab",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3033222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a224167656e7473207368617265206f6e652061637475616c20726f6f6d2e222c2273706f6e736f725f646967657374223a2233393538343765376466663064356234613935356161393961616435333564373132333535323338363561663039336339633437366238356165303466636162222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "f071757e84c788f40eae31dc96921b7bba2d1838cbe48cfa4ed5ccec60374382",
+      "proof": [
+        {
+          "hash": "0b3128823571250f84ae4f629ab469e543942b21a81974a67bff3644cedd6094",
+          "side": "right"
+        },
+        {
+          "hash": "24b899751b225ba8743f24a098d5cd13c8618052d68419c03c93253f1262aca5",
+          "side": "right"
+        },
+        {
+          "hash": "7daa291646414df64a52ba96f7015b3de852a84b2d260f42a5dad570ccf3761b",
+          "side": "left"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M03",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Agents share one actual room.",
+          "sponsor_digest": "395847e7dff0d5b4a955aa99aad535d71235523865af093c9c476b85ae04fcab",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3034222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a224174206c656173742074776f206167656e74732070617274696369706174652e222c2273706f6e736f725f646967657374223a2231666133616264653233313963616436656362323633316362346661316330646266376431373864633064666134313230633233626439653661316365326637222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "0b3128823571250f84ae4f629ab469e543942b21a81974a67bff3644cedd6094",
+      "proof": [
+        {
+          "hash": "f071757e84c788f40eae31dc96921b7bba2d1838cbe48cfa4ed5ccec60374382",
+          "side": "left"
+        },
+        {
+          "hash": "24b899751b225ba8743f24a098d5cd13c8618052d68419c03c93253f1262aca5",
+          "side": "right"
+        },
+        {
+          "hash": "7daa291646414df64a52ba96f7015b3de852a84b2d260f42a5dad570ccf3761b",
+          "side": "left"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M04",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "At least two agents participate.",
+          "sponsor_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3035222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a224c6561642f617263686974656374207772697465732074686520706c616e20696e2074686520726f6f6d2e222c2273706f6e736f725f646967657374223a2231666133616264653233313963616436656362323633316362346661316330646266376431373864633064666134313230633233626439653661316365326637222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "4669550ff7fc1d76b13630f746f85f5f49b45745cfdf13c63d6c7fe501c477e6",
+      "proof": [
+        {
+          "hash": "97ad6904c590ba18d3a57c0b3e1c0ff2faae9c43be9a449d5d3247b7b54f82b7",
+          "side": "right"
+        },
+        {
+          "hash": "3e8a7fd35156c83731fca6d79525891790378ce1f49d2c883688cda840df1b05",
+          "side": "left"
+        },
+        {
+          "hash": "7daa291646414df64a52ba96f7015b3de852a84b2d260f42a5dad570ccf3761b",
+          "side": "left"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M05",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Lead/architect writes the plan in the room.",
+          "sponsor_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3036222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a225465616d20776f726b732066726f6d206f6e6520706c616e2e222c2273706f6e736f725f646967657374223a2239373339653066323361613339376636636366656162303936656263353761613038376666303233633933393835356437623236313138636464383938326235222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "97ad6904c590ba18d3a57c0b3e1c0ff2faae9c43be9a449d5d3247b7b54f82b7",
+      "proof": [
+        {
+          "hash": "4669550ff7fc1d76b13630f746f85f5f49b45745cfdf13c63d6c7fe501c477e6",
+          "side": "left"
+        },
+        {
+          "hash": "3e8a7fd35156c83731fca6d79525891790378ce1f49d2c883688cda840df1b05",
+          "side": "left"
+        },
+        {
+          "hash": "7daa291646414df64a52ba96f7015b3de852a84b2d260f42a5dad570ccf3761b",
+          "side": "left"
+        },
+        {
+          "hash": "1e30d5514bf9c8512c28d53343134c9c99650a949e37a46f3e783955c7c22637",
+          "side": "left"
+        },
+        {
+          "hash": "8ef865383a3922aba08bf878cc64de610f31a0ceee6126e8f11e21f1eaa1f23f",
+          "side": "right"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M06",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Team works from one plan.",
+          "sponsor_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3037222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a225465616d2075736573206f6e652073686172656420776f726b20626f6172642e222c2273706f6e736f725f646967657374223a2233393538343765376466663064356234613935356161393961616435333564373132333535323338363561663039336339633437366238356165303466636162222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "be59a7f43ae98713bfa1af60806a2cb37d3abc238c965f152f75b640be6806e3",
+      "proof": [
+        {
+          "hash": "3501198ad636d9e220231b5d3d7663a5659652256005c90da4c63d1446e58b74",
+          "side": "right"
+        },
+        {
+          "hash": "c1f20c553d9b4d9c300d5c55b30385c5f22b50f94b097c00af2a560eb98905fe",
+          "side": "right"
+        },
+        {
+          "hash": "26bf6c5a471470fbf1eae7e016417c2177e60a705a447ea7be8cfe5ade1a6166",
+          "side": "right"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M07",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Team uses one shared work board.",
+          "sponsor_digest": "395847e7dff0d5b4a955aa99aad535d71235523865af093c9c476b85ae04fcab",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3038222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224641494c222c22726571756972656d656e74223a224167656e747320636c61696d20776f726b206974656d732e222c2273706f6e736f725f646967657374223a2231666133616264653233313963616436656362323633316362346661316330646266376431373864633064666134313230633233626439653661316365326637222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "3501198ad636d9e220231b5d3d7663a5659652256005c90da4c63d1446e58b74",
+      "proof": [
+        {
+          "hash": "be59a7f43ae98713bfa1af60806a2cb37d3abc238c965f152f75b640be6806e3",
+          "side": "left"
+        },
+        {
+          "hash": "c1f20c553d9b4d9c300d5c55b30385c5f22b50f94b097c00af2a560eb98905fe",
+          "side": "right"
+        },
+        {
+          "hash": "26bf6c5a471470fbf1eae7e016417c2177e60a705a447ea7be8cfe5ade1a6166",
+          "side": "right"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M08",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "FAIL",
+          "requirement": "Agents claim work items.",
+          "sponsor_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3039222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a2241637475616c207461736b207472616e736974696f6e7320696e636c75646520546f2d646f20616e6420446f6e652e222c2273706f6e736f725f646967657374223a2239373339653066323361613339376636636366656162303936656263353761613038376666303233633933393835356437623236313138636464383938326235222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "933a830fd5326fb565d3d29d7955c80b36fa9aea61ac44f4dcab135a7a63c9f3",
+      "proof": [
+        {
+          "hash": "c73cd1d54553f8d2c6a76d112aa70a56df7ece20344e4cfbe1ea4656ad77042e",
+          "side": "right"
+        },
+        {
+          "hash": "c6fbe057bd297c12bc0b2b13e10f136e132ddb5d48453cba9f00b608518a6ecd",
+          "side": "left"
+        },
+        {
+          "hash": "26bf6c5a471470fbf1eae7e016417c2177e60a705a447ea7be8cfe5ade1a6166",
+          "side": "right"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M09",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Actual task transitions include To-do and Done.",
+          "sponsor_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3130222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a224167656e747320616464726573732065616368206f746865722077697468206d656e74696f6e732e222c2273706f6e736f725f646967657374223a2266653831366630393635373934336139643639396336613564393962393530636461323734383738653136323739333631626263653438366232333637373232222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "c73cd1d54553f8d2c6a76d112aa70a56df7ece20344e4cfbe1ea4656ad77042e",
+      "proof": [
+        {
+          "hash": "933a830fd5326fb565d3d29d7955c80b36fa9aea61ac44f4dcab135a7a63c9f3",
+          "side": "left"
+        },
+        {
+          "hash": "c6fbe057bd297c12bc0b2b13e10f136e132ddb5d48453cba9f00b608518a6ecd",
+          "side": "left"
+        },
+        {
+          "hash": "26bf6c5a471470fbf1eae7e016417c2177e60a705a447ea7be8cfe5ade1a6166",
+          "side": "right"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M10",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Agents address each other with mentions.",
+          "sponsor_digest": "fe816f09657943a9d699c6a5d99b950cda274878e16279361bbce486b2367722",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3131222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a224167656e74732068616e6420636f6e74657874206469726563746c7920746f206f74686572206167656e74732e222c2273706f6e736f725f646967657374223a2266653831366630393635373934336139643639396336613564393962393530636461323734383738653136323739333631626263653438366232333637373232222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "688772462082ff8a185aa3f4b1dee09b817ac8f7e37187e4929721150627d259",
+      "proof": [
+        {
+          "hash": "3ee7bcca31fdefa713cff40dde0a0a185090640a228fac4448a3c6ead95f88a3",
+          "side": "right"
+        },
+        {
+          "hash": "3ef2fbbef1c638cb531285cf86d7f76e898336b1f519a869f179d05887a5a477",
+          "side": "right"
+        },
+        {
+          "hash": "91b8c8da035c9d2d47d4513b6a77c91440b6458ce581879349bdfbf319516cec",
+          "side": "left"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M11",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Agents hand context directly to other agents.",
+          "sponsor_digest": "fe816f09657943a9d699c6a5d99b950cda274878e16279361bbce486b2367722",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3132222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a2248616e646f666620737563636565647320776974686f75742068756d616e20636f7079696e672e222c2273706f6e736f725f646967657374223a2231666133616264653233313963616436656362323633316362346661316330646266376431373864633064666134313230633233626439653661316365326637222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "3ee7bcca31fdefa713cff40dde0a0a185090640a228fac4448a3c6ead95f88a3",
+      "proof": [
+        {
+          "hash": "688772462082ff8a185aa3f4b1dee09b817ac8f7e37187e4929721150627d259",
+          "side": "left"
+        },
+        {
+          "hash": "3ef2fbbef1c638cb531285cf86d7f76e898336b1f519a869f179d05887a5a477",
+          "side": "right"
+        },
+        {
+          "hash": "91b8c8da035c9d2d47d4513b6a77c91440b6458ce581879349bdfbf319516cec",
+          "side": "left"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M12",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Handoff succeeds without human copying.",
+          "sponsor_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3133222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a224174206c65617374206f6e65207265616c206465636973696f6e206f7220617070726f76616c206f63637572732e222c2273706f6e736f725f646967657374223a2239373339653066323361613339376636636366656162303936656263353761613038376666303233633933393835356437623236313138636464383938326235222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "d3925ef066a32683fe471635a5aa98d3daab25e4ccfa520c16e6ee57c273b46d",
+      "proof": [
+        {
+          "hash": "dfcf4d2d67a7db145f7a422d6267b07b677a4a6ceeacc4425c7c5c037686d379",
+          "side": "right"
+        },
+        {
+          "hash": "62fe641867b5b0a7257001a126fd7e7486f9de3cfda5d6b713e3e3aed3c63673",
+          "side": "left"
+        },
+        {
+          "hash": "91b8c8da035c9d2d47d4513b6a77c91440b6458ce581879349bdfbf319516cec",
+          "side": "left"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M13",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "At least one real decision or approval occurs.",
+          "sponsor_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3134222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a2248756d616e2072656365697665732074686174206465636973696f6e207468726f7567682042616e642e222c2273706f6e736f725f646967657374223a2239373339653066323361613339376636636366656162303936656263353761613038376666303233633933393835356437623236313138636464383938326235222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "dfcf4d2d67a7db145f7a422d6267b07b677a4a6ceeacc4425c7c5c037686d379",
+      "proof": [
+        {
+          "hash": "d3925ef066a32683fe471635a5aa98d3daab25e4ccfa520c16e6ee57c273b46d",
+          "side": "left"
+        },
+        {
+          "hash": "62fe641867b5b0a7257001a126fd7e7486f9de3cfda5d6b713e3e3aed3c63673",
+          "side": "left"
+        },
+        {
+          "hash": "91b8c8da035c9d2d47d4513b6a77c91440b6458ce581879349bdfbf319516cec",
+          "side": "left"
+        },
+        {
+          "hash": "cda432a47f4ca4d005aadc7f58d945c76450f7c1e0dc2a40ea6a37f4c9f281e3",
+          "side": "right"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M14",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Human receives that decision through Band.",
+          "sponsor_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d4d3135222c226b696e64223a2253706f6e736f724d616e6461746f727941746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a224465636973696f6e206973206e6f7420686172642d636f6465642e222c2273706f6e736f725f646967657374223a2239373339653066323361613339376636636366656162303936656263353761613038376666303233633933393835356437623236313138636464383938326235222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "39d92558b76203c928a1e59e72ba52f1d858da229b778368c20f942067bce452",
+      "proof": [
+        {
+          "hash": "3d1ff63cc0bef32598287dcd15516246e05057159f25bf680946e37a4c576222",
+          "side": "right"
+        },
+        {
+          "hash": "27662b4076c2ba0e95af898650eaa84e2f6c535c18e6de0b0568a8c2b8c31ee4",
+          "side": "right"
+        },
+        {
+          "hash": "b78c85cbbf2302776fc8a85e6cfd6c398b424b3a20d2f3b06c0541e6a908e92d",
+          "side": "right"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-M15",
+        "kind": "SponsorMandatoryAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Decision is not hard-coded.",
+          "sponsor_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533031222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a225573652061207265616c20536e796b207363616e6e696e672070726f647563743b20616c7465726e61746976657320617265206e6f7420616c6c206d616e6461746f72792e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "3d1ff63cc0bef32598287dcd15516246e05057159f25bf680946e37a4c576222",
+      "proof": [
+        {
+          "hash": "39d92558b76203c928a1e59e72ba52f1d858da229b778368c20f942067bce452",
+          "side": "left"
+        },
+        {
+          "hash": "27662b4076c2ba0e95af898650eaa84e2f6c535c18e6de0b0568a8c2b8c31ee4",
+          "side": "right"
+        },
+        {
+          "hash": "b78c85cbbf2302776fc8a85e6cfd6c398b424b3a20d2f3b06c0541e6a908e92d",
+          "side": "right"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S01",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Use a real Snyk scanning product; alternatives are not all mandatory.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533032222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a2250415353222c22726571756972656d656e74223a225363616e20746865206578616374206172746966616374206275696c7420627920746865206167656e74732e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a747275657d7d",
+      "leaf": "e2e092198bcc25a698a96df3736d2be57930fd479469411cb22ea4ccfacb379d",
+      "proof": [
+        {
+          "hash": "6201519c4fa2e3de441c43fecabe106cf275aebd79b8990e7d720ba71a42a27d",
+          "side": "right"
+        },
+        {
+          "hash": "f3750ad0a93de96d80836d1c68393138d35c0df167d4c450cf2d6a9f80bb71a4",
+          "side": "left"
+        },
+        {
+          "hash": "b78c85cbbf2302776fc8a85e6cfd6c398b424b3a20d2f3b06c0541e6a908e92d",
+          "side": "right"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S02",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "PASS",
+          "requirement": "Scan the exact artifact built by the agents.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533033222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a22476976652073656375726974792072657669657720616e2061637475616c207465616d20726f6c652e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "6201519c4fa2e3de441c43fecabe106cf275aebd79b8990e7d720ba71a42a27d",
+      "proof": [
+        {
+          "hash": "e2e092198bcc25a698a96df3736d2be57930fd479469411cb22ea4ccfacb379d",
+          "side": "left"
+        },
+        {
+          "hash": "f3750ad0a93de96d80836d1c68393138d35c0df167d4c450cf2d6a9f80bb71a4",
+          "side": "left"
+        },
+        {
+          "hash": "b78c85cbbf2302776fc8a85e6cfd6c398b424b3a20d2f3b06c0541e6a908e92d",
+          "side": "right"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S03",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Give security review an actual team role.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533034222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a2253656375726974792072657669657765722070617274696369706174657320696e207468652042414e4420726f6f6d2e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "9b5071339f9d7024334e1fbe580d7610e45e28c0dd876cb7c8acbe1a27290826",
+      "proof": [
+        {
+          "hash": "640f96d2fa5cde08f50527fe547120319661992e3d83f2094fc51051033bd24a",
+          "side": "right"
+        },
+        {
+          "hash": "bd67263121e204ad68a70bf8261e3a2b3b8b10d21b1d951247186d95a23a1999",
+          "side": "right"
+        },
+        {
+          "hash": "02a8bed4ddf840eaed3230cd66c504794c8f1fc11958d5f5f272656c164df92a",
+          "side": "left"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S04",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Security reviewer participates in the BAND room.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533035222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a2253656375726974792072657669657765722072756e7320536e796b207363616e732e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "640f96d2fa5cde08f50527fe547120319661992e3d83f2094fc51051033bd24a",
+      "proof": [
+        {
+          "hash": "9b5071339f9d7024334e1fbe580d7610e45e28c0dd876cb7c8acbe1a27290826",
+          "side": "left"
+        },
+        {
+          "hash": "bd67263121e204ad68a70bf8261e3a2b3b8b10d21b1d951247186d95a23a1999",
+          "side": "right"
+        },
+        {
+          "hash": "02a8bed4ddf840eaed3230cd66c504794c8f1fc11958d5f5f272656c164df92a",
+          "side": "left"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S05",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Security reviewer runs Snyk scans.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533036222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a22536563757269747920726576696577657220706f7374732061637475616c2066696e64696e67732e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "267ad7d14a9c1e8f857a7a43ce679f6c5f353b95fd6f2d615b044bbeb7c9782f",
+      "proof": [
+        {
+          "hash": "05b58e70c7f46380a8f0f9a373fdf3c088efbd4af7b8e4fd475151e8adf6373c",
+          "side": "right"
+        },
+        {
+          "hash": "17d18bed38d205e1ebd77287e3a3a5c14af720d48cf61ee77b314f1ad95d5fa7",
+          "side": "left"
+        },
+        {
+          "hash": "02a8bed4ddf840eaed3230cd66c504794c8f1fc11958d5f5f272656c164df92a",
+          "side": "left"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S06",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Security reviewer posts actual findings.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533037222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a22412066696e64696e672061637475616c6c7920626c6f636b7320636f6d706c6574696f6e20756e74696c2061207665726966696564206669782e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "05b58e70c7f46380a8f0f9a373fdf3c088efbd4af7b8e4fd475151e8adf6373c",
+      "proof": [
+        {
+          "hash": "267ad7d14a9c1e8f857a7a43ce679f6c5f353b95fd6f2d615b044bbeb7c9782f",
+          "side": "left"
+        },
+        {
+          "hash": "17d18bed38d205e1ebd77287e3a3a5c14af720d48cf61ee77b314f1ad95d5fa7",
+          "side": "left"
+        },
+        {
+          "hash": "02a8bed4ddf840eaed3230cd66c504794c8f1fc11958d5f5f272656c164df92a",
+          "side": "left"
+        },
+        {
+          "hash": "42bf51ee2602c306e6faf709417ec49d7cbea939d3cf5a28c5a8eb3f51839908",
+          "side": "left"
+        },
+        {
+          "hash": "fc9492406293e52ae38fdc919462b08fb78a3f49c00d4d41c0c2be365b9d3d2c",
+          "side": "left"
+        },
+        {
+          "hash": "1962075baf6ce1ca1633abe617144480e4f3163d12178c4ca2b9f5b0d967b4a8",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S07",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "A finding actually blocks completion until a verified fix.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533038222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a2253746f726520726563757272696e672069737375652065766964656e636520696e20436f676e656520776f726b696e67206d656d6f72792e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "d85828298ded73ac66b242a5a9253e64b62febd5038aac491a6b54607c1af600",
+      "proof": [
+        {
+          "hash": "e3893e45af5623285fc13859e2992c8bdde10b55c1c26a100d3bd2416ddfcae4",
+          "side": "right"
+        },
+        {
+          "hash": "cee8d1613a0fb04f5b6b79a9f4d54ad08ec925703c928a94964de0a934867b13",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S08",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Store recurring issue evidence in Cognee working memory.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": false
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a225245512d414f4b2d533039222c226b696e64223a224f7074696f6e616c426f6e757341746f6d222c227061796c6f6164223a7b226d6d72223a224e4f545f434f4d4d4954544544222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c22726571756972656d656e74223a2244656d6f6e73747261746520726563616c6c6564207365637572697479206d656d6f7279206368616e676573206265686176696f72206f6e2061207265706561746564207461736b2e222c2273706f6e736f725f646967657374223a2266396439396131323561613162353163613334326639363462333864346462643631306531386531356665376162613062646230316361666465386333313139222c227472696564223a747275652c227665726966696564223a66616c73657d7d",
+      "leaf": "e3893e45af5623285fc13859e2992c8bdde10b55c1c26a100d3bd2416ddfcae4",
+      "proof": [
+        {
+          "hash": "d85828298ded73ac66b242a5a9253e64b62febd5038aac491a6b54607c1af600",
+          "side": "left"
+        },
+        {
+          "hash": "cee8d1613a0fb04f5b6b79a9f4d54ad08ec925703c928a94964de0a934867b13",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "REQ-AOK-S09",
+        "kind": "OptionalBonusAtom",
+        "payload": {
+          "mmr": "NOT_COMMITTED",
+          "observed_outcome": "NOT_TESTED",
+          "requirement": "Demonstrate recalled security memory changes behavior on a repeated task.",
+          "sponsor_digest": "f9d99a125aa1b51ca342f964b38d4dbd610e18e15fe7aba0bdb01cafde8c3119",
+          "tried": true,
+          "verified": false
+        }
+      }
+    }
+  ],
+  "meaning": "Single MVP merkle root over sponsor mandatory atoms, optional/bonus atoms, and per-agent Snyk bindings; hash travel = leaf + proof \u2192 mvp_root; mmr NOT_COMMITTED",
+  "mmr": "NOT_COMMITTED",
+  "mvp_root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+  "optional_count": 16,
+  "package_digest": "a69206a37f944488d4c2afe38263118ae24ed4f9522ea1c1ae801d8fe7d2c35e",
+  "parent": "SNEAK-028",
+  "root": "8d1036e3bbaa64231dee0e0873a5f3e040192a14752967b5f9526d18ab5dc6ef",
+  "schema": "sneak.mvp-hash-travel.v1",
+  "signed": false,
+  "sponsor_count": 15
+}

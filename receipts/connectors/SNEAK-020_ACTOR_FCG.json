@@ -1,0 +1,199 @@
+{
+  "edges": [
+    {
+      "from": "ACTOR-tom-0000",
+      "id": "EDGE-ACTOR-tom-0000-ACTOR",
+      "kind": "FCGEdge",
+      "to": "ACTOR-NODE-tom",
+      "type": "EMITTED_BY"
+    },
+    {
+      "from": "ACTOR-tom-0000-ROI",
+      "id": "EDGE-ACTOR-tom-0000-ROI",
+      "kind": "FCGEdge",
+      "roi": "11.500000",
+      "to": "ACTOR-tom-0000",
+      "type": "ROI_DERIVED_FROM"
+    },
+    {
+      "from": "ACTOR-jerry-0000",
+      "id": "EDGE-ACTOR-jerry-0000-ACTOR",
+      "kind": "FCGEdge",
+      "to": "ACTOR-NODE-jerry",
+      "type": "EMITTED_BY"
+    },
+    {
+      "from": "ACTOR-jerry-0000-ROI",
+      "id": "EDGE-ACTOR-jerry-0000-ROI",
+      "kind": "FCGEdge",
+      "roi": "24.000000",
+      "to": "ACTOR-jerry-0000",
+      "type": "ROI_DERIVED_FROM"
+    },
+    {
+      "from": "ACTOR-jerry-0000",
+      "id": "EDGE-ACTOR-jerry-0000-SEQ",
+      "kind": "FCGEdge",
+      "to": "ACTOR-tom-0000",
+      "type": "PRECEDED_BY"
+    },
+    {
+      "from": "ACTOR-scanner-0000",
+      "id": "EDGE-ACTOR-scanner-0000-ACTOR",
+      "kind": "FCGEdge",
+      "to": "ACTOR-NODE-scanner",
+      "type": "EMITTED_BY"
+    },
+    {
+      "from": "ACTOR-scanner-0000-ROI",
+      "id": "EDGE-ACTOR-scanner-0000-ROI",
+      "kind": "FCGEdge",
+      "roi": "24.000000",
+      "to": "ACTOR-scanner-0000",
+      "type": "ROI_DERIVED_FROM"
+    },
+    {
+      "from": "ACTOR-scanner-0000",
+      "id": "EDGE-ACTOR-scanner-0000-SEQ",
+      "kind": "FCGEdge",
+      "to": "ACTOR-jerry-0000",
+      "type": "PRECEDED_BY"
+    },
+    {
+      "from": "ACTOR-cognee-0000",
+      "id": "EDGE-ACTOR-cognee-0000-ACTOR",
+      "kind": "FCGEdge",
+      "to": "ACTOR-NODE-cognee",
+      "type": "EMITTED_BY"
+    },
+    {
+      "from": "ACTOR-cognee-0000-ROI",
+      "id": "EDGE-ACTOR-cognee-0000-ROI",
+      "kind": "FCGEdge",
+      "roi": "7.333333",
+      "to": "ACTOR-cognee-0000",
+      "type": "ROI_DERIVED_FROM"
+    },
+    {
+      "from": "ACTOR-cognee-0000",
+      "id": "EDGE-ACTOR-cognee-0000-SEQ",
+      "kind": "FCGEdge",
+      "to": "ACTOR-scanner-0000",
+      "type": "PRECEDED_BY"
+    },
+    {
+      "from": "ACTOR-human-0000",
+      "id": "EDGE-ACTOR-human-0000-PRECEDED",
+      "kind": "FCGEdge",
+      "to": "ACTOR-cognee-0000",
+      "type": "PRECEDED_BY"
+    },
+    {
+      "from": "ACTOR-human-0000",
+      "id": "EDGE-ACTOR-human-0000-ACTOR",
+      "kind": "FCGEdge",
+      "to": "ACTOR-NODE-human",
+      "type": "EMITTED_BY"
+    },
+    {
+      "from": "ACTOR-human-0000-ROI",
+      "id": "EDGE-ACTOR-human-0000-ROI",
+      "kind": "FCGEdge",
+      "roi": null,
+      "to": "ACTOR-human-0000",
+      "type": "ROI_DERIVED_FROM"
+    },
+    {
+      "from": "ACTOR-scanner-0001",
+      "id": "EDGE-ACTOR-scanner-0001-ACTOR",
+      "kind": "FCGEdge",
+      "to": "ACTOR-NODE-scanner",
+      "type": "EMITTED_BY"
+    },
+    {
+      "from": "ACTOR-scanner-0001-ROI",
+      "id": "EDGE-ACTOR-scanner-0001-ROI",
+      "kind": "FCGEdge",
+      "roi": "-1.000000",
+      "to": "ACTOR-scanner-0001",
+      "type": "ROI_DERIVED_FROM"
+    }
+  ],
+  "mmr": "NOT_COMMITTED",
+  "nodes": [
+    {
+      "id": "ACTOR-tom-0000",
+      "identity": "9e63c0b0ce2a3379341836127cae331c908378ecef1205aa1f4d7dde65a05d91",
+      "kind": "ActorEventFCO",
+      "verified": false
+    },
+    {
+      "id": "ACTOR-jerry-0000",
+      "identity": "08f3a0fd0b7f0d12360966d3f2d144519d7516610e4a7f44d634a247d7e1c7fe",
+      "kind": "ActorEventFCO",
+      "verified": false
+    },
+    {
+      "id": "ACTOR-scanner-0000",
+      "identity": "e0b9267d4743d2381a13cd9c50d08e9b58ef34ca7ebafa6eb0a7e3c9e26df31b",
+      "kind": "ActorEventFCO",
+      "verified": false
+    },
+    {
+      "id": "ACTOR-cognee-0000",
+      "identity": "297694c048302330a748a39c93f7385ebe4f7c4ae8293d04e79308a8cb2703ee",
+      "kind": "ActorEventFCO",
+      "verified": false
+    },
+    {
+      "id": "ACTOR-human-0000",
+      "identity": "4faffd70438ed81e99b279836f761c31b8075b97e462c32359e510a380392b1b",
+      "kind": "ActorEventFCO",
+      "verified": false
+    },
+    {
+      "id": "ACTOR-scanner-0001",
+      "identity": "9a3be8357450aba5843b36236c9b62c0284495f7dad3b84b7d18ca2c23972553",
+      "kind": "ActorEventFCO",
+      "verified": false
+    },
+    {
+      "actor_id": "cognee",
+      "id": "ACTOR-NODE-cognee",
+      "identity": "45472facd0fd7d58ac0e2d96965fc0c6bac0e643175d43d9ce9d578783e88572",
+      "kind": "ActorFCO",
+      "verified": false
+    },
+    {
+      "actor_id": "human",
+      "id": "ACTOR-NODE-human",
+      "identity": "38127c792bb3d054b8a88c718f34a34d334e0ef7bd95db79655fa2162c49e89f",
+      "kind": "ActorFCO",
+      "verified": false
+    },
+    {
+      "actor_id": "jerry",
+      "id": "ACTOR-NODE-jerry",
+      "identity": "4f772fef8be77a3de08c60b575d24a8943206cac49aa073153a21d4dea1445f4",
+      "kind": "ActorFCO",
+      "verified": false
+    },
+    {
+      "actor_id": "scanner",
+      "id": "ACTOR-NODE-scanner",
+      "identity": "7a09b3b429730808f4b9c5ff996189be678978cbaa81d46dab7cc3b6679ce4a9",
+      "kind": "ActorFCO",
+      "verified": false
+    },
+    {
+      "actor_id": "tom",
+      "id": "ACTOR-NODE-tom",
+      "identity": "455e3f9f4e47afa2f85882655f45c1cdd8a0cb149b1c87e3f6876642a566bddf",
+      "kind": "ActorFCO",
+      "verified": false
+    }
+  ],
+  "schema": "sneak.actor-audit-fcg.v1",
+  "scope": "CANDIDATE_NOT_CANONICAL",
+  "signed": false
+}

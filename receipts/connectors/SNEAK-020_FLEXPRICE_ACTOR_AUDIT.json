@@ -1,0 +1,679 @@
+{
+  "actor_summaries": {
+    "cognee": {
+      "actor_id": "cognee",
+      "aggregate_roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.03",
+        "observed_outcome": "COMPUTED",
+        "roi": "7.333333",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "action": "data_breakpoint_write",
+          "fco_candidate_sha256": "297694c048302330a748a39c93f7385ebe4f7c4ae8293d04e79308a8cb2703ee",
+          "id": "ACTOR-cognee-0000",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": "7.333333"
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-cognee-0000"
+      ]
+    },
+    "human": {
+      "actor_id": "human",
+      "aggregate_roi": {
+        "benefit_units": "0.0",
+        "cost_units": "0.00",
+        "observed_outcome": "UNDEFINED_ZERO_COST",
+        "roi": null,
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "action": "pending_decision",
+          "fco_candidate_sha256": "4faffd70438ed81e99b279836f761c31b8075b97e462c32359e510a380392b1b",
+          "id": "ACTOR-human-0000",
+          "outcome": "PENDING",
+          "roi": null
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-human-0000"
+      ]
+    },
+    "jerry": {
+      "actor_id": "jerry",
+      "aggregate_roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.01",
+        "observed_outcome": "COMPUTED",
+        "roi": "24.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "action": "band_security_review",
+          "fco_candidate_sha256": "08f3a0fd0b7f0d12360966d3f2d144519d7516610e4a7f44d634a247d7e1c7fe",
+          "id": "ACTOR-jerry-0000",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": "24.000000"
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-jerry-0000"
+      ]
+    },
+    "scanner": {
+      "actor_id": "scanner",
+      "aggregate_roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.02",
+        "observed_outcome": "COMPUTED",
+        "roi": "11.500000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 2,
+      "events": [
+        {
+          "action": "skill_scan_completed",
+          "fco_candidate_sha256": "e0b9267d4743d2381a13cd9c50d08e9b58ef34ca7ebafa6eb0a7e3c9e26df31b",
+          "id": "ACTOR-scanner-0000",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": "24.000000"
+        },
+        {
+          "action": "skill_scan_completed",
+          "fco_candidate_sha256": "9a3be8357450aba5843b36236c9b62c0284495f7dad3b84b7d18ca2c23972553",
+          "id": "ACTOR-scanner-0001",
+          "outcome": "DENIED",
+          "roi": "-1.000000"
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-scanner-0000",
+        "ACTOR-scanner-0001"
+      ]
+    },
+    "tom": {
+      "actor_id": "tom",
+      "aggregate_roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.02",
+        "observed_outcome": "COMPUTED",
+        "roi": "11.500000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "action": "band_security_review",
+          "fco_candidate_sha256": "9e63c0b0ce2a3379341836127cae331c908378ecef1205aa1f4d7dde65a05d91",
+          "id": "ACTOR-tom-0000",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": "11.500000"
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-tom-0000"
+      ]
+    }
+  },
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "fcg_digest": "7e29107c6113171a8452dc618d55137f70fe88db9687908840cf7a9a8976eaa0",
+  "id": "SNEAK-020",
+  "leaf_count": 12,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a224143544f522d636f676e65652d30303030222c226b696e64223a224163746f724576656e7446434f222c227061796c6f6164223a7b22616374696f6e223a22646174615f627265616b706f696e745f7772697465222c226163746f725f6964223a22636f676e6565222c2266636f5f63616e6469646174655f736861323536223a2232393736393463303438333032333330613734386133396339336637333835656265346637633461653832393364303465373933303861386362323730336565222c226f7574636f6d65223a224c4f43414c5f434f4e54524143545f4f4e4c59222c22726f69223a7b2262656e656669745f756e697473223a22302e3235222c22636f73745f756e697473223a22302e3033222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a22372e333333333333222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d7d7d",
+      "leaf": "3733415782046c35b677ee16f2cf79a507626078c1327100951143aa8cd2317f",
+      "proof": [
+        {
+          "hash": "645dfa6d33040791825c8dbc0b237fb5790a40ada6ac75ea894d33d531d33724",
+          "side": "right"
+        },
+        {
+          "hash": "fce033776e53159dfa0c973a137c7648df79277f89a40036a3ee92f14502d7bf",
+          "side": "right"
+        },
+        {
+          "hash": "dbb21482e5de71137661479b7b6b07bc8f37ab892fe059638f286fd24a9316da",
+          "side": "right"
+        },
+        {
+          "hash": "a511a9eb4f4a473fdc61c82c747103e31ebe6e7069cc16ca8222e4556475345b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ACTOR-cognee-0000",
+        "kind": "ActorEventFCO",
+        "payload": {
+          "action": "data_breakpoint_write",
+          "actor_id": "cognee",
+          "fco_candidate_sha256": "297694c048302330a748a39c93f7385ebe4f7c4ae8293d04e79308a8cb2703ee",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": {
+            "benefit_units": "0.25",
+            "cost_units": "0.03",
+            "observed_outcome": "COMPUTED",
+            "roi": "7.333333",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a224143544f522d68756d616e2d30303030222c226b696e64223a224163746f724576656e7446434f222c227061796c6f6164223a7b22616374696f6e223a2270656e64696e675f6465636973696f6e222c226163746f725f6964223a2268756d616e222c2266636f5f63616e6469646174655f736861323536223a2234666166666437303433386564383165393962323739383336663736316333316238303735623937653436326333323335396535313061333830333932623162222c226f7574636f6d65223a2250454e44494e47222c22726f69223a7b2262656e656669745f756e697473223a22302e30222c22636f73745f756e697473223a22302e3030222c226f627365727665645f6f7574636f6d65223a22554e444546494e45445f5a45524f5f434f5354222c22726f69223a6e756c6c2c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d7d7d",
+      "leaf": "645dfa6d33040791825c8dbc0b237fb5790a40ada6ac75ea894d33d531d33724",
+      "proof": [
+        {
+          "hash": "3733415782046c35b677ee16f2cf79a507626078c1327100951143aa8cd2317f",
+          "side": "left"
+        },
+        {
+          "hash": "fce033776e53159dfa0c973a137c7648df79277f89a40036a3ee92f14502d7bf",
+          "side": "right"
+        },
+        {
+          "hash": "dbb21482e5de71137661479b7b6b07bc8f37ab892fe059638f286fd24a9316da",
+          "side": "right"
+        },
+        {
+          "hash": "a511a9eb4f4a473fdc61c82c747103e31ebe6e7069cc16ca8222e4556475345b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ACTOR-human-0000",
+        "kind": "ActorEventFCO",
+        "payload": {
+          "action": "pending_decision",
+          "actor_id": "human",
+          "fco_candidate_sha256": "4faffd70438ed81e99b279836f761c31b8075b97e462c32359e510a380392b1b",
+          "outcome": "PENDING",
+          "roi": {
+            "benefit_units": "0.0",
+            "cost_units": "0.00",
+            "observed_outcome": "UNDEFINED_ZERO_COST",
+            "roi": null,
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a224143544f522d6a657272792d30303030222c226b696e64223a224163746f724576656e7446434f222c227061796c6f6164223a7b22616374696f6e223a2262616e645f73656375726974795f726576696577222c226163746f725f6964223a226a65727279222c2266636f5f63616e6469646174655f736861323536223a2230386633613066643062376630643132333630393636643366326431343435313964373531363631306534613766343464363334613234376437653163376665222c226f7574636f6d65223a224c4f43414c5f434f4e54524143545f4f4e4c59222c22726f69223a7b2262656e656669745f756e697473223a22302e3235222c22636f73745f756e697473223a22302e3031222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a2232342e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d7d7d",
+      "leaf": "31a3632861b0c17c29efbdd53744faa8cf9190594ccbcead1d36296f3cb61d2a",
+      "proof": [
+        {
+          "hash": "7f218a1f402eb155a7dacf22fc30a81dd4c076b84dd41b74af36886b75ed7b44",
+          "side": "right"
+        },
+        {
+          "hash": "0c9c6a4b94b89309e7dc75a161f721edc708bd5f34946f47ee17c3754c1c4028",
+          "side": "left"
+        },
+        {
+          "hash": "dbb21482e5de71137661479b7b6b07bc8f37ab892fe059638f286fd24a9316da",
+          "side": "right"
+        },
+        {
+          "hash": "a511a9eb4f4a473fdc61c82c747103e31ebe6e7069cc16ca8222e4556475345b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ACTOR-jerry-0000",
+        "kind": "ActorEventFCO",
+        "payload": {
+          "action": "band_security_review",
+          "actor_id": "jerry",
+          "fco_candidate_sha256": "08f3a0fd0b7f0d12360966d3f2d144519d7516610e4a7f44d634a247d7e1c7fe",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": {
+            "benefit_units": "0.25",
+            "cost_units": "0.01",
+            "observed_outcome": "COMPUTED",
+            "roi": "24.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a224143544f522d7363616e6e65722d30303030222c226b696e64223a224163746f724576656e7446434f222c227061796c6f6164223a7b22616374696f6e223a22736b696c6c5f7363616e5f636f6d706c65746564222c226163746f725f6964223a227363616e6e6572222c2266636f5f63616e6469646174655f736861323536223a2265306239323637643437343364323338316131336364396335306430386539623538656633346361376562616661366562306137653363396532366466333162222c226f7574636f6d65223a224c4f43414c5f434f4e54524143545f4f4e4c59222c22726f69223a7b2262656e656669745f756e697473223a22302e3235222c22636f73745f756e697473223a22302e3031222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a2232342e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d7d7d",
+      "leaf": "7f218a1f402eb155a7dacf22fc30a81dd4c076b84dd41b74af36886b75ed7b44",
+      "proof": [
+        {
+          "hash": "31a3632861b0c17c29efbdd53744faa8cf9190594ccbcead1d36296f3cb61d2a",
+          "side": "left"
+        },
+        {
+          "hash": "0c9c6a4b94b89309e7dc75a161f721edc708bd5f34946f47ee17c3754c1c4028",
+          "side": "left"
+        },
+        {
+          "hash": "dbb21482e5de71137661479b7b6b07bc8f37ab892fe059638f286fd24a9316da",
+          "side": "right"
+        },
+        {
+          "hash": "a511a9eb4f4a473fdc61c82c747103e31ebe6e7069cc16ca8222e4556475345b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ACTOR-scanner-0000",
+        "kind": "ActorEventFCO",
+        "payload": {
+          "action": "skill_scan_completed",
+          "actor_id": "scanner",
+          "fco_candidate_sha256": "e0b9267d4743d2381a13cd9c50d08e9b58ef34ca7ebafa6eb0a7e3c9e26df31b",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": {
+            "benefit_units": "0.25",
+            "cost_units": "0.01",
+            "observed_outcome": "COMPUTED",
+            "roi": "24.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a224143544f522d7363616e6e65722d30303031222c226b696e64223a224163746f724576656e7446434f222c227061796c6f6164223a7b22616374696f6e223a22736b696c6c5f7363616e5f636f6d706c65746564222c226163746f725f6964223a227363616e6e6572222c2266636f5f63616e6469646174655f736861323536223a2239613362653833353734353061626135383433623336323336633962363263303238343439356637646164336238346237643138636132633233393732353533222c226f7574636f6d65223a2244454e494544222c22726f69223a7b2262656e656669745f756e697473223a22302e30222c22636f73745f756e697473223a22302e3031222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a222d312e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d7d7d",
+      "leaf": "92940537b5fc82e0e81fe20ff16e43b39a5146c4ac1da6458cd544931ee66fa1",
+      "proof": [
+        {
+          "hash": "8d377fb02e2a67cfc8127017345d426924ffaf118159119a4c971a8ba306eb72",
+          "side": "right"
+        },
+        {
+          "hash": "90245558ed9f06eef8d07990e4b21a8dcf561de1ea2fbf54c485e3fa0b28e314",
+          "side": "right"
+        },
+        {
+          "hash": "9536dacf34250f54743ec7a84372e12d4e132a18d806a52559fce21f820a5783",
+          "side": "left"
+        },
+        {
+          "hash": "a511a9eb4f4a473fdc61c82c747103e31ebe6e7069cc16ca8222e4556475345b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ACTOR-scanner-0001",
+        "kind": "ActorEventFCO",
+        "payload": {
+          "action": "skill_scan_completed",
+          "actor_id": "scanner",
+          "fco_candidate_sha256": "9a3be8357450aba5843b36236c9b62c0284495f7dad3b84b7d18ca2c23972553",
+          "outcome": "DENIED",
+          "roi": {
+            "benefit_units": "0.0",
+            "cost_units": "0.01",
+            "observed_outcome": "COMPUTED",
+            "roi": "-1.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a224143544f522d746f6d2d30303030222c226b696e64223a224163746f724576656e7446434f222c227061796c6f6164223a7b22616374696f6e223a2262616e645f73656375726974795f726576696577222c226163746f725f6964223a22746f6d222c2266636f5f63616e6469646174655f736861323536223a2239653633633062306365326133333739333431383336313237636165333331633930383337386563656631323035616131663464376464653635613035643931222c226f7574636f6d65223a224c4f43414c5f434f4e54524143545f4f4e4c59222c22726f69223a7b2262656e656669745f756e697473223a22302e3235222c22636f73745f756e697473223a22302e3032222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a2231312e353030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d7d7d",
+      "leaf": "8d377fb02e2a67cfc8127017345d426924ffaf118159119a4c971a8ba306eb72",
+      "proof": [
+        {
+          "hash": "92940537b5fc82e0e81fe20ff16e43b39a5146c4ac1da6458cd544931ee66fa1",
+          "side": "left"
+        },
+        {
+          "hash": "90245558ed9f06eef8d07990e4b21a8dcf561de1ea2fbf54c485e3fa0b28e314",
+          "side": "right"
+        },
+        {
+          "hash": "9536dacf34250f54743ec7a84372e12d4e132a18d806a52559fce21f820a5783",
+          "side": "left"
+        },
+        {
+          "hash": "a511a9eb4f4a473fdc61c82c747103e31ebe6e7069cc16ca8222e4556475345b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ACTOR-tom-0000",
+        "kind": "ActorEventFCO",
+        "payload": {
+          "action": "band_security_review",
+          "actor_id": "tom",
+          "fco_candidate_sha256": "9e63c0b0ce2a3379341836127cae331c908378ecef1205aa1f4d7dde65a05d91",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": {
+            "benefit_units": "0.25",
+            "cost_units": "0.02",
+            "observed_outcome": "COMPUTED",
+            "roi": "11.500000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a224643472d534e415053484f54222c226b696e64223a224163746f724175646974464347222c227061796c6f6164223a7b22656467655f636f756e74223a31362c226663675f646967657374223a2237653239313037633631313331373161383435326463363138643535313337663730666538386462393638373930383834306366376139613839373665616130222c226e6f64655f636f756e74223a31317d7d",
+      "leaf": "0bf750f577b3a01907ba6a40cfbcc2f499a225827d6fca6a6ab436ea91879589",
+      "proof": [
+        {
+          "hash": "5ef4001adb0aaf3b3b41693662ad98e2c19d5f00963302f367e4aca9e7683730",
+          "side": "right"
+        },
+        {
+          "hash": "d5fd9c1efb5a135d49172b63f2821c59722b485a7155601f8eaa22da9ee12142",
+          "side": "left"
+        },
+        {
+          "hash": "9536dacf34250f54743ec7a84372e12d4e132a18d806a52559fce21f820a5783",
+          "side": "left"
+        },
+        {
+          "hash": "a511a9eb4f4a473fdc61c82c747103e31ebe6e7069cc16ca8222e4556475345b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "FCG-SNAPSHOT",
+        "kind": "ActorAuditFCG",
+        "payload": {
+          "edge_count": 16,
+          "fcg_digest": "7e29107c6113171a8452dc618d55137f70fe88db9687908840cf7a9a8976eaa0",
+          "node_count": 11
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d636f676e6565222c226b696e64223a224163746f72524f49416767726567617465222c227061796c6f6164223a7b226163746f725f6964223a22636f676e6565222c226167677265676174655f726f69223a7b2262656e656669745f756e697473223a22302e3235222c22636f73745f756e697473223a22302e3033222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a22372e333333333333222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d2c226576656e745f636f756e74223a312c226576656e7473223a5b7b22616374696f6e223a22646174615f627265616b706f696e745f7772697465222c2266636f5f63616e6469646174655f736861323536223a2232393736393463303438333032333330613734386133396339336637333835656265346637633461653832393364303465373933303861386362323730336565222c226964223a224143544f522d636f676e65652d30303030222c226f7574636f6d65223a224c4f43414c5f434f4e54524143545f4f4e4c59222c22726f69223a22372e333333333333227d5d2c2266636f5f696473223a5b224143544f522d636f676e65652d30303030225d7d7d",
+      "leaf": "5ef4001adb0aaf3b3b41693662ad98e2c19d5f00963302f367e4aca9e7683730",
+      "proof": [
+        {
+          "hash": "0bf750f577b3a01907ba6a40cfbcc2f499a225827d6fca6a6ab436ea91879589",
+          "side": "left"
+        },
+        {
+          "hash": "d5fd9c1efb5a135d49172b63f2821c59722b485a7155601f8eaa22da9ee12142",
+          "side": "left"
+        },
+        {
+          "hash": "9536dacf34250f54743ec7a84372e12d4e132a18d806a52559fce21f820a5783",
+          "side": "left"
+        },
+        {
+          "hash": "a511a9eb4f4a473fdc61c82c747103e31ebe6e7069cc16ca8222e4556475345b",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "ROI-cognee",
+        "kind": "ActorROIAggregate",
+        "payload": {
+          "actor_id": "cognee",
+          "aggregate_roi": {
+            "benefit_units": "0.25",
+            "cost_units": "0.03",
+            "observed_outcome": "COMPUTED",
+            "roi": "7.333333",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          },
+          "event_count": 1,
+          "events": [
+            {
+              "action": "data_breakpoint_write",
+              "fco_candidate_sha256": "297694c048302330a748a39c93f7385ebe4f7c4ae8293d04e79308a8cb2703ee",
+              "id": "ACTOR-cognee-0000",
+              "outcome": "LOCAL_CONTRACT_ONLY",
+              "roi": "7.333333"
+            }
+          ],
+          "fco_ids": [
+            "ACTOR-cognee-0000"
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d68756d616e222c226b696e64223a224163746f72524f49416767726567617465222c227061796c6f6164223a7b226163746f725f6964223a2268756d616e222c226167677265676174655f726f69223a7b2262656e656669745f756e697473223a22302e30222c22636f73745f756e697473223a22302e3030222c226f627365727665645f6f7574636f6d65223a22554e444546494e45445f5a45524f5f434f5354222c22726f69223a6e756c6c2c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d2c226576656e745f636f756e74223a312c226576656e7473223a5b7b22616374696f6e223a2270656e64696e675f6465636973696f6e222c2266636f5f63616e6469646174655f736861323536223a2234666166666437303433386564383165393962323739383336663736316333316238303735623937653436326333323335396535313061333830333932623162222c226964223a224143544f522d68756d616e2d30303030222c226f7574636f6d65223a2250454e44494e47222c22726f69223a6e756c6c7d5d2c2266636f5f696473223a5b224143544f522d68756d616e2d30303030225d7d7d",
+      "leaf": "27e14802b84583e6184d18db6f86d2a31eaeddfdd922f52387462ed27b8421e0",
+      "proof": [
+        {
+          "hash": "0493095d504cc1292b4e6a6d1d2a55a85b9ceafdc977f7a4d051bfea4131d8d3",
+          "side": "right"
+        },
+        {
+          "hash": "3e24527ee0c15babd6cb072e3e5d68982046592d70cfccd175fb7388c86a7be8",
+          "side": "right"
+        },
+        {
+          "hash": "a9db104a8e21162dc7eee345c8a8a873d5669abd7b4074d0f9e83f2fd049a046",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "ROI-human",
+        "kind": "ActorROIAggregate",
+        "payload": {
+          "actor_id": "human",
+          "aggregate_roi": {
+            "benefit_units": "0.0",
+            "cost_units": "0.00",
+            "observed_outcome": "UNDEFINED_ZERO_COST",
+            "roi": null,
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          },
+          "event_count": 1,
+          "events": [
+            {
+              "action": "pending_decision",
+              "fco_candidate_sha256": "4faffd70438ed81e99b279836f761c31b8075b97e462c32359e510a380392b1b",
+              "id": "ACTOR-human-0000",
+              "outcome": "PENDING",
+              "roi": null
+            }
+          ],
+          "fco_ids": [
+            "ACTOR-human-0000"
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d6a65727279222c226b696e64223a224163746f72524f49416767726567617465222c227061796c6f6164223a7b226163746f725f6964223a226a65727279222c226167677265676174655f726f69223a7b2262656e656669745f756e697473223a22302e3235222c22636f73745f756e697473223a22302e3031222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a2232342e303030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d2c226576656e745f636f756e74223a312c226576656e7473223a5b7b22616374696f6e223a2262616e645f73656375726974795f726576696577222c2266636f5f63616e6469646174655f736861323536223a2230386633613066643062376630643132333630393636643366326431343435313964373531363631306534613766343464363334613234376437653163376665222c226964223a224143544f522d6a657272792d30303030222c226f7574636f6d65223a224c4f43414c5f434f4e54524143545f4f4e4c59222c22726f69223a2232342e303030303030227d5d2c2266636f5f696473223a5b224143544f522d6a657272792d30303030225d7d7d",
+      "leaf": "0493095d504cc1292b4e6a6d1d2a55a85b9ceafdc977f7a4d051bfea4131d8d3",
+      "proof": [
+        {
+          "hash": "27e14802b84583e6184d18db6f86d2a31eaeddfdd922f52387462ed27b8421e0",
+          "side": "left"
+        },
+        {
+          "hash": "3e24527ee0c15babd6cb072e3e5d68982046592d70cfccd175fb7388c86a7be8",
+          "side": "right"
+        },
+        {
+          "hash": "a9db104a8e21162dc7eee345c8a8a873d5669abd7b4074d0f9e83f2fd049a046",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "ROI-jerry",
+        "kind": "ActorROIAggregate",
+        "payload": {
+          "actor_id": "jerry",
+          "aggregate_roi": {
+            "benefit_units": "0.25",
+            "cost_units": "0.01",
+            "observed_outcome": "COMPUTED",
+            "roi": "24.000000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          },
+          "event_count": 1,
+          "events": [
+            {
+              "action": "band_security_review",
+              "fco_candidate_sha256": "08f3a0fd0b7f0d12360966d3f2d144519d7516610e4a7f44d634a247d7e1c7fe",
+              "id": "ACTOR-jerry-0000",
+              "outcome": "LOCAL_CONTRACT_ONLY",
+              "roi": "24.000000"
+            }
+          ],
+          "fco_ids": [
+            "ACTOR-jerry-0000"
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d7363616e6e6572222c226b696e64223a224163746f72524f49416767726567617465222c227061796c6f6164223a7b226163746f725f6964223a227363616e6e6572222c226167677265676174655f726f69223a7b2262656e656669745f756e697473223a22302e3235222c22636f73745f756e697473223a22302e3032222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a2231312e353030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d2c226576656e745f636f756e74223a322c226576656e7473223a5b7b22616374696f6e223a22736b696c6c5f7363616e5f636f6d706c65746564222c2266636f5f63616e6469646174655f736861323536223a2265306239323637643437343364323338316131336364396335306430386539623538656633346361376562616661366562306137653363396532366466333162222c226964223a224143544f522d7363616e6e65722d30303030222c226f7574636f6d65223a224c4f43414c5f434f4e54524143545f4f4e4c59222c22726f69223a2232342e303030303030227d2c7b22616374696f6e223a22736b696c6c5f7363616e5f636f6d706c65746564222c2266636f5f63616e6469646174655f736861323536223a2239613362653833353734353061626135383433623336323336633962363263303238343439356637646164336238346237643138636132633233393732353533222c226964223a224143544f522d7363616e6e65722d30303031222c226f7574636f6d65223a2244454e494544222c22726f69223a222d312e303030303030227d5d2c2266636f5f696473223a5b224143544f522d7363616e6e65722d30303030222c224143544f522d7363616e6e65722d30303031225d7d7d",
+      "leaf": "0965a36612788f0dad0f32ebc8c587165195f5125327088742d976857e85afe8",
+      "proof": [
+        {
+          "hash": "13e8f2695e235472a7b97dcc61cd71c54e27354fb462d2bed580171cec179c4d",
+          "side": "right"
+        },
+        {
+          "hash": "008bd41e75d787e41a3b52a105e047ab97270f02848c06861063d6337a90f521",
+          "side": "left"
+        },
+        {
+          "hash": "a9db104a8e21162dc7eee345c8a8a873d5669abd7b4074d0f9e83f2fd049a046",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "ROI-scanner",
+        "kind": "ActorROIAggregate",
+        "payload": {
+          "actor_id": "scanner",
+          "aggregate_roi": {
+            "benefit_units": "0.25",
+            "cost_units": "0.02",
+            "observed_outcome": "COMPUTED",
+            "roi": "11.500000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          },
+          "event_count": 2,
+          "events": [
+            {
+              "action": "skill_scan_completed",
+              "fco_candidate_sha256": "e0b9267d4743d2381a13cd9c50d08e9b58ef34ca7ebafa6eb0a7e3c9e26df31b",
+              "id": "ACTOR-scanner-0000",
+              "outcome": "LOCAL_CONTRACT_ONLY",
+              "roi": "24.000000"
+            },
+            {
+              "action": "skill_scan_completed",
+              "fco_candidate_sha256": "9a3be8357450aba5843b36236c9b62c0284495f7dad3b84b7d18ca2c23972553",
+              "id": "ACTOR-scanner-0001",
+              "outcome": "DENIED",
+              "roi": "-1.000000"
+            }
+          ],
+          "fco_ids": [
+            "ACTOR-scanner-0000",
+            "ACTOR-scanner-0001"
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22524f492d746f6d222c226b696e64223a224163746f72524f49416767726567617465222c227061796c6f6164223a7b226163746f725f6964223a22746f6d222c226167677265676174655f726f69223a7b2262656e656669745f756e697473223a22302e3235222c22636f73745f756e697473223a22302e3032222c226f627365727665645f6f7574636f6d65223a22434f4d5055544544222c22726f69223a2231312e353030303030222c22726f695f6261736973223a222862656e656669745f756e697473202d20636f73745f756e69747329202f20636f73745f756e697473222c22726f756e64696e67223a22524f554e445f48414c465f4556454e5f746f5f366470227d2c226576656e745f636f756e74223a312c226576656e7473223a5b7b22616374696f6e223a2262616e645f73656375726974795f726576696577222c2266636f5f63616e6469646174655f736861323536223a2239653633633062306365326133333739333431383336313237636165333331633930383337386563656631323035616131663464376464653635613035643931222c226964223a224143544f522d746f6d2d30303030222c226f7574636f6d65223a224c4f43414c5f434f4e54524143545f4f4e4c59222c22726f69223a2231312e353030303030227d5d2c2266636f5f696473223a5b224143544f522d746f6d2d30303030225d7d7d",
+      "leaf": "13e8f2695e235472a7b97dcc61cd71c54e27354fb462d2bed580171cec179c4d",
+      "proof": [
+        {
+          "hash": "0965a36612788f0dad0f32ebc8c587165195f5125327088742d976857e85afe8",
+          "side": "left"
+        },
+        {
+          "hash": "008bd41e75d787e41a3b52a105e047ab97270f02848c06861063d6337a90f521",
+          "side": "left"
+        },
+        {
+          "hash": "a9db104a8e21162dc7eee345c8a8a873d5669abd7b4074d0f9e83f2fd049a046",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "ROI-tom",
+        "kind": "ActorROIAggregate",
+        "payload": {
+          "actor_id": "tom",
+          "aggregate_roi": {
+            "benefit_units": "0.25",
+            "cost_units": "0.02",
+            "observed_outcome": "COMPUTED",
+            "roi": "11.500000",
+            "roi_basis": "(benefit_units - cost_units) / cost_units",
+            "rounding": "ROUND_HALF_EVEN_to_6dp"
+          },
+          "event_count": 1,
+          "events": [
+            {
+              "action": "band_security_review",
+              "fco_candidate_sha256": "9e63c0b0ce2a3379341836127cae331c908378ecef1205aa1f4d7dde65a05d91",
+              "id": "ACTOR-tom-0000",
+              "outcome": "LOCAL_CONTRACT_ONLY",
+              "roi": "11.500000"
+            }
+          ],
+          "fco_ids": [
+            "ACTOR-tom-0000"
+          ]
+        }
+      }
+    }
+  ],
+  "meaning": "Candidate MMR-shaped Merkle over actor FCOs/FCG with deterministic ROI; not an Overwatch MMR commitment",
+  "mmr": "NOT_COMMITTED",
+  "mmr_peaks_candidate": [
+    "3733415782046c35b677ee16f2cf79a507626078c1327100951143aa8cd2317f",
+    "645dfa6d33040791825c8dbc0b237fb5790a40ada6ac75ea894d33d531d33724",
+    "31a3632861b0c17c29efbdd53744faa8cf9190594ccbcead1d36296f3cb61d2a",
+    "7f218a1f402eb155a7dacf22fc30a81dd4c076b84dd41b74af36886b75ed7b44",
+    "92940537b5fc82e0e81fe20ff16e43b39a5146c4ac1da6458cd544931ee66fa1",
+    "8d377fb02e2a67cfc8127017345d426924ffaf118159119a4c971a8ba306eb72",
+    "0bf750f577b3a01907ba6a40cfbcc2f499a225827d6fca6a6ab436ea91879589",
+    "5ef4001adb0aaf3b3b41693662ad98e2c19d5f00963302f367e4aca9e7683730",
+    "27e14802b84583e6184d18db6f86d2a31eaeddfdd922f52387462ed27b8421e0",
+    "0493095d504cc1292b4e6a6d1d2a55a85b9ceafdc977f7a4d051bfea4131d8d3",
+    "0965a36612788f0dad0f32ebc8c587165195f5125327088742d976857e85afe8",
+    "13e8f2695e235472a7b97dcc61cd71c54e27354fb462d2bed580171cec179c4d"
+  ],
+  "parent": "SNEAK-019",
+  "root": "83e03fdc47de0a2d20ceb2e50da12176ba68b32fd445de127fe4ce22cbad2432",
+  "root_recompute": "83e03fdc47de0a2d20ceb2e50da12176ba68b32fd445de127fe4ce22cbad2432",
+  "schema": "sneak.actor-audit-mmr-candidate.v1",
+  "signed": false
+}

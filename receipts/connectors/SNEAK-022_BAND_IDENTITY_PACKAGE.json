@@ -1,0 +1,476 @@
+{
+  "agent_acks": [
+    {
+      "id": "84a6c57c-ae1a-4586-8d1c-e6f30c3f558e",
+      "preview": "ACK from Tom. Handle: @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]]/tom. I'm in room 7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3 (my workspace directory is named for it). I have no tool that reads the board or its task count, so I can't confirm \"active tasks = 1\" myself. I printed no secret"
+    },
+    {
+      "id": "4869ca23-a80b-408f-b21b-61c215b81b88",
+      "preview": "{\"name\": \"band_send_message\", \"args\": {\"content\": \"ACK from Tom. Handle: @biobitworks/tom. I'm in room 7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3 (my workspace directory is named for it). I have no tool that reads the board or its task count, so I can't confirm \\\"active tasks = 1\\\" mys"
+    },
+    {
+      "id": "abdd5ef5-f523-4042-b08a-d770c086832a",
+      "preview": "ACK again from Jerry \ud83d\udc2d \u2014 handle @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]]/jerry. I'm in this room (working dir is named for 7e218ad7-...), but I can't independently verify the task count \u2014 no board tool on my side. No secrets printed \ud83e\uddc0"
+    },
+    {
+      "id": "a92eb19f-6483-4343-acec-c7846a4fc7a8",
+      "preview": "{\"name\": \"band_send_message\", \"args\": {\"content\": \"ACK again from Jerry \\ud83d\\udc2d \\u2014 handle @biobitworks/jerry. I'm in this room (working dir is named for 7e218ad7-...), but I can't independently verify the task count \\u2014 no board tool on my side. No secrets printed \\ud"
+    },
+    {
+      "id": "2226f18e-4aa5-4f60-b731-a9275fceaae3",
+      "preview": "ACK from Tom. Handle: @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]]/tom. I'm in the room and can see your SNEAK-022 message. I can't confirm the Tasks board item, though. I only have chat tools (send message, participants, peers, events), and nothing for reading the board. So I can't"
+    },
+    {
+      "id": "b3291242-72ea-4cfa-8195-5d76988f1c43",
+      "preview": "{\"name\": \"band_send_message\", \"args\": {\"content\": \"ACK from Tom. Handle: @biobitworks/tom. I'm in the room and can see your SNEAK-022 message. I can't confirm the Tasks board item, though. I only have chat tools (send message, participants, peers, events), and nothing for reading"
+    },
+    {
+      "id": "9073d5e6-efe5-4e8f-aa5c-bf0872bf8878",
+      "preview": "ACK from Jerry \ud83d\udc2d \u2014 handle @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]]/jerry. I can see the room roster (you, Chirag, both Toms, both Jerrys). But I have no tool for the Tasks board, so I can't confirm I see task #1 \u2014 I only know about it from your message. No secrets printed \ud83e\uddc0"
+    },
+    {
+      "id": "19e2f231-929e-4aa5-85cd-af554fbc4753",
+      "preview": "{\"name\": \"band_send_message\", \"args\": {\"content\": \"ACK from Jerry \\ud83d\\udc2d \\u2014 handle @biobitworks/jerry. I can see the room roster (you, Chirag, both Toms, both Jerrys). But I have no tool for the Tasks board, so I can't confirm I see task #1 \\u2014 I only know about it f"
+    }
+  ],
+  "artifact_digest": "bb9028544a7953bfc831b722749f5594df0cd36f39648d5179e637a03986d7ee",
+  "auth": {
+    "api_key_present": true,
+    "desktop_band_cli": {
+      "available_in_cloud_vm": false,
+      "docs": "https://docs.band.ai/jam",
+      "reason": "band CLI is bundled with Band Desktop/jamd (localhost); not installed on this Linux cloud agent"
+    },
+    "me": {
+      "handle": "biobitworks",
+      "http_status": 200,
+      "ok": true,
+      "user_id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1"
+    },
+    "method": "BAND_USER_API_KEY via Human API (app.band.ai/api/v1/me)"
+  },
+  "board_goal": {
+    "board": null,
+    "http_status": 404,
+    "note": "Goal/board GET is documented on Agent API; Human API may return 404",
+    "observed_outcome": "NOT_EXPOSED_ON_HUMAN_API",
+    "ok": false,
+    "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3"
+  },
+  "chats": [
+    {
+      "agents": [
+        {
+          "handle": "biobitworks/tom",
+          "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+          "name": "Tom",
+          "type": "Agent"
+        },
+        {
+          "handle": "biobitworks/jerry",
+          "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+          "name": "Jerry",
+          "type": "Agent"
+        },
+        {
+          "handle": "cmanjesh/jerry",
+          "id": "0415f9ec-2d1b-4726-934b-8d7362ad69af",
+          "name": "Jerry",
+          "type": "Agent"
+        },
+        {
+          "handle": "cmanjesh/tom",
+          "id": "3f8ab94b-e5b4-40a9-b188-0cd2885cc98e",
+          "name": "Tom",
+          "type": "Agent"
+        },
+        {
+          "handle": "cmanjesh/planner",
+          "id": "ca71b60f-97be-4b03-8ed8-8b95f8b805ed",
+          "name": "Planner",
+          "type": "Agent"
+        }
+      ],
+      "id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+      "inserted_at": "2026-10-20T20:54:49.501697Z",
+      "last_message_at": "2026-10-20T20:57:54.311260Z",
+      "status": "active",
+      "task_counts": {
+        "blocked": 0,
+        "completed": 0,
+        "failed": 0,
+        "in_progress": 0,
+        "in_review": 0,
+        "pending": 1
+      },
+      "task_id": null,
+      "title": "New Session",
+      "type": "direct",
+      "work_status": "idle"
+    },
+    {
+      "agents": [
+        {
+          "handle": "biobitworks/tom",
+          "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+          "name": "Tom",
+          "type": "Agent"
+        },
+        {
+          "handle": "biobitworks/jerry",
+          "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+          "name": "Jerry",
+          "type": "Agent"
+        },
+        {
+          "handle": "cmanjesh/jerry",
+          "id": "0415f9ec-2d1b-4726-934b-8d7362ad69af",
+          "name": "Jerry",
+          "type": "Agent"
+        },
+        {
+          "handle": "cmanjesh/tom",
+          "id": "3f8ab94b-e5b4-40a9-b188-0cd2885cc98e",
+          "name": "Tom",
+          "type": "Agent"
+        }
+      ],
+      "id": "6ccd7685-f7bc-4d6c-9dbc-785777a258a8",
+      "inserted_at": "2026-10-20T20:28:43.256807Z",
+      "last_message_at": "2026-10-20T20:29:56.422212Z",
+      "status": "active",
+      "task_counts": {
+        "blocked": 0,
+        "completed": 0,
+        "failed": 0,
+        "in_progress": 0,
+        "in_review": 0,
+        "pending": 0
+      },
+      "task_id": null,
+      "title": "New Session",
+      "type": "direct",
+      "work_status": "idle"
+    },
+    {
+      "agents": [
+        {
+          "handle": "biobitworks/tom",
+          "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+          "name": "Tom",
+          "type": "Agent"
+        },
+        {
+          "handle": "biobitworks/jerry",
+          "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+          "name": "Jerry",
+          "type": "Agent"
+        },
+        {
+          "handle": "cmanjesh/tom",
+          "id": "3f8ab94b-e5b4-40a9-b188-0cd2885cc98e",
+          "name": "Tom",
+          "type": "Agent"
+        },
+        {
+          "handle": "cmanjesh/jerry",
+          "id": "0415f9ec-2d1b-4726-934b-8d7362ad69af",
+          "name": "Jerry",
+          "type": "Agent"
+        }
+      ],
+      "id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+      "inserted_at": "2026-10-20T18:59:24.352064Z",
+      "last_message_at": "2026-10-20T20:33:40.848012Z",
+      "status": "active",
+      "task_counts": {
+        "blocked": 0,
+        "completed": 0,
+        "failed": 0,
+        "in_progress": 0,
+        "in_review": 0,
+        "pending": 1
+      },
+      "task_id": null,
+      "title": "Sneak \u2014 Requirements & Custody",
+      "type": "direct",
+      "work_status": "idle"
+    },
+    {
+      "agents": [],
+      "id": "e39c6485-9cdc-4f04-a3da-31b4b4f46f38",
+      "inserted_at": "2026-10-20T18:05:32.964332Z",
+      "last_message_at": null,
+      "status": "active",
+      "task_counts": {
+        "blocked": 0,
+        "completed": 0,
+        "failed": 0,
+        "in_progress": 0,
+        "in_review": 0,
+        "pending": 0
+      },
+      "task_id": null,
+      "title": "New Session",
+      "type": "direct",
+      "work_status": "idle"
+    },
+    {
+      "agents": [],
+      "id": "772ad1dc-48d4-44fd-9af1-ba06ee0ac415",
+      "inserted_at": "2026-10-20T18:05:32.658006Z",
+      "last_message_at": null,
+      "status": "active",
+      "task_counts": {
+        "blocked": 0,
+        "completed": 0,
+        "failed": 0,
+        "in_progress": 0,
+        "in_review": 0,
+        "pending": 0
+      },
+      "task_id": null,
+      "title": "New Session",
+      "type": "direct",
+      "work_status": "idle"
+    }
+  ],
+  "default_sneak_room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+  "empty_board_explanation": "UI 'No active tasks' matches GET /chats/{id}/tasks returning []. Filing POST {subject,detail} creates an active shared board task.",
+  "id": "SNEAK-022-BAND-IDENTITY-VERIFY",
+  "identity_checks": [
+    {
+      "configured": {
+        "handle": "biobitworks/tom",
+        "harness": "claude",
+        "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+        "name": "Tom",
+        "role": "architect"
+      },
+      "harness": "claude",
+      "id_match": true,
+      "live_agent_record": {
+        "handle": null,
+        "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+        "is_external": true,
+        "name": "Tom",
+        "slug": "tom"
+      },
+      "name_match": true
+    },
+    {
+      "configured": {
+        "handle": "biobitworks/jerry",
+        "harness": "chatgpt",
+        "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+        "name": "Jerry",
+        "role": "builder"
+      },
+      "harness": "chatgpt",
+      "id_match": true,
+      "live_agent_record": {
+        "handle": null,
+        "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+        "is_external": true,
+        "name": "Jerry",
+        "slug": "jerry"
+      },
+      "name_match": true
+    }
+  ],
+  "meaning": "Live BAND room/board/agent identity verification; not SIGNED/MMR",
+  "mention": {
+    "http_status": 201,
+    "message_id": "6b7cfbaa-f962-48ec-b075-afe7469bdda1",
+    "ok": true,
+    "recipients": [
+      {
+        "harness": "claude",
+        "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+        "name": "Tom"
+      },
+      {
+        "harness": "chatgpt",
+        "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+        "name": "Jerry"
+      }
+    ]
+  },
+  "owned_agents": [
+    {
+      "handle": null,
+      "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+      "is_external": true,
+      "name": "Jerry",
+      "slug": "jerry"
+    },
+    {
+      "handle": null,
+      "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+      "is_external": true,
+      "name": "Tom",
+      "slug": "tom"
+    }
+  ],
+  "parent": "SNEAK-021",
+  "participants_target_room": [
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/jerry",
+      "id": "0415f9ec-2d1b-4726-934b-8d7362ad69af",
+      "name": "Jerry",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": null,
+      "handle": "biobitworks",
+      "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+      "name": "Byron Lee",
+      "online": true,
+      "type": "User"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "biobitworks/tom",
+      "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+      "name": "Tom",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/tom",
+      "id": "3f8ab94b-e5b4-40a9-b188-0cd2885cc98e",
+      "name": "Tom",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": null,
+      "handle": "cmanjesh",
+      "id": "7ee7bf0f-fb32-4e11-8eb8-2c7516ca49f6",
+      "name": "Chirag Manjeshwar",
+      "online": true,
+      "type": "User"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "biobitworks/jerry",
+      "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+      "name": "Jerry",
+      "online": true,
+      "type": "Agent"
+    },
+    {
+      "connection_status": "connected",
+      "handle": "cmanjesh/planner",
+      "id": "ca71b60f-97be-4b03-8ed8-8b95f8b805ed",
+      "name": "Planner",
+      "online": true,
+      "type": "Agent"
+    }
+  ],
+  "secrets": {
+    "env_overrides_present": [
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "file_exists": true,
+    "file_mode": "0o600",
+    "keys_present": [
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "parent_exists": true,
+    "parent_mode": "0o700",
+    "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+    "value_inspected": false
+  },
+  "sneak_room_tasks": {
+    "active_count": 1,
+    "http_status": 200,
+    "observed_outcome": "PASS",
+    "ok": true,
+    "room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+    "tasks": [
+      {
+        "assignments": [],
+        "chat_room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+        "created_by": {
+          "handle": "biobitworks",
+          "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+          "name": "Byron Lee",
+          "type": "User"
+        },
+        "detail": "Filed by cloud agent after Human API auth. Empty board observed; verifying identities.",
+        "id": "ca9150ff-11f1-4918-84bc-60411cdb8725",
+        "inserted_at": "2026-10-20T20:57:11.847376Z",
+        "number": 1,
+        "overall_status": "pending",
+        "state": "active",
+        "subject": "SNEAK-022 authenticate and verify room/board/agents",
+        "updated_at": "2026-10-20T20:57:11.847376Z"
+      }
+    ]
+  },
+  "sneak_task_created": null,
+  "target_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+  "task_created": null,
+  "tasks_after": {
+    "active_count": 1,
+    "http_status": 200,
+    "observed_outcome": "PASS",
+    "ok": true,
+    "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+    "tasks": [
+      {
+        "assignments": [],
+        "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+        "created_by": {
+          "handle": "biobitworks",
+          "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+          "name": "Byron Lee",
+          "type": "User"
+        },
+        "detail": "Filed by cloud agent after Human API auth. Empty board observed; verifying identities.",
+        "id": "f288f997-3bd5-4ee2-8519-1f136a6b7bf0",
+        "inserted_at": "2026-10-20T20:57:11.694702Z",
+        "number": 1,
+        "overall_status": "pending",
+        "state": "active",
+        "subject": "SNEAK-022 authenticate and verify room/board/agents",
+        "updated_at": "2026-10-20T20:57:11.694702Z"
+      }
+    ]
+  },
+  "tasks_before": {
+    "active_count": 1,
+    "http_status": 200,
+    "observed_outcome": "PASS",
+    "ok": true,
+    "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+    "tasks": [
+      {
+        "assignments": [],
+        "chat_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+        "created_by": {
+          "handle": "biobitworks",
+          "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+          "name": "Byron Lee",
+          "type": "User"
+        },
+        "detail": "Filed by cloud agent after Human API auth. Empty board observed; verifying identities.",
+        "id": "f288f997-3bd5-4ee2-8519-1f136a6b7bf0",
+        "inserted_at": "2026-10-20T20:57:11.694702Z",
+        "number": 1,
+        "overall_status": "pending",
+        "state": "active",
+        "subject": "SNEAK-022 authenticate and verify room/board/agents",
+        "updated_at": "2026-10-20T20:57:11.694702Z"
+      }
+    ]
+  }
+}

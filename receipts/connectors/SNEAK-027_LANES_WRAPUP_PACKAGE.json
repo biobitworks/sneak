@@ -1,0 +1,180 @@
+{
+  "artifact_digest": "32b0b453ccc793b64eebde953588828bfd08a1543bfb860c14b935013339c655",
+  "bonus_awarded": false,
+  "desktop_cli": {
+    "magicpro": {
+      "band_app": "RUNNING",
+      "band_cli": "PRESENT",
+      "next": "band init",
+      "signed_in": false,
+      "whoami": "record not found"
+    },
+    "magicstudio": {
+      "band_app": "MISSING",
+      "band_cli": "MISSING",
+      "signed_in": false
+    },
+    "tom_jerry_weigh_in_on_host_choice": "NOT_OBSERVED"
+  },
+  "human_gates_open": [
+    "CHECKOFF-6-Chirag",
+    "CHECKOFF-7-Byron",
+    "band-init-host-choice"
+  ],
+  "id": "SNEAK-027",
+  "lanes": [
+    {
+      "executed": true,
+      "id": "band-human-api",
+      "implemented": true,
+      "not_tested": [
+        "desktop_band_cli_signed_in"
+      ],
+      "observed_outcome": "PASS",
+      "supported_by": [
+        "SNEAK-022"
+      ]
+    },
+    {
+      "executed": true,
+      "id": "planner-remote-checkoffs",
+      "implemented": true,
+      "not_tested": [
+        "human_checkoff_6",
+        "human_checkoff_7"
+      ],
+      "observed_outcome": "PASS",
+      "supported_by": [
+        "SNEAK-023"
+      ]
+    },
+    {
+      "executed": true,
+      "id": "conversation-custody",
+      "implemented": true,
+      "not_tested": [
+        "live_liquid_openjev_inference",
+        "mmr_committed"
+      ],
+      "observed_outcome": "PASS",
+      "supported_by": [
+        "SNEAK-024"
+      ]
+    },
+    {
+      "executed": true,
+      "id": "planner-websocket-runtime",
+      "implemented": true,
+      "observed_outcome": "PASS",
+      "supported_by": [
+        "SNEAK-025"
+      ]
+    },
+    {
+      "executed": true,
+      "id": "planner-onboarding",
+      "implemented": true,
+      "observed_outcome": "PASS",
+      "supported_by": [
+        "SNEAK-026"
+      ]
+    },
+    {
+      "executed": false,
+      "id": "claude-tom",
+      "implemented": true,
+      "not_tested": [
+        "board_task_3_complete",
+        "desktop_cli_host_choice_weigh_in"
+      ],
+      "observed_outcome": "CHAT_ACK_ONLY",
+      "supported_by": [
+        "SNEAK-025",
+        "SNEAK-026"
+      ]
+    },
+    {
+      "executed": false,
+      "id": "chatgpt-jerry",
+      "implemented": true,
+      "not_tested": [
+        "board_task_4_complete",
+        "desktop_cli_host_choice_weigh_in"
+      ],
+      "observed_outcome": "CHAT_ACK_ONLY",
+      "supported_by": [
+        "SNEAK-025",
+        "SNEAK-026"
+      ]
+    },
+    {
+      "executed": true,
+      "id": "cognee-memory",
+      "implemented": true,
+      "observed_outcome": "PASS",
+      "supported_by": [
+        "SNEAK-024"
+      ]
+    },
+    {
+      "bonus_awarded": false,
+      "executed": false,
+      "id": "snyk-javier-bonus",
+      "implemented": true,
+      "not_tested": [
+        "live_snyk_token_scan"
+      ],
+      "observed_outcome": "EVIDENCE_PREPARED",
+      "supported_by": [
+        "bonus_receipts"
+      ]
+    },
+    {
+      "executed": true,
+      "id": "flexprice-actor-audit",
+      "implemented": true,
+      "observed_outcome": "LOCAL_CONTRACT",
+      "supported_by": [
+        "SNEAK-020"
+      ]
+    },
+    {
+      "executed": false,
+      "id": "liquid-openjev-longmemeval",
+      "implemented": true,
+      "not_tested": [
+        "live_liquid_key",
+        "live_openjev_key"
+      ],
+      "observed_outcome": "FIXTURE_OR_NOT_TESTED",
+      "supported_by": [
+        "SNEAK-021"
+      ]
+    },
+    {
+      "executed": true,
+      "id": "merkle-mmr-verify",
+      "implemented": true,
+      "not_tested": [
+        "overwatch_signed",
+        "mmr_committed"
+      ],
+      "observed_outcome": "PASS_CANDIDATE_ONLY",
+      "supported_by": [
+        "SNEAK-024",
+        "pytest"
+      ]
+    }
+  ],
+  "meaning": "Closeout taxonomy for all SNEAK lanes on PR cursor/snyk-bonus-lomo-band-0c2f; preserve NOT_TESTED and human gates",
+  "mmr": "NOT_COMMITTED",
+  "overall_plan_done": false,
+  "parent": "SNEAK-026",
+  "pr": {
+    "base": "main",
+    "branch": "cursor/snyk-bonus-lomo-band-0c2f",
+    "number": 10
+  },
+  "schema": "sneak.lanes-wrapup.v1",
+  "signed": false
+}

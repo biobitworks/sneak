@@ -1,0 +1,97 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-027",
+  "leaf_count": 3,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032372d4445534b544f50222c226b696e64223a226465736b746f705f636c69222c227061796c6f6164223a7b226d6167696370726f223a7b2262616e645f617070223a2252554e4e494e47222c2262616e645f636c69223a2250524553454e54222c226e657874223a2262616e6420696e6974222c227369676e65645f696e223a66616c73652c2277686f616d69223a227265636f7264206e6f7420666f756e64227d2c226d6167696373747564696f223a7b2262616e645f617070223a224d495353494e47222c2262616e645f636c69223a224d495353494e47222c227369676e65645f696e223a66616c73657d2c22746f6d5f6a657272795f77656967685f696e5f6f6e5f686f73745f63686f696365223a224e4f545f4f42534552564544227d7d",
+      "leaf": "4e04a744850b409504c1ca9f11588d2e2bf52181d8ac7b790f3578a8f286be76",
+      "proof": [
+        {
+          "hash": "b4a8553450f530f4a7eeea15ae96cf82e6b5938f43db1d54d6dbdd6b3f2eb383",
+          "side": "right"
+        },
+        {
+          "hash": "8cccc46361de218bf7d9e1fcb533071156c3ddbbbaad269b08ce7bb5c829384f",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-027-DESKTOP",
+        "kind": "desktop_cli",
+        "payload": {
+          "magicpro": {
+            "band_app": "RUNNING",
+            "band_cli": "PRESENT",
+            "next": "band init",
+            "signed_in": false,
+            "whoami": "record not found"
+          },
+          "magicstudio": {
+            "band_app": "MISSING",
+            "band_cli": "MISSING",
+            "signed_in": false
+          },
+          "tom_jerry_weigh_in_on_host_choice": "NOT_OBSERVED"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032372d4741544553222c226b696e64223a2268756d616e5f6761746573222c227061796c6f6164223a7b226f70656e223a5b22434845434b4f46462d362d436869726167222c22434845434b4f46462d372d4279726f6e222c2262616e642d696e69742d686f73742d63686f696365225d7d7d",
+      "leaf": "b4a8553450f530f4a7eeea15ae96cf82e6b5938f43db1d54d6dbdd6b3f2eb383",
+      "proof": [
+        {
+          "hash": "4e04a744850b409504c1ca9f11588d2e2bf52181d8ac7b790f3578a8f286be76",
+          "side": "left"
+        },
+        {
+          "hash": "8cccc46361de218bf7d9e1fcb533071156c3ddbbbaad269b08ce7bb5c829384f",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-027-GATES",
+        "kind": "human_gates",
+        "payload": {
+          "open": [
+            "CHECKOFF-6-Chirag",
+            "CHECKOFF-7-Byron",
+            "band-init-host-choice"
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032372d4c414e4553222c226b696e64223a226c616e6573222c227061796c6f6164223a7b22636f756e74223a31322c226f766572616c6c5f706c616e5f646f6e65223a66616c73657d7d",
+      "leaf": "8cccc46361de218bf7d9e1fcb533071156c3ddbbbaad269b08ce7bb5c829384f",
+      "proof": [
+        {
+          "hash": "df0e9e98c71e1a8ffa0b683836bdcebbec2248c5890d6b936566aec2edd25195",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-027-LANES",
+        "kind": "lanes",
+        "payload": {
+          "count": 12,
+          "overall_plan_done": false
+        }
+      }
+    }
+  ],
+  "meaning": "Closeout taxonomy for all SNEAK lanes on PR cursor/snyk-bonus-lomo-band-0c2f; preserve NOT_TESTED and human gates",
+  "mmr": "NOT_COMMITTED",
+  "package_digest": "32b0b453ccc793b64eebde953588828bfd08a1543bfb860c14b935013339c655",
+  "parent": "SNEAK-026",
+  "root": "ab74a50af70e46d2bce5d91bcce93a5d951eb46d81fde09de5c2626ef0a643ac",
+  "schema": "sneak.lanes-wrapup.v1",
+  "signed": false
+}

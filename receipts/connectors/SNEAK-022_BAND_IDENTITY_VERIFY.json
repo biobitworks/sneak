@@ -1,0 +1,210 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-022",
+  "leaf_count": 4,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032322d4147454e5453222c226b696e64223a2262616e645f6167656e7473222c227061796c6f6164223a7b226964656e746974795f636865636b73223a5b7b22636f6e66696775726564223a7b2268616e646c65223a2262696f626974776f726b732f746f6d222c226861726e657373223a22636c61756465222c226964223a2233393236323138642d383334322d343636372d396630372d356235353662353066623766222c226e616d65223a22546f6d222c22726f6c65223a22617263686974656374227d2c226861726e657373223a22636c61756465222c2269645f6d61746368223a747275652c226c6976655f6167656e745f7265636f7264223a7b2268616e646c65223a6e756c6c2c226964223a2233393236323138642d383334322d343636372d396630372d356235353662353066623766222c2269735f65787465726e616c223a747275652c226e616d65223a22546f6d222c22736c7567223a22746f6d227d2c226e616d655f6d61746368223a747275657d2c7b22636f6e66696775726564223a7b2268616e646c65223a2262696f626974776f726b732f6a65727279222c226861726e657373223a2263686174677074222c226964223a2238623531663239352d633265372d346161612d393964642d356632333335646361623439222c226e616d65223a224a65727279222c22726f6c65223a226275696c646572227d2c226861726e657373223a2263686174677074222c2269645f6d61746368223a747275652c226c6976655f6167656e745f7265636f7264223a7b2268616e646c65223a6e756c6c2c226964223a2238623531663239352d633265372d346161612d393964642d356632333335646361623439222c2269735f65787465726e616c223a747275652c226e616d65223a224a65727279222c22736c7567223a226a65727279227d2c226e616d655f6d61746368223a747275657d5d2c227061727469636970616e7473223a5b7b22636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c2268616e646c65223a22636d616e6a6573682f6a65727279222c226964223a2230343135663965632d326431622d343732362d393334622d386437333632616436396166222c226e616d65223a224a65727279222c226f6e6c696e65223a747275652c2274797065223a224167656e74227d2c7b22636f6e6e656374696f6e5f737461747573223a6e756c6c2c2268616e646c65223a2262696f626974776f726b73222c226964223a2230363639396635642d643535392d346266372d613630382d323232643162306662396131222c226e616d65223a224279726f6e204c6565222c226f6e6c696e65223a747275652c2274797065223a2255736572227d2c7b22636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c2268616e646c65223a2262696f626974776f726b732f746f6d222c226964223a2233393236323138642d383334322d343636372d396630372d356235353662353066623766222c226e616d65223a22546f6d222c226f6e6c696e65223a747275652c2274797065223a224167656e74227d2c7b22636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c2268616e646c65223a22636d616e6a6573682f746f6d222c226964223a2233663861623934622d653562342d343061392d623138382d306364323838356363393865222c226e616d65223a22546f6d222c226f6e6c696e65223a747275652c2274797065223a224167656e74227d2c7b22636f6e6e656374696f6e5f737461747573223a6e756c6c2c2268616e646c65223a22636d616e6a657368222c226964223a2237656537626630662d666233322d346531312d386562382d326337353136636134396636222c226e616d65223a22436869726167204d616e6a657368776172222c226f6e6c696e65223a747275652c2274797065223a2255736572227d2c7b22636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c2268616e646c65223a2262696f626974776f726b732f6a65727279222c226964223a2238623531663239352d633265372d346161612d393964642d356632333335646361623439222c226e616d65223a224a65727279222c226f6e6c696e65223a747275652c2274797065223a224167656e74227d2c7b22636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c2268616e646c65223a22636d616e6a6573682f706c616e6e6572222c226964223a2263613731623630662d393762652d346230332d386564382d386239356638623830356564222c226e616d65223a22506c616e6e6572222c226f6e6c696e65223a747275652c2274797065223a224167656e74227d5d7d7d",
+      "leaf": "9751bceff5d0736ea1cd993924c3cf8fceb92202631a4ef926d6c20939a9e5f1",
+      "proof": [
+        {
+          "hash": "6a98e34a1272076d0ae2e3779ea62a3aaab16187f4143be7127111274d121828",
+          "side": "right"
+        },
+        {
+          "hash": "007fe19eb685111a738c2116ed0e0d67b4194ebb7567f72bbbec83a707057df0",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-022-AGENTS",
+        "kind": "band_agents",
+        "payload": {
+          "identity_checks": [
+            {
+              "configured": {
+                "handle": "biobitworks/tom",
+                "harness": "claude",
+                "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+                "name": "Tom",
+                "role": "architect"
+              },
+              "harness": "claude",
+              "id_match": true,
+              "live_agent_record": {
+                "handle": null,
+                "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+                "is_external": true,
+                "name": "Tom",
+                "slug": "tom"
+              },
+              "name_match": true
+            },
+            {
+              "configured": {
+                "handle": "biobitworks/jerry",
+                "harness": "chatgpt",
+                "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+                "name": "Jerry",
+                "role": "builder"
+              },
+              "harness": "chatgpt",
+              "id_match": true,
+              "live_agent_record": {
+                "handle": null,
+                "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+                "is_external": true,
+                "name": "Jerry",
+                "slug": "jerry"
+              },
+              "name_match": true
+            }
+          ],
+          "participants": [
+            {
+              "connection_status": "connected",
+              "handle": "cmanjesh/jerry",
+              "id": "0415f9ec-2d1b-4726-934b-8d7362ad69af",
+              "name": "Jerry",
+              "online": true,
+              "type": "Agent"
+            },
+            {
+              "connection_status": null,
+              "handle": "biobitworks",
+              "id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1",
+              "name": "Byron Lee",
+              "online": true,
+              "type": "User"
+            },
+            {
+              "connection_status": "connected",
+              "handle": "biobitworks/tom",
+              "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+              "name": "Tom",
+              "online": true,
+              "type": "Agent"
+            },
+            {
+              "connection_status": "connected",
+              "handle": "cmanjesh/tom",
+              "id": "3f8ab94b-e5b4-40a9-b188-0cd2885cc98e",
+              "name": "Tom",
+              "online": true,
+              "type": "Agent"
+            },
+            {
+              "connection_status": null,
+              "handle": "cmanjesh",
+              "id": "7ee7bf0f-fb32-4e11-8eb8-2c7516ca49f6",
+              "name": "Chirag Manjeshwar",
+              "online": true,
+              "type": "User"
+            },
+            {
+              "connection_status": "connected",
+              "handle": "biobitworks/jerry",
+              "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+              "name": "Jerry",
+              "online": true,
+              "type": "Agent"
+            },
+            {
+              "connection_status": "connected",
+              "handle": "cmanjesh/planner",
+              "id": "ca71b60f-97be-4b03-8ed8-8b95f8b805ed",
+              "name": "Planner",
+              "online": true,
+              "type": "Agent"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032322d41555448222c226b696e64223a2262616e645f68756d616e5f6170695f61757468222c227061796c6f6164223a7b226465736b746f705f636c69223a66616c73652c2268616e646c65223a2262696f626974776f726b73222c226f6b223a747275652c22757365725f6964223a2230363639396635642d643535392d346266372d613630382d323232643162306662396131227d7d",
+      "leaf": "6a98e34a1272076d0ae2e3779ea62a3aaab16187f4143be7127111274d121828",
+      "proof": [
+        {
+          "hash": "9751bceff5d0736ea1cd993924c3cf8fceb92202631a4ef926d6c20939a9e5f1",
+          "side": "left"
+        },
+        {
+          "hash": "007fe19eb685111a738c2116ed0e0d67b4194ebb7567f72bbbec83a707057df0",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-022-AUTH",
+        "kind": "band_human_api_auth",
+        "payload": {
+          "desktop_cli": false,
+          "handle": "biobitworks",
+          "ok": true,
+          "user_id": "06699f5d-d559-4bf7-a608-222d1b0fb9a1"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032322d424f415244222c226b696e64223a2262616e645f7461736b735f626f617264222c227061796c6f6164223a7b22626f6172645f676f616c5f6f7574636f6d65223a224e4f545f4558504f5345445f4f4e5f48554d414e5f415049222c22637265617465645f7461736b5f6964223a6e756c6c2c227461736b735f61667465725f636f756e74223a312c227461736b735f6265666f72655f636f756e74223a317d7d",
+      "leaf": "90803210a25f702c22c28d125a7176de0280b01af034ab1ea3bb4669757a6c55",
+      "proof": [
+        {
+          "hash": "377f1f7d6f2f8437cb73b92eefd71e2e88bd7a54711089e39c739041956b4643",
+          "side": "right"
+        },
+        {
+          "hash": "fbd04df684df766e40804a4299a9c663baa22c7b9ba6a41bf27463e14a2633ad",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-022-BOARD",
+        "kind": "band_tasks_board",
+        "payload": {
+          "board_goal_outcome": "NOT_EXPOSED_ON_HUMAN_API",
+          "created_task_id": null,
+          "tasks_after_count": 1,
+          "tasks_before_count": 1
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032322d524f4f4d222c226b696e64223a2262616e645f726f6f6d222c227061796c6f6164223a7b22636861745f636f756e74223a352c22736e65616b5f726f6f6d5f6964223a2232306631656535662d366635622d343663352d393237312d306261353336643332326664222c227461726765745f726f6f6d5f6964223a2237653231386164372d346434652d346130372d613362322d643464623861303362346333227d7d",
+      "leaf": "377f1f7d6f2f8437cb73b92eefd71e2e88bd7a54711089e39c739041956b4643",
+      "proof": [
+        {
+          "hash": "90803210a25f702c22c28d125a7176de0280b01af034ab1ea3bb4669757a6c55",
+          "side": "left"
+        },
+        {
+          "hash": "fbd04df684df766e40804a4299a9c663baa22c7b9ba6a41bf27463e14a2633ad",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-022-ROOM",
+        "kind": "band_room",
+        "payload": {
+          "chat_count": 5,
+          "sneak_room_id": "20f1ee5f-6f5b-46c5-9271-0ba536d322fd",
+          "target_room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3"
+        }
+      }
+    }
+  ],
+  "meaning": "BAND Human API auth + verified room/agent IDs + filed shared task on empty board",
+  "mmr": "NOT_COMMITTED",
+  "package_digest": "9067e122b4f868bdba948747bdd7ec1851476eb5d5897ddccfb94318fbae33ce",
+  "parent": "SNEAK-021",
+  "root": "65d30d67c88d09357a09b25c12a0916e07ac1f7dd7e26f2fa5a13cda18ce1ae0",
+  "schema": "sneak.band-identity-verify.v1",
+  "signed": false
+}

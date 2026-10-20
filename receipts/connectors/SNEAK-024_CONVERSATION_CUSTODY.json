@@ -1,0 +1,293 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-024",
+  "leaf_count": 6,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032342d42414e44222c226b696e64223a2262616e645f61736b5f726573706f6e64222c227061796c6f6164223a7b226d6573736167655f6964223a2232663136653666322d356432622d346435332d393436642d623664323237303262303566222c226f6b223a747275652c22726f6f6d5f6964223a2237653231386164372d346434652d346130372d613362322d643464623861303362346333227d7d",
+      "leaf": "25ce2ded0c640eb9824b936e9a2af7e4009fce9f16307d10ab634f1a2e93e10e",
+      "proof": [
+        {
+          "hash": "d3394456e70c0974f0367276e04f38e5f07d892e3e94a24efa25a4e4991197e9",
+          "side": "right"
+        },
+        {
+          "hash": "0ea85b24afb1078aac89109eb8166073ea590f569092ed7564e653bbd6c1f9ed",
+          "side": "right"
+        },
+        {
+          "hash": "4b902d62fb0d1d9f8d70c7cd682f1f103fd74002fc9eeca6aee68c01b14d3ccd",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-024-BAND",
+        "kind": "band_ask_respond",
+        "payload": {
+          "message_id": "2f16e6f2-5d2b-4d53-946d-b6d22702b05f",
+          "ok": true,
+          "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032342d425053222c226b696e64223a22436f6e766572736174696f6e427265616b706f696e7473222c227061796c6f6164223a7b22636f756e74223a342c226661696c5f636f756e74223a312c22696473223a5b2242502d736e65616b3032342d6c69717569642d746f6d2d3031222c2242502d736e65616b3032342d6f70656e6a65762d6a657272792d3031222c2242502d736e65616b3032342d6c69717569642d746f6d2d3032222c2242502d736e65616b3032342d706c616e6e65722d3031225d2c22706173735f636f756e74223a337d7d",
+      "leaf": "d3394456e70c0974f0367276e04f38e5f07d892e3e94a24efa25a4e4991197e9",
+      "proof": [
+        {
+          "hash": "25ce2ded0c640eb9824b936e9a2af7e4009fce9f16307d10ab634f1a2e93e10e",
+          "side": "left"
+        },
+        {
+          "hash": "0ea85b24afb1078aac89109eb8166073ea590f569092ed7564e653bbd6c1f9ed",
+          "side": "right"
+        },
+        {
+          "hash": "4b902d62fb0d1d9f8d70c7cd682f1f103fd74002fc9eeca6aee68c01b14d3ccd",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-024-BPS",
+        "kind": "ConversationBreakpoints",
+        "payload": {
+          "count": 4,
+          "fail_count": 1,
+          "ids": [
+            "BP-sneak024-liquid-tom-01",
+            "BP-sneak024-openjev-jerry-01",
+            "BP-sneak024-liquid-tom-02",
+            "BP-sneak024-planner-01"
+          ],
+          "pass_count": 3
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032342d434f474e4545222c226b696e64223a22636f676e65655f64617461222c227061796c6f6164223a7b226f6b223a747275652c226f7574636f6d65223a2250415353227d7d",
+      "leaf": "5b674465fc10456b5af42d64ca2f9ab953b1e1f91bd43488bc2a6bf8de4949bb",
+      "proof": [
+        {
+          "hash": "7b4e18c10bfc44e8b53ad02abe5813b55d038e67d3232021472b24a4b5b84bbc",
+          "side": "right"
+        },
+        {
+          "hash": "959ae09014437d645b3a37f73fab2051d69c4e78d272ca5d0a6febdf55be1da8",
+          "side": "left"
+        },
+        {
+          "hash": "4b902d62fb0d1d9f8d70c7cd682f1f103fd74002fc9eeca6aee68c01b14d3ccd",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-024-COGNEE",
+        "kind": "cognee_data",
+        "payload": {
+          "ok": true,
+          "outcome": "PASS"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032342d4d4f44454c2d4d4d52222c226b696e64223a224d6f64656c4d4d52547261696c73222c227061796c6f6164223a7b226c69717569642d6c666d223a7b226c61746573745f726f6f74223a2238373836383333303331363961346161316231373538616637616139386437313066336230363066616266633031626138323335343361366166393535306435222c226d6d72223a224e4f545f434f4d4d4954544544222c227065616b5f636f756e74223a327d2c226f70656e6a6576223a7b226c61746573745f726f6f74223a2230306339653064363161326563663638646663313337343838346163356363316662613830616633363730616634633930343736346137383938333065343062222c226d6d72223a224e4f545f434f4d4d4954544544222c227065616b5f636f756e74223a317d2c22706c616e6e65722d72656d6f7465223a7b226c61746573745f726f6f74223a2265343934353066336666353132646536633531363331656537313638663839323039643538313538326233303638376465633938323062633730313963316438222c226d6d72223a224e4f545f434f4d4d4954544544222c227065616b5f636f756e74223a317d7d7d",
+      "leaf": "7b4e18c10bfc44e8b53ad02abe5813b55d038e67d3232021472b24a4b5b84bbc",
+      "proof": [
+        {
+          "hash": "5b674465fc10456b5af42d64ca2f9ab953b1e1f91bd43488bc2a6bf8de4949bb",
+          "side": "left"
+        },
+        {
+          "hash": "959ae09014437d645b3a37f73fab2051d69c4e78d272ca5d0a6febdf55be1da8",
+          "side": "left"
+        },
+        {
+          "hash": "4b902d62fb0d1d9f8d70c7cd682f1f103fd74002fc9eeca6aee68c01b14d3ccd",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-024-MODEL-MMR",
+        "kind": "ModelMMRTrails",
+        "payload": {
+          "liquid-lfm": {
+            "latest_root": "878683303169a4aa1b1758af7aa98d710f3b060fabfc01ba823543a6af9550d5",
+            "mmr": "NOT_COMMITTED",
+            "peak_count": 2
+          },
+          "openjev": {
+            "latest_root": "00c9e0d61a2ecf68dfc1374884ac5cc1fba80af3670af4c904764a789830e40b",
+            "mmr": "NOT_COMMITTED",
+            "peak_count": 1
+          },
+          "planner-remote": {
+            "latest_root": "e49450f3ff512de6c51631ee7168f89209d581582b30687dec9820bc7019c1d8",
+            "mmr": "NOT_COMMITTED",
+            "peak_count": 1
+          }
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032342d52455153222c226b696e64223a22637573746f64795f726571756972656d656e7473222c227061796c6f6164223a7b226d616e6461746f72795f70617373223a392c226d616e6461746f72795f746f74616c223a392c226f7074696f6e616c223a5b7b226964223a225245512d435553544f44592d3130222c226f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d435553544f44592d3131222c226f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d5d7d7d",
+      "leaf": "741e011315078222db863731103db700b1ce46d250ef22b37b4a5a35ab310b08",
+      "proof": [
+        {
+          "hash": "db29153f7c633382cb0479cbbb05d89da15297232f0db6e690446b745b1a010f",
+          "side": "right"
+        },
+        {
+          "hash": "4dfe6c011575a682af596a78cf30752f12a4b2720c1bdf8f88d7d6870a21bd45",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-024-REQS",
+        "kind": "custody_requirements",
+        "payload": {
+          "mandatory_pass": 9,
+          "mandatory_total": 9,
+          "optional": [
+            {
+              "id": "REQ-CUSTODY-10",
+              "outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-CUSTODY-11",
+              "outcome": "NOT_TESTED",
+              "verified": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032342d524f4f542d51222c226b696e64223a22526f6f745175657374696f6e46434f222c227061796c6f6164223a7b2266636f223a2232333663636562353039363535303331353366323565653065613232633665326134363539326561363936346637623838336563666565656366633164333764222c226c656166223a2231386132303535386532663166383334326337633765353335326639353139616630653137346662636136363530326535646132656132323465376137363334227d7d",
+      "leaf": "db29153f7c633382cb0479cbbb05d89da15297232f0db6e690446b745b1a010f",
+      "proof": [
+        {
+          "hash": "741e011315078222db863731103db700b1ce46d250ef22b37b4a5a35ab310b08",
+          "side": "left"
+        },
+        {
+          "hash": "4dfe6c011575a682af596a78cf30752f12a4b2720c1bdf8f88d7d6870a21bd45",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-024-ROOT-Q",
+        "kind": "RootQuestionFCO",
+        "payload": {
+          "fco": "236cceb50965503153f25ee0ea22c6e2a46592ea6964f7b883ecfeeecfc1d37d",
+          "leaf": "18a20558e2f1f8342c7c7e5352f9519af0e174fbca66502e5da2ea224e7a7634"
+        }
+      }
+    }
+  ],
+  "meaning": "Conversation custody ledger with unique true/false merkle breakpoints, per-model candidate MMR deltas vs root question, BAND+Cognee+planner loop",
+  "mmr": "NOT_COMMITTED",
+  "package_digest": "422032eeb18cf401edd8f59cdc4080a98e1470195986274987db15af6a70baef",
+  "parent": "SNEAK-023",
+  "project_root": "8987773f8f12d598d1d3ecda4b2a05a710ccc56005d011c443ba7bcdd426888f",
+  "requirements": [
+    {
+      "id": "REQ-CUSTODY-01",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Unique merkle breakpoints for each conversation so they reconnect at project end",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-02",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Each merkle breakpoint carries pass true|false",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-03",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Each model has candidate MMR vs root question with delta over time",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-04",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "input hashed \u2192 deterministic script steps/FCO \u2192 output hashed",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-05",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Updates hashed through FCO tracking successors",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-06",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "BAND used to ask and respond among agents",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-07",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Cognee @Data captures sneak custody information for breakpoints",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-08",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "All agents and planner updated in the conversation",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-09",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Check with planner in band.ai chat that has a planner",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-10",
+      "kind": "optional",
+      "observed_outcome": "NOT_TESTED",
+      "required_for_entry": false,
+      "statement": "Live model inference (Liquid/OpenJev) bound into custody turns",
+      "verified": false
+    },
+    {
+      "id": "REQ-CUSTODY-11",
+      "kind": "optional",
+      "observed_outcome": "NOT_TESTED",
+      "required_for_entry": false,
+      "statement": "Project MMR Overwatch commitment (SIGNED/MMR_COMMITTED)",
+      "verified": false
+    }
+  ],
+  "root": "254fb3ea994c4bd445b207a88dd0ee6babe72990dc36302f115edd2bbb6e0e29",
+  "schema": "sneak.conversation-custody.v1",
+  "signed": false
+}

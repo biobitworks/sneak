@@ -44,8 +44,8 @@ def main() -> int:
         band_msg = band.message_claude_and_chatgpt(
             "SNEAK-017: Cloud agent cannot reach magicSTUDIObox.local or Desktop Commander MCP. "
             "Please run on MagicStudio (or report output): "
-            "`ollama list` and `ollama run qwen2.5:0.5b 'Reply with exactly: OLLAMA_OK'` "
-            "plus same for qwen2.5:1.5b. Also confirm hostname. "
+            "`ollama list` and `ollama run lfm2.5:1.2b-instruct 'Reply with exactly: OLLAMA_OK'` "
+            "plus same for openjev:latest. Qwen 2.5 is retired. Also confirm hostname. "
             "We will bind results into @Data + LOMO score chain. "
             "Do not print secrets."
         )

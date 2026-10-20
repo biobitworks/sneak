@@ -28,9 +28,17 @@ DEFAULT_AGENTS = {
         "harness": "chatgpt",
         "role": "builder",
     },
+    "planner": {
+        "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+        "name": "Planner",
+        "handle": "biobitworks/planner",
+        "harness": "remote-external",
+        "role": "planner",
+    },
 }
 
 DEFAULT_ROOM_ID = "20f1ee5f-6f5b-46c5-9271-0ba536d322fd"
+PLANNER_ROOM_ID = "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3"
 
 
 class BandClient:
@@ -180,3 +188,122 @@ class BandClient:
                 }
             )
         return {"http_status": status, "messages": safe, "ok": status == 200}
+
+    def list_chats(self) -> dict[str, Any]:
+        status, body = self._request("GET", "/chats")
+        chats = (body or {}).get("data", []) if isinstance(body, dict) else []
+        safe = []
+        for ch in chats:
+            if not isinstance(ch, dict):
+                continue
+            safe.append(
+                {
+                    "id": ch.get("id"),
+                    "title": ch.get("title"),
+                    "type": ch.get("type"),
+                    "status": ch.get("status"),
+                    "work_status": ch.get("work_status"),
+                    "task_counts": ch.get("task_counts"),
+                    "task_id": ch.get("task_id"),
+                    "agents": [
+                        {k: a.get(k) for k in ("id", "name", "handle", "type")}
+                        for a in (ch.get("agents") or [])
+                        if isinstance(a, dict)
+                    ],
+                    "inserted_at": ch.get("inserted_at"),
+                    "last_message_at": ch.get("last_message_at"),
+                }
+            )
+        return {"http_status": status, "chats": safe, "ok": status == 200}
+
+    def list_tasks(self, room_id: Optional[str] = None, *, state: str = "active") -> dict[str, Any]:
+        """List shared tasks on a room board (Human API). Empty list = 'No active tasks'."""
+        rid = room_id or self.room_id
+        status, body = self._request("GET", f"/chats/{rid}/tasks?state={state}")
+        tasks = (body or {}).get("data", []) if isinstance(body, dict) else []
+        safe = []
+        for t in tasks:
+            if not isinstance(t, dict):
+                continue
+            safe.append(
+                {
+                    k: t.get(k)
+                    for k in (
+                        "id",
+                        "number",
+                        "subject",
+                        "detail",
+                        "overall_status",
+                        "state",
+                        "chat_room_id",
+                        "created_by",
+                        "assignments",
+                        "inserted_at",
+                        "updated_at",
+                    )
+                }
+            )
+        return {
+            "http_status": status,
+            "room_id": rid,
+            "tasks": safe,
+            "active_count": len(safe),
+            "ok": status == 200,
+            "observed_outcome": "EMPTY_BOARD" if status == 200 and not safe else ("PASS" if status == 200 else "FAIL"),
+        }
+
+    def create_task(
+        self,
+        subject: str,
+        *,
+        detail: Optional[str] = None,
+        room_id: Optional[str] = None,
+    ) -> dict[str, Any]:
+        """File a shared task on the room board (subject/detail schema)."""
+        rid = room_id or self.room_id
+        payload: dict[str, Any] = {"subject": subject}
+        if detail is not None:
+            payload["detail"] = detail
+        status, body = self._request("POST", f"/chats/{rid}/tasks", payload)
+        task = (body or {}).get("data") if isinstance(body, dict) else None
+        safe = None
+        if isinstance(task, dict):
+            safe = {
+                k: task.get(k)
+                for k in (
+                    "id",
+                    "number",
+                    "subject",
+                    "detail",
+                    "overall_status",
+                    "state",
+                    "chat_room_id",
+                    "created_by",
+                    "assignments",
+                )
+            }
+        return {
+            "http_status": status,
+            "ok": status in (200, 201),
+            "room_id": rid,
+            "task": safe,
+            "observed_outcome": "PASS" if status in (200, 201) else "FAIL",
+        }
+
+    def get_board(self, room_id: Optional[str] = None) -> dict[str, Any]:
+        """Room goal/board. Human API may 404 while Agent API supports /board."""
+        rid = room_id or self.room_id
+        status, body = self._request("GET", f"/chats/{rid}/board")
+        data = (body or {}).get("data") if isinstance(body, dict) else None
+        return {
+            "http_status": status,
+            "ok": status == 200,
+            "room_id": rid,
+            "board": data if isinstance(data, dict) else None,
+            "observed_outcome": (
+                "PASS"
+                if status == 200
+                else ("NOT_EXPOSED_ON_HUMAN_API" if status == 404 else "FAIL")
+            ),
+            "note": "Goal/board GET is documented on Agent API; Human API may return 404",
+        }

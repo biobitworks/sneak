@@ -1,0 +1,382 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "event_bonus_awarded": false,
+  "event_bonus_claim": "EVIDENCE_PREPARED",
+  "id": "SNEAK-019",
+  "leaf_count": 5,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031392d42414e44222c226b696e64223a2262616e645f726576696577222c227061796c6f6164223a7b2262616e645f6f7574636f6d65223a2250415353222c2262616e645f72656365697074223a2262616e645f6475616c5f6861726e6573735f6d6573736167652d636234323761326366393933222c226d6573736167655f6c656166223a2231316430353538616566306462346231663136316133653765306263306365306535316639346561643937636336353661366662366566306130616561313032222c226d6573736167655f726f6f74223a2231316430353538616566306462346231663136316133653765306263306365306535316639346561643937636336353661366662366566306130616561313032227d7d",
+      "leaf": "e06518d1d51b9e351129091359f15f923b08434d9c25d5c42185e7d6319cc33b",
+      "proof": [
+        {
+          "hash": "5ba65e61d55f0ebdbeae10cc6220b44baa7e5a3079b555640af7c9ceb986c3a3",
+          "side": "right"
+        },
+        {
+          "hash": "7b90206dac6b34cf71d0239c9aaebcda37ac3dba29da9f5ed6e4b25eebeef558",
+          "side": "right"
+        },
+        {
+          "hash": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-019-BAND",
+        "kind": "band_review",
+        "payload": {
+          "band_outcome": "PASS",
+          "band_receipt": "band_dual_harness_message-cb427a2cf993",
+          "message_leaf": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+          "message_root": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031392d4352495445524941222c226b696e64223a22626f6e75735f6372697465726961222c227061796c6f6164223a7b226372697465726961223a5b7b2265766964656e63655f6e6565646564223a225265616c20536e796b20696e746567726174696f6e2073686f776e20746f206a75646765733b206e6f74206175746f2d6177617264656420627920746f6f6c2073636f7265222c226964223a224a2d303037222c226b696e64223a224a554447494e475f424f4e5553222c226f627365727665645f6f7574636f6d65223a22574f524b464c4f575f494e54454752415445445f50454e44494e475f4c4956455f5343414e222c2273746174656d656e74223a22536e796b20626f6e757320757020746f202b313025222c22737461747573223a2245564944454e43455f5052455041524544222c227665726966696564223a66616c73657d2c7b2265766964656e63655f6e6565646564223a225363616e20626f756e6420746f2073746167656420646967657374202b204a61766965722070696e202b204c4f4d4f20627265616b706f696e7420726f6f7473222c226964223a22534e594b2d303031222c226b696e64223a22424f4e5553222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c2273746174656d656e74223a22536e796b207363616e20696e746567726174656420696e20776f726b666c6f7720776974682076657273696f6e65642072656365697074222c22737461747573223a225041525449414c222c227665726966696564223a66616c73657d2c7b2265766964656e63655f6e6565646564223a2242414e442073656375726974792068616e646f666673202b204044617461206d656d6f7279206f662066696e64696e67732f627265616b706f696e7473222c226964223a22534e594b2d303032222c226b696e64223a22424f4e5553222c226f627365727665645f6f7574636f6d65223a2242414e445f48414e444f4646535f414e445f434f474e45455f4c4553534f4e5f5245434f52444544222c2273746174656d656e74223a22536563757269747920726576696577657220626c6f636b7320756e7361666520776f726b20616e642073746f726573206c6573736f6e7320696e20436f676e6565222c22737461747573223a225041525449414c222c227665726966696564223a66616c73657d2c7b2265766964656e63655f6e6565646564223a224c697665205343412f53415354207768656e20534e594b5f544f4b454e2070726573656e743b20656c7365204e4f545f544553544544222c226964223a225245512d414f4b2d533031222c226b696e64223a22626f6e75735f73656c6563746564222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c2273746174656d656e74223a225573652061207265616c20536e796b207363616e6e696e672070726f64756374222c22737461747573223a225041525449414c222c227665726966696564223a66616c73657d2c7b2265766964656e63655f6e6565646564223a22617070732f73656375726974792d64656d6f2064696765737420626f756e6420696e746f2073636f7265207265636569707473222c226964223a225245512d414f4b2d533032222c226b696e64223a22626f6e75735f73656c6563746564222c226f627365727665645f6f7574636f6d65223a225354414745445f4449474553545f424f554e44222c2273746174656d656e74223a225363616e20746865206578616374206172746966616374206275696c7420627920746865206167656e7473222c22737461747573223a2250415353222c227665726966696564223a66616c73657d5d7d7d",
+      "leaf": "5ba65e61d55f0ebdbeae10cc6220b44baa7e5a3079b555640af7c9ceb986c3a3",
+      "proof": [
+        {
+          "hash": "e06518d1d51b9e351129091359f15f923b08434d9c25d5c42185e7d6319cc33b",
+          "side": "left"
+        },
+        {
+          "hash": "7b90206dac6b34cf71d0239c9aaebcda37ac3dba29da9f5ed6e4b25eebeef558",
+          "side": "right"
+        },
+        {
+          "hash": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-019-CRITERIA",
+        "kind": "bonus_criteria",
+        "payload": {
+          "criteria": [
+            {
+              "evidence_needed": "Real Snyk integration shown to judges; not auto-awarded by tool score",
+              "id": "J-007",
+              "kind": "JUDGING_BONUS",
+              "observed_outcome": "WORKFLOW_INTEGRATED_PENDING_LIVE_SCAN",
+              "statement": "Snyk bonus up to +10%",
+              "status": "EVIDENCE_PREPARED",
+              "verified": false
+            },
+            {
+              "evidence_needed": "Scan bound to staged digest + Javier pin + LOMO breakpoint roots",
+              "id": "SNYK-001",
+              "kind": "BONUS",
+              "observed_outcome": "NOT_TESTED",
+              "statement": "Snyk scan integrated in workflow with versioned receipt",
+              "status": "PARTIAL",
+              "verified": false
+            },
+            {
+              "evidence_needed": "BAND security handoffs + @Data memory of findings/breakpoints",
+              "id": "SNYK-002",
+              "kind": "BONUS",
+              "observed_outcome": "BAND_HANDOFFS_AND_COGNEE_LESSON_RECORDED",
+              "statement": "Security reviewer blocks unsafe work and stores lessons in Cognee",
+              "status": "PARTIAL",
+              "verified": false
+            },
+            {
+              "evidence_needed": "Live SCA/SAST when SNYK_TOKEN present; else NOT_TESTED",
+              "id": "REQ-AOK-S01",
+              "kind": "bonus_selected",
+              "observed_outcome": "NOT_TESTED",
+              "statement": "Use a real Snyk scanning product",
+              "status": "PARTIAL",
+              "verified": false
+            },
+            {
+              "evidence_needed": "apps/security-demo digest bound into score receipts",
+              "id": "REQ-AOK-S02",
+              "kind": "bonus_selected",
+              "observed_outcome": "STAGED_DIGEST_BOUND",
+              "statement": "Scan the exact artifact built by the agents",
+              "status": "PASS",
+              "verified": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031392d44415441222c226b696e64223a22636f676e65655f64617461222c227061796c6f6164223a7b226c6573736f6e5f6f7574636f6d65223a2250415353222c226c6573736f6e5f72656365697074223a22646174615f627265616b706f696e742d366237393764343230323535222c227061636b6167655f72656365697074223a22646174615f627265616b706f696e742d316363616637353838636232227d7d",
+      "leaf": "126288bcc8cc7bbbe60d092b62e6523ce94d2278d5080ed1b438ff334e823743",
+      "proof": [
+        {
+          "hash": "293d5b09040e721d8fb2b307467bfd3b4ce801521ba1ce5333585cb8ca08b9bc",
+          "side": "right"
+        },
+        {
+          "hash": "f01f04ef40398f12c6434182fd558bd07eab18e45f27cbffc8b082983fc48f6b",
+          "side": "left"
+        },
+        {
+          "hash": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-019-DATA",
+        "kind": "cognee_data",
+        "payload": {
+          "lesson_outcome": "PASS",
+          "lesson_receipt": "data_breakpoint-6b797d420255",
+          "package_receipt": "data_breakpoint-1ccaf7588cb2"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031392d4c4f4d4f222c226b696e64223a226c6f6d6f5f73636f72655f726f7773222c227061796c6f6164223a7b22726f7773223a5b7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22627265616b706f696e745f6964223a224c4f4d4f2d434f4e4e2d30312d42415345222c22636f7665726167655f6163636570746564223a66616c73652c226d65726b6c655f726f6f74223a2263303635326562323262656535663461633139393264396565353231363638643532373739613237343863383036353136376434616337643265343133353962222c227363616e5f6f7574636f6d65223a224e4f545f544553544544227d2c7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22627265616b706f696e745f6964223a224c4f4d4f2d434f4e4e2d30312d41424c415445222c22636f7665726167655f6163636570746564223a66616c73652c226d65726b6c655f726f6f74223a2238353033333139666130303038396636316230646231633439636161313730363664306564616366393666336232393336643431376237383962366231313638222c227363616e5f6f7574636f6d65223a224e4f545f544553544544227d2c7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22627265616b706f696e745f6964223a224c4f4d4f2d434f4e4e2d30322d42415345222c22636f7665726167655f6163636570746564223a66616c73652c226d65726b6c655f726f6f74223a2230363430306436363039396165323063353339616166616635313430663838326136313839633965306435633164303762393164336630653736613731373963222c227363616e5f6f7574636f6d65223a224e4f545f544553544544227d2c7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22627265616b706f696e745f6964223a224c4f4d4f2d434f4e4e2d30322d41424c415445222c22636f7665726167655f6163636570746564223a66616c73652c226d65726b6c655f726f6f74223a2232333339353766663034383964373135346365623730316236613065323439386538633337646534316261376263633133663739663561386465653932303030222c227363616e5f6f7574636f6d65223a224e4f545f544553544544227d2c7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22627265616b706f696e745f6964223a224c4f4d4f2d434f4e4e2d30332d42415345222c22636f7665726167655f6163636570746564223a66616c73652c226d65726b6c655f726f6f74223a2239343138306135373738663266643331663862303263353062303134356566363939376433653132656437326364636664376534636465383034383965363762222c227363616e5f6f7574636f6d65223a224e4f545f544553544544227d2c7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22627265616b706f696e745f6964223a224c4f4d4f2d434f4e4e2d30332d41424c415445222c22636f7665726167655f6163636570746564223a66616c73652c226d65726b6c655f726f6f74223a2230363135633566306333353737636261343637306232616338643536666132333163353062313061373961613232353661626332323032326634326366373161222c227363616e5f6f7574636f6d65223a224e4f545f544553544544227d2c7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22627265616b706f696e745f6964223a224c4f4d4f2d434f4e4e2d30342d42415345222c22636f7665726167655f6163636570746564223a66616c73652c226d65726b6c655f726f6f74223a2236616131353166383164363636336663653763363332663730636132613734366532333035356231316430653961316339343336636630666539383563356437222c227363616e5f6f7574636f6d65223a224e4f545f544553544544227d2c7b226170706c69636174696f6e5f73636f7265223a6e756c6c2c22627265616b706f696e745f6964223a224c4f4d4f2d434f4e4e2d30342d41424c415445222c22636f7665726167655f6163636570746564223a66616c73652c226d65726b6c655f726f6f74223a2262616635333861346666353739383630346564633837383130316661386237306235643237303736363237356361303237346664336363353631323761396432222c227363616e5f6f7574636f6d65223a224e4f545f544553544544227d5d7d7d",
+      "leaf": "293d5b09040e721d8fb2b307467bfd3b4ce801521ba1ce5333585cb8ca08b9bc",
+      "proof": [
+        {
+          "hash": "126288bcc8cc7bbbe60d092b62e6523ce94d2278d5080ed1b438ff334e823743",
+          "side": "left"
+        },
+        {
+          "hash": "f01f04ef40398f12c6434182fd558bd07eab18e45f27cbffc8b082983fc48f6b",
+          "side": "left"
+        },
+        {
+          "hash": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-019-LOMO",
+        "kind": "lomo_score_rows",
+        "payload": {
+          "rows": [
+            {
+              "application_score": null,
+              "breakpoint_id": "LOMO-CONN-01-BASE",
+              "coverage_accepted": false,
+              "merkle_root": "c0652eb22bee5f4ac1992d9ee521668d52779a2748c8065167d4ac7d2e41359b",
+              "scan_outcome": "NOT_TESTED"
+            },
+            {
+              "application_score": null,
+              "breakpoint_id": "LOMO-CONN-01-ABLATE",
+              "coverage_accepted": false,
+              "merkle_root": "8503319fa00089f61b0db1c49caa17066d0edacf96f3b2936d417b789b6b1168",
+              "scan_outcome": "NOT_TESTED"
+            },
+            {
+              "application_score": null,
+              "breakpoint_id": "LOMO-CONN-02-BASE",
+              "coverage_accepted": false,
+              "merkle_root": "06400d66099ae20c539aafaf5140f882a6189c9e0d5c1d07b91d3f0e76a7179c",
+              "scan_outcome": "NOT_TESTED"
+            },
+            {
+              "application_score": null,
+              "breakpoint_id": "LOMO-CONN-02-ABLATE",
+              "coverage_accepted": false,
+              "merkle_root": "233957ff0489d7154ceb701b6a0e2498e8c37de41ba7bcc13f79f5a8dee92000",
+              "scan_outcome": "NOT_TESTED"
+            },
+            {
+              "application_score": null,
+              "breakpoint_id": "LOMO-CONN-03-BASE",
+              "coverage_accepted": false,
+              "merkle_root": "94180a5778f2fd31f8b02c50b0145ef6997d3e12ed72cdcfd7e4cde80489e67b",
+              "scan_outcome": "NOT_TESTED"
+            },
+            {
+              "application_score": null,
+              "breakpoint_id": "LOMO-CONN-03-ABLATE",
+              "coverage_accepted": false,
+              "merkle_root": "0615c5f0c3577cba4670b2ac8d56fa231c50b10a79aa2256abc22022f42cf71a",
+              "scan_outcome": "NOT_TESTED"
+            },
+            {
+              "application_score": null,
+              "breakpoint_id": "LOMO-CONN-04-BASE",
+              "coverage_accepted": false,
+              "merkle_root": "6aa151f81d6663fce7c632f70ca2a746e23055b11d0e9a1c9436cf0fe985c5d7",
+              "scan_outcome": "NOT_TESTED"
+            },
+            {
+              "application_score": null,
+              "breakpoint_id": "LOMO-CONN-04-ABLATE",
+              "coverage_accepted": false,
+              "merkle_root": "baf538a4ff5798604edc878101fa8b70b5d270766275ca0274fd3cc56127a9d2",
+              "scan_outcome": "NOT_TESTED"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031392d53554d4d415259222c226b696e64223a22626f6e75735f73756d6d617279222c227061796c6f6164223a7b22627265616b706f696e7473223a382c226576656e745f626f6e75735f61776172646564223a66616c73652c226576656e745f626f6e75735f636c61696d223a2245564944454e43455f5052455041524544222c226a61766965725f636f6d6d69745f6d6174636865735f70696e223a747275652c226a61766965725f6e6f64655f68656c7065725f6d61746368223a747275652c226a61766965725f70696e223a2236653166323736303566653237386565643334376231306461623666333962333530316631343836222c226a61766965725f7265706f223a2268747470733a2f2f6769746875622e636f6d2f6a61766965726761727a612d736e796b2f6170702d73656375726974792d73636f7265222c226c6976655f736e796b223a224e4f545f544553544544222c226d6573736167655f6c656166223a2231316430353538616566306462346231663136316133653765306263306365306535316639346561643937636336353661366662366566306130616561313032222c226d6573736167655f726f6f74223a2231316430353538616566306462346231663136316133653765306263306365306535316639346561643937636336353661366662366566306130616561313032222c227061636b6167655f646967657374223a2235646532656431386432303631613735343764653734306435353332393435623565643165353535643930316339353438323262663863363034363965653365227d7d",
+      "leaf": "4d7f0121c45cbf332ffa8b7b73527325c99ecb3ea659ee3f7d8d35a9a1167cde",
+      "proof": [
+        {
+          "hash": "a126795d2772b33aaf131f091cb88e158a35c86dc5caa21b7a60b046f730e7f3",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-019-SUMMARY",
+        "kind": "bonus_summary",
+        "payload": {
+          "breakpoints": 8,
+          "event_bonus_awarded": false,
+          "event_bonus_claim": "EVIDENCE_PREPARED",
+          "javier_commit_matches_pin": true,
+          "javier_node_helper_match": true,
+          "javier_pin": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+          "javier_repo": "https://github.com/javiergarza-snyk/app-security-score",
+          "live_snyk": "NOT_TESTED",
+          "message_leaf": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+          "message_root": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+          "package_digest": "5de2ed18d2061a7547de740d5532945b5ed1e555d901c954822bf8c60469ee3e"
+        }
+      }
+    }
+  ],
+  "meaning": "Snyk event-bonus evidence chain via LOMO\u00d7merkle\u00d7Javier + BAND agent review; bonus not awarded by this receipt",
+  "message_leaf": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+  "message_root": "11d0558aef0db4b1f161a3e7e0bc0ce0e51f94ead97cc656a6fb6ef0a0aea102",
+  "mmr": "NOT_COMMITTED",
+  "package_digest": "5de2ed18d2061a7547de740d5532945b5ed1e555d901c954822bf8c60469ee3e",
+  "parent": "SNEAK-018",
+  "root": "e630fe1ef0be1d37eb10435aa0ef674119286f9310b48a0cfb72d0622774c097",
+  "schema": "sneak.snyk-bonus-evidence.v1",
+  "scored_breakpoints": [
+    {
+      "application_score": null,
+      "authorization_effect": "FAIL_CLOSED_NO_COORDINATION",
+      "band_outcome": "SKIPPED",
+      "breakpoint_id": "LOMO-CONN-01-BASE",
+      "breakpoint_kind": "baseline_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "c0652eb22bee5f4ac1992d9ee521668d52779a2748c8065167d4ac7d2e41359b",
+      "raw_score": 10.0,
+      "removed_component": "band-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-ab012344d379",
+      "trial_id": "LOMO-CONN-01"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "FAIL_CLOSED_NO_COORDINATION",
+      "band_outcome": "PASS",
+      "breakpoint_id": "LOMO-CONN-01-ABLATE",
+      "breakpoint_kind": "ablated_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "8503319fa00089f61b0db1c49caa17066d0edacf96f3b2936d417b789b6b1168",
+      "raw_score": 10.0,
+      "removed_component": "band-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-3bcd53447a18",
+      "trial_id": "LOMO-CONN-01"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "FAIL_CLOSED_NO_MEMORY_CONTINUATION",
+      "band_outcome": "SKIPPED",
+      "breakpoint_id": "LOMO-CONN-02-BASE",
+      "breakpoint_kind": "baseline_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "06400d66099ae20c539aafaf5140f882a6189c9e0d5c1d07b91d3f0e76a7179c",
+      "raw_score": 10.0,
+      "removed_component": "cognee-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-26d6f81a4528",
+      "trial_id": "LOMO-CONN-02"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "FAIL_CLOSED_NO_MEMORY_CONTINUATION",
+      "band_outcome": "PASS",
+      "breakpoint_id": "LOMO-CONN-02-ABLATE",
+      "breakpoint_kind": "ablated_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "233957ff0489d7154ceb701b6a0e2498e8c37de41ba7bcc13f79f5a8dee92000",
+      "raw_score": 10.0,
+      "removed_component": "cognee-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-19cdc65ffb53",
+      "trial_id": "LOMO-CONN-02"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "DENY",
+      "band_outcome": "SKIPPED",
+      "breakpoint_id": "LOMO-CONN-03-BASE",
+      "breakpoint_kind": "baseline_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "94180a5778f2fd31f8b02c50b0145ef6997d3e12ed72cdcfd7e4cde80489e67b",
+      "raw_score": 10.0,
+      "removed_component": "snyk-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-485653ece56f",
+      "trial_id": "LOMO-CONN-03"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "DENY",
+      "band_outcome": "PASS",
+      "breakpoint_id": "LOMO-CONN-03-ABLATE",
+      "breakpoint_kind": "ablated_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "0615c5f0c3577cba4670b2ac8d56fa231c50b10a79aa2256abc22022f42cf71a",
+      "raw_score": 10.0,
+      "removed_component": "snyk-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-c6ea8c8a7195",
+      "trial_id": "LOMO-CONN-03"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "METERING_UNAVAILABLE_SECURITY_UNCHANGED",
+      "band_outcome": "SKIPPED",
+      "breakpoint_id": "LOMO-CONN-04-BASE",
+      "breakpoint_kind": "baseline_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "6aa151f81d6663fce7c632f70ca2a746e23055b11d0e9a1c9436cf0fe985c5d7",
+      "raw_score": 10.0,
+      "removed_component": "flex-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-f1456a53dac8",
+      "trial_id": "LOMO-CONN-04"
+    },
+    {
+      "application_score": null,
+      "authorization_effect": "METERING_UNAVAILABLE_SECURITY_UNCHANGED",
+      "band_outcome": "PASS",
+      "breakpoint_id": "LOMO-CONN-04-ABLATE",
+      "breakpoint_kind": "ablated_breakpoint",
+      "coverage_accepted": false,
+      "data_outcome": "PASS",
+      "merkle_root": "baf538a4ff5798604edc878101fa8b70b5d270766275ca0274fd3cc56127a9d2",
+      "raw_score": 10.0,
+      "removed_component": "flex-connector",
+      "scan_outcome": "NOT_TESTED",
+      "score_receipt_id": "breakpoint_snyk_score-9525f422caf2",
+      "trial_id": "LOMO-CONN-04"
+    }
+  ],
+  "signed": false
+}

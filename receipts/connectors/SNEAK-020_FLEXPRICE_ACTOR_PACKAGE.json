@@ -1,0 +1,258 @@
+{
+  "actor_summaries": {
+    "cognee": {
+      "actor_id": "cognee",
+      "aggregate_roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.03",
+        "observed_outcome": "COMPUTED",
+        "roi": "7.333333",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "action": "data_breakpoint_write",
+          "fco_candidate_sha256": "297694c048302330a748a39c93f7385ebe4f7c4ae8293d04e79308a8cb2703ee",
+          "id": "ACTOR-cognee-0000",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": "7.333333"
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-cognee-0000"
+      ]
+    },
+    "human": {
+      "actor_id": "human",
+      "aggregate_roi": {
+        "benefit_units": "0.0",
+        "cost_units": "0.00",
+        "observed_outcome": "UNDEFINED_ZERO_COST",
+        "roi": null,
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "action": "pending_decision",
+          "fco_candidate_sha256": "4faffd70438ed81e99b279836f761c31b8075b97e462c32359e510a380392b1b",
+          "id": "ACTOR-human-0000",
+          "outcome": "PENDING",
+          "roi": null
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-human-0000"
+      ]
+    },
+    "jerry": {
+      "actor_id": "jerry",
+      "aggregate_roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.01",
+        "observed_outcome": "COMPUTED",
+        "roi": "24.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "action": "band_security_review",
+          "fco_candidate_sha256": "08f3a0fd0b7f0d12360966d3f2d144519d7516610e4a7f44d634a247d7e1c7fe",
+          "id": "ACTOR-jerry-0000",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": "24.000000"
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-jerry-0000"
+      ]
+    },
+    "scanner": {
+      "actor_id": "scanner",
+      "aggregate_roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.02",
+        "observed_outcome": "COMPUTED",
+        "roi": "11.500000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 2,
+      "events": [
+        {
+          "action": "skill_scan_completed",
+          "fco_candidate_sha256": "e0b9267d4743d2381a13cd9c50d08e9b58ef34ca7ebafa6eb0a7e3c9e26df31b",
+          "id": "ACTOR-scanner-0000",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": "24.000000"
+        },
+        {
+          "action": "skill_scan_completed",
+          "fco_candidate_sha256": "9a3be8357450aba5843b36236c9b62c0284495f7dad3b84b7d18ca2c23972553",
+          "id": "ACTOR-scanner-0001",
+          "outcome": "DENIED",
+          "roi": "-1.000000"
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-scanner-0000",
+        "ACTOR-scanner-0001"
+      ]
+    },
+    "tom": {
+      "actor_id": "tom",
+      "aggregate_roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.02",
+        "observed_outcome": "COMPUTED",
+        "roi": "11.500000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "action": "band_security_review",
+          "fco_candidate_sha256": "9e63c0b0ce2a3379341836127cae331c908378ecef1205aa1f4d7dde65a05d91",
+          "id": "ACTOR-tom-0000",
+          "outcome": "LOCAL_CONTRACT_ONLY",
+          "roi": "11.500000"
+        }
+      ],
+      "fco_ids": [
+        "ACTOR-tom-0000"
+      ]
+    }
+  },
+  "artifact_digest": "5a846495b046458254e0f090974b13b2146c275e36122000f86cdd465e1e60c0",
+  "availability": {
+    "credits": 1,
+    "live_available": false,
+    "observed_outcome": "NOT_TESTED",
+    "provider": "flexprice",
+    "upstream": "https://github.com/flexprice/flexprice"
+  },
+  "candidate_mmr_root": "83e03fdc47de0a2d20ceb2e50da12176ba68b32fd445de127fe4ce22cbad2432",
+  "deny_receipt": "flexprice_usage-d8bb5b8d2029",
+  "emitted": [
+    {
+      "actor_id": "tom",
+      "fco_candidate_sha256": "9e63c0b0ce2a3379341836127cae331c908378ecef1205aa1f4d7dde65a05d91",
+      "fco_id": "ACTOR-tom-0000",
+      "roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.02",
+        "observed_outcome": "COMPUTED",
+        "roi": "11.500000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "run_id": "sneak-actor-tom-00",
+      "usage_outcome": "LOCAL_CONTRACT_ONLY",
+      "usage_receipt": "flexprice_usage-16296a656156"
+    },
+    {
+      "actor_id": "jerry",
+      "fco_candidate_sha256": "08f3a0fd0b7f0d12360966d3f2d144519d7516610e4a7f44d634a247d7e1c7fe",
+      "fco_id": "ACTOR-jerry-0000",
+      "roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.01",
+        "observed_outcome": "COMPUTED",
+        "roi": "24.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "run_id": "sneak-actor-jerry-01",
+      "usage_outcome": "LOCAL_CONTRACT_ONLY",
+      "usage_receipt": "flexprice_usage-1b8a0ead538b"
+    },
+    {
+      "actor_id": "scanner",
+      "fco_candidate_sha256": "e0b9267d4743d2381a13cd9c50d08e9b58ef34ca7ebafa6eb0a7e3c9e26df31b",
+      "fco_id": "ACTOR-scanner-0000",
+      "roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.01",
+        "observed_outcome": "COMPUTED",
+        "roi": "24.000000",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "run_id": "sneak-actor-scanner-02",
+      "usage_outcome": "LOCAL_CONTRACT_ONLY",
+      "usage_receipt": "flexprice_usage-41be685ad43d"
+    },
+    {
+      "actor_id": "cognee",
+      "fco_candidate_sha256": "297694c048302330a748a39c93f7385ebe4f7c4ae8293d04e79308a8cb2703ee",
+      "fco_id": "ACTOR-cognee-0000",
+      "roi": {
+        "benefit_units": "0.25",
+        "cost_units": "0.03",
+        "observed_outcome": "COMPUTED",
+        "roi": "7.333333",
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "run_id": "sneak-actor-cognee-03",
+      "usage_outcome": "LOCAL_CONTRACT_ONLY",
+      "usage_receipt": "flexprice_usage-04ff5b2bcd64"
+    },
+    {
+      "actor_id": "human",
+      "fco_candidate_sha256": "4faffd70438ed81e99b279836f761c31b8075b97e462c32359e510a380392b1b",
+      "fco_id": "ACTOR-human-0000",
+      "roi": {
+        "benefit_units": "0.0",
+        "cost_units": "0.00",
+        "observed_outcome": "UNDEFINED_ZERO_COST",
+        "roi": null,
+        "roi_basis": "(benefit_units - cost_units) / cost_units",
+        "rounding": "ROUND_HALF_EVEN_to_6dp"
+      },
+      "run_id": "sneak-actor-human-04",
+      "usage_outcome": "PENDING",
+      "usage_receipt": "flexprice_usage-20502293f863"
+    }
+  ],
+  "fcg_digest": "7e29107c6113171a8452dc618d55137f70fe88db9687908840cf7a9a8976eaa0",
+  "id": "SNEAK-020-FLEXPRICE-ACTOR-AUDIT",
+  "live_flexprice": false,
+  "meaning": "Per-actor FlexPrice usage audit as FCO/FCG with deterministic ROI; candidate Merkle trail is not an Overwatch MMR commitment",
+  "mmr": "NOT_COMMITTED",
+  "parent": "SNEAK-019",
+  "roi_helper_check": {
+    "benefit_units": "1.0",
+    "cost_units": "0.02",
+    "observed_outcome": "COMPUTED",
+    "roi": "49.000000",
+    "roi_basis": "(benefit_units - cost_units) / cost_units",
+    "rounding": "ROUND_HALF_EVEN_to_6dp"
+  },
+  "secrets": {
+    "env_overrides_present": [
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "file_exists": true,
+    "file_mode": "0o600",
+    "keys_present": [
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "parent_exists": true,
+    "parent_mode": "0o700",
+    "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+    "value_inspected": false
+  },
+  "signed": false,
+  "upstream": "https://github.com/flexprice/flexprice"
+}

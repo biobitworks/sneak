@@ -1,0 +1,119 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-025",
+  "leaf_count": 3,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032352d50524553454e4345222c226b696e64223a22706c616e6e65725f70726573656e6365222c227061796c6f6164223a7b22636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c226f6e6c696e655f6f62736572766564223a747275652c227265706c795f7365656e223a747275657d7d",
+      "leaf": "0acaebd221610ac89d1dfe616c70c1754634c9f5c0d62ac09e18f593fdf4f6c6",
+      "proof": [
+        {
+          "hash": "eacb8931e4852d4bc25e219277805294cd4824ce500ebb6727912abdedfc299d",
+          "side": "right"
+        },
+        {
+          "hash": "4fcf58ddae379593b24e3e483b14ddd3806eb36b44ff161646cd71076bce86ab",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-025-PRESENCE",
+        "kind": "planner_presence",
+        "payload": {
+          "connection_status": "connected",
+          "online_observed": true,
+          "reply_seen": true
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032352d52554e54494d45222c226b696e64223a2272756e74696d655f6d657461222c227061796c6f6164223a7b227265706c6965735f73656e74223a302c2272756e5f7365636f6e6473223a31332e33367d7d",
+      "leaf": "eacb8931e4852d4bc25e219277805294cd4824ce500ebb6727912abdedfc299d",
+      "proof": [
+        {
+          "hash": "0acaebd221610ac89d1dfe616c70c1754634c9f5c0d62ac09e18f593fdf4f6c6",
+          "side": "left"
+        },
+        {
+          "hash": "4fcf58ddae379593b24e3e483b14ddd3806eb36b44ff161646cd71076bce86ab",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-025-RUNTIME",
+        "kind": "runtime_meta",
+        "payload": {
+          "replies_sent": 0,
+          "run_seconds": 13.36
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032352d545241434b222c226b696e64223a22706c616e5f747261636b222c227061796c6f6164223a7b226279726f6e5f68756d616e5f7461736b5f37223a2270656e64696e67222c226368697261675f7461736b5f36223a2270656e64696e67222c226a657272795f7461736b5f345f626f617264223a2270656e64696e67222c226a657272795f7461736b5f345f636861745f61636b223a7b2268697473223a5b7b22636f6e74656e745f707265666978223a22434841545f41434b202334204a65727279205c75323031342068616e646c6520405b5b30363639396635642d643535392d346266372d613630382d3232326431623066623961315d5d2f6a657272792e20426f61726420746f6f6c206d697373696e672c20636861742065766964656e6365206f6e6c792e204e6f74206d61726b656420446f6e65205c75643833655c7564646330222c226d6573736167655f6964223a2262626462363363332d396133612d343864312d613636362d346164323634643463306466227d2c7b22636f6e74656e745f707265666978223a227b5c226e616d655c223a205c2262616e645f73656e645f6d6573736167655c222c205c22617267735c223a207b5c22636f6e74656e745c223a205c22434841545f41434b202334204a65727279205c5c75323031342068616e646c65204062696f626974776f726b732f6a657272792e20426f61726420746f6f6c206d697373696e672c20636861742065766964656e6365206f6e6c792e204e6f74206d61726b656420446f6e65205c5c222c226d6573736167655f6964223a2263333635623434302d363032332d343265622d393761352d373530626330363332383932227d5d2c226b696e64223a22434841545f41434b222c226f62736572766564223a747275657d2c226f766572616c6c5f706c616e5f646f6e65223a66616c73652c22706c616e6e65725f636f6e6e656374696f6e5f737461747573223a22636f6e6e6563746564222c22706c616e6e65725f6f6e6c696e655f6f62736572766564223a747275652c22706c616e6e65725f7265706c795f7365656e223a747275652c22726561736f6e223a22506c616e6e657220776562736f636b65742072756e74696d65206578657263697365642e20546f6d2f4a6572727920636861742041434b73207265636f726465642028626f617264206d617920737461792070656e64696e6720696620424f4152445f544f4f4c5f4d495353494e47292e2048756d616e2067617465732023362f23372072656d61696e206f70656e2e204f766572616c6c20446f6e652066616c73652e222c22746f6d5f7461736b5f335f626f617264223a2270656e64696e67222c22746f6d5f7461736b5f335f636861745f61636b223a7b2268697473223a5b7b22636f6e74656e745f707265666978223a22434841545f41434b20233320546f6d205c75323031342068616e646c6520405b5b30363639396635642d643535392d346266372d613630382d3232326431623066623961315d5d2f746f6d2e20426f61726420746f6f6c206d697373696e672c20736f207468697320697320636861742d6f6e6c792e204e6f74206d61726b656420446f6e652e222c226d6573736167655f6964223a2235326565666566652d366333382d346530652d383934662d326638663565396133623135227d2c7b22636f6e74656e745f707265666978223a227b5c226e616d655c223a205c2262616e645f73656e645f6d6573736167655c222c205c22617267735c223a207b5c22636f6e74656e745c223a205c22434841545f41434b20233320546f6d205c5c75323031342068616e646c65204062696f626974776f726b732f746f6d2e20426f61726420746f6f6c206d697373696e672c20736f207468697320697320636861742d6f6e6c792e204e6f74206d61726b656420446f6e652e5c222c20222c226d6573736167655f6964223a2262323766396261622d356632322d346164342d396537382d353936353334363666323833227d5d2c226b696e64223a22434841545f41434b222c226f62736572766564223a747275657d7d7d",
+      "leaf": "4fcf58ddae379593b24e3e483b14ddd3806eb36b44ff161646cd71076bce86ab",
+      "proof": [
+        {
+          "hash": "93e191687e252dedfe59f607d20c7ff7fbe47186967487d98bc066950e71a05a",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-025-TRACK",
+        "kind": "plan_track",
+        "payload": {
+          "byron_human_task_7": "pending",
+          "chirag_task_6": "pending",
+          "jerry_task_4_board": "pending",
+          "jerry_task_4_chat_ack": {
+            "hits": [
+              {
+                "content_prefix": "CHAT_ACK #4 Jerry \u2014 handle @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]]/jerry. Board tool missing, chat evidence only. Not marked Done \ud83e\uddc0",
+                "message_id": "bbdb63c3-9a3a-48d1-a666-4ad264d4c0df"
+              },
+              {
+                "content_prefix": "{\"name\": \"band_send_message\", \"args\": {\"content\": \"CHAT_ACK #4 Jerry \\u2014 handle @biobitworks/jerry. Board tool missing, chat evidence only. Not marked Done \\",
+                "message_id": "c365b440-6023-42eb-97a5-750bc0632892"
+              }
+            ],
+            "kind": "CHAT_ACK",
+            "observed": true
+          },
+          "overall_plan_done": false,
+          "planner_connection_status": "connected",
+          "planner_online_observed": true,
+          "planner_reply_seen": true,
+          "reason": "Planner websocket runtime exercised. Tom/Jerry chat ACKs recorded (board may stay pending if BOARD_TOOL_MISSING). Human gates #6/#7 remain open. Overall Done false.",
+          "tom_task_3_board": "pending",
+          "tom_task_3_chat_ack": {
+            "hits": [
+              {
+                "content_prefix": "CHAT_ACK #3 Tom \u2014 handle @[[06699f5d-d559-4bf7-a608-222d1b0fb9a1]]/tom. Board tool missing, so this is chat-only. Not marked Done.",
+                "message_id": "52eefefe-6c38-4e0e-894f-2f8f5e9a3b15"
+              },
+              {
+                "content_prefix": "{\"name\": \"band_send_message\", \"args\": {\"content\": \"CHAT_ACK #3 Tom \\u2014 handle @biobitworks/tom. Board tool missing, so this is chat-only. Not marked Done.\", ",
+                "message_id": "b27f9bab-5f22-4ad4-9e78-59653466f283"
+              }
+            ],
+            "kind": "CHAT_ACK",
+            "observed": true
+          }
+        }
+      }
+    }
+  ],
+  "meaning": "Planner Band SDK websocket runtime brought online; plan track posted; overall Done remains false",
+  "mmr": "NOT_COMMITTED",
+  "package_digest": "284e363efc1166eef42e82bb364187eef616653c8638634e1aa42b272e20e1ad",
+  "parent": "SNEAK-024",
+  "root": "335c93d760e6c27f3e8a4c2b1a8c8842c38dcd2da1c17eb442d2c2a6390048ef",
+  "schema": "sneak.band-planner-runtime.v1",
+  "signed": false
+}

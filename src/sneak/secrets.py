@@ -32,9 +32,17 @@ def export_to_environ(path: Path | None = None) -> list[str]:
     """Export allowlisted keys into process env. Returns key names only."""
     allow = {
         "BAND_USER_API_KEY",
+        "BAND_PLANNER_AGENT_ID",
+        "BAND_PLANNER_API_KEY",
         "COGNEE_BASE_URL",
         "COGNEE_API_KEY",
         "FLEXPRICE_API_KEY",
+        "LIQUID_API_KEY",
+        "LIQUID_BASE_URL",
+        "LIQUID_MODEL",
+        "OPENJEV_API_KEY",
+        "OPENJEV_BASE_URL",
+        "OPENJEV_MODEL",
         "SNYK_TOKEN",
     }
     loaded = load_secret_file(path)
@@ -64,9 +72,13 @@ def presence_receipt(path: Path | None = None) -> dict[str, Any]:
             k
             for k in (
                 "BAND_USER_API_KEY",
+                "BAND_PLANNER_AGENT_ID",
+                "BAND_PLANNER_API_KEY",
                 "COGNEE_BASE_URL",
                 "COGNEE_API_KEY",
                 "FLEXPRICE_API_KEY",
+                "LIQUID_API_KEY",
+                "OPENJEV_API_KEY",
                 "SNYK_TOKEN",
             )
             if os.environ.get(k)

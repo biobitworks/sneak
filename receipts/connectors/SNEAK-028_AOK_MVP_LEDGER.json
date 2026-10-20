@@ -1,0 +1,772 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "id": "SNEAK-028",
+  "leaf_count": 4,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032382d434f554e5453222c226b696e64223a226c65646765725f636f756e7473222c227061796c6f6164223a7b226661696c223a312c226e6f745f746573746564223a392c2270617373223a31302c227472696564223a31372c2276657269666965645f74727565223a31307d7d",
+      "leaf": "a4b886014f3949693de0a29617824b73f5210213e4c00ef63ee2bcb48f0ff0d3",
+      "proof": [
+        {
+          "hash": "7b770a3b00f6d95173f58a690e6255d265e35e6364cc84d116e3cac7b92b9452",
+          "side": "right"
+        },
+        {
+          "hash": "3e6344ccd037ad072cafdd2ceec4efb347ba998d176ea5b6766c8863573249c1",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-028-COUNTS",
+        "kind": "ledger_counts",
+        "payload": {
+          "fail": 1,
+          "not_tested": 9,
+          "pass": 10,
+          "tried": 17,
+          "verified_true": 10
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032382d47415445222c226b696e64223a22656e7472795f67617465222c227061796c6f6164223a7b22656e7472795f67617465223a66616c73652c226d616e6461746f72795f636f756e74223a32302c226d616e6461746f72795f756e7665726966696564223a31302c226d616e6461746f72795f7665726966696564223a31302c226d65616e696e67223a22656e7472795f67617465203d20616c6c286d616e6461746f72795f61746f6d2e7665726966696564206973205472756529227d7d",
+      "leaf": "7b770a3b00f6d95173f58a690e6255d265e35e6364cc84d116e3cac7b92b9452",
+      "proof": [
+        {
+          "hash": "a4b886014f3949693de0a29617824b73f5210213e4c00ef63ee2bcb48f0ff0d3",
+          "side": "left"
+        },
+        {
+          "hash": "3e6344ccd037ad072cafdd2ceec4efb347ba998d176ea5b6766c8863573249c1",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-028-GATE",
+        "kind": "entry_gate",
+        "payload": {
+          "entry_gate": false,
+          "mandatory_count": 20,
+          "mandatory_unverified": 10,
+          "mandatory_verified": 10,
+          "meaning": "entry_gate = all(mandatory_atom.verified is True)"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032382d4c495645222c226b696e64223a226c6976655f62616e64222c227061796c6f6164223a7b226167656e745f636f756e74223a372c2262616e645f617661696c61626c65223a747275652c226d655f6f6b223a747275652c226f6e6c696e655f6167656e745f636f756e74223a372c226f6e6c696e655f68616e646c6573223a5b22636d616e6a6573682f6a65727279222c2262696f626974776f726b732f746f6d222c22636d616e6a6573682f746f6d222c22636d616e6a6573682f636f6f6c6167656e74222c2262696f626974776f726b732f706c616e6e6572222c2262696f626974776f726b732f6a65727279222c22636d616e6a6573682f706c616e6e6572225d2c227461736b5f636f6d706c657465645f6e756d62657273223a5b322c355d2c227461736b5f70656e64696e675f636f756e74223a387d7d",
+      "leaf": "528f8d0449db710365df1f687b0f2711275e1e4bacf8653602a4d0cd58c7cd5a",
+      "proof": [
+        {
+          "hash": "cfe3f19d4f9323f952d2550b2de28cde8a77d5d1c97c9beb54be7ea8256d9bfe",
+          "side": "right"
+        },
+        {
+          "hash": "d0c2a0f839c42ff1aa82dfdc4a926cef84e8335b638fabf9a6ce41c0aca82f07",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-028-LIVE",
+        "kind": "live_band",
+        "payload": {
+          "agent_count": 7,
+          "band_available": true,
+          "me_ok": true,
+          "online_agent_count": 7,
+          "online_handles": [
+            "cmanjesh/jerry",
+            "biobitworks/tom",
+            "cmanjesh/tom",
+            "cmanjesh/coolagent",
+            "biobitworks/planner",
+            "biobitworks/jerry",
+            "cmanjesh/planner"
+          ],
+          "task_completed_numbers": [
+            2,
+            5
+          ],
+          "task_pending_count": 8
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3032382d4d30312d4d3135222c226b696e64223a226d76705f62616e645f61746f6d73222c227061796c6f6164223a7b225245512d414f4b2d4d3031223a7b226f7574636f6d65223a224e4f545f544553544544222c227472696564223a747275652c227665726966696564223a66616c73657d2c225245512d414f4b2d4d3032223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3033223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3034223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3035223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3036223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3037223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3038223a7b226f7574636f6d65223a224641494c222c227472696564223a747275652c227665726966696564223a66616c73657d2c225245512d414f4b2d4d3039223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3130223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3131223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3132223a7b226f7574636f6d65223a2250415353222c227472696564223a747275652c227665726966696564223a747275657d2c225245512d414f4b2d4d3133223a7b226f7574636f6d65223a224e4f545f544553544544222c227472696564223a747275652c227665726966696564223a66616c73657d2c225245512d414f4b2d4d3134223a7b226f7574636f6d65223a224e4f545f544553544544222c227472696564223a747275652c227665726966696564223a66616c73657d2c225245512d414f4b2d4d3135223a7b226f7574636f6d65223a224e4f545f544553544544222c227472696564223a747275652c227665726966696564223a66616c73657d7d7d",
+      "leaf": "cfe3f19d4f9323f952d2550b2de28cde8a77d5d1c97c9beb54be7ea8256d9bfe",
+      "proof": [
+        {
+          "hash": "528f8d0449db710365df1f687b0f2711275e1e4bacf8653602a4d0cd58c7cd5a",
+          "side": "left"
+        },
+        {
+          "hash": "d0c2a0f839c42ff1aa82dfdc4a926cef84e8335b638fabf9a6ce41c0aca82f07",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-028-M01-M15",
+        "kind": "mvp_band_atoms",
+        "payload": {
+          "REQ-AOK-M01": {
+            "outcome": "NOT_TESTED",
+            "tried": true,
+            "verified": false
+          },
+          "REQ-AOK-M02": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M03": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M04": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M05": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M06": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M07": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M08": {
+            "outcome": "FAIL",
+            "tried": true,
+            "verified": false
+          },
+          "REQ-AOK-M09": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M10": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M11": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M12": {
+            "outcome": "PASS",
+            "tried": true,
+            "verified": true
+          },
+          "REQ-AOK-M13": {
+            "outcome": "NOT_TESTED",
+            "tried": true,
+            "verified": false
+          },
+          "REQ-AOK-M14": {
+            "outcome": "NOT_TESTED",
+            "tried": true,
+            "verified": false
+          },
+          "REQ-AOK-M15": {
+            "outcome": "NOT_TESTED",
+            "tried": true,
+            "verified": false
+          }
+        }
+      }
+    }
+  ],
+  "meaning": "Successor AoK M01\u2013M20 ledger from receipts + live Band observation; Desktop-specific atoms remain NOT_TESTED; entry_gate false",
+  "mmr": "NOT_COMMITTED",
+  "package_digest": "4746d26a4203195bdcf2bfb565c71caa2f5714e90f60837b3f27e2ed76e3ca86",
+  "parent": "SNEAK-027",
+  "requirements": [
+    {
+      "evidence": [
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        },
+        {
+          "artifact_digest": "395847e7dff0d5b4a955aa99aad535d71235523865af093c9c476b85ae04fcab",
+          "external_id": "SNEAK-022",
+          "observed_at": "2026-10-20T21:58:18.295283+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-022_BAND_IDENTITY_VERIFY.json"
+        }
+      ],
+      "id": "REQ-AOK-M01-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M01",
+      "reason": "Requirement is actual Band Desktop. magicstudio: CLI/app missing; magicpro: CLI present but band whoami unsigned (SNEAK-027). MVP used Human API + Agent SDK websocket instead \u2014 substitute does not satisfy Desktop.",
+      "required_for_entry": true,
+      "requirement": "Use actual Band Desktop.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "395847e7dff0d5b4a955aa99aad535d71235523865af093c9c476b85ae04fcab",
+          "external_id": "SNEAK-022",
+          "observed_at": "2026-10-20T21:58:18.295283+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-022_BAND_IDENTITY_VERIFY.json"
+        },
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        },
+        {
+          "artifact_digest": "eec8302f00b4ad4a73ea125e026a30d5e2ab441e9d1b50615200ed1b9e40871d",
+          "external_id": "SNEAK-026",
+          "observed_at": "2026-10-20T21:58:18.295400+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-026_PLANNER_ONBOARDING.json"
+        }
+      ],
+      "id": "REQ-AOK-M02-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M02",
+      "reason": "Band platform coordinated Tom/Jerry/Planner via Human API mentions and Planner Agent SDK runtime (SNEAK-022..026).",
+      "required_for_entry": true,
+      "requirement": "Band coordinates the agent team.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "395847e7dff0d5b4a955aa99aad535d71235523865af093c9c476b85ae04fcab",
+          "external_id": "SNEAK-022",
+          "observed_at": "2026-10-20T21:58:18.295283+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-022_BAND_IDENTITY_VERIFY.json"
+        },
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        }
+      ],
+      "id": "REQ-AOK-M03-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M03",
+      "reason": "Agents share planner room `7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3` (live + SNEAK-022/025).",
+      "required_for_entry": true,
+      "requirement": "Agents share one actual room.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        },
+        {
+          "artifact_digest": "eec8302f00b4ad4a73ea125e026a30d5e2ab441e9d1b50615200ed1b9e40871d",
+          "external_id": "SNEAK-026",
+          "observed_at": "2026-10-20T21:58:18.295400+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-026_PLANNER_ONBOARDING.json"
+        }
+      ],
+      "id": "REQ-AOK-M04-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M04",
+      "reason": "Live online agents=7 handles=['cmanjesh/jerry', 'biobitworks/tom', 'cmanjesh/tom', 'cmanjesh/coolagent', 'biobitworks/planner', 'biobitworks/jerry', 'cmanjesh/planner']; biobitworks agents in room=3.",
+      "required_for_entry": true,
+      "requirement": "At least two agents participate.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        },
+        {
+          "artifact_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "external_id": "SNEAK-023",
+          "observed_at": "2026-10-20T21:58:18.295330+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-023_PLANNER_PLAN_TRACK.json"
+        }
+      ],
+      "id": "REQ-AOK-M05-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M05",
+      "reason": "Planner (@biobitworks/planner) posted plan-track status in-room (SNEAK-025 replies_sent / plan-track reply observed).",
+      "required_for_entry": true,
+      "requirement": "Lead/architect writes the plan in the room.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "external_id": "SNEAK-023",
+          "observed_at": "2026-10-20T21:58:18.295330+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-023_PLANNER_PLAN_TRACK.json"
+        },
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        }
+      ],
+      "id": "REQ-AOK-M06-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M06",
+      "reason": "One shared plan-track CHECKOFF set (#2\u2013#7) governs work; overall Done remains false (SNEAK-023/025).",
+      "required_for_entry": true,
+      "requirement": "Team works from one plan.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "395847e7dff0d5b4a955aa99aad535d71235523865af093c9c476b85ae04fcab",
+          "external_id": "SNEAK-022",
+          "observed_at": "2026-10-20T21:58:18.295283+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-022_BAND_IDENTITY_VERIFY.json"
+        },
+        {
+          "artifact_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "external_id": "SNEAK-023",
+          "observed_at": "2026-10-20T21:58:18.295330+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-023_PLANNER_PLAN_TRACK.json"
+        }
+      ],
+      "id": "REQ-AOK-M07-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M07",
+      "reason": "Shared room task board observed via Human API (active tasks=10; SNEAK-022 empty-board\u2192tasks).",
+      "required_for_entry": true,
+      "requirement": "Team uses one shared work board.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        },
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M08-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "FAIL",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M08",
+      "reason": "Tried: chase Tom/Jerry to claim CHECKOFF #3/#4. Observed chat ACK only; board assignments empty; BOARD_TOOL_MISSING (SNEAK-025/027). Chat ACK is not a board claim.",
+      "required_for_entry": true,
+      "requirement": "Agents claim work items.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "external_id": "SNEAK-023",
+          "observed_at": "2026-10-20T21:58:18.295330+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-023_PLANNER_PLAN_TRACK.json"
+        },
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        }
+      ],
+      "id": "REQ-AOK-M09-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M09",
+      "reason": "Board shows To-do/pending and Done/completed (completed_numbers=[2, 5]; pending_count=8). Agent #3/#4 Done transitions still open.",
+      "required_for_entry": true,
+      "requirement": "Actual task transitions include To-do and Done.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "fe816f09657943a9d699c6a5d99b950cda274878e16279361bbce486b2367722",
+          "external_id": "SNEAK-024",
+          "observed_at": "2026-10-20T21:58:18.295357+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-024_CONVERSATION_CUSTODY.json"
+        },
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        },
+        {
+          "artifact_digest": "eec8302f00b4ad4a73ea125e026a30d5e2ab441e9d1b50615200ed1b9e40871d",
+          "external_id": "SNEAK-026",
+          "observed_at": "2026-10-20T21:58:18.295400+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-026_PLANNER_ONBOARDING.json"
+        }
+      ],
+      "id": "REQ-AOK-M10-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M10",
+      "reason": "Native BAND @mentions among Planner/Tom/Jerry observed (SNEAK-024/025/026 message ids).",
+      "required_for_entry": true,
+      "requirement": "Agents address each other with mentions.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "fe816f09657943a9d699c6a5d99b950cda274878e16279361bbce486b2367722",
+          "external_id": "SNEAK-024",
+          "observed_at": "2026-10-20T21:58:18.295357+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-024_CONVERSATION_CUSTODY.json"
+        },
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        }
+      ],
+      "id": "REQ-AOK-M11-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M11",
+      "reason": "Direct room handoffs: Human API dual-harness + Planner SDK replies carrying plan-track context (SNEAK-024/025).",
+      "required_for_entry": true,
+      "requirement": "Agents hand context directly to other agents.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "1fa3abde2319cad6ecb2631cb4fa1c0dbf7d178dc0dfa4120c23bd9e6a1ce2f7",
+          "external_id": "SNEAK-025",
+          "observed_at": "2026-10-20T21:58:18.295380+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-025_PLANNER_RUNTIME.json"
+        },
+        {
+          "artifact_digest": "eec8302f00b4ad4a73ea125e026a30d5e2ab441e9d1b50615200ed1b9e40871d",
+          "external_id": "SNEAK-026",
+          "observed_at": "2026-10-20T21:58:18.295400+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-026_PLANNER_ONBOARDING.json"
+        }
+      ],
+      "id": "REQ-AOK-M12-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "PASS",
+      "pass_gate": true,
+      "predecessor_requirement_id": "REQ-AOK-M12",
+      "reason": "Agent replies delivered by Band platform to @mentions without human copy-paste of agent context between Tom/Jerry/Planner.",
+      "required_for_entry": true,
+      "requirement": "Handoff succeeds without human copying.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": true
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "external_id": "SNEAK-023",
+          "observed_at": "2026-10-20T21:58:18.295330+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-023_PLANNER_PLAN_TRACK.json"
+        },
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M13-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M13",
+      "reason": "Human CHECKOFF #7 still pending. Task #5 completed by planner API is not a qualifying human approval (SNEAK-023/027). No real human decision receipt.",
+      "required_for_entry": true,
+      "requirement": "At least one real decision or approval occurs.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "external_id": "SNEAK-023",
+          "observed_at": "2026-10-20T21:58:18.295330+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-023_PLANNER_PLAN_TRACK.json"
+        },
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M14-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M14",
+      "reason": "Blocked on M13: no qualifying human decision to route through Band yet.",
+      "required_for_entry": true,
+      "requirement": "Human receives that decision through Band.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "9739e0f23aa397f6ccfeab096ebc57aa087ff023c939855d7b26118cdd8982b5",
+          "external_id": "SNEAK-023",
+          "observed_at": "2026-10-20T21:58:18.295330+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-023_PLANNER_PLAN_TRACK.json"
+        },
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M15-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M15",
+      "reason": "No qualifying decision body to assess hard-coding. Checkoff text is template; human approval content not yet observed.",
+      "required_for_entry": true,
+      "requirement": "Decision is not hard-coded.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M16-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M16",
+      "reason": "Demo Desktop room view not captured; Desktop unsigned/missing (SNEAK-027).",
+      "required_for_entry": true,
+      "requirement": "Demo shows Band Desktop rooms.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "395847e7dff0d5b4a955aa99aad535d71235523865af093c9c476b85ae04fcab",
+          "external_id": "SNEAK-022",
+          "observed_at": "2026-10-20T21:58:18.295283+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-022_BAND_IDENTITY_VERIFY.json"
+        },
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M17-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M17",
+      "reason": "Work board observed via Human API JSON, not Band Desktop demo view. Desktop demo NOT_TESTED.",
+      "required_for_entry": true,
+      "requirement": "Demo shows the work board.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": true,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M18-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M18",
+      "reason": "Per-agent Desktop session view not observed.",
+      "required_for_entry": true,
+      "requirement": "Demo shows per-agent sessions.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": false,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M19-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M19",
+      "reason": "Token counts in Band Desktop UI not observed.",
+      "required_for_entry": true,
+      "requirement": "Demo shows token counts.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": false,
+      "verified": false
+    },
+    {
+      "evidence": [
+        {
+          "artifact_digest": "6353e340b4643005d1bd3204d9a3ed0eb52992c6a55e0301b64444d084fa1ac4",
+          "external_id": "SNEAK-027",
+          "observed_at": "2026-10-20T21:58:18.295417+00:00",
+          "provider": "sneak.receipt",
+          "receipt_path": "receipts/connectors/SNEAK-027_LANES_WRAPUP.json"
+        }
+      ],
+      "id": "REQ-AOK-M20-SNEAK-028",
+      "level": "mandatory",
+      "observed_outcome": "NOT_TESTED",
+      "pass_gate": false,
+      "predecessor_requirement_id": "REQ-AOK-M20",
+      "reason": "Estimated costs in Band Desktop UI not observed.",
+      "required_for_entry": true,
+      "requirement": "Demo shows estimated costs.",
+      "source_status_policy": "receipts_and_live_observation_only_never_graph_links",
+      "tried": false,
+      "verified": false
+    }
+  ],
+  "root": "43497407ae91a0e2b4bda762ccf580c0b9c936bd3f0da693ef40978cf2ee61ac",
+  "schema": "sneak.aok-mvp-ledger.v1",
+  "signed": false
+}

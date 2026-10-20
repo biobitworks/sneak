@@ -1,0 +1,77 @@
+[
+  {
+    "question_id": "fixture_lme_gps_001",
+    "question_type": "temporal-reasoning",
+    "question": "What was the first issue I had with my new car after its first service?",
+    "answer": "GPS system not functioning correctly",
+    "question_date": "2023/04/10 (Mon) 23:07",
+    "haystack_dates": ["2023/04/10 (Mon) 17:50"],
+    "haystack_session_ids": ["answer_fixture_gps_1"],
+    "haystack_sessions": [
+      [
+        {
+          "role": "user",
+          "content": "I just got my car serviced for the first time on March 15th. Right after that the GPS system stopped functioning correctly.",
+          "has_answer": true
+        },
+        {
+          "role": "assistant",
+          "content": "Sorry about the GPS issue after service — that is useful to track for warranty."
+        }
+      ]
+    ],
+    "answer_session_ids": ["answer_fixture_gps_1"],
+    "source": "schema_compatible_fixture_not_full_longmemeval_corpus",
+    "license_note": "Fixture crafted for local custody tests; full LongMemEval stays outside git until pulled to sources/"
+  },
+  {
+    "question_id": "fixture_lme_bike_002",
+    "question_type": "temporal-reasoning",
+    "question": "Which vehicle did I take care of first in February, the bike or the car?",
+    "answer": "bike",
+    "question_date": "2023/03/10 (Fri) 23:15",
+    "haystack_dates": ["2023/03/10 (Fri) 22:50"],
+    "haystack_session_ids": ["answer_fixture_bike_1"],
+    "haystack_sessions": [
+      [
+        {
+          "role": "user",
+          "content": "In mid-February I took my bike in for gear repairs before I did anything with the car.",
+          "has_answer": true
+        },
+        {
+          "role": "assistant",
+          "content": "Got it — bike maintenance first in February."
+        }
+      ]
+    ],
+    "answer_session_ids": ["answer_fixture_bike_1"],
+    "source": "schema_compatible_fixture_not_full_longmemeval_corpus",
+    "license_note": "Fixture crafted for local custody tests; full LongMemEval stays outside git until pulled to sources/"
+  },
+  {
+    "question_id": "fixture_lme_phone_003",
+    "question_type": "temporal-reasoning",
+    "question": "Which device did I get first, the Samsung Galaxy S22 or the Dell XPS 13?",
+    "answer": "Samsung Galaxy S22",
+    "question_date": "2023/03/15 (Wed) 03:53",
+    "haystack_dates": ["2023/03/15 (Wed) 00:56"],
+    "haystack_session_ids": ["answer_fixture_phone_1"],
+    "haystack_sessions": [
+      [
+        {
+          "role": "user",
+          "content": "I got a Samsung Galaxy S22 on February 20th, then later bought a Dell XPS 13.",
+          "has_answer": true
+        },
+        {
+          "role": "assistant",
+          "content": "Phone first, then the laptop."
+        }
+      ]
+    ],
+    "answer_session_ids": ["answer_fixture_phone_1"],
+    "source": "schema_compatible_fixture_not_full_longmemeval_corpus",
+    "license_note": "Fixture crafted for local custody tests; full LongMemEval stays outside git until pulled to sources/"
+  }
+]
