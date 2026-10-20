@@ -1,0 +1,22 @@
+{
+ "schema": "sneak.cross-run-determinism.v1",
+ "compares": [
+  "runs/run1_stdout.txt",
+  "runs/run2_stdout.txt"
+ ],
+ "unit": "model_call response sha256 prefix (16 hex) per model and round",
+ "options": {
+  "temperature": 0,
+  "seed": 42
+ },
+ "total": 12,
+ "identical": 11,
+ "differing": [
+  "model:qwen2.5:0.5b|r1"
+ ],
+ "note": "run1 was recorded under the pre-fix breakpoint identity (stream not in identity) and its ledger was discarded; its response hashes are unaffected by that bug. Both runs on magicSTUDIObox Ollama, same model digests.",
+ "run_files_sha256": {
+  "runs/run1_stdout.txt": "12ca7f1d5e84c937fafade68600fd71629e8c2eb101f8594e62adcab7f603e71",
+  "runs/run2_stdout.txt": "e323eb19aea1d1ea49adb5e5037e4ab901b925a2b1881a454b1465c6b2732d56"
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "summary": {
+  "ledger_pass": true,
+  "entries": 55,
+  "global_root": "fbada9c110c2a2d6e62b0234b1d1a0afeec10c27da428a8a9d58623a08f3508e",
+  "counts": {
+   "EXECUTED": 8,
+   "FAILED": 1,
+   "NOT_TESTED": 10,
+   "OBSERVED": 2
+  }
+ },
+ "requirements": [
+  {
+   "id": "BPR-01",
+   "requirement": "Every conversation turn and step has a unique Merkle breakpoint",
+   "state": "EXECUTED",
+   "evidence": "55 entries, all ids unique and recomputed; this chat session recorded (9 messages). BAND conversations not yet captured",
+   "optional": false
+  },
+  {
+   "id": "BPR-02",
+   "requirement": "A breakpoint can be TRUE or FALSE",
+   "state": "OBSERVED",
+   "evidence": "4 TRUE, 20 FALSE step breakpoints",
+   "optional": false
+  },
+  {
+   "id": "BPR-03",
+   "requirement": "Each model has its own MMR",
+   "state": "EXECUTED",
+   "evidence": "model:lfm2-1.2b-longevity-q4km:latest@3839bfb14341 size 16; model:longhorizon-liquid-230m:latest@fea00095c205 size 16; model:qwen2.5:0.5b@a8b0c5157701 size 16; model:qwen2.5:1.5b@65ec06548149 size 16",
+   "optional": false
+  },
+  {
+   "id": "BPR-04",
+   "requirement": "Each model is compared to the root question",
+   "state": "EXECUTED",
+   "evidence": "1 root question(s): BP-c1fa73944d419246",
+   "optional": false
+  },
+  {
+   "id": "BPR-05",
+   "requirement": "Delta over time for each model",
+   "state": "OBSERVED",
+   "evidence": "delta kinds seen: ['FIRST', 'SAME', 'TURNED_TRUE']",
+   "optional": false
+  },
+  {
+   "id": "BPR-06",
+   "requirement": "Input is hashed",
+   "state": "EXECUTED",
+   "evidence": "36 steps with input_sha256",
+   "optional": false
+  },
+  {
+   "id": "BPR-07",
+   "requirement": "Deterministic script steps",
+   "state": "FAILED",
+   "evidence": "script_sha256 on every step; within-run replay 4/4 identical; cross-run 11/12 identical, differing: ['model:qwen2.5:0.5b|r1']",
+   "optional": false
+  },
+  {
+   "id": "BPR-08",
+   "requirement": "Steps are FCO-style identities (hash of immutable fields)",
+   "state": "EXECUTED",
+   "evidence": "bp_sha256 = SHA256(canonical identity); verify recomputes all",
+   "optional": false
+  },
+  {
+   "id": "BPR-09",
+   "requirement": "Output is hashed",
+   "state": "EXECUTED",
+   "evidence": "output_sha256 on every step; breakpoint computed only when text matches hash",
+   "optional": false
+  },
+  {
+   "id": "BPR-10",
+   "requirement": "Updates are hashed through FCO tracking",
+   "state": "EXECUTED",
+   "evidence": "2 link(s) from breakpoints to contribution FCOs: FCO-8b904d2cf8f265d9, FCO-cb3b6ef299f35553",
+   "optional": false
+  },
+  {
+   "id": "BPR-11",
+   "requirement": "BAND is used to ask",
+   "state": "NOT_TESTED",
+   "evidence": "1 question(s) queued, 0 sent (Claude not yet connected to BAND)",
+   "optional": false
+  },
+  {
+   "id": "BPR-12",
+   "requirement": "BAND responses are recorded as breakpoints",
+   "state": "NOT_TESTED",
+   "evidence": "no BAND reply captured yet",
+   "optional": false
+  },
+  {
+   "id": "BPR-13",
+   "requirement": "Cognee captures everything",
+   "state": "NOT_TESTED",
+   "evidence": "34 memory item(s) queued, 0 sent (Cognee OSS not yet running)",
+   "optional": false
+  },
+  {
+   "id": "BPR-14",
+   "requirement": "All agents are updated",
+   "state": "NOT_TESTED",
+   "evidence": "requires BAND delivery to every agent plus acknowledgements",
+   "optional": false
+  },
+  {
+   "id": "BPR-15",
+   "requirement": "Planner is in the conversation and checked via BAND chat",
+   "state": "NOT_TESTED",
+   "evidence": "question to @planner queued as BP-1240e7e97ab1d2b5",
+   "optional": false
+  },
+  {
+   "id": "BPR-16",
+   "requirement": "Everything connects at the end (one project root)",
+   "state": "EXECUTED",
+   "evidence": "global MMR root now fbada9c110c2a2d6e62b0234b1d1a0afeec10c27da428a8a9d58623a08f3508e over 55 entries; final project root NOT_COMPUTED until project end",
+   "optional": false
+  },
+  {
+   "id": "BPR-17",
+   "requirement": "Each step is checked with Snyk",
+   "state": "NOT_TESTED",
+   "evidence": "branch-level Snyk Code scans exist (RT-29); per-step scanning not wired",
+   "optional": false
+  },
+  {
+   "id": "BPR-18",
+   "requirement": "Flexprice analyses ROI per token",
+   "state": "NOT_TESTED",
+   "evidence": "12 token event(s) queued, 0 sent; ROI NOT_COMPUTED (value definition pending)",
+   "optional": false
+  },
+  {
+   "id": "BPR-19",
+   "requirement": "Snyk API key set up from iPad and stored outside chat",
+   "state": "NOT_TESTED",
+   "evidence": "human action pending",
+   "optional": false
+  },
+  {
+   "id": "BPR-20",
+   "requirement": "Claude, Cursor and the teammate each acknowledge in BAND by @mention",
+   "state": "NOT_TESTED",
+   "evidence": "Claude not connected; Cursor and teammate not seen in the room",
+   "optional": true
+  },
+  {
+   "id": "BPR-21",
+   "requirement": "Cognee OSS: raw upload vs SeedGraph LongMemEval comparison (30 questions)",
+   "state": "NOT_TESTED",
+   "evidence": "paused before setup; dataset sha256 d6f21ea9... verified",
+   "optional": true
+  }
+ ]
+}
