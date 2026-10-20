@@ -1,0 +1,509 @@
+{
+ "schema": "sneak.failure-proofs.v1",
+ "script_sha256": "02283e90c211f12c43a65f1b952f2c4ec6cd2238595fd0bc7d314cbbb4b43d94",
+ "failures": [
+  {
+   "failure": "F1",
+   "summary": "Second Tom & Jerry registration attempt re-implemented a blocked action. Blocked actions leave no machine trace.",
+   "root_bp": "BP-5592f180180f98fb",
+   "parent_request_bp": "BP-7711816dc79dae3e",
+   "evidence_root": "0000000000000000000000000000000000000000000000000000000000000000",
+   "verdict": "NOT_PROVEN",
+   "proof_bp": "BP-715801afa916daf7",
+   "evidence": [],
+   "lomo": [],
+   "path_to_conversation": [
+    "BP-715801afa916daf7",
+    "BP-5592f180180f98fb",
+    "BP-7711816dc79dae3e"
+   ]
+  },
+  {
+   "failure": "F2",
+   "summary": "Cognee tenant API called with the pasted key from magicstudio before the owner confirmed key use.",
+   "root_bp": "BP-8a6d9d45bd2a1545",
+   "parent_request_bp": "BP-1f367ae6503e1cb7",
+   "evidence_root": "9c0e3a574c8dcdd2e7262adbd80f8b826adfdf89315996a1683aef56c3631a2f",
+   "verdict": "PROVEN",
+   "proof_bp": "BP-5851ef26252492da",
+   "evidence": [
+    {
+     "ref": "magicSTUDIObox:/tmp/rt/cognee_openapi.json",
+     "role": "cognee-response-on-disk",
+     "sha256": "05105767606e277a66dd8b9885e63f51ef2019c4befb1efac81d4fe3b3d47dc1",
+     "supports": true,
+     "detail": "file exists"
+    },
+    {
+     "ref": "magicSTUDIObox:/tmp/rt/cognee_health.json",
+     "role": "cognee-response-on-disk",
+     "sha256": "0d4434365a5fe854c2afc35d110e705b00aaf3af2e6bf16a56749df63b3603b9",
+     "supports": true,
+     "detail": "file exists"
+    },
+    {
+     "ref": "magicSTUDIObox:/tmp/rt/cognee__api_v1_datasets_.json",
+     "role": "cognee-response-on-disk",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "supports": false,
+     "detail": "missing"
+    }
+   ],
+   "lomo": [
+    {
+     "removed": "magicSTUDIObox:/tmp/rt/cognee_openapi.json",
+     "role": "cognee-response-on-disk",
+     "root": "8fd0052856f4e5a0",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-76d4474d1f9d27d5"
+    },
+    {
+     "removed": "magicSTUDIObox:/tmp/rt/cognee_health.json",
+     "role": "cognee-response-on-disk",
+     "root": "b02e20f42455c9de",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-2001b7a817e53dd8"
+    },
+    {
+     "removed": "magicSTUDIObox:/tmp/rt/cognee__api_v1_datasets_.json",
+     "role": "cognee-response-on-disk",
+     "root": "53f2bb7d6ac1b271",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-37fbbb2c95e57348"
+    }
+   ],
+   "path_to_conversation": [
+    "BP-5851ef26252492da",
+    "BP-8a6d9d45bd2a1545",
+    "BP-1f367ae6503e1cb7"
+   ]
+  },
+  {
+   "failure": "F3",
+   "summary": "Marked M03/M04/M10-M12 SUPPORTED from a receipt-hash check only.",
+   "root_bp": "BP-9553e5eb8b552fad",
+   "parent_request_bp": "BP-debce702107eb765",
+   "evidence_root": "5a3823da4a776e48d99af6b55e7da36a088524d9b07d35c5b9b7875a154ff8f0",
+   "verdict": "PROVEN",
+   "proof_bp": "BP-3db650cee6ac02dd",
+   "evidence": [
+    {
+     "ref": "97f0904:redteam/requirements_review_summary.json",
+     "role": "overstated-claim",
+     "sha256": "365be9462da728c69f8c5e6ba16c0e0f17b1ecaa549881e30682d96980d7583f",
+     "supports": true,
+     "detail": "mandatory_supported=5"
+    },
+    {
+     "ref": "redteam/BAND_MESSAGE_SNEAK-RT-CLAUDE-002.txt",
+     "role": "claim-published",
+     "sha256": "e7e4c9785f85b9134d124601a3f6471eb3c386559a5da6b13fe0a52d6632c5c6",
+     "supports": true,
+     "detail": "hashed message says SUPPORTED 5/30"
+    },
+    {
+     "ref": "origin/redteam/claude-20261020:redteam/requirements_review_summary.json",
+     "role": "correction",
+     "sha256": "1873265853c219fc31222df6395271052ada7a9979c9e9c4769765fe7a365f94",
+     "supports": true,
+     "detail": "mandatory_supported=0"
+    }
+   ],
+   "lomo": [
+    {
+     "removed": "97f0904:redteam/requirements_review_summary.json",
+     "role": "overstated-claim",
+     "root": "a573834304ca9329",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-288b929bec071e69"
+    },
+    {
+     "removed": "redteam/BAND_MESSAGE_SNEAK-RT-CLAUDE-002.txt",
+     "role": "claim-published",
+     "root": "70362d08e8807bff",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-f823cb4fee4e8516"
+    },
+    {
+     "removed": "origin/redteam/claude-20261020:redteam/requirements_review_summary.json",
+     "role": "correction",
+     "root": "302d4f183c316834",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-608a38dbae4a04c4"
+    }
+   ],
+   "path_to_conversation": [
+    "BP-3db650cee6ac02dd",
+    "BP-9553e5eb8b552fad",
+    "BP-debce702107eb765"
+   ]
+  },
+  {
+   "failure": "F4",
+   "summary": "Claude's commits carry Byron's name and email, unsigned.",
+   "root_bp": "BP-a30685a49c2d9449",
+   "parent_request_bp": "BP-1f367ae6503e1cb7",
+   "evidence_root": "53561ce7640bd8f09ea2b14a6bab862b977e54669c34386101e0e7fade67f4cb",
+   "verdict": "PROVEN",
+   "proof_bp": "BP-6f69ab15c3bb634b",
+   "evidence": [
+    {
+     "ref": "origin/redteam/claude-20261020 commits",
+     "role": "authored-as-byron",
+     "sha256": "0cf3f1d97d62fb8631b51ff5dd7fd32081355556b1273a738958f014229250d1",
+     "supports": true,
+     "detail": "8/8 Claude commits authored as Byron; 8 unsigned"
+    },
+    {
+     "ref": "origin/onboarding/teammate-fco-handoff commits",
+     "role": "authored-as-byron",
+     "sha256": "8499e82d11d6aa7b48fb559c623d77efc76cc1ef1dc87ceb954859fc0f4ad3ab",
+     "supports": true,
+     "detail": "3/3 Claude commits authored as Byron; 3 unsigned"
+    },
+    {
+     "ref": "origin/docs/merkle-mmr-knowledge-base commits",
+     "role": "authored-as-byron",
+     "sha256": "f8538531bbe137d233e971ce53a4a8e9e473d61cfa63373edbd7dd2ad66bf4d9",
+     "supports": true,
+     "detail": "5/5 Claude commits authored as Byron; 5 unsigned"
+    },
+    {
+     "ref": "origin/feat/breakpoint-mmr-ledger commits",
+     "role": "authored-as-byron",
+     "sha256": "cbd492d1e453cecd349ffedb5236890adcf51152cd796e11357cc0383f79f3c8",
+     "supports": true,
+     "detail": "7/7 Claude commits authored as Byron; 7 unsigned"
+    }
+   ],
+   "lomo": [
+    {
+     "removed": "origin/redteam/claude-20261020 commits",
+     "role": "authored-as-byron",
+     "root": "24dece73b106c7b3",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-433fa16912e45e52"
+    },
+    {
+     "removed": "origin/onboarding/teammate-fco-handoff commits",
+     "role": "authored-as-byron",
+     "root": "689a3d64a63e79fc",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-68c836de35a93166"
+    },
+    {
+     "removed": "origin/docs/merkle-mmr-knowledge-base commits",
+     "role": "authored-as-byron",
+     "root": "c528a1bf6a534b44",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-96f26e9b896bbec6"
+    },
+    {
+     "removed": "origin/feat/breakpoint-mmr-ledger commits",
+     "role": "authored-as-byron",
+     "root": "1bec39f27943646c",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-78f5e90971f5b11a"
+    }
+   ],
+   "path_to_conversation": [
+    "BP-6f69ab15c3bb634b",
+    "BP-a30685a49c2d9449",
+    "BP-1f367ae6503e1cb7"
+   ]
+  },
+  {
+   "failure": "F5",
+   "summary": "Claude's GitHub comments were posted from the owner's account.",
+   "root_bp": "BP-def113f6828405f2",
+   "parent_request_bp": "BP-debce702107eb765",
+   "evidence_root": "e84408082daaef46509cd07a93c28c63aa676e0ae60d0d16f4c442ec11616bab",
+   "verdict": "PROVEN",
+   "proof_bp": "BP-31af13d398218d8a",
+   "evidence": [
+    {
+     "ref": "github:issuecomment-6302626402",
+     "role": "posted-from-user-account",
+     "sha256": "e92f544cd41f74ad6ecf83c8672d6e9d7f0e5f6bb94a3f600f941e2a822a0571",
+     "supports": true,
+     "detail": "author=biobitworks; claude_footer=True"
+    },
+    {
+     "ref": "github:issuecomment-6302626823",
+     "role": "posted-from-user-account",
+     "sha256": "d24fa59299e8842a16553353fb937b70f41ccf4d6adc0074dc8772f284a4d8d1",
+     "supports": true,
+     "detail": "author=biobitworks; claude_footer=True"
+    },
+    {
+     "ref": "github:issuecomment-6302627424",
+     "role": "posted-from-user-account",
+     "sha256": "70ab64a0419cf23839a3df04d73c3b73c0f2738e8a589a3d64ebd448865dba98",
+     "supports": true,
+     "detail": "author=biobitworks; claude_footer=True"
+    },
+    {
+     "ref": "github:issuecomment-6302628146",
+     "role": "posted-from-user-account",
+     "sha256": "711f45b5f28545f62e0934efed015881996b167ffa73fa8af6a7fa96487083f2",
+     "supports": true,
+     "detail": "author=biobitworks; claude_footer=True"
+    },
+    {
+     "ref": "github:issuecomment-6302628620",
+     "role": "posted-from-user-account",
+     "sha256": "fe713c92b945a1066fac477cf788a16138845bbf4de960fed8a5e72cabe355ce",
+     "supports": true,
+     "detail": "author=biobitworks; claude_footer=True"
+    }
+   ],
+   "lomo": [
+    {
+     "removed": "github:issuecomment-6302626402",
+     "role": "posted-from-user-account",
+     "root": "794591f759011697",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-43dec2df10f76b0a"
+    },
+    {
+     "removed": "github:issuecomment-6302626823",
+     "role": "posted-from-user-account",
+     "root": "c84161a901fb95d6",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-b450a41a2a3f11ed"
+    },
+    {
+     "removed": "github:issuecomment-6302627424",
+     "role": "posted-from-user-account",
+     "root": "5ef4e5ddb736e738",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-c3c3cb4c6a405295"
+    },
+    {
+     "removed": "github:issuecomment-6302628146",
+     "role": "posted-from-user-account",
+     "root": "b7b865277463136a",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-17179afd0a247c29"
+    },
+    {
+     "removed": "github:issuecomment-6302628620",
+     "role": "posted-from-user-account",
+     "root": "5fb95571480dfb36",
+     "verdict": "PROVEN",
+     "breakpoint": true,
+     "bp_id": "BP-4e9dbc9d11480fc6"
+    }
+   ],
+   "path_to_conversation": [
+    "BP-31af13d398218d8a",
+    "BP-def113f6828405f2",
+    "BP-debce702107eb765"
+   ]
+  },
+  {
+   "failure": "F6",
+   "summary": "Proof-of-work labelled SUPPORTED though checker and checked work share one author.",
+   "root_bp": "BP-2d211f7c649ed9c0",
+   "parent_request_bp": "BP-debce702107eb765",
+   "evidence_root": "89d1832870662539ccae4dcbdb497dfcbe5bb57e49654beff200f81e2550e9cb",
+   "verdict": "PROVEN",
+   "proof_bp": "BP-1caea9b2c9e6d139",
+   "evidence": [
+    {
+     "ref": "redteam/PROOF_SNEAK-RT-CLAUDE-003.json",
+     "role": "labelled-supported",
+     "sha256": "68ab2fc37c87ae0943c0ae1b92f1be7e9cc68a8930b322ad862adb2a5ca52b90",
+     "supports": true,
+     "detail": "17/17 labelled SUPPORTED"
+    },
+    {
+     "ref": "redteam/prove_all.py authoring commit",
+     "role": "same-author-wrote-checker",
+     "sha256": "aa5d2f7c0cddaea05458eef0f8b014105c3de2ea1b7a5df7674eed69740d98ac",
+     "supports": true,
+     "detail": "checker written in the same Claude session"
+    }
+   ],
+   "lomo": [
+    {
+     "removed": "redteam/PROOF_SNEAK-RT-CLAUDE-003.json",
+     "role": "labelled-supported",
+     "root": "9f23417b5f503794",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-c34b23f60f002258"
+    },
+    {
+     "removed": "redteam/prove_all.py authoring commit",
+     "role": "same-author-wrote-checker",
+     "root": "23be5b68c8978239",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-09d83c67ef835b19"
+    }
+   ],
+   "path_to_conversation": [
+    "BP-1caea9b2c9e6d139",
+    "BP-2d211f7c649ed9c0",
+    "BP-debce702107eb765"
+   ]
+  },
+  {
+   "failure": "F7",
+   "summary": "Knowledge-base claim about proof sides encoding the index was wrong; fixed before the first commit, so no committed trace.",
+   "root_bp": "BP-3ac60ddd92338576",
+   "parent_request_bp": "BP-ae1d6f06acbc1e7b",
+   "evidence_root": "0000000000000000000000000000000000000000000000000000000000000000",
+   "verdict": "NOT_PROVEN",
+   "proof_bp": "BP-c1a44b1bd52da67a",
+   "evidence": [],
+   "lomo": [],
+   "path_to_conversation": [
+    "BP-c1a44b1bd52da67a",
+    "BP-3ac60ddd92338576",
+    "BP-ae1d6f06acbc1e7b"
+   ]
+  },
+  {
+   "failure": "F8",
+   "summary": "Engineering failures: cross-run nondeterminism, secret check hit own test, Flexprice attempt 1 failed, two ledger bugs.",
+   "root_bp": "BP-d72873e20d736104",
+   "parent_request_bp": "BP-7240fb9c380ee42c",
+   "evidence_root": "f3a96daf3ca067bfb01a423b6ae335478429bc806b6d7a093706e6ffcf0cdb8f",
+   "verdict": "PROVEN",
+   "proof_bp": "BP-02571dc2f8b22ec1",
+   "evidence": [
+    {
+     "ref": "CROSS_RUN_DETERMINISM.json",
+     "role": "nondeterminism",
+     "sha256": "6d171eeea14c3a049476790cfb52cae290e1412f38bc11707a111ba9a123e899",
+     "supports": true,
+     "detail": "11/12 identical; ['model:qwen2.5:0.5b|r1']"
+    },
+    {
+     "ref": "99b6195:tests/test_contribution_fco.py",
+     "role": "secret-check-hit-own-test",
+     "sha256": "03d5b51b60b16ee33a3478ffc7c1cac513327ae8f615d04211df20ee5982c786",
+     "supports": true,
+     "detail": "literal fake key in committed test"
+    },
+    {
+     "ref": "magicSTUDIObox:/tmp/rt/fp_setup_attempt1_main-4bc124e.log",
+     "role": "flexprice-attempt1-failed",
+     "sha256": "78b3490d3d360490b7451b07f193f26c98eeec51f2d23a7d88f86694cdadb100",
+     "supports": true,
+     "detail": "setup_rc=2"
+    },
+    {
+     "ref": "scripts/breakpoint_ledger.py (fixed)",
+     "role": "ledger-bugs-fixed",
+     "sha256": "32fc9baf2263221c8424dc04a2d1c2aaa79e0285366b5cdd31a5f84608f1864d",
+     "supports": true,
+     "detail": "stream-in-identity and per-step delta fixes present"
+    }
+   ],
+   "lomo": [
+    {
+     "removed": "CROSS_RUN_DETERMINISM.json",
+     "role": "nondeterminism",
+     "root": "505175c1a9a6db69",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-15308da605438993"
+    },
+    {
+     "removed": "99b6195:tests/test_contribution_fco.py",
+     "role": "secret-check-hit-own-test",
+     "root": "f2789dfa3954c3bf",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-bff967d4d3c6f2be"
+    },
+    {
+     "removed": "magicSTUDIObox:/tmp/rt/fp_setup_attempt1_main-4bc124e.log",
+     "role": "flexprice-attempt1-failed",
+     "root": "fb553ea40e0dc375",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-816845a65ae1dcde"
+    },
+    {
+     "removed": "scripts/breakpoint_ledger.py (fixed)",
+     "role": "ledger-bugs-fixed",
+     "root": "e79c11d1c355d83f",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-3740b37b87f59f61"
+    }
+   ],
+   "path_to_conversation": [
+    "BP-02571dc2f8b22ec1",
+    "BP-d72873e20d736104",
+    "BP-7240fb9c380ee42c"
+   ]
+  },
+  {
+   "failure": "F9",
+   "summary": "Successor IDs collided with the architect's numbering twice.",
+   "root_bp": "BP-b729c4021b34ff1d",
+   "parent_request_bp": "BP-1f367ae6503e1cb7",
+   "evidence_root": "30c82dec6328b89f64035c3072ea8403f3c57c50112bcfa6773216fd9cb8c6b7",
+   "verdict": "PROVEN",
+   "proof_bp": "BP-552fb691118e7651",
+   "evidence": [
+    {
+     "ref": "origin/main SNEAK-016 receipts",
+     "role": "other-agent-uses-id",
+     "sha256": "7429a23732a1a9018e61ddc62ac435c92537393610b10ccedf9bf81bebd3f06f",
+     "supports": true,
+     "detail": "2 file(s)"
+    },
+    {
+     "ref": "redteam/findings_SNEAK-013.jsonl",
+     "role": "claude-used-same-id",
+     "sha256": "5f839ac9b8cdae71885c2388535e0965ea1e093fbcfc1f15e11697d4069444ac",
+     "supports": true,
+     "detail": "SNEAK-016-REDTEAM used"
+    }
+   ],
+   "lomo": [
+    {
+     "removed": "origin/main SNEAK-016 receipts",
+     "role": "other-agent-uses-id",
+     "root": "0a47231a2b4257d5",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-6337e3e70257e2ec"
+    },
+    {
+     "removed": "redteam/findings_SNEAK-013.jsonl",
+     "role": "claude-used-same-id",
+     "root": "a90638d4746b8753",
+     "verdict": "NOT_PROVEN",
+     "breakpoint": false,
+     "bp_id": "BP-b73ddcf3cb4a3764"
+    }
+   ],
+   "path_to_conversation": [
+    "BP-552fb691118e7651",
+    "BP-b729c4021b34ff1d",
+    "BP-1f367ae6503e1cb7"
+   ]
+  }
+ ]
+}
