@@ -21,6 +21,8 @@ from .merkle import breakpoint_receipt
 from .scanner import digest_tree, live_scan_availability, scan
 from .score import UPSTREAM_COMMIT, is_clean_ten
 from .secrets import presence_receipt
+from .fcg_registry import FCGRegistry
+from .lomo_fcg import register_breakpoint_result
 
 
 def score_after_breakpoint(
@@ -33,8 +35,14 @@ def score_after_breakpoint(
     band: Optional[BandAdapter] = None,
     notify_band: bool = True,
     wait_data_seconds: float = 40.0,
+    fcg: Optional[FCGRegistry] = None,
+    actor_fco: Optional[str] = None,
+    model_fco: str = "UNKNOWN",
+    parent_fco: Optional[str] = None,
 ) -> dict[str, Any]:
     """Mandatory post-breakpoint gate: @Data write, optional BAND notify, Snyk+score."""
+    if fcg is not None and not actor_fco:
+        raise ValueError("FCO actor identity required for per-breakpoint MMR custody")
     data_ref = data.write_breakpoint(
         breakpoint_id=breakpoint_id,
         merkle_root=merkle_root,
@@ -78,7 +86,20 @@ def score_after_breakpoint(
         parent_id=breakpoint_id,
         provider="snyk+javier-score",
     )
+    fcg_result = (
+        register_breakpoint_result(
+            fcg, actor_fco=actor_fco, model_fco=model_fco,
+            breakpoint_id=breakpoint_id, merkle_root=merkle_root,
+            score_receipt_path=Path(score_receipt.receipt_path),
+            scan_outcome=scan_result.observed_outcome,
+            application_score=scan_result.score.application_score,
+            coverage_accepted=scan_result.score.coverage_accepted,
+            candidate_digest=digest, parent_fco=parent_fco,
+        )
+        if fcg is not None else None
+    )
     return {
+        "fcg": fcg_result,
         "breakpoint_id": breakpoint_id,
         "merkle_root": merkle_root,
         "data": json.loads(Path(data_ref.receipt_path).read_text())["payload"],
@@ -105,14 +126,22 @@ def run_connector_lomo_with_scores(
     parent_breakpoint: str = "SNEAK-015",
     live: bool = True,
     notify_band: bool = True,
+    fcg: Optional[FCGRegistry] = None,
+    actor_fco: Optional[str] = None,
+    model_fco: str = "UNKNOWN",
+    chain_breakpoint_id: str = "SNEAK-016",
 ) -> dict[str, Any]:
     """Run connector LOMO trials; score after each baseline and ablated merkle root."""
+    if fcg is not None and not actor_fco:
+        raise ValueError("FCO actor identity required for registered LOMO trials")
     data = DataBackend(store, live=live)
     band = BandAdapter(store, live=live)
     trials = matrix_connector_trials(parent_breakpoint=parent_breakpoint)
     scored: list[dict[str, Any]] = []
+    predecessor_fco: Optional[str] = None
 
     for trial in trials:
+        baseline_fco: Optional[str] = None
         for kind in ("baseline_breakpoint", "ablated_breakpoint"):
             bp = trial[kind]
             scored.append(
@@ -131,9 +160,37 @@ def run_connector_lomo_with_scores(
                         notify_band=notify_band and kind == "ablated_breakpoint",
                         # Persist to @Data quickly; final recall verified once at end.
                         wait_data_seconds=0.0,
+                        fcg=fcg,
+                        actor_fco=actor_fco,
+                        model_fco=model_fco,
+                        parent_fco=predecessor_fco,
                     ),
                 }
             )
+            if fcg is not None:
+                result = scored[-1]["post"]
+                predecessor_fco = result["fcg"]["classification_fco_id"]
+                if kind == "baseline_breakpoint":
+                    baseline_fco = result["fcg"]["breakpoint_fco_id"]
+                else:
+                    delta = fcg.append(
+                        kind="delta", actor_fco=actor_fco, model_fco=model_fco,
+                        parent_fco=predecessor_fco,
+                        edges=[{"relation": "ablates", "to": baseline_fco}],
+                        payload={
+                            "trial_id": trial["trial_id"],
+                            "removed_component": trial["removed_component"],
+                            "baseline_merkle_root": trial["baseline_root"],
+                            "ablated_merkle_root": trial["ablated_root"],
+                            "root_identity_changed": trial["roots_differ"],
+                            "numeric_delta": "NOT_COMPUTED",
+                        },
+                        state="EXECUTED", source_sha256=result["score_digest"],
+                        context={"source": "post_lomo_score_receipt_body_digest",
+                                 "meaning": "root identity comparison, not metric improvement"},
+                    )
+                    result["fcg_delta_fco_id"] = delta["fco_id"]
+                    predecessor_fco = delta["fco_id"]
 
     summary = {
         "parent_breakpoint": parent_breakpoint,
@@ -161,7 +218,7 @@ def run_connector_lomo_with_scores(
 
     chain = breakpoint_receipt(
         schema="sneak.lomo-score-chain.v1",
-        breakpoint_id="SNEAK-016",
+        breakpoint_id=chain_breakpoint_id,
         parent_id=parent_breakpoint,
         records=[
             {
