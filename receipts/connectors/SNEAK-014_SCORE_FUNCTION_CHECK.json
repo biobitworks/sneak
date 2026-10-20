@@ -1,0 +1,22 @@
+{
+  "application_score": null,
+  "eleven_medium_score": 0.0,
+  "incomplete_coverage": {
+    "application_score": null,
+    "coverage_accepted": false,
+    "license": "UNKNOWN_ROOT_LICENSE_404",
+    "meaning": "Tool score only; not an awarded event bonus or vulnerability-free claim",
+    "raw_score": 10.0,
+    "reject_reason": "incomplete_sca_or_sast_coverage",
+    "sast_coverage": false,
+    "sca_coverage": true,
+    "upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+    "upstream_repo": "https://github.com/javiergarza-snyk/app-security-score"
+  },
+  "license": "UNKNOWN_ROOT_LICENSE_404",
+  "one_high_score": 9.0,
+  "sast_coverage": "NOT_EXECUTED_LIVE",
+  "sca_coverage": "NOT_EXECUTED_LIVE",
+  "upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+  "zero_findings_score": 10.0
+}

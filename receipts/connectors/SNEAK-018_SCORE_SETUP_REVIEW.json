@@ -1,0 +1,196 @@
+{
+  "application_score": null,
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "event_snyk_bonus": "NOT_AWARDED",
+  "human_decision": "APPROVE_PATH_RECORDED",
+  "id": "SNEAK-018",
+  "leaf_count": 4,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031382d44415441222c226b696e64223a22636f676e65655f646174615f757064617465222c227061796c6f6164223a7b22646967657374223a2235633936333233666632386666616362363237343139303364393061393864336230626261363435653838636634376263376166653538656465346563343734222c226f62736572766564223a2250415353222c22726563656970745f6964223a22646174615f627265616b706f696e742d373739373466316331393539227d7d",
+      "leaf": "fcfaaf50b7658bb89f4000efaf969442010b9318e1eb4a47ae2492305fc319d0",
+      "proof": [
+        {
+          "hash": "ba686d216d41e5b7e0ff0d6b0dcd25d8fbc55f7fbdbdae3b10d99949ca7bdb53",
+          "side": "right"
+        },
+        {
+          "hash": "e730631cae1d08b6885254fd0db43faae8ef2502af4185f5be0c68795a667acc",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-018-DATA",
+        "kind": "cognee_data_update",
+        "payload": {
+          "digest": "5c96323ff28ffacb62741903d90a98d3b0bba645e88cf47bc7afe58ede4ec474",
+          "observed": "PASS",
+          "receipt_id": "data_breakpoint-77974f1c1959"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031382d484153484d5347222c226b696e64223a2262616e645f6861736865645f7265766965775f6d657373616765222c227061796c6f6164223a7b2262616e645f6f7574636f6d65223a2250415353222c2262616e645f72656365697074223a2262616e645f6475616c5f6861726e6573735f6d6573736167652d356130646330306238363966222c226d6573736167655f6c656166223a2265303730663266646636343836303266373138643037343136663130653738646535373136383931386633376563343834316631336361643935616339316463222c226d6573736167655f726f6f74223a2265303730663266646636343836303266373138643037343136663130653738646535373136383931386633376563343834316631336361643935616339316463222c227265766965775f646967657374223a2263366637326661393464303636363734306630336635626638306635623737653932313565346164663733383739643038363630323537306135306461636263227d7d",
+      "leaf": "ba686d216d41e5b7e0ff0d6b0dcd25d8fbc55f7fbdbdae3b10d99949ca7bdb53",
+      "proof": [
+        {
+          "hash": "fcfaaf50b7658bb89f4000efaf969442010b9318e1eb4a47ae2492305fc319d0",
+          "side": "left"
+        },
+        {
+          "hash": "e730631cae1d08b6885254fd0db43faae8ef2502af4185f5be0c68795a667acc",
+          "side": "right"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-018-HASHMSG",
+        "kind": "band_hashed_review_message",
+        "payload": {
+          "band_outcome": "PASS",
+          "band_receipt": "band_dual_harness_message-5a0dc00b869f",
+          "message_leaf": "e070f2fdf648602f718d07416f10e78de57168918f37ec4841f13cad95ac91dc",
+          "message_root": "e070f2fdf648602f718d07416f10e78de57168918f37ec4841f13cad95ac91dc",
+          "review_digest": "c6f72fa94d0666740f03f5bf80f5b77e9215e4adf73879d086602570a50dacbc"
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031382d50494e222c226b696e64223a226a61766965725f70696e222c227061796c6f6164223a7b22636f6d6d6974223a2236653166323736303566653237386565643334376231306461623666333962333530316631343836222c22636f6d6d69745f6d6174636865735f70696e223a747275652c226e6f64655f68656c7065725f6d61746368223a747275652c22707974686f6e5f656c6576656e5f6d656469756d223a302e302c22707974686f6e5f6f6e655f68696768223a392e302c22707974686f6e5f7a65726f223a31302e307d7d",
+      "leaf": "f007c8547b416e3de31d06c6e805f33aad288e028fed242d1de6d67fc6ed8d15",
+      "proof": [
+        {
+          "hash": "8c0df537ff5ca9b307ca7feccabfd3ba5a6d086300720b61223203dc0a593c7c",
+          "side": "right"
+        },
+        {
+          "hash": "9c3c8911974629f7359ebbe7c7212f9549cf73c8146fa60f33f60aad97793eca",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-018-PIN",
+        "kind": "javier_pin",
+        "payload": {
+          "commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+          "commit_matches_pin": true,
+          "node_helper_match": true,
+          "python_eleven_medium": 0.0,
+          "python_one_high": 9.0,
+          "python_zero": 10.0
+        }
+      }
+    },
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d3031382d524551222c226b696e64223a22726571756972656d656e74735f726576696577222c227061796c6f6164223a7b22636f756e7473223a7b22626f6e75735f73656c6563746564223a342c226d616e6461746f7279223a33302c226f74686572223a302c2273636f72696e675f656e726963686d656e74223a31327d2c22656e7472795f67617465223a7b22656e7472795f67617465223a66616c73652c226d616e6461746f72795f636f756e74223a33302c226d616e6461746f72795f756e7665726966696564223a33302c226d616e6461746f72795f7665726966696564223a302c226d65616e696e67223a22656e7472795f67617465203d20616c6c286d616e6461746f72795f61746f6d2e7665726966696564206973205472756529227d2c226c6976655f636f6e6e6563746f7273223a7b2262616e645f636f676e65655f617070726f766564223a747275652c2264656d6f5f646967657374223a2239656334626362343833383631303333306337326532303137393530626266626231393765343731633133343963623030323366356234393066303539383461222c22736e796b5f6c697665223a224e4f545f544553544544227d2c226d616e6461746f72795f7374696c6c5f756e7665726966696564223a33302c22736e796b5f626f6e75735f61746f6d73223a5b7b226964223a225245512d414f4b2d5330312d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330322d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330312d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330322d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330332d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330342d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330352d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330362d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330372d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330382d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d2c7b226964223a225245512d414f4b2d5330392d534e45414b2d303134222c226f627365727665645f6f7574636f6d65223a224e4f545f544553544544222c227665726966696564223a66616c73657d5d7d7d",
+      "leaf": "8c0df537ff5ca9b307ca7feccabfd3ba5a6d086300720b61223203dc0a593c7c",
+      "proof": [
+        {
+          "hash": "f007c8547b416e3de31d06c6e805f33aad288e028fed242d1de6d67fc6ed8d15",
+          "side": "left"
+        },
+        {
+          "hash": "9c3c8911974629f7359ebbe7c7212f9549cf73c8146fa60f33f60aad97793eca",
+          "side": "left"
+        }
+      ],
+      "record": {
+        "id": "SNEAK-018-REQ",
+        "kind": "requirements_review",
+        "payload": {
+          "counts": {
+            "bonus_selected": 4,
+            "mandatory": 30,
+            "other": 0,
+            "scoring_enrichment": 12
+          },
+          "entry_gate": {
+            "entry_gate": false,
+            "mandatory_count": 30,
+            "mandatory_unverified": 30,
+            "mandatory_verified": 0,
+            "meaning": "entry_gate = all(mandatory_atom.verified is True)"
+          },
+          "live_connectors": {
+            "band_cognee_approved": true,
+            "demo_digest": "9ec4bcb4838610330c72e2017950bbfbb197e471c1349cb0023f5b490f05984a",
+            "snyk_live": "NOT_TESTED"
+          },
+          "mandatory_still_unverified": 30,
+          "snyk_bonus_atoms": [
+            {
+              "id": "REQ-AOK-S01-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S02-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S01-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S02-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S03-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S04-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S05-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S06-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S07-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S08-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            },
+            {
+              "id": "REQ-AOK-S09-SNEAK-014",
+              "observed_outcome": "NOT_TESTED",
+              "verified": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meaning": "Javier score pin + requirements review + @Data update + hashed BAND review request; not a live 10/10 claim or awarded event bonus",
+  "message_leaf": "e070f2fdf648602f718d07416f10e78de57168918f37ec4841f13cad95ac91dc",
+  "message_root": "e070f2fdf648602f718d07416f10e78de57168918f37ec4841f13cad95ac91dc",
+  "mmr": "NOT_COMMITTED",
+  "parent": "SNEAK-017B",
+  "review_digest": "c6f72fa94d0666740f03f5bf80f5b77e9215e4adf73879d086602570a50dacbc",
+  "root": "9e86cb2869917d62e027227adf31621e65b2aaf03b784fe9dc41417e24ba2327",
+  "schema": "sneak.score-setup-review.v1",
+  "signed": false
+}

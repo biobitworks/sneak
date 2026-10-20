@@ -1,0 +1,42 @@
+{
+  "commit_matches_pin": true,
+  "coverage_gate": {
+    "application_score": null,
+    "coverage_accepted": false,
+    "license": "UNKNOWN_ROOT_LICENSE_404",
+    "meaning": "Tool score only; not an awarded event bonus or vulnerability-free claim",
+    "raw_score": 10.0,
+    "reject_reason": "incomplete_sca_or_sast_coverage",
+    "sast_coverage": false,
+    "sca_coverage": true,
+    "upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+    "upstream_repo": "https://github.com/javiergarza-snyk/app-security-score"
+  },
+  "event_bonus": "up_to_plus_10_percent_NOT_AWARDED_BY_TOOL_SCORE",
+  "license": "UNKNOWN_ROOT_LICENSE_404",
+  "local_clone_present": true,
+  "local_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+  "meaning": "A tool score of 0 means many findings (worst). Extra event marks (up to +10%) come from real Snyk integration evidence, not from forcing tool score to 0.",
+  "node_helper": {
+    "eleven_medium": 0,
+    "one_high": 9,
+    "zero": 10
+  },
+  "node_helper_match": true,
+  "python_helper": {
+    "eleven_medium": 0.0,
+    "non_low_cutoff": 10,
+    "one_high": 9.0,
+    "weights": {
+      "critical": 3.0,
+      "high": 1.0,
+      "low": 0.1,
+      "medium": 0.3
+    },
+    "zero_findings": 10.0
+  },
+  "required_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+  "scale": "0_to_10_tool_score_where_10_is_clean",
+  "target_for_bonus_path": "application_score_10_with_sca_and_sast_coverage",
+  "upstream_repo": "https://github.com/javiergarza-snyk/app-security-score"
+}
