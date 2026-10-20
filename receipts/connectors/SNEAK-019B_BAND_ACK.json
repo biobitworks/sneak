@@ -1,0 +1,37 @@
+{
+  "construction": {
+    "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+    "hash": "SHA-256",
+    "internal": "SHA256(0x01 || left32 || right32)",
+    "leaf": "SHA256(0x00 || canonical(event))",
+    "odd": "promote unchanged",
+    "ordering": "event id ascending"
+  },
+  "event_bonus_awarded": false,
+  "id": "SNEAK-019B",
+  "leaf_count": 1,
+  "leaves": [
+    {
+      "canonical_hex": "7b226964223a22534e45414b2d303139422d4147454e542d41434b222c226b696e64223a2262616e645f6167656e745f61636b222c227061796c6f6164223a7b226576656e745f626f6e75735f61776172646564223a66616c73652c226e6f7465223a22436c617564652f546f6d2041434b2073696e676c652d6c65616620726f6f743b20696e646570656e64656e74207265636f6d707574652064656665727265642070656e64696e672063616e6f6e6963616c697a6174696f6e20707265696d61676520696e2d726f6f6d222c226f627365727665645f6f7574636f6d65223a2241434b5f5245434549564544222c22746f6d5f61636b5f6c656166223a2232316466613839343863666239313364363666373365353663383766653231366132646265363731616537653233626161353762623963653334663262386438222c22746f6d5f7265636f6d7075746564223a66616c73657d7d",
+      "leaf": "a9b5333459bfcd0c5f9e97309f700d9d2f72ead0f0d27d81533d1b3fac71e9d7",
+      "proof": [],
+      "record": {
+        "id": "SNEAK-019B-AGENT-ACK",
+        "kind": "band_agent_ack",
+        "payload": {
+          "event_bonus_awarded": false,
+          "note": "Claude/Tom ACK single-leaf root; independent recompute deferred pending canonicalization preimage in-room",
+          "observed_outcome": "ACK_RECEIVED",
+          "tom_ack_leaf": "21dfa8948cfb913d66f73e56c87fe216a2dbe671ae7e23baa57bb9ce34f2b8d8",
+          "tom_recomputed": false
+        }
+      }
+    }
+  ],
+  "meaning": "BAND agent ACK of bonus evidence hash; not award",
+  "mmr": "NOT_COMMITTED",
+  "parent": "SNEAK-019",
+  "root": "a9b5333459bfcd0c5f9e97309f700d9d2f72ead0f0d27d81533d1b3fac71e9d7",
+  "schema": "sneak.snyk-bonus-ack.v1",
+  "signed": false
+}
