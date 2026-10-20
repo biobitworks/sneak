@@ -1,0 +1,76 @@
+{
+  "ID": "IP-20261020-006",
+  "PARENT": "IP-20261020-005",
+  "project": "skill-custody-lab",
+  "repo": "biobitworks/skill-custody-lab",
+  "visibility": "PRIVATE",
+  "VERIFIED_NEW": [
+    "PDF exact SHA-256",
+    "independent seven-page extraction equals predecessor",
+    "197 extracted-line atoms",
+    "46 semantic acceptance atoms with source offsets",
+    "30 mandatory atoms",
+    "50-leaf candidate root independently matched by Python and Node",
+    "4-code-cell notebook execution PASS",
+    "R4/R5 predecessor asset snapshot hashes"
+  ],
+  "EXECUTED": [
+    "Desktop Commander source recovery",
+    "requirements/data preparation",
+    "candidate Merkle/proof checks",
+    "independent Node recomputation",
+    "notebook execution",
+    "private repository creation"
+  ],
+  "OBSERVED": {
+    "acceptance_gate": false,
+    "verified_atoms_true": 0,
+    "verified_atoms_false": 46,
+    "atom_observed_status": "NOT_TESTED",
+    "Docker": "UNAVAILABLE",
+    "MagicPro": "OFFLINE_AT_ATTEMPT",
+    "Studio_RAM_GiB": 32
+  },
+  "DECISIONS": [
+    "requirements first",
+    "source/occurrence separate",
+    "Boolean gate separate from UNKNOWN/NOT_TESTED/FAILED",
+    "private release hold",
+    "source-of-truth access through independent capability gate"
+  ],
+  "PROPOSED": [
+    "Qwen 0.5B and 1.5B Studio baselines",
+    "Qwen Coder 7B candidate",
+    "80 actor-component LOMO assignments",
+    "BAND/Cognee/Snyk/Flexprice integrations",
+    "VM isolation",
+    "Claude Code external red team"
+  ],
+  "NOT_TESTED": [
+    "all app integration workflows",
+    "model inference/LOMO experiments",
+    "VM boundaries",
+    "security scanner coverage",
+    "UI visual notebook inspection",
+    "Anticube/DeltaG*"
+  ],
+  "FAILURES": [
+    "R5 Node JSON insertion-order comparison failed; preserved and corrected in R6",
+    "R4 notebook has no recovered completion receipt",
+    "Docker daemon unavailable",
+    "MagicPro offline"
+  ],
+  "UNRESOLVED": [
+    "authenticated web-app connections",
+    "VM runtime",
+    "operator-supplied scanner token",
+    "BAND/event rights",
+    "Javier reuse license"
+  ],
+  "NEXT_ACTION": "Review atomic requirements, establish actual BAND Desktop and isolated Cognee OSS workflow, then execute scanner and model protocols.",
+  "ROOT": "9f74f3e989ff25af71eb3ca038b63c9c4843a12ebd927275a0652d0e3b7c342b",
+  "MMR": "NOT_COMMITTED",
+  "SIGNED": "NO",
+  "CANONICAL_ADMISSION": "NOT_EXECUTED",
+  "SNYK_APP_SCORE": "NOT_COMPUTED"
+}

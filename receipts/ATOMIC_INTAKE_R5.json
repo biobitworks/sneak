@@ -1,0 +1,18 @@
+{
+  "id": "IP-20261020-005-ATOMIC-INTAKE",
+  "parent": "IP-20261020-004",
+  "predecessor_commit": "735757f02e16f4638d24e4639f7e3a2f9e0bacd2",
+  "atoms": 46,
+  "mandatory": 30,
+  "verified_true": 0,
+  "verified_false": 46,
+  "entry_gate": false,
+  "observed_outcomes": {
+    "NOT_TESTED": 46
+  },
+  "source_offsets_valid": true,
+  "semantic_atoms_complete_for_pasted_scope": "REVIEW_REQUIRED",
+  "pdf_full_line_inventory_atoms": 197,
+  "model_experiments": "NOT_EXECUTED",
+  "snyk_app_score": "NOT_COMPUTED"
+}

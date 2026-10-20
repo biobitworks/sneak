@@ -1,0 +1,9 @@
+{
+  "status": "PROPOSED_NOT_ACTIVE_GSD_CONFIG",
+  "commit_docs": true,
+  "execution": "native sequential; Claude Code external independent red-team lane",
+  "research": true,
+  "plan_check": true,
+  "verifier": true,
+  "automatic_public_release": false
+}

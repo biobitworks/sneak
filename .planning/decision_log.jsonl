@@ -1,1 +1,2 @@
 {"decision":"requirements-first private source/data freeze","id":"IP-20261020-004-D1","parent":"IP-20261020-003","source":"user instruction","state":"IMPLEMENTED_DOCUMENTS_ONLY"}
+{"decision":"Separate requirement Boolean from observed UNKNOWN/NOT_TESTED/FAILED; complete atomic intake before integration execution.","id":"IP-20261020-005-D1","parent":"IP-20261020-004-D1"}

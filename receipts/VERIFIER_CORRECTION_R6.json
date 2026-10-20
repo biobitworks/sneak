@@ -1,0 +1,9 @@
+{
+  "id": "IP-20261020-006-CORRECTION",
+  "parent": "IP-20261020-005",
+  "predecessor_verification": "FAILED",
+  "reason": "Node compared insertion order rather than declared canonical bytes",
+  "correction": "Independently serialize sorted record keys, then compare exact bytes and compute hashes",
+  "prior_receipt": "receipts/NOTEBOOK_R5_EXECUTION.json",
+  "state": "IMPLEMENTED_NOT_YET_EXECUTED"
+}

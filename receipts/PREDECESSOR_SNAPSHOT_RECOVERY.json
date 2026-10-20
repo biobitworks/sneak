@@ -1,0 +1,14 @@
+[
+  {
+    "snapshot": "R4",
+    "root": "b43169c3b76f600f7358341fd79fd7152409708cf90ce82ee4d1f6f3ced59cba",
+    "recovered_assets": 38,
+    "hashes_verified": true
+  },
+  {
+    "snapshot": "R5",
+    "root": "878ff2881af94b4b89d8fdc75cc09008b950901d72b407a0f6ee2b60fd21d4f2",
+    "recovered_assets": 47,
+    "hashes_verified": true
+  }
+]

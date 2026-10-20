@@ -1,0 +1,23 @@
+Mandatory Requirements
+1. Band Desktop integration (new desktop features)
+Your project must use Band Desktop, BAND's new desktop app for coordinating coding agents, as the coordination layer for your agent team. At minimum:
+
+Shared room: Two or more agents work together in one Band room. Using agents from different harnesses or frameworks (for example Claude Code with Codex, Copilot, OpenCode, or a LangGraph/CrewAI agent) scores higher.
+One plan, one board: A lead or architect agent writes the plan in the room. Agents claim work items and move them from To-do to Done.
+Agent-to-agent handoffs: Agents @mention each other and pass context directly, with no human copy-pasting between them.
+Human in the loop: At least one real decision or approval (for example running a command, editing a file, or a product choice) goes to the human through Band instead of being hard-coded.
+Visibility: Your demo must show Band Desktop's views of the work: rooms, the work board, and per-agent sessions, tokens, and estimated cost.
+2. Cognee integration (AI memory)
+Your agents must use Cognee Open Source as working memory, not as a static document dump. At minimum:
+
+Agents write to memory during the work (for example decisions, customer insights, code context, or review findings).
+Agents recall from memory to change what they do next, and you must show this across a session restart or between two different agents.
+Using improve or forget, or connecting Cognee to a graph backend such as Neo4j, earns extra credit within this criterion.
+3. Deep integration
+Band Desktop and Cognee must be essential to the product. If you can remove either one and the demo still works the same way, it's bolted on. Integrations that feel like afterthoughts are grounds for disqualification.
+
+Bonus Integrations (Extra Marks)
+Flexprice: Usage-based billing
+Use Flexprice to meter real usage events from your product or agents (API calls, tokens, tasks completed, reports generated) and turn them into a pricing model: usage-based, credits and top-ups, tiered, or hybrid. Top marks go to projects where metering drives the product, for example credits that gate features, or agent costs from Band passed through to customer billing.
+Snyk: Secure by default
+Use Snyk (CLI, Snyk Code, Snyk Open Source, or Snyk Container) to scan what your agents build. Top marks go to projects where security is a team member, for example a security-reviewer agent in the Band room that runs Snyk scans, posts findings, blocks a work item until it's fixed, and stores recurring issues in Cognee so the team stops repeating them.

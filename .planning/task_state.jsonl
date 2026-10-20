@@ -1,1 +1,2 @@
 {"application":"NOT_EXECUTED","id":"IP-20261020-004","parent":"IP-20261020-003","status":"RUNNING","task":"requirements and starter data"}
+{"atoms":46,"entry_gate":false,"id":"IP-20261020-005-ATOMIC-INTAKE","mandatory":30,"model_experiments":"NOT_EXECUTED","observed_outcomes":{"NOT_TESTED":46},"parent":"IP-20261020-004","pdf_full_line_inventory_atoms":197,"predecessor_commit":"735757f02e16f4638d24e4639f7e3a2f9e0bacd2","semantic_atoms_complete_for_pasted_scope":"REVIEW_REQUIRED","snyk_app_score":"NOT_COMPUTED","source_offsets_valid":true,"verified_false":46,"verified_true":0}

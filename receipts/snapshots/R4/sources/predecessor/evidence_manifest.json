@@ -1,0 +1,242 @@
+{
+  "BAND_SESSION": "NOT_TESTED",
+  "date": "2026-10-20",
+  "excluded_imports": [
+    "SPC protected datasets",
+    "Owkin restricted data",
+    "AACR GENIE restricted data and derivatives",
+    "IMYOO restricted research bytes",
+    "private proprietary repository source trees",
+    "consumer private messages in BAND or Cognee"
+  ],
+  "external_sources": [
+    {
+      "id": "BAND_TERMS",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "BAND SaaS Agreement, updated 2026-09-14",
+      "url": "https://www.band.ai/terms-of-service"
+    },
+    {
+      "id": "BAND_PRIVACY",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "BAND Privacy Policy",
+      "url": "https://www.band.ai/privacy-policy"
+    },
+    {
+      "id": "BAND_DESKTOP_DOCS",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "BAND Desktop documentation, version 0.4.15",
+      "url": "https://docs.band.ai/band-desktop"
+    },
+    {
+      "id": "COGNEE_LICENSE",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, Git commit NOT_PINNED",
+      "title": "Cognee Apache-2.0 LICENSE, moving branch ref",
+      "url": "https://github.com/topoteretes/cognee/blob/main/LICENSE"
+    },
+    {
+      "id": "FLEXPRICE_REPO",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, Git commit NOT_PINNED",
+      "title": "Flexprice AGPL-3.0 open-core notice, moving branch ref",
+      "url": "https://github.com/flexprice/flexprice"
+    },
+    {
+      "id": "AGPL_FULL",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "GNU AGPL-3.0 section 13",
+      "url": "https://www.gnu.org/licenses/agpl-3.0.html"
+    },
+    {
+      "id": "SNYK_DATA",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "Snyk data handling",
+      "url": "https://docs.snyk.io/snyk-data-and-governance/how-snyk-handles-your-data"
+    },
+    {
+      "id": "CC_NC_ND",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "CC BY-NC-ND 4.0 legal code",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en"
+    },
+    {
+      "id": "USCO_AI",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "USCO AI copyrightability January 2025",
+      "url": "https://www.copyright.gov/newsnet/2025/1060.html"
+    },
+    {
+      "id": "USPTO_AI",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "USPTO revised 2025 AI inventorship guidance",
+      "url": "https://www.uspto.gov/subscription-center/2025/revised-inventorship-guidance-ai-assisted-inventions"
+    },
+    {
+      "id": "USPTO_DISCLOSURE",
+      "raw_sha256": "NOT_COMPUTED",
+      "retrieval_date": "2026-10-20",
+      "status": "Web text inspected, bytes NOT_CAPTURED",
+      "title": "USPTO international protection and grace period",
+      "url": "https://www.uspto.gov/patents/basics/international-protection/filing-patents-abroad"
+    }
+  ],
+  "handoff_id": "IP-20261020-001",
+  "higher_order_path_computation": {
+    "algorithm": "bounded exhaustive directed simple paths of 2 or 3 hops from eight named starts to seven named sink types",
+    "candidate_paths_found": 26,
+    "observed_real_data_flows": "NOT_TESTED",
+    "rights_legal_review": "NOT_TESTED",
+    "status": "EXECUTED_SYNTACTIC_GRAPH_TRAVERSAL"
+  },
+  "merkle_algorithm": "NOT_DECLARED",
+  "real_ingestion_into_FCO_FCG": "NOT_EXECUTED",
+  "real_ingestion_into_cognee": "NOT_EXECUTED",
+  "repos": [
+    {
+      "github_blob_sha": "8151ec38cffeecc4878d166b06fa32169324f02d",
+      "inspected_default_branch": "main",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "dual AGPL-3.0-or-later / separate commercial license",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/seedgraph",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "GIT_BLOB_SHA1",
+      "visibility": "private"
+    },
+    {
+      "github_blob_sha": "NOT_RECOVERED",
+      "inspected_default_branch": "main",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "No root LICENSE found on inspected branch",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/fractal-custody-objects",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "NOT_COMPUTED",
+      "visibility": "private"
+    },
+    {
+      "github_blob_sha": "NOT_RECOVERED",
+      "inspected_default_branch": "main",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "No root LICENSE found on inspected branch",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/atlas-fragmentum-2026",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "NOT_COMPUTED",
+      "visibility": "private"
+    },
+    {
+      "github_blob_sha": "NOT_RECOVERED",
+      "inspected_default_branch": "main",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "No root LICENSE found on inspected branch",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/vitaology",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "NOT_COMPUTED",
+      "visibility": "private"
+    },
+    {
+      "github_blob_sha": "NOT_RECOVERED",
+      "inspected_default_branch": "magicstudio/bootstrap-vca",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "No root LICENSE found on inspected branch",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/cloudmer",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "NOT_COMPUTED",
+      "visibility": "private"
+    },
+    {
+      "github_blob_sha": "NOT_RECOVERED",
+      "inspected_default_branch": "magicPRObox/snapshot-magicPRObox-snapshot-main-20260606T061123Z-20260606T235403Z",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "No root LICENSE found on inspected branch",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/gtm-cellico",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "NOT_COMPUTED",
+      "visibility": "private"
+    },
+    {
+      "github_blob_sha": "NOT_RECOVERED",
+      "inspected_default_branch": "main",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "No root LICENSE found on inspected branch",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/cellico",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "NOT_COMPUTED",
+      "visibility": "private"
+    },
+    {
+      "github_blob_sha": "1ef80353b82457569ff1021ce074b53494e30b9d",
+      "inspected_default_branch": "main",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "Apache-2.0",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/hydradg",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "GIT_BLOB_SHA1",
+      "visibility": "public"
+    },
+    {
+      "github_blob_sha": "eb721210925ad2c04776f4bdf0c42dc2f607f009",
+      "inspected_default_branch": "main",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "Apache-2.0",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/biocustody",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "GIT_BLOB_SHA1",
+      "visibility": "public"
+    },
+    {
+      "github_blob_sha": "NOT_RECOVERED",
+      "inspected_default_branch": "main",
+      "inspection_method": "GitHub connector get_repo + fetch_file",
+      "observation": "No root LICENSE found on inspected branch",
+      "queried_path": "LICENSE",
+      "repo": "biobitworks/vithia-verifiable-long-horizon-agents",
+      "repo_commit_sha": "NOT_RECOVERED",
+      "sha_type": "NOT_COMPUTED",
+      "visibility": "public"
+    }
+  ],
+  "rights_expert_review": "NOT_TESTED",
+  "root": "NOT_COMPUTED",
+  "scope_limit": "Total import applies only to seven pages of uploaded PDF; cross-repository and web source complete import NOT_EXECUTED",
+  "source_pdf": {
+    "bytes": 117881,
+    "caution": "PDF includes explicit pre-publication placeholders; final competition terms NOT_RECOVERED",
+    "claim_class": "SOURCE_SUPPORTED_CLAIM",
+    "completeness": "FULL_SEVEN_PAGES_TEXT_IMPORTED",
+    "document_meta_title": "SF Startup Challenge Hackathon — Official Problem Statement",
+    "id": "CHALLENGE_PDF_20261020",
+    "name": "SF Startup Challenge Hackathon — Official Problem Statement.pdf",
+    "pages": 7,
+    "pages_extracted": 7,
+    "retrieval": "user_upload",
+    "sha256": "f9c730d4c6464cdfeedb540e0d4b6080b7bfcde9fab496a1eac0dbc15b0aa1cc"
+  },
+  "status": "BOUNDED_CANDIDATE_EVIDENCE_HANDOFF"
+}

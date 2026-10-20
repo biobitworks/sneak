@@ -1,0 +1,15 @@
+{
+  "id": "IP-20261020-006-NOTEBOOK",
+  "parent": "IP-20261020-005-NOTEBOOK",
+  "source": "notebooks/03_atomic_requirements_r6.ipynb",
+  "execution": "PASS",
+  "code_cells": 4,
+  "outputs": [
+    "{\"source_identity\": true, \"atoms\": 197, \"occurrence_reconstruction_exact\": true}\n",
+    "{\"atoms\": 46, \"mandatory\": 30, \"source_bindings_valid\": true, \"acceptance_gate\": false}\n",
+    "{\"root\": \"9f74f3e989ff25af71eb3ca038b63c9c4843a12ebd927275a0652d0e3b7c342b\", \"leaves\": 50, \"checks\": {\"iterative_equals_recursive\": true, \"all_inclusion_proofs_valid\": true, \"tampered_leaf_accepted\": false, \"wrong_root_accepted\": false, \"leaf_removal_preserves_root\": false, \"leaf_reorder_preserves_root\": false}}\n\n",
+    "{\"implementation\":\"node:crypto independently implemented\",\"root\":\"9f74f3e989ff25af71eb3ca038b63c9c4843a12ebd927275a0652d0e3b7c342b\",\"leaves\":50,\"result\":\"PASS\"}\n\n"
+  ],
+  "executed_sha256": "481d3125e87f6cb0c701ea9cfd65c8cee976207bfddac660d93e764eac9cf0c4",
+  "visual_ui_review": "NOT_TESTED"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "IP-20261020-004-NOTEBOOK",
+  "status": "NO_COMPLETION_RECEIPT_RECOVERED",
+  "predecessor_snapshot": "735757f02e16f4638d24e4639f7e3a2f9e0bacd2",
+  "source_extraction": "PASS",
+  "merkle_computation": "PASS",
+  "notebook_execution": "UNCONFIRMED",
+  "successor": "IP-20261020-005"
+}
