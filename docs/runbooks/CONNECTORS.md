@@ -25,6 +25,20 @@ python3 scripts/live_band_cognee.py
 - BAND Human API messages Claude harness agent **Tom** and ChatGPT harness agent **Jerry** in room `20f1ee5f-…`.
 - Receipts: `receipts/connectors/SNEAK-015_*` (no secret values).
 
+## BAND auth + room/board/agent identity verify
+
+Desktop `band` CLI needs Band Desktop + `jamd` on the local machine. Cloud agents
+authenticate with `BAND_USER_API_KEY` against the Human API instead:
+
+```bash
+python3 scripts/verify_band_identities.py
+```
+
+- Lists chats, participants, owned agents (Tom/Jerry IDs).
+- Explains UI **No active tasks** = `GET /chats/{id}/tasks` → `[]`.
+- Files a shared board task via `POST {subject, detail}` when the board is empty.
+- Receipts: `SNEAK-022_*`.
+
 ## LOMO × merkle breakpoint → @Data → Snyk + score
 
 Operator-approved path (SNEAK-016):
