@@ -1,0 +1,314 @@
+{
+  "artifact_digest": "422032eeb18cf401edd8f59cdc4080a98e1470195986274987db15af6a70baef",
+  "band": {
+    "ask_ok": true,
+    "dual_outcome": "PASS",
+    "message_id": "2f16e6f2-5d2b-4d53-946d-b6d22702b05f",
+    "planner_handoff": "PASS",
+    "planner_in_room": true,
+    "planner_online": false,
+    "recipients": [
+      {
+        "harness": "claude",
+        "id": "3926218d-8342-4667-9f07-5b556b50fb7f",
+        "name": "Tom"
+      },
+      {
+        "harness": "chatgpt",
+        "id": "8b51f295-c2e7-4aaa-99dd-5f2335dcab49",
+        "name": "Jerry"
+      },
+      {
+        "harness": "remote-external",
+        "id": "64f24a90-3937-47c8-bc7c-f03cb7980d49",
+        "name": "Planner"
+      }
+    ],
+    "room_id": "7e218ad7-4d4e-4a07-a3b2-d4db8a03b4c3",
+    "task_number": 9
+  },
+  "breakpoints": [
+    {
+      "agent_id": "tom",
+      "id": "BP-sneak024-liquid-tom-01",
+      "input_hash": "b6dbdcff46cef938d51789b4a431077aaf14bfffd5dcbbce0fc3aa28c444d88c",
+      "model_id": "liquid-lfm",
+      "model_mmr_delta": {
+        "index": 0,
+        "mmr": "NOT_COMMITTED",
+        "model_mmr_root": "9eb675631f65dd703f217fd3a68f8534a7864c79c2e9d20e3066237738397b48",
+        "peak": "9eb675631f65dd703f217fd3a68f8534a7864c79c2e9d20e3066237738397b48",
+        "vs_prev_model_root_xor_distance": null,
+        "vs_root_question_xor_distance": 113
+      },
+      "output_hash": "f345f8d77feb8127328f5b8e94ad52b8200310f0766bce79465a00d45de926e1",
+      "pass": true,
+      "root": "de12329ae9a6cc0880f975d40169ad005825905180d633d96a78f451fa6445f9"
+    },
+    {
+      "agent_id": "jerry",
+      "id": "BP-sneak024-openjev-jerry-01",
+      "input_hash": "fc6a143cc65a272a5b9c49269c8e0b299db99ea72243c21b3ba163993a6ede40",
+      "model_id": "openjev",
+      "model_mmr_delta": {
+        "index": 0,
+        "mmr": "NOT_COMMITTED",
+        "model_mmr_root": "00c9e0d61a2ecf68dfc1374884ac5cc1fba80af3670af4c904764a789830e40b",
+        "peak": "00c9e0d61a2ecf68dfc1374884ac5cc1fba80af3670af4c904764a789830e40b",
+        "vs_prev_model_root_xor_distance": null,
+        "vs_root_question_xor_distance": 135
+      },
+      "output_hash": "20d076dfa843421e6cfa9f8e2532e1b6affd624f03d3db4ea5712e4bfb96106f",
+      "pass": true,
+      "root": "32996cdc98fe0e4e7118efbaef634dc21466bc0fdb791b8c97a7bdd9b335a034"
+    },
+    {
+      "agent_id": "tom",
+      "id": "BP-sneak024-liquid-tom-02",
+      "input_hash": "bc36c79245b056478d7f1fa64cd5d4e3c311a967bc6b1743091250cb8b457264",
+      "model_id": "liquid-lfm",
+      "model_mmr_delta": {
+        "index": 1,
+        "mmr": "NOT_COMMITTED",
+        "model_mmr_root": "878683303169a4aa1b1758af7aa98d710f3b060fabfc01ba823543a6af9550d5",
+        "peak": "982f14dacda600d3749e58ac9fb81dca47ac394a1979422fe2cc281d7eef5326",
+        "vs_prev_model_root_xor_distance": 123,
+        "vs_root_question_xor_distance": 123
+      },
+      "output_hash": "e59e3183a6ea32d6cca670d84203610141347312a37ac810219af4f4a1aabb7b",
+      "pass": false,
+      "root": "e08d426e6784f2e99ffeda5afd6509cc65d935e265e9e628b4d892997fd206ee"
+    },
+    {
+      "agent_id": "planner",
+      "id": "BP-sneak024-planner-01",
+      "input_hash": "cc1f7a23368e95c3f9b9dfaa57440383f3db685e95f456c3e3301ce6fc883637",
+      "model_id": "planner-remote",
+      "model_mmr_delta": {
+        "index": 0,
+        "mmr": "NOT_COMMITTED",
+        "model_mmr_root": "e49450f3ff512de6c51631ee7168f89209d581582b30687dec9820bc7019c1d8",
+        "peak": "e49450f3ff512de6c51631ee7168f89209d581582b30687dec9820bc7019c1d8",
+        "vs_prev_model_root_xor_distance": null,
+        "vs_root_question_xor_distance": 136
+      },
+      "output_hash": "36b990bf091f64a3ac1019d876e43fa8df9f19f1dea4077e156df8270ed9f58b",
+      "pass": true,
+      "root": "b390f3a4d5ff4b193e1d4531b0352400fac90626e24cec282f86308fa47b3aab"
+    }
+  ],
+  "cognee": {
+    "live": {
+      "add_ok": true,
+      "cognify_ok": true,
+      "dataset": "sneak_working_memory",
+      "hit_count": 3,
+      "observed_outcome": "PASS"
+    },
+    "observed_outcome": "PASS",
+    "recall_hit_count": 4,
+    "recall_outcome": "HIT",
+    "record_id": "cognee_remember-74a346b8a979"
+  },
+  "id": "SNEAK-024-CONVERSATION-CUSTODY",
+  "meaning": "Conversation custody ledger with unique true/false merkle breakpoints, per-model candidate MMR deltas vs root question, BAND+Cognee+planner loop",
+  "mmr": "NOT_COMMITTED",
+  "model_trails": {
+    "liquid-lfm": {
+      "deltas": [
+        {
+          "index": 0,
+          "mmr": "NOT_COMMITTED",
+          "model_mmr_root": "9eb675631f65dd703f217fd3a68f8534a7864c79c2e9d20e3066237738397b48",
+          "peak": "9eb675631f65dd703f217fd3a68f8534a7864c79c2e9d20e3066237738397b48",
+          "vs_prev_model_root_xor_distance": null,
+          "vs_root_question_xor_distance": 113
+        },
+        {
+          "index": 1,
+          "mmr": "NOT_COMMITTED",
+          "model_mmr_root": "878683303169a4aa1b1758af7aa98d710f3b060fabfc01ba823543a6af9550d5",
+          "peak": "982f14dacda600d3749e58ac9fb81dca47ac394a1979422fe2cc281d7eef5326",
+          "vs_prev_model_root_xor_distance": 123,
+          "vs_root_question_xor_distance": 123
+        }
+      ],
+      "mmr": "NOT_COMMITTED",
+      "model_id": "liquid-lfm",
+      "peak_count": 2,
+      "peaks": [
+        "9eb675631f65dd703f217fd3a68f8534a7864c79c2e9d20e3066237738397b48",
+        "982f14dacda600d3749e58ac9fb81dca47ac394a1979422fe2cc281d7eef5326"
+      ],
+      "root_question_leaf": "18a20558e2f1f8342c7c7e5352f9519af0e174fbca66502e5da2ea224e7a7634",
+      "roots": [
+        "9eb675631f65dd703f217fd3a68f8534a7864c79c2e9d20e3066237738397b48",
+        "878683303169a4aa1b1758af7aa98d710f3b060fabfc01ba823543a6af9550d5"
+      ]
+    },
+    "openjev": {
+      "deltas": [
+        {
+          "index": 0,
+          "mmr": "NOT_COMMITTED",
+          "model_mmr_root": "00c9e0d61a2ecf68dfc1374884ac5cc1fba80af3670af4c904764a789830e40b",
+          "peak": "00c9e0d61a2ecf68dfc1374884ac5cc1fba80af3670af4c904764a789830e40b",
+          "vs_prev_model_root_xor_distance": null,
+          "vs_root_question_xor_distance": 135
+        }
+      ],
+      "mmr": "NOT_COMMITTED",
+      "model_id": "openjev",
+      "peak_count": 1,
+      "peaks": [
+        "00c9e0d61a2ecf68dfc1374884ac5cc1fba80af3670af4c904764a789830e40b"
+      ],
+      "root_question_leaf": "18a20558e2f1f8342c7c7e5352f9519af0e174fbca66502e5da2ea224e7a7634",
+      "roots": [
+        "00c9e0d61a2ecf68dfc1374884ac5cc1fba80af3670af4c904764a789830e40b"
+      ]
+    },
+    "planner-remote": {
+      "deltas": [
+        {
+          "index": 0,
+          "mmr": "NOT_COMMITTED",
+          "model_mmr_root": "e49450f3ff512de6c51631ee7168f89209d581582b30687dec9820bc7019c1d8",
+          "peak": "e49450f3ff512de6c51631ee7168f89209d581582b30687dec9820bc7019c1d8",
+          "vs_prev_model_root_xor_distance": null,
+          "vs_root_question_xor_distance": 136
+        }
+      ],
+      "mmr": "NOT_COMMITTED",
+      "model_id": "planner-remote",
+      "peak_count": 1,
+      "peaks": [
+        "e49450f3ff512de6c51631ee7168f89209d581582b30687dec9820bc7019c1d8"
+      ],
+      "root_question_leaf": "18a20558e2f1f8342c7c7e5352f9519af0e174fbca66502e5da2ea224e7a7634",
+      "roots": [
+        "e49450f3ff512de6c51631ee7168f89209d581582b30687dec9820bc7019c1d8"
+      ]
+    }
+  },
+  "parent": "SNEAK-023",
+  "requirements": [
+    {
+      "id": "REQ-CUSTODY-01",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Unique merkle breakpoints for each conversation so they reconnect at project end",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-02",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Each merkle breakpoint carries pass true|false",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-03",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Each model has candidate MMR vs root question with delta over time",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-04",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "input hashed \u2192 deterministic script steps/FCO \u2192 output hashed",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-05",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Updates hashed through FCO tracking successors",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-06",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "BAND used to ask and respond among agents",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-07",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Cognee @Data captures sneak custody information for breakpoints",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-08",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "All agents and planner updated in the conversation",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-09",
+      "kind": "mandatory",
+      "observed_outcome": "PASS",
+      "required_for_entry": true,
+      "statement": "Check with planner in band.ai chat that has a planner",
+      "verified": true
+    },
+    {
+      "id": "REQ-CUSTODY-10",
+      "kind": "optional",
+      "observed_outcome": "NOT_TESTED",
+      "required_for_entry": false,
+      "statement": "Live model inference (Liquid/OpenJev) bound into custody turns",
+      "verified": false
+    },
+    {
+      "id": "REQ-CUSTODY-11",
+      "kind": "optional",
+      "observed_outcome": "NOT_TESTED",
+      "required_for_entry": false,
+      "statement": "Project MMR Overwatch commitment (SIGNED/MMR_COMMITTED)",
+      "verified": false
+    }
+  ],
+  "root_question": {
+    "fco_candidate_sha256": "236cceb50965503153f25ee0ea22c6e2a46592ea6964f7b883ecfeeecfc1d37d",
+    "leaf": "18a20558e2f1f8342c7c7e5352f9519af0e174fbca66502e5da2ea224e7a7634",
+    "text": "Unique merkle tree breakpoints (pass true|false) per conversation; each model candidate MMR vs root question with delta over time; input hashed \u2192 deterministic script steps/FCO \u2192 output hashed; updates hashed via FCO tracking; BAND ask/respond; Cognee @Data; update all agents + planner; verify each requirement including optional."
+  },
+  "secrets": {
+    "env_overrides_present": [
+      "BAND_PLANNER_AGENT_ID",
+      "BAND_PLANNER_API_KEY",
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "file_exists": true,
+    "file_mode": "0o600",
+    "keys_present": [
+      "BAND_PLANNER_AGENT_ID",
+      "BAND_PLANNER_API_KEY",
+      "BAND_USER_API_KEY",
+      "COGNEE_API_KEY",
+      "COGNEE_BASE_URL"
+    ],
+    "parent_exists": true,
+    "parent_mode": "0o700",
+    "path_configured": "/home/ubuntu/.secrets/sneak/providers.env",
+    "value_inspected": false
+  },
+  "signed": false,
+  "update_fco_count": 4
+}

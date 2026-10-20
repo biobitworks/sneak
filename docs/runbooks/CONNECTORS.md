@@ -51,6 +51,19 @@ python3 scripts/run_band_planner_checkoffs.py
 - Per-role CHECKOFF tasks; overall Done stays false until the correct assignees complete them
 - Receipts: `SNEAK-023_*`
 
+## Conversation custody (unique merkle BPs + model MMR deltas)
+
+```bash
+python3 scripts/run_conversation_custody.py
+```
+
+- Unique conversation merkle breakpoints with `pass: true|false`
+- Per-model candidate MMR peaks vs root-question leaf (XOR deltas over time); project MMR stays `NOT_COMMITTED`
+- Pipeline: `input_hash` → deterministic step FCOs → `output_hash`; updates via UpdateTrackingFCO
+- BAND ask/respond to Tom + Jerry + Planner in planner room; Cognee `@Data` capture
+- Verifies REQ-CUSTODY-01..11 (mandatory + optional) independently
+- Receipts: `SNEAK-024_*`; requirements: `data/verification/requirements_sneak_024.jsonl`
+
 ## LOMO × merkle breakpoint → @Data → Snyk + score
 
 Operator-approved path (SNEAK-016):
