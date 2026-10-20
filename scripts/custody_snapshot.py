@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Versioned Git snapshot integrity. Hash identity is not semantic truth."""
-import argparse,hashlib,json,pathlib,subprocess,sys
+import argparse,hashlib,json,pathlib,subprocess,sys,re
 def canonical(x):
     return json.dumps(x,sort_keys=True,ensure_ascii=True,separators=(",",":")).encode("ascii")
 def h(x):return hashlib.sha256(x).digest()
@@ -61,7 +61,11 @@ def check(repo,receipt):
         if actual[key]!=receipt[key]:errors.append("snapshot mismatch: "+key)
     expected=bytes.fromhex(receipt["root"])
     for item in receipt["leaves"]:
-        r=item["record"];p=repo/r["path"]
+        r=item["record"];candidate=repo/r["path"];p=candidate.resolve()
+        if candidate.is_symlink():
+            errors.append("symlink: "+r["path"]);continue
+        if not p.is_relative_to(repo.resolve()):
+            errors.append("traversal outside repository: "+r["path"]);continue
         if not verify(leaf(r),item["proof"],expected):errors.append("bad proof: "+r["path"])
         if not p.is_file() or p.is_symlink():errors.append("missing/nonregular: "+r["path"]);continue
         b=p.read_bytes()
@@ -69,7 +73,12 @@ def check(repo,receipt):
     return {"pass":not errors,"errors":errors,"root":receipt["root"],"leaf_count":receipt["leaf_count"],"snapshot_commit":receipt["snapshot_commit"]}
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("action",choices=["create","verify"]);ap.add_argument("receipt");ap.add_argument("--ref",default="HEAD");args=ap.parse_args()
-    repo=pathlib.Path(__file__).resolve().parents[1];path=repo/args.receipt
+    repo=pathlib.Path(__file__).resolve().parents[1]
+    if not re.fullmatch(r"receipts/(?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_.-]+\.json",args.receipt):
+        ap.error("receipt must be a JSON path under receipts/ without traversal")
+    path=(repo/args.receipt).resolve()
+    if not path.is_relative_to((repo/"receipts").resolve()):
+        ap.error("receipt must resolve within receipts/")
     if args.action=="create":
         r=snapshot(repo,args.ref);path.parent.mkdir(parents=True,exist_ok=True)
         with path.open("x") as f:json.dump(r,f,indent=2);f.write("\n")

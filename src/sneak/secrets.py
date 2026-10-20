@@ -15,7 +15,7 @@ DEFAULT_SECRET_FILE = Path.home() / ".secrets" / "sneak" / "providers.env"
 
 def load_secret_file(path: Path | None = None) -> dict[str, str]:
     """Parse KEY=VALUE lines. Does not export into os.environ unless asked."""
-    path = Path(path or os.environ.get("SNEAK_SECRETS_FILE", DEFAULT_SECRET_FILE))
+    path = Path(path or DEFAULT_SECRET_FILE)
     if not path.is_file():
         return {}
     out: dict[str, str] = {}
@@ -50,7 +50,7 @@ def export_to_environ(path: Path | None = None) -> list[str]:
 
 def presence_receipt(path: Path | None = None) -> dict[str, Any]:
     """Safe receipt: paths, modes, which keys exist — never values."""
-    path = Path(path or os.environ.get("SNEAK_SECRETS_FILE", DEFAULT_SECRET_FILE))
+    path = Path(path or DEFAULT_SECRET_FILE)
     parent = path.parent
     keys = list(load_secret_file(path).keys()) if path.is_file() else []
     return {

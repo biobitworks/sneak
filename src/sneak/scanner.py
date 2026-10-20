@@ -142,9 +142,7 @@ def token_present_outside_process_env_file(secret_path: Path) -> dict[str, Any]:
 
 def resolve_snyk_cli() -> Optional[str]:
     """Locate snyk CLI without requiring a global install."""
-    env_cli = os.environ.get("SNYK_CLI")
-    if env_cli and Path(env_cli).is_file():
-        return env_cli
+    # Never trust an environment-controlled executable path for the scanner.
     which = shutil.which("snyk")
     if which:
         return which
