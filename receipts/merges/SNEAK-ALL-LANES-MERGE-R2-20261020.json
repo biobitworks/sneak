@@ -1,0 +1,179 @@
+{
+  "schema": "sneak.all-lanes-merge-observed.v1",
+  "id": "SNEAK-ALL-LANES-MERGE-R2-20261020",
+  "parent": "SNEAK-ALL-LANES-MERGE-R1-20261020",
+  "parent_commit": "e8eaa8ba2318ab3e540716f8075f6ec923b53cee",
+  "observed_main_merge_commit": "79a8b25a0fa6054306d0151b483c7da5fbdcd2c7",
+  "merge_pr": "https://github.com/biobitworks/sneak/pull/23",
+  "source_status": "MERGED_PUSHED_OBSERVED",
+  "all_pinned_lane_heads_included": 19,
+  "lane_ancestry": [
+    {
+      "branch": "audit/r14-divergent-receipts-20261020",
+      "sha": "e5d1befd3821a9e18f8788c386351833c222b486",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "cursor/connector-custody-review-0c2f",
+      "sha": "e8766554ca393568c39e760b14af71680df9ce07",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "cursor/licensing-cc-apache-0c2f",
+      "sha": "a723c24d7f84360f9ab3a172bb85b47db7026162",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "cursor/snyk-bonus-lomo-band-0c2f",
+      "sha": "2e21b75e7e1ee0cda3cd401bb495cb475bd7034e",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "custody/markdown-exact-20261020",
+      "sha": "d93dc18c74532c6880fb5cd89a313728ec3ff84e",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "deploy/sneak-vercel-preview-20261020",
+      "sha": "31f22435a62ed69cc0947565aca71a028fabb91c",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "docs/merkle-mmr-knowledge-base",
+      "sha": "edf9cbe2e776f47b26e9abcb8fc4f3857298c391",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "evaluation/lmev2-security-20261020",
+      "sha": "6a7b342c0e00bf5e6544ed5672c0b540920892f9",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "feat/breakpoint-mmr-ledger",
+      "sha": "8af402e510d67711e4d3698ebdcc9cc153ca1dbe",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "feature/conversation-federation-mmr-20261020",
+      "sha": "5a9c5a73f6d08bf687d1835ee5f963dac8ccf53b",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "feature/flexprice-roi-20261020",
+      "sha": "517f630866834ddbe2e4dcee74f1213271055bbc",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "feature/sneak-mvp-20261020",
+      "sha": "7793cfe684273e55dcadf5ddd98339c6b6ad196a",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "fix/ship-gate-audit-20261020",
+      "sha": "d4a7286ba7cc905399e8761c3a4a887dde017825",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "integration/band-cognee-snyk-20261020",
+      "sha": "b81526598873c6422630247692766be0b73796b6",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "integration/cognee-flexprice-r14",
+      "sha": "e2b69c1ddd5be62910c56ae467d28787ce45b065",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "integration/sneak-audit-fco-20261020",
+      "sha": "89b96e98f1b6a00b7fb59eb480844590f4ba95bf",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "integration/sneak-consolidation-20261020",
+      "sha": "87349928e19ae78da012b7106037a24cc83219de",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "onboarding/teammate-fco-handoff",
+      "sha": "2e236b745564a005de14cc814c5fa5df188020f8",
+      "ancestor_verified": true
+    },
+    {
+      "branch": "redteam/claude-20261020",
+      "sha": "054a0eb2332bbcd0a8e1c6fcb0dcb529afe64d1a",
+      "ancestor_verified": true
+    }
+  ],
+  "closed_stacked_prs": [
+    19,
+    17,
+    15,
+    14,
+    13,
+    11,
+    9,
+    8
+  ],
+  "tested_executable_source_unchanged_in_final_merge": true,
+  "final_merge_documentation_difference": [
+    "README.md",
+    "docs/SNEAK_MAIN_VERCEL_RELEASE_20261020.md",
+    "receipts/release/SNEAK_MAIN_VERCEL_BP005_20261020.json"
+  ],
+  "verification": {
+    "python_passed": 196,
+    "python_subtests_passed": 13,
+    "python_skipped": 2,
+    "node_passed": 12,
+    "export_contract_passed": 9,
+    "uv_lock_check": "PASS",
+    "offline_custody": "PASS_OFFLINE_CUSTODY_ONLY"
+  },
+  "export_custody": {
+    "export_merkle_root": "ccc863bf744a27c41483750128f6500f161b849d697e945d01ae03216aa9f18b",
+    "export_mmr_root": "584aabfe08bda87eed98462ae6024f7d0b9bba4317d8a19ad6c738389c7f795f",
+    "export_leaf_count": 38,
+    "source_commit": "d88d71d607f1f756842f94440db2edddd6637a8d"
+  },
+  "import_manifest": {
+    "path": "receipts/sneak_mvp/TEAMMATE_IMPORT_20261020_R5.json",
+    "leaf_count": 107,
+    "root": "847f9a88d3e53b1b341bbe878682061693b6bcb064013e6e7b660889218e1bc7"
+  },
+  "root_scope": "Export roots bind only declared static file bytes; import root binds 107 declared file records. Neither establishes security truth or external causality.",
+  "project_global_mmr": "NOT_COMPUTED",
+  "security_ship_gate": "BLOCKED",
+  "security_app_score": "NOT_COMPUTED",
+  "new_deployment_this_turn": "NOT_EXECUTED",
+  "preserved_failures": [
+    "Snyk auth exit 2 predecessor",
+    "Runner lacks Snyk CLI",
+    "Initial combined suite failed 4 integration checks; all corrected",
+    "Intermediate hunk-reconciliation defect corrected before final tests",
+    "Initial uv lock Python support conflict corrected",
+    "Expected-head main fast-forward failed after concurrent main update; inspected successor and used native GitHub merge"
+  ],
+  "not_tested": [
+    "Official pinned dataset absent",
+    "BAND SDK not installed",
+    "Authenticated merged-source Snyk SCA and Code",
+    "Live multi-agent and human-approval flow",
+    "New deployment from this merge"
+  ],
+  "decisions": [
+    "Original lane branches retained",
+    "No force push or branch history rewrite",
+    "R3-R5 manifests and alternate receipt variants preserved",
+    "Existing failed and proposed claim states retained",
+    "README Snyk dashboard image link is unverified documentation, not a scored scan receipt"
+  ],
+  "proposed": [
+    "Run authenticated Snyk SCA and Code on final main; record teammate app score independently"
+  ],
+  "unresolved": [
+    "Security scan and score",
+    "Two skipped test prerequisites",
+    "Sponsor acceptance"
+  ],
+  "next_action": "Authenticate Snyk in actual runner and scan final main without promoting unsupported acceptance"
+}
