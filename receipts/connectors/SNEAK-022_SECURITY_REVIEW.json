@@ -1,0 +1,89 @@
+{
+  "classification_fco": "FCO-bc02b4c93d69cfc0e378fe9905c399971ae2bb0ec441f26cf517e6451f2b3f1b",
+  "last_inclusion_verified": true,
+  "notes": [
+    "Raw Snyk reports are retained locally; Git contains their report digests and bounded findings only.",
+    "A reported path traversal is not independently validated exploitability.",
+    "No application security score is accepted because SCA coverage failed."
+  ],
+  "parent_mmr": {
+    "fcg_edges": 106,
+    "fco_count": 94,
+    "mmr_root": "e214642bb3e8153c8a2a16a0b63444e6534afb95cc0c5853e808948df9903e78",
+    "mmr_size": 183,
+    "verified": true
+  },
+  "statement": {
+    "baseline_code_commit": "5660be64d2cd94fd1488b0961bc6685a0fb8b2cf",
+    "baseline_sast": {
+      "count": 7,
+      "raw_report_sha256": "e1de109d67136b1a73ceb40eb114959db2dc340152ae80ac4b1d23b87dd5a647"
+    },
+    "classification": {
+      "bonus_awarded": "NOT_VERIFIED",
+      "gate": "DENY"
+    },
+    "code_commit": "97d1a7b3093dd0348a6bc8858604e8e1ab305c19",
+    "delta": {
+      "delta": -2,
+      "from": 7,
+      "meaning": "scan outputs; not independently confirmed risk reduction",
+      "metric": "SAST finding count",
+      "to": 5
+    },
+    "javier": {
+      "application_score": null,
+      "formula_pin": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+      "reason": "SCA incomplete; SAST findings",
+      "source": "javiergarza-snyk/app-security-score"
+    },
+    "sast": {
+      "count": 5,
+      "exit_code": 1,
+      "raw_report_sha256": "1709834553a04a4a57748ba81f15d3690b5685d75dae133a43ee59bfeba789a0",
+      "reported_findings": [
+        {
+          "level": "note",
+          "rule": "javascript/PT"
+        },
+        {
+          "level": "note",
+          "rule": "python/PT"
+        },
+        {
+          "level": "note",
+          "rule": "python/PT"
+        },
+        {
+          "level": "note",
+          "rule": "python/PT"
+        },
+        {
+          "level": "note",
+          "rule": "python/PT"
+        }
+      ],
+      "severity_levels": {
+        "note": 5,
+        "warning": 0
+      },
+      "status": "EXECUTED_FINDINGS"
+    },
+    "sca": {
+      "error_class": "unable_to_resolve_empty_manifest",
+      "exit_code": 2,
+      "raw_report_sha256": "4e840e75217fe925534c93c6097f1ec22ac713db47701548ab036a7c4fd2df16",
+      "status": "FAILED"
+    },
+    "scanner": "Snyk CLI 1.1307.2",
+    "schema": "sneak.security-rescan-evidence.v1"
+  },
+  "statement_sha256": "d6e26c7a21c02da8aa9ab2086b36bb2c58609301129b0e4161076f7e5dee0eb4",
+  "successor_mmr": {
+    "fcg_edges": 113,
+    "fco_count": 101,
+    "mmr_root": "40a1df7aac73fcdc5897752a342823cf9aa312ae7fb29bf0f0c401b64332587d",
+    "mmr_size": 198,
+    "verified": true
+  }
+}

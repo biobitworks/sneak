@@ -1,0 +1,382 @@
+{
+  "checkpoint_chain": {
+    "construction": {
+      "canonical": "ASCII JSON, recursively sorted keys, ensure_ascii=True, compact separators, no newline",
+      "hash": "SHA-256",
+      "internal": "SHA256(0x01 || left32 || right32)",
+      "leaf": "SHA256(0x00 || canonical(event))",
+      "odd": "promote unchanged",
+      "ordering": "event id ascending"
+    },
+    "id": "SNEAK-021",
+    "leaf_count": 8,
+    "leaves": [
+      {
+        "canonical_hex": "7b22636f7665726167655f6163636570746564223a66616c73652c226964223a2253434f52452d30302d4c4f4d4f2d434f4e4e2d30312d42415345222c226d65726b6c655f726f6f74223a2263646433353162393733316232663538623931323735653830613238343437363734616235336431376265613732626434616261666130653230376437663436222c227363616e5f6f7574636f6d65223a224e4f545f544553544544222c2273636f72655f726563656970745f6964223a22627265616b706f696e745f736e796b5f73636f72652d383231336437626237366632222c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3031227d",
+        "leaf": "fbe9111dd4f99390a671d1da93ccfd5c99c98da1a67b0b55cac5b2111e727ac1",
+        "proof": [
+          {
+            "hash": "833348f80407e01a815345002098037d31e311717044741de5a5dfea547572cc",
+            "side": "right"
+          },
+          {
+            "hash": "584c465b91ae8b18783acd4b5e1ec0e6bbe6f8e5a3f26934d25c0984d113788a",
+            "side": "right"
+          },
+          {
+            "hash": "e4fd89e5ed13a179e0f9b2c7d2983a8c89a0f0d9b2128738c538383835cad911",
+            "side": "right"
+          }
+        ],
+        "record": {
+          "coverage_accepted": false,
+          "id": "SCORE-00-LOMO-CONN-01-BASE",
+          "merkle_root": "cdd351b9731b2f58b91275e80a28447674ab53d17bea72bd4abafa0e207d7f46",
+          "scan_outcome": "NOT_TESTED",
+          "score_receipt_id": "breakpoint_snyk_score-8213d7bb76f2",
+          "trial_id": "LOMO-CONN-01"
+        }
+      },
+      {
+        "canonical_hex": "7b22636f7665726167655f6163636570746564223a66616c73652c226964223a2253434f52452d30312d4c4f4d4f2d434f4e4e2d30312d41424c415445222c226d65726b6c655f726f6f74223a2265656335383338626263653537373531646333663132386331323466333162323831353530666663316465366434363839373436626266623730326662386637222c227363616e5f6f7574636f6d65223a224e4f545f544553544544222c2273636f72655f726563656970745f6964223a22627265616b706f696e745f736e796b5f73636f72652d306264383533633963656135222c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3031227d",
+        "leaf": "833348f80407e01a815345002098037d31e311717044741de5a5dfea547572cc",
+        "proof": [
+          {
+            "hash": "fbe9111dd4f99390a671d1da93ccfd5c99c98da1a67b0b55cac5b2111e727ac1",
+            "side": "left"
+          },
+          {
+            "hash": "584c465b91ae8b18783acd4b5e1ec0e6bbe6f8e5a3f26934d25c0984d113788a",
+            "side": "right"
+          },
+          {
+            "hash": "e4fd89e5ed13a179e0f9b2c7d2983a8c89a0f0d9b2128738c538383835cad911",
+            "side": "right"
+          }
+        ],
+        "record": {
+          "coverage_accepted": false,
+          "id": "SCORE-01-LOMO-CONN-01-ABLATE",
+          "merkle_root": "eec5838bbce57751dc3f128c124f31b281550ffc1de6d4689746bbfb702fb8f7",
+          "scan_outcome": "NOT_TESTED",
+          "score_receipt_id": "breakpoint_snyk_score-0bd853c9cea5",
+          "trial_id": "LOMO-CONN-01"
+        }
+      },
+      {
+        "canonical_hex": "7b22636f7665726167655f6163636570746564223a66616c73652c226964223a2253434f52452d30322d4c4f4d4f2d434f4e4e2d30322d42415345222c226d65726b6c655f726f6f74223a2264336239393165613237376463656235623266336633653662346330373134306530646361653736353437613231333466373833356364383538396262666462222c227363616e5f6f7574636f6d65223a224e4f545f544553544544222c2273636f72655f726563656970745f6964223a22627265616b706f696e745f736e796b5f73636f72652d633939383137386366333531222c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3032227d",
+        "leaf": "f9913ec3dbd2122dde59304d6b4b503b4ea59b8468bd2ca460349d0b79dd8cfd",
+        "proof": [
+          {
+            "hash": "fe37ae19c1eb82aa3ec8b991f7a52bdc8a26afe3f493d96c5dc6b12686a93ea5",
+            "side": "right"
+          },
+          {
+            "hash": "229f9cfda8108636337e6fd826fcfc5ca58c6de61c2ecc1b2482ce5c69aeda00",
+            "side": "left"
+          },
+          {
+            "hash": "e4fd89e5ed13a179e0f9b2c7d2983a8c89a0f0d9b2128738c538383835cad911",
+            "side": "right"
+          }
+        ],
+        "record": {
+          "coverage_accepted": false,
+          "id": "SCORE-02-LOMO-CONN-02-BASE",
+          "merkle_root": "d3b991ea277dceb5b2f3f3e6b4c07140e0dcae76547a2134f7835cd8589bbfdb",
+          "scan_outcome": "NOT_TESTED",
+          "score_receipt_id": "breakpoint_snyk_score-c998178cf351",
+          "trial_id": "LOMO-CONN-02"
+        }
+      },
+      {
+        "canonical_hex": "7b22636f7665726167655f6163636570746564223a66616c73652c226964223a2253434f52452d30332d4c4f4d4f2d434f4e4e2d30322d41424c415445222c226d65726b6c655f726f6f74223a2238346138386338323065313261663837623337343465383534326461393764653033383939373430326632313763666533376233383532313834353330643566222c227363616e5f6f7574636f6d65223a224e4f545f544553544544222c2273636f72655f726563656970745f6964223a22627265616b706f696e745f736e796b5f73636f72652d366236393365353335373861222c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3032227d",
+        "leaf": "fe37ae19c1eb82aa3ec8b991f7a52bdc8a26afe3f493d96c5dc6b12686a93ea5",
+        "proof": [
+          {
+            "hash": "f9913ec3dbd2122dde59304d6b4b503b4ea59b8468bd2ca460349d0b79dd8cfd",
+            "side": "left"
+          },
+          {
+            "hash": "229f9cfda8108636337e6fd826fcfc5ca58c6de61c2ecc1b2482ce5c69aeda00",
+            "side": "left"
+          },
+          {
+            "hash": "e4fd89e5ed13a179e0f9b2c7d2983a8c89a0f0d9b2128738c538383835cad911",
+            "side": "right"
+          }
+        ],
+        "record": {
+          "coverage_accepted": false,
+          "id": "SCORE-03-LOMO-CONN-02-ABLATE",
+          "merkle_root": "84a88c820e12af87b3744e8542da97de038997402f217cfe37b3852184530d5f",
+          "scan_outcome": "NOT_TESTED",
+          "score_receipt_id": "breakpoint_snyk_score-6b693e53578a",
+          "trial_id": "LOMO-CONN-02"
+        }
+      },
+      {
+        "canonical_hex": "7b22636f7665726167655f6163636570746564223a66616c73652c226964223a2253434f52452d30342d4c4f4d4f2d434f4e4e2d30332d42415345222c226d65726b6c655f726f6f74223a2265373563383563366433636531313461393234653433653134343530396331386239393263306265656539363733626233333862633630323661643536303364222c227363616e5f6f7574636f6d65223a224e4f545f544553544544222c2273636f72655f726563656970745f6964223a22627265616b706f696e745f736e796b5f73636f72652d333132363963333463383032222c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3033227d",
+        "leaf": "50f4eef5a9c7e8d1b79d546d7b1e35c68334d63fa876c2e2f826e135d7f591e7",
+        "proof": [
+          {
+            "hash": "0e8467b4e2837e72877588afaee1e954b46be0c38f2d4756036f82bdfd811c94",
+            "side": "right"
+          },
+          {
+            "hash": "e258b1164f64aa16b209f9bbad29c58a1506c78e260340723f0d04108aa30c05",
+            "side": "right"
+          },
+          {
+            "hash": "50682e1f881f0844542019863bebd2f8ae7b274850db30a27ed85cf56dd29d4e",
+            "side": "left"
+          }
+        ],
+        "record": {
+          "coverage_accepted": false,
+          "id": "SCORE-04-LOMO-CONN-03-BASE",
+          "merkle_root": "e75c85c6d3ce114a924e43e144509c18b992c0beee9673bb338bc6026ad5603d",
+          "scan_outcome": "NOT_TESTED",
+          "score_receipt_id": "breakpoint_snyk_score-31269c34c802",
+          "trial_id": "LOMO-CONN-03"
+        }
+      },
+      {
+        "canonical_hex": "7b22636f7665726167655f6163636570746564223a66616c73652c226964223a2253434f52452d30352d4c4f4d4f2d434f4e4e2d30332d41424c415445222c226d65726b6c655f726f6f74223a2266643331366431643233623432646137383838313836393036323135326561393963303965353530633436383938383732656535663866653430333436333366222c227363616e5f6f7574636f6d65223a224e4f545f544553544544222c2273636f72655f726563656970745f6964223a22627265616b706f696e745f736e796b5f73636f72652d326363303531323231333731222c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3033227d",
+        "leaf": "0e8467b4e2837e72877588afaee1e954b46be0c38f2d4756036f82bdfd811c94",
+        "proof": [
+          {
+            "hash": "50f4eef5a9c7e8d1b79d546d7b1e35c68334d63fa876c2e2f826e135d7f591e7",
+            "side": "left"
+          },
+          {
+            "hash": "e258b1164f64aa16b209f9bbad29c58a1506c78e260340723f0d04108aa30c05",
+            "side": "right"
+          },
+          {
+            "hash": "50682e1f881f0844542019863bebd2f8ae7b274850db30a27ed85cf56dd29d4e",
+            "side": "left"
+          }
+        ],
+        "record": {
+          "coverage_accepted": false,
+          "id": "SCORE-05-LOMO-CONN-03-ABLATE",
+          "merkle_root": "fd316d1d23b42da78881869062152ea99c09e550c46898872ee5f8fe4034633f",
+          "scan_outcome": "NOT_TESTED",
+          "score_receipt_id": "breakpoint_snyk_score-2cc051221371",
+          "trial_id": "LOMO-CONN-03"
+        }
+      },
+      {
+        "canonical_hex": "7b22636f7665726167655f6163636570746564223a66616c73652c226964223a2253434f52452d30362d4c4f4d4f2d434f4e4e2d30342d42415345222c226d65726b6c655f726f6f74223a2234326137653961643930656663323432626139353861313138663534326137383036393666326535663930643036646266623631316664643163343035346534222c227363616e5f6f7574636f6d65223a224e4f545f544553544544222c2273636f72655f726563656970745f6964223a22627265616b706f696e745f736e796b5f73636f72652d653032656665653437306563222c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3034227d",
+        "leaf": "18e4177c30c21b39d09e66b6556bb189d3c2157d56404ba2fa4523fb1241aaae",
+        "proof": [
+          {
+            "hash": "365bea8f41cb14b70735be92af0437969a18aa8b0655a4d08a226bf7467bcaa0",
+            "side": "right"
+          },
+          {
+            "hash": "2bd33900b32b3b66ac8fe4c8e11a43668389fe9ebb71c224a6059c3fdc90bad0",
+            "side": "left"
+          },
+          {
+            "hash": "50682e1f881f0844542019863bebd2f8ae7b274850db30a27ed85cf56dd29d4e",
+            "side": "left"
+          }
+        ],
+        "record": {
+          "coverage_accepted": false,
+          "id": "SCORE-06-LOMO-CONN-04-BASE",
+          "merkle_root": "42a7e9ad90efc242ba958a118f542a780696f2e5f90d06dbfb611fdd1c4054e4",
+          "scan_outcome": "NOT_TESTED",
+          "score_receipt_id": "breakpoint_snyk_score-e02efee470ec",
+          "trial_id": "LOMO-CONN-04"
+        }
+      },
+      {
+        "canonical_hex": "7b22636f7665726167655f6163636570746564223a66616c73652c226964223a2253434f52452d30372d4c4f4d4f2d434f4e4e2d30342d41424c415445222c226d65726b6c655f726f6f74223a2233643739663461646566363632636563623133663534623737373366323761656364656538646530386334396332363138346564383333363631643232316634222c227363616e5f6f7574636f6d65223a224e4f545f544553544544222c2273636f72655f726563656970745f6964223a22627265616b706f696e745f736e796b5f73636f72652d363765643766623538336434222c22747269616c5f6964223a224c4f4d4f2d434f4e4e2d3034227d",
+        "leaf": "365bea8f41cb14b70735be92af0437969a18aa8b0655a4d08a226bf7467bcaa0",
+        "proof": [
+          {
+            "hash": "18e4177c30c21b39d09e66b6556bb189d3c2157d56404ba2fa4523fb1241aaae",
+            "side": "left"
+          },
+          {
+            "hash": "2bd33900b32b3b66ac8fe4c8e11a43668389fe9ebb71c224a6059c3fdc90bad0",
+            "side": "left"
+          },
+          {
+            "hash": "50682e1f881f0844542019863bebd2f8ae7b274850db30a27ed85cf56dd29d4e",
+            "side": "left"
+          }
+        ],
+        "record": {
+          "coverage_accepted": false,
+          "id": "SCORE-07-LOMO-CONN-04-ABLATE",
+          "merkle_root": "3d79f4adef662cecb13f54b7773f27aecdee8de08c49c26184ed833661d221f4",
+          "scan_outcome": "NOT_TESTED",
+          "score_receipt_id": "breakpoint_snyk_score-67ed7fb583d4",
+          "trial_id": "LOMO-CONN-04"
+        }
+      }
+    ],
+    "meaning": "Chain of LOMO merkle breakpoints each followed by Snyk+score attempt; integrity only \u2014 not vulnerability-free or awarded bonus",
+    "mmr": "NOT_COMMITTED",
+    "parent": "SNEAK-020",
+    "root": "b54c5450ab5512c96f437bb8d78cd97e70d013b82bbdb2a0f8de19ff5d737b8c",
+    "schema": "sneak.lomo-score-chain.v1",
+    "signed": false
+  },
+  "checkpoint_leaf_count": 8,
+  "checkpoint_merkle_root": "b54c5450ab5512c96f437bb8d78cd97e70d013b82bbdb2a0f8de19ff5d737b8c",
+  "fcg": {
+    "fcg_edges": 106,
+    "fco_count": 94,
+    "mmr_root": "e214642bb3e8153c8a2a16a0b63444e6534afb95cc0c5853e808948df9903e78",
+    "mmr_size": 183,
+    "verified": true
+  },
+  "id": "SNEAK-021",
+  "last_inclusion_verified": true,
+  "live_band_per_event": "NOT_TESTED",
+  "live_cognee_per_event": "NOT_TESTED",
+  "live_snyk": "NOT_TESTED",
+  "local_mode": true,
+  "parent_mmr_root": "f0579f511bccecf09c588f1d564e33a12af3409502a56b7868c4b61eab87587a",
+  "schema": "sneak.registered-lomo-mmr.v1",
+  "scored_breakpoints": [
+    {
+      "application_score": null,
+      "breakpoint_fco_id": "FCO-45c89d10edbc9eb5976d1cf092d748b8728ab5f11f4f444a4526a4413f1d7fb4",
+      "breakpoint_id": "LOMO-CONN-01-BASE",
+      "classification_fco_id": "FCO-bcc2ffb17b5ccaf23c6a144b3380810c606a6aba01f91a9e4077e92dd6e673a9",
+      "coverage_accepted": false,
+      "delta_fco_id": null,
+      "kind": "baseline_breakpoint",
+      "merkle_root": "cdd351b9731b2f58b91275e80a28447674ab53d17bea72bd4abafa0e207d7f46",
+      "registry_mmr_root": "27b60105acdc918dffa0fbbd5a1e7e57623e4541931dcf36c88c710c9b0f91f0",
+      "registry_mmr_size": 119,
+      "scan_fco_id": "FCO-6b103333ff0a4551de62b200bbac9e442cef52a517457ff9d181e116601ff086",
+      "scan_outcome": "NOT_TESTED",
+      "trial": "LOMO-CONN-01",
+      "value_fco_id": "FCO-0322ad333e5981de3f23ea0e2999d55aab6e76fa08f408cd40dc0bdc80c9adfa"
+    },
+    {
+      "application_score": null,
+      "breakpoint_fco_id": "FCO-29506471e3c9a301457f0a3144c0c4b92d3db605580185ca2f74387848752402",
+      "breakpoint_id": "LOMO-CONN-01-ABLATE",
+      "classification_fco_id": "FCO-28c0d792a92e54e98980d267e35c193284fe1f0e8f096323b7c5f9252a6d0b8f",
+      "coverage_accepted": false,
+      "delta_fco_id": "FCO-fd2766adeb1181b226db6a73db45ab53f7bff80be9bf62ad9c7f3743dd5c3762",
+      "kind": "ablated_breakpoint",
+      "merkle_root": "eec5838bbce57751dc3f128c124f31b281550ffc1de6d4689746bbfb702fb8f7",
+      "registry_mmr_root": "dc7b840f9c76d4b0e55f3e6e3b60d5c6c61d2499086b186db7e5b3aa9e38d379",
+      "registry_mmr_size": 130,
+      "scan_fco_id": "FCO-5844a665e914d0708d46a642929b4dbaffb6dd4009d17f92232f0ff1eca127fa",
+      "scan_outcome": "NOT_TESTED",
+      "trial": "LOMO-CONN-01",
+      "value_fco_id": "FCO-b56c32f9401e47df62c2f4d24ca30a4f46c6022e5627134e6d3c3aff5f89c349"
+    },
+    {
+      "application_score": null,
+      "breakpoint_fco_id": "FCO-3e5f1adeabd00daa8ce810b8783d6f120b0945ebe2846305c1bc03e2f2de749a",
+      "breakpoint_id": "LOMO-CONN-02-BASE",
+      "classification_fco_id": "FCO-7f77312256665b78fa590734cf9adadfd123cb091be0f3af6d383908f0bac168",
+      "coverage_accepted": false,
+      "delta_fco_id": null,
+      "kind": "baseline_breakpoint",
+      "merkle_root": "d3b991ea277dceb5b2f3f3e6b4c07140e0dcae76547a2134f7835cd8589bbfdb",
+      "registry_mmr_root": "405eeca7ff7d08dfc6eba8bfc9e090054a15d01dc8eac4bb0504b805db8039f2",
+      "registry_mmr_size": 138,
+      "scan_fco_id": "FCO-6e1b5fef7491183678277ec4c3f346d584350475921a8d49cc1feb886c3733ce",
+      "scan_outcome": "NOT_TESTED",
+      "trial": "LOMO-CONN-02",
+      "value_fco_id": "FCO-396906b9c6481a1482665d77a7e2c31a168c84a300b80a2fb5a2605bca2bc674"
+    },
+    {
+      "application_score": null,
+      "breakpoint_fco_id": "FCO-1c47704141fd6b80aa838277320c262d2780d49dc252d8d9e6b018d20aef176b",
+      "breakpoint_id": "LOMO-CONN-02-ABLATE",
+      "classification_fco_id": "FCO-3180a2c454c74fe8fef7060a269629a57009f7bdf5795fa3c79723c30ac78d7b",
+      "coverage_accepted": false,
+      "delta_fco_id": "FCO-0caba531a9fa48d97c3bd40929a3829d65c8201e27a21185f81f3ddc523f1fce",
+      "kind": "ablated_breakpoint",
+      "merkle_root": "84a88c820e12af87b3744e8542da97de038997402f217cfe37b3852184530d5f",
+      "registry_mmr_root": "20a8f5d9fb2a97edd795b61fd07e351e0744deb6bf7198e9d662baf5068d1e55",
+      "registry_mmr_size": 146,
+      "scan_fco_id": "FCO-7cc3f5ff0d3e7e947ec34036d349ca8c87269b34f5d4c1280107e863060425b3",
+      "scan_outcome": "NOT_TESTED",
+      "trial": "LOMO-CONN-02",
+      "value_fco_id": "FCO-66b0f3d0183171c8bf690f894a87a03bef44cb4a306306e5cb6b1a2a93cb7d2e"
+    },
+    {
+      "application_score": null,
+      "breakpoint_fco_id": "FCO-7156f4dd2b9e62f3f1d38dfa6c335637fe09e5cf50b5c38fff3123a8383358c7",
+      "breakpoint_id": "LOMO-CONN-03-BASE",
+      "classification_fco_id": "FCO-ead3ce778cbeeb5f61813c7c060f7923c8d68c6d6393140e6203ddaf88ba8e8b",
+      "coverage_accepted": false,
+      "delta_fco_id": null,
+      "kind": "baseline_breakpoint",
+      "merkle_root": "e75c85c6d3ce114a924e43e144509c18b992c0beee9673bb338bc6026ad5603d",
+      "registry_mmr_root": "f24fb96345931cadd80cc1354b6fad1e63dc014ed9181fe672efedb8de6cf02b",
+      "registry_mmr_size": 158,
+      "scan_fco_id": "FCO-fc483be2ea71ef421a6f833a364103a1ab75066c2739596a886ad5fbc36b0505",
+      "scan_outcome": "NOT_TESTED",
+      "trial": "LOMO-CONN-03",
+      "value_fco_id": "FCO-f3ab6404a42c9e92f5ca784216ae0377bc43f5dd3d5d157e48b3adf4a3217f06"
+    },
+    {
+      "application_score": null,
+      "breakpoint_fco_id": "FCO-638fc6f6b4730ea2131786ec491eee0c929f43ae69cabe971347531d52cba8c5",
+      "breakpoint_id": "LOMO-CONN-03-ABLATE",
+      "classification_fco_id": "FCO-66075d59de980a14e24c6ebbb68b964901286a0aea65ff130dd5fd6fe4e649f0",
+      "coverage_accepted": false,
+      "delta_fco_id": "FCO-0008d56f6c293e62aec9996392ace8807b60c24ae57371a6e03d6f60297f38e1",
+      "kind": "ablated_breakpoint",
+      "merkle_root": "fd316d1d23b42da78881869062152ea99c09e550c46898872ee5f8fe4034633f",
+      "registry_mmr_root": "49be11549f36d751e62aa822851a6475112b43ecfe955264d4cfcc915e872af4",
+      "registry_mmr_size": 165,
+      "scan_fco_id": "FCO-9198c1125c6f20fe3d324ecc982c230fa25886d60738d58e1678362c97eef54e",
+      "scan_outcome": "NOT_TESTED",
+      "trial": "LOMO-CONN-03",
+      "value_fco_id": "FCO-5d13a8dd7a1ef464827c618cbb8204718359b809b80d3d6f2011d59be256e60a"
+    },
+    {
+      "application_score": null,
+      "breakpoint_fco_id": "FCO-2eb4e92123b2a468022d64e1949c2698a9f6fdc44d00a5752e5c9aac623a1d50",
+      "breakpoint_id": "LOMO-CONN-04-BASE",
+      "classification_fco_id": "FCO-6bba88e1aaa84bd37f126e7d251a9b83c910b50b8ab784c74685a8964581c7c8",
+      "coverage_accepted": false,
+      "delta_fco_id": null,
+      "kind": "baseline_breakpoint",
+      "merkle_root": "42a7e9ad90efc242ba958a118f542a780696f2e5f90d06dbfb611fdd1c4054e4",
+      "registry_mmr_root": "de9e44fca61f2012e6572677df268fbdd16038e72a084067537cc7772114f372",
+      "registry_mmr_size": 174,
+      "scan_fco_id": "FCO-b315029c044b08168f5e51645bccd59aef1d16e53760138027c120e10329c48e",
+      "scan_outcome": "NOT_TESTED",
+      "trial": "LOMO-CONN-04",
+      "value_fco_id": "FCO-4653d45117afc6ca530a2555a255d0be371abb77cd000a0736bbebc6b9d24614"
+    },
+    {
+      "application_score": null,
+      "breakpoint_fco_id": "FCO-6711ae7897a0ac3837432d18c8520fd0b2fa6e7918314c36b3cbf1cfa98f5bec",
+      "breakpoint_id": "LOMO-CONN-04-ABLATE",
+      "classification_fco_id": "FCO-4e5277d24d42baab1ed8cb3f389864c5406c67a3386500dad5b6171f8df6dfbc",
+      "coverage_accepted": false,
+      "delta_fco_id": "FCO-9a3d56fd9ef289c2f047c7113c526555f2151429ade982b3d8c2bb97599b6b07",
+      "kind": "ablated_breakpoint",
+      "merkle_root": "3d79f4adef662cecb13f54b7773f27aecdee8de08c49c26184ed833661d221f4",
+      "registry_mmr_root": "e666c2752f8832db880a294550c47ec92f17ff48c75b83820f82c71db58365cf",
+      "registry_mmr_size": 181,
+      "scan_fco_id": "FCO-81be67670ac7218889de2a217e5c44c5a59f62762578908170d53d80dfdb042a",
+      "scan_outcome": "NOT_TESTED",
+      "trial": "LOMO-CONN-04",
+      "value_fco_id": "FCO-f812c2dcd95c334976e04f52f7b80a0e7b9dbf8a3344a733e550eaf04c813438"
+    }
+  ],
+  "security_admission": "DENY",
+  "source_commit": "97d1a7b3093dd0348a6bc8858604e8e1ab305c19",
+  "source_merkle_id": "SNEAK-016",
+  "status": "EXECUTED_LOCAL",
+  "tool_application_score": null
+}
