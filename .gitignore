@@ -1,4 +1,5 @@
 sources/app-security-score/
+sources/longmemeval/
 .secrets/
 .env
 .env.*
