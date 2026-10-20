@@ -64,6 +64,18 @@ python3 scripts/run_conversation_custody.py
 - Verifies REQ-CUSTODY-01..11 (mandatory + optional) independently
 - Receipts: `SNEAK-024_*`; requirements: `data/verification/requirements_sneak_024.jsonl`
 
+## Planner websocket runtime (online presence)
+
+```bash
+python3 -m pip install band-sdk
+python3 scripts/run_band_planner_runtime.py
+```
+
+- Loads `BAND_PLANNER_*` / `~/.secrets/sneak/band_planner_agent_config.yaml` (never printed)
+- Deterministic Planner adapter (no LLM): posts plan-track status; never marks human Done
+- Verifies Human API `online=true` for `@biobitworks/planner`, chases Tom/Jerry ACK + Chirag #6
+- Receipts: `SNEAK-025_*`
+
 ## LOMO × merkle breakpoint → @Data → Snyk + score
 
 Operator-approved path (SNEAK-016):

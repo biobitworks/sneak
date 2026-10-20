@@ -30,9 +30,14 @@ External agents stay **inactive/offline** until a process connects with the agen
 
 ```bash
 # credentials live outside the repo
-# ~/.secrets/sneak/band_planner_agent_config.yaml
-python3 scripts/run_band_planner_checkoffs.py
+# ~/.secrets/sneak/band_planner_agent_config.yaml  (planner.agent_id + planner.api_key)
+python3 -m pip install band-sdk
+python3 scripts/run_band_planner_runtime.py   # SNEAK-025: bring websocket online
+python3 scripts/run_band_planner_checkoffs.py # SNEAK-023: refresh plan-track board
 ```
+
+Deterministic adapter (no LLM) posts the plan-track status and refuses to mark
+human gates (#6/#7) Done. Hold the process to keep `online=true`.
 
 ## Note
 
