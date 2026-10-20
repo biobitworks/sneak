@@ -10,13 +10,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "redteam"
-AS_OF = "2026-10-20T20:10Z"
+AS_OF = "2026-10-20T22:00Z"
 REVIEWER = "claude-redteam (Claude Opus 5.5) on magicSTUDIObox / magicPRObox"
 
 E = {  # evidence references
     "S013": "receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22)",
     "H01": "SNEAK-H01 request in BAND room 20f1ee5f…, human_response=null",
-    "PR5": "PR #5 scripts/run_lomo_snyk_breakpoints.py hard-codes APPROVE (RT-30)",
+    "PR5": "PR #5 (merged to main a67be28) scripts/run_lomo_snyk_breakpoints.py hard-codes APPROVE (RT-30)",
     "DESK": "band-desktop process observed on magicPRObox (pid 64146)",
     "INT1": "PR #3 receipts/integration/SNEAK-20261020-INTEGRATION-001.json (Cognee Cloud add/cognify/search 200)",
     "S015": "PR #5 receipts/connectors/SNEAK-015_LIVE_BAND_COGNEE.json (3 recall hits)",
@@ -29,11 +29,11 @@ E = {  # evidence references
 # id -> (state, evidence keys, note)
 OVERRIDES = {
     "M01": ("OBSERVED", ["DESK"], "Desktop app runs; agents connect through band-sdk, not shown as Desktop-coordinated"),
-    "M03": ("SUPPORTED", ["S013"], "receipt-level"),
-    "M04": ("SUPPORTED", ["S013"], "receipt-level"),
-    "M10": ("SUPPORTED", ["S013"], "receipt-level"),
-    "M11": ("SUPPORTED", ["S013"], "receipt-level"),
-    "M12": ("SUPPORTED", ["S013"], "receipt-level; handoff initiated by an agent via API"),
+    "M03": ("OBSERVED", ["S013"], "CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level"),
+    "M04": ("OBSERVED", ["S013"], "CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level"),
+    "M10": ("OBSERVED", ["S013"], "CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level"),
+    "M11": ("OBSERVED", ["S013"], "CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level"),
+    "M12": ("OBSERVED", ["S013"], "CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level; handoff initiated by an agent via API"),
     "M13": ("NOT_TESTED", ["H01", "PR5"], "request exists; no human response; PR #5 APPROVE is hard-coded, rejected"),
     "M14": ("NOT_TESTED", ["H01", "PR5"], "as M13"),
     "M15": ("NOT_TESTED", ["PR5"], "the only 'approval' on record is hard-coded, which is what M15 forbids"),

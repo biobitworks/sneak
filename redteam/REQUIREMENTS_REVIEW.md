@@ -1,24 +1,24 @@
-# Requirements review (2026-10-20T20:10Z)
+# Requirements review (2026-10-20T22:00Z)
 
-Reviewer: claude-redteam (Claude Opus 5.5) on magicSTUDIObox / magicPRObox. Proposed states, not verdicts. Mandatory SUPPORTED: **5/30**. Entry gate: **FALSE**. Security app score: **NOT_COMPUTED**.
+Reviewer: claude-redteam (Claude Opus 5.5) on magicSTUDIObox / magicPRObox. Proposed states, not verdicts. Mandatory SUPPORTED: **0/30**. Entry gate: **FALSE**. Security app score: **NOT_COMPUTED**.
 
 | Atom | Level | Requirement | Reviewed state | Evidence / note |
 |---|---|---|---|---|
 | M01 | mandatory | Use actual Band Desktop. | OBSERVED | Desktop app runs; agents connect through band-sdk, not shown as Desktop-coordinated. band-desktop process observed on magicPRObox (pid 64146) |
 | M02 | mandatory | Band coordinates the agent team. | NOT_TESTED | no receipt found. — |
-| M03 | mandatory | Agents share one actual room. | SUPPORTED | receipt-level. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
-| M04 | mandatory | At least two agents participate. | SUPPORTED | receipt-level. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
+| M03 | mandatory | Agents share one actual room. | OBSERVED | CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
+| M04 | mandatory | At least two agents participate. | OBSERVED | CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
 | M05 | mandatory | Lead/architect writes the plan in the room. | NOT_TESTED | no receipt found. — |
 | M06 | mandatory | Team works from one plan. | NOT_TESTED | no receipt found. — |
 | M07 | mandatory | Team uses one shared work board. | NOT_TESTED | no receipt found. — |
 | M08 | mandatory | Agents claim work items. | NOT_TESTED | no receipt found. — |
 | M09 | mandatory | Actual task transitions include To-do and Done. | NOT_TESTED | no receipt found. — |
-| M10 | mandatory | Agents address each other with mentions. | SUPPORTED | receipt-level. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
-| M11 | mandatory | Agents hand context directly to other agents. | SUPPORTED | receipt-level. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
-| M12 | mandatory | Handoff succeeds without human copying. | SUPPORTED | receipt-level; handoff initiated by an agent via API. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
-| M13 | mandatory | At least one real decision or approval occurs. | NOT_TESTED | request exists; no human response; PR #5 APPROVE is hard-coded, rejected. SNEAK-H01 request in BAND room 20f1ee5f…, human_response=null; PR #5 scripts/run_lomo_snyk_breakpoints.py hard-codes APPROVE (RT-30) |
-| M14 | mandatory | Human receives that decision through Band. | NOT_TESTED | as M13. SNEAK-H01 request in BAND room 20f1ee5f…, human_response=null; PR #5 scripts/run_lomo_snyk_breakpoints.py hard-codes APPROVE (RT-30) |
-| M15 | mandatory | Decision is not hard-coded. | NOT_TESTED | the only 'approval' on record is hard-coded, which is what M15 forbids. PR #5 scripts/run_lomo_snyk_breakpoints.py hard-codes APPROVE (RT-30) |
+| M10 | mandatory | Agents address each other with mentions. | OBSERVED | CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
+| M11 | mandatory | Agents hand context directly to other agents. | OBSERVED | CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
+| M12 | mandatory | Handoff succeeds without human copying. | OBSERVED | CORRECTED from SUPPORTED: only the captured record's hash was recomputed; BAND was not queried and no verdict successor exists. receipt-level; handoff initiated by an agent via API. receipts/band/SNEAK-013_HANDOFF.json (root 29002d5e…, recomputed RT-22) |
+| M13 | mandatory | At least one real decision or approval occurs. | NOT_TESTED | request exists; no human response; PR #5 APPROVE is hard-coded, rejected. SNEAK-H01 request in BAND room 20f1ee5f…, human_response=null; PR #5 (merged to main a67be28) scripts/run_lomo_snyk_breakpoints.py hard-codes APPROVE (RT-30) |
+| M14 | mandatory | Human receives that decision through Band. | NOT_TESTED | as M13. SNEAK-H01 request in BAND room 20f1ee5f…, human_response=null; PR #5 (merged to main a67be28) scripts/run_lomo_snyk_breakpoints.py hard-codes APPROVE (RT-30) |
+| M15 | mandatory | Decision is not hard-coded. | NOT_TESTED | the only 'approval' on record is hard-coded, which is what M15 forbids. PR #5 (merged to main a67be28) scripts/run_lomo_snyk_breakpoints.py hard-codes APPROVE (RT-30) |
 | M16 | mandatory | Demo shows Band Desktop rooms. | NOT_TESTED | no receipt found. — |
 | M17 | mandatory | Demo shows the work board. | NOT_TESTED | no receipt found. — |
 | M18 | mandatory | Demo shows per-agent sessions. | NOT_TESTED | no receipt found. — |
