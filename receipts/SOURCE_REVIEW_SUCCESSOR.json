@@ -1,0 +1,27 @@
+{
+  "id": "IP-20261020-004-SOURCE",
+  "parent": "IP-20261020-003",
+  "pdf_sha256": "f9c730d4c6464cdfeedb540e0d4b6080b7bfcde9fab496a1eac0dbc15b0aa1cc",
+  "pdf_matches_predecessor": true,
+  "bundle_pdf_equals_library_pdf": true,
+  "pages": 7,
+  "nonempty_line_atoms": 197,
+  "unique_content_atoms": 196,
+  "occurrence_reconstruction_exact": true,
+  "new_pdf_extraction": "NOT_EXECUTED",
+  "visual_layout_review": "NOT_TESTED",
+  "requirements": 56,
+  "requirements_with_owning_phase": 56,
+  "model_experiments": "NOT_EXECUTED",
+  "snyk_score": "NOT_COMPUTED",
+  "project_mmr": "NOT_COMMITTED",
+  "requirements_successor_count": 59,
+  "independent_extraction": {
+    "page_count": 7,
+    "all_page_texts_equal": true,
+    "independent_extractor_version": "2.0",
+    "source_pdf_sha256": "f9c730d4c6464cdfeedb540e0d4b6080b7bfcde9fab496a1eac0dbc15b0aa1cc",
+    "visual_layout_review": "NOT_TESTED",
+    "status": "PASS_SOURCE_EXTRACTION_COMPLETE"
+  }
+}

@@ -1,0 +1,9 @@
+sources/app-security-score/
+.secrets/
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+local-runs/

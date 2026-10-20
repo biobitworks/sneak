@@ -1,0 +1,12 @@
+{
+  "upstream_commit": "6e1f27605fe278eed347b10dab6f39b3501f1486",
+  "execution": "PURE_HELPER_ONLY_NOT_SCAN",
+  "zero_findings_score": 10,
+  "one_high_score": 9,
+  "eleven_medium_score": 0,
+  "sca_coverage": "NOT_EXECUTED",
+  "sast_coverage": "NOT_EXECUTED",
+  "application_score": null,
+  "finding": "Upstream computes a numeric score separately from coverage; wrapper must reject incomplete coverage.",
+  "license": "UNKNOWN_ROOT_LICENSE_404"
+}
