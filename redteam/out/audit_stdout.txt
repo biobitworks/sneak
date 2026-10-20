@@ -1,0 +1,173 @@
+{
+ "env": {
+  "python": "3.15.0",
+  "node": "v26.0.0",
+  "git": "git version 2.54.0",
+  "audited_head": "ee7432bf551451fc620df270a86a986a23000d46"
+ },
+ "snapshots": [
+  [
+   "ootstrap/SNAPSHOT.json",
+   "SUPPORTED",
+   "dcabcb5db384588b"
+  ],
+  [
+   "p/SNAPSHOT_MERGED.json",
+   "SUPPORTED",
+   "6fcec1a89efd31b0"
+  ]
+ ],
+ "tamper": [
+  [
+   "control_untampered",
+   "ACCEPT",
+   "ACCEPT",
+   "SUPPORTED"
+  ],
+  [
+   "copied_file_byte",
+   "REJECT",
+   "REJECT",
+   "SUPPORTED"
+  ],
+  [
+   "leaf_hash",
+   "REJECT",
+   "REJECT",
+   "SUPPORTED"
+  ],
+  [
+   "record_sha",
+   "REJECT",
+   "REJECT",
+   "SUPPORTED"
+  ],
+  [
+   "root",
+   "REJECT",
+   "REJECT",
+   "SUPPORTED"
+  ],
+  [
+   "ordering_swap",
+   "REJECT",
+   "REJECT",
+   "SUPPORTED"
+  ],
+  [
+   "proof_direction",
+   "REJECT",
+   "REJECT",
+   "SUPPORTED"
+  ],
+  [
+   "missing_manifest_member",
+   "REJECT",
+   "REJECT",
+   "SUPPORTED"
+  ],
+  [
+   "snapshot_commit_swap",
+   "REJECT",
+   "REJECT",
+   "SUPPORTED"
+  ],
+  [
+   "claim_signed_true",
+   "REJECT",
+   "ACCEPT",
+   "FAILED"
+  ],
+  [
+   "claim_mmr_committed",
+   "REJECT",
+   "ACCEPT",
+   "FAILED"
+  ],
+  [
+   "rewrite_meaning",
+   "REJECT",
+   "ACCEPT",
+   "FAILED"
+  ]
+ ],
+ "aok": {
+  "content_ok": 46,
+  "context_ok": 46,
+  "fco_ok": 46,
+  "offsets_ok": 46,
+  "excerpt_hash_ok": 46,
+  "pdf_hash_matches_file": 46,
+  "start_is_first_hit": 46,
+  "pdf_page_supported": 46,
+  "fcg_node_identity_ok": 46,
+  "fcg_edge_context_ok": 46,
+  "fcg_edge_target_is_pdf": 0,
+  "fco_hash_covers_mutable_status": 46
+ },
+ "shared": {
+  "must be essential to the product": [
+   "REQ-AOK-M28",
+   "REQ-AOK-M29"
+  ]
+ },
+ "ambiguous": [
+  [
+   "REQ-AOK-M19",
+   2
+  ]
+ ],
+ "page_unsupported": [],
+ "pages": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7
+ ],
+ "lomo": [
+  [
+   "source-atom",
+   "EXECUTED",
+   true
+  ],
+  [
+   "occurrence-context",
+   "EXECUTED",
+   true
+  ],
+  [
+   "rights-binding",
+   "NOT_TESTED",
+   false
+  ],
+  [
+   "policy-binding",
+   "EXECUTED",
+   true
+  ],
+  [
+   "scan-receipt",
+   "NOT_TESTED",
+   false
+  ],
+  [
+   "memory-reference",
+   "NOT_TESTED",
+   false
+  ],
+  [
+   "authorization-receipt",
+   "NOT_TESTED",
+   false
+  ],
+  [
+   "parent-breakpoint",
+   "NOT_TESTED",
+   false
+  ]
+ ]
+}
+exit=0

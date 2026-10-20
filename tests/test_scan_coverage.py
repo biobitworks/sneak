@@ -48,3 +48,12 @@ class ScanCoverageTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ExecutableBoundaryTests(unittest.TestCase):
+    def test_env_cannot_redirect_snyk_executable(self):
+        import os
+        from unittest.mock import patch
+        from sneak.scanner import resolve_snyk_cli
+        with patch.dict(os.environ, {"SNYK_CLI": "/bin/sh"}):
+            self.assertNotEqual(resolve_snyk_cli(), "/bin/sh")

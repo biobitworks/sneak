@@ -1,0 +1,85 @@
+{
+ "argv": [
+  "code",
+  "test",
+  "--json"
+ ],
+ "exit_code": 1,
+ "finding_count": 10,
+ "findings": [
+  {
+   "id": "javascript/DOMXSS",
+   "severity": "medium",
+   "where": "apps/sneak_mvp/web/audit.js"
+  },
+  {
+   "id": "python/CommandInjection",
+   "severity": "medium",
+   "where": "src/sneak/scanner.py"
+  },
+  {
+   "id": "python/HardcodedNonCryptoSecret/test",
+   "severity": "low",
+   "where": "tests/test_cognee_contract.py"
+  },
+  {
+   "id": "python/HardcodedNonCryptoSecret/test",
+   "severity": "low",
+   "where": "tests/test_cognee_contract.py"
+  },
+  {
+   "id": "python/HardcodedNonCryptoSecret/test",
+   "severity": "low",
+   "where": "tests/test_cognee_contract.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "scripts/custody_snapshot.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "src/sneak/connectors.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "src/sneak/secrets.py"
+  },
+  {
+   "id": "python/PT",
+   "severity": "low",
+   "where": "src/sneak/security_gate.py"
+  }
+ ],
+ "finished_at": "2026-10-20T20:25:42.449923+00:00",
+ "gate": "BLOCKED",
+ "local_run_dir": "local-runs/snyk/20261020T202527Z",
+ "mode": "code",
+ "outcome": "FINDINGS",
+ "reason": "10 issue(s)",
+ "redactions": 0,
+ "schema": "sneak.snyk-receipt.v1",
+ "severity_counts": {
+  "critical": 0,
+  "high": 0,
+  "low": 8,
+  "medium": 2
+ },
+ "snyk_cli_version": "1.1307.2",
+ "started_at": "2026-10-20T20:25:26.293572+00:00",
+ "stdout_bytes": 56289,
+ "stdout_sha256": "971debe7f85994395b58ba42697bc652930fbd13444484e79736322c83567912",
+ "target": {
+  "commit": "cd1b308e2aa10d3d8861fc581eaba34e98e601b7",
+  "dirty": false,
+  "name": "sneak-consolidation",
+  "tree": "249149733ef66a2d308cb2d62976f025e6fcf247"
+ }
+}

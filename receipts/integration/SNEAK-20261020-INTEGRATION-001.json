@@ -1,0 +1,43 @@
+{
+  "band_agents": "NOT_CONNECTED",
+  "band_desktop": "NOT_DETECTED",
+  "canonical_admission": "NOT_EXECUTED",
+  "cognee_cloud": {
+    "auth_health_http": 200,
+    "cognify_http": 200,
+    "corrected_add_http": 200,
+    "cross_agent_changed_behavior": "NOT_TESTED",
+    "dataset": "sneak_synthetic_review_20261020",
+    "dataset_id": "46ed3528-451b-5952-b67a-4c573b4a215c",
+    "datasets_http": 200,
+    "first_add_http": 422,
+    "retrieved_synthetic_constraint": true,
+    "search_http": 200
+  },
+  "cognee_oss": "NOT_EXECUTED",
+  "flexprice": "NOT_TESTED",
+  "human_band_approval": "NOT_EXECUTED",
+  "id": "SNEAK-20261020-INTEGRATION-001",
+  "integration_merkle_root": "NOT_COMPUTED",
+  "notes": [
+    "API key must never be stored in repository",
+    "SAST receipt refers to predecessor code; successor code must be rescanned",
+    "Snyk exit 3 is not clean",
+    "No application acceptance is assigned by this receipt"
+  ],
+  "observed_at_utc": "2026-10-20T19:15:27.577018+00:00",
+  "parent": "SNEAK-008",
+  "sast_exit": 1,
+  "sast_paths": [
+    "scripts/custody_snapshot.py",
+    "scripts/verify_custody_snapshot.mjs"
+  ],
+  "sast_result_count": 4,
+  "sast_sarif_sha256": "7cb3864423b3e461b7249168c40f0b7cf2736171a909b4cc568631d5dfb6ba92",
+  "sca_coverage": "UNSUPPORTED",
+  "sca_exit": 3,
+  "scan_cli": "snyk 1.1307.2",
+  "scanned_git_commit": "ee7432bf551451fc620df270a86a986a23000d46",
+  "scope": "candidate integration successor",
+  "security_score": "NOT_COMPUTED"
+}

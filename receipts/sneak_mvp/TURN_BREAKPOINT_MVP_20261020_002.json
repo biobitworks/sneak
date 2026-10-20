@@ -1,0 +1,153 @@
+{
+  "DECISIONS": [
+    "all remote predecessors preserved",
+    "source imports scoped and source-bound; no blind destructive merges",
+    "do not claim Snyk zero vulnerabilities",
+    "do not treat scanner finding as verified exploit",
+    "BAND Desktop user sign-in does not prove CLI account configured",
+    "keep draft PR and no main merge"
+  ],
+  "EVIDENCE_SHA256": {
+    "full_snapshot": "83d8b0c8e670b4319fabf9fb9227121b4351c3f0deffcc8cc756db8e38d4f5d9",
+    "import": "e907dd0e8247c8eed97eab66c9c4754137e051980c095c8cf578d1ec067bb195",
+    "previous": "e4d5d7515567e6e7620fc12ec54665395fa84ee49bf4e3b4932687b565474b36",
+    "snyk_code": "f8b73aad6d302e539f4106f210224378c948d83fd9cf4e2fa069bf091100cd1c",
+    "snyk_manifest": "4066863c7eb4b2c8c15fb97725651dbfb0eb4ecb9666558e8bff34814aaf38e1",
+    "snyk_oss": "88b53b325759ef30e948653e96d1189e2f2f06d341ec22b721419e2965cc22a2"
+  },
+  "EXECUTED": [
+    "branch inventory and scoped teammate import",
+    "Cognee transport compatibility repair",
+    "receipt metadata/signed/MMR tamper guard in Python and Node",
+    "GSD successor planning and integration graph",
+    "local 114 Python tests and 5 Node tests",
+    "cross-language 319-file snapshot recompute",
+    "Snyk Code source scan",
+    "Snyk Open Source repository and manifest coverage attempts",
+    "BAND device code authentication attempt"
+  ],
+  "FAILURES": [
+    "BAND device authorization timed out",
+    "Snyk Open Source could not detect supported target",
+    "Snyk targeted manifest exit 2",
+    "Snyk Code 10 findings, including 2 medium"
+  ],
+  "ID": "SNEAK-MVP-20261020-BP-002",
+  "MMR": "NOT_COMPUTED",
+  "NEXT_ACTION": "Push and review draft; request operator complete BAND sign-in on magicPRObox. Run real room approval and agent handoff, then app scan successor with artifact binding.",
+  "NOT_TESTED": [
+    "real BAND Desktop board/session/token/cost views",
+    "human approval in BAND after this build",
+    "full BAND-to-Cognee-to-Snyk multi-agent action",
+    "Flexprice actual metered billing for SNEAK"
+  ],
+  "OBSERVED": {
+    "band_cli": "NOT_AUTHENTICATED_DEVICE_AUTH_TIMED_OUT",
+    "band_desktop": "USER_REPORTED_PARTIAL_SIGN_IN",
+    "branch": "integration/sneak-consolidation-20261020",
+    "full_snapshot_files": 319,
+    "full_snapshot_root": "72626fa7654b7392b1511c0cf04e611b24d000589c6a8375dd4055cde0467e86",
+    "http": [
+      {
+        "path": "/",
+        "response_sha256": "7ccd1cbf909656724ea6472e7202a8e9bf01174ca84c2bb661ffd30b72868d60",
+        "status": 200
+      },
+      {
+        "path": "/audit",
+        "response_sha256": "6a40e4df3c001e93a8cf0b68465980c576dd6670078c12163b00b07e24bfe614",
+        "status": 200
+      },
+      {
+        "path": "/api/graph",
+        "response_sha256": "834e200ef70479236f5212b5f5a142cafc81bdd3db50fa640b0c5dc5aa1d424a",
+        "status": 200
+      },
+      {
+        "path": "/api/audit",
+        "response_sha256": "f4a3056f677f8cedda16849813299a57b23b8caaed07c8daa303d717a571efe5",
+        "status": 200
+      },
+      {
+        "path": "/api/stack",
+        "response_sha256": "75c2b8d0979aa08ece5277ff8756b818065aba1110ca103590059b204563c4ac",
+        "status": 200
+      },
+      {
+        "path": "/api/check",
+        "response_sha256": "0353283f17eccf5784e968859c4a067bf505338c376f33be595cde2842b070f6",
+        "status": 200
+      }
+    ],
+    "import_count": 107,
+    "import_root": "f5666ab7d21e4870bbca134abe1e10f50554c431addf167745a3708e61bcce65",
+    "mandatory_total": 30,
+    "mandatory_verified": 0,
+    "snapshot_commit": "f756ba7ca713a07ebab00ebba72d721ad67d414c",
+    "snyk_code": {
+      "findings": 10,
+      "gate": "BLOCKED",
+      "outcome": "FINDINGS",
+      "scanned_commit": "cd1b308e2aa10d3d8861fc581eaba34e98e601b7",
+      "severity": {
+        "critical": 0,
+        "high": 0,
+        "low": 8,
+        "medium": 2
+      }
+    },
+    "snyk_manifest": {
+      "coverage": "ONE_DEPENDENCY_MANIFEST_ONLY",
+      "exit_code": 2,
+      "status": "ERROR"
+    },
+    "snyk_oss": {
+      "coverage": "NOT_ESTABLISHED",
+      "exit_code": 3,
+      "status": "ERROR"
+    },
+    "snyk_release_gate": "BLOCKED",
+    "tests_node": {
+      "count": 5,
+      "log_sha256": "e22e3ec3db7b3ffa8aceea4e2cbd87b4009958b6dc63d3fe73513a24e0fac5f5",
+      "status": "PASS"
+    },
+    "tests_python": {
+      "count": 114,
+      "log_sha256": "17a2745c76cc5b765528c079a0f4c5d46b6ecfb0d2872df2734810cb6764a235",
+      "status": "PASS"
+    }
+  },
+  "PARENT": {
+    "breakpoint": "SNEAK-MVP-20261020-BP-001",
+    "receipt_sha256": "e4d5d7515567e6e7620fc12ec54665395fa84ee49bf4e3b4932687b565474b36",
+    "source_commit": "7793cfe684273e55dcadf5ddd98339c6b6ad196a"
+  },
+  "PROPOSED": [
+    "human completes new BAND CLI device flow and confirms visible room",
+    "Claude and Codex enter one room with shared plan and board",
+    "Cognee OSS agent-action recall and HITL security decision",
+    "review medium security findings and scan locked successor",
+    "Flexprice metered test event and readback",
+    "2\u20133 minute demo video"
+  ],
+  "ROOT": "NOT_COMPUTED",
+  "SIGNED": false,
+  "UNRESOLVED": [
+    "BAND authenticated account and remote room verification",
+    "medium Snyk finding source adjudication",
+    "SCA tooling/manifest lock",
+    "submission deadline and video"
+  ],
+  "VERIFIED_NEW": [
+    "107-file candidate import graph with verified root and exact source branch/commit SHA bindings",
+    "319-file exact-byte Git snapshot independently verified in Python and Node",
+    "114 Python tests PASS; 5 Node tests PASS",
+    "six local SNEAK HTTP endpoints 200 with read-only live status",
+    "Snyk Code 10 findings on locked commit (2 medium, 8 low) and gate BLOCKED",
+    "Snyk Open Source package-manager autodetection error and targeted manifest error preserved"
+  ],
+  "git_head_prior_to_this_receipt": "cd1b308e2aa10d3d8861fc581eaba34e98e601b7",
+  "observed_at_utc": "2026-10-20T20:29:13.438225+00:00",
+  "schema": "sneak.turn-breakpoint.v2"
+}

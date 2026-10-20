@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-10-20T20:27:42.389270+00:00",
+  "coverage": "ONE_DEPENDENCY_MANIFEST_ONLY",
+  "exit_code": 2,
+  "finding_count": null,
+  "gate": "BLOCKED",
+  "manifest_file": "requirements-integrations.txt",
+  "manifest_sha256": "10735223eee1c1e7288d8332f4446a8cf9a4da10272ea3ed8b91e36bfb10144e",
+  "mmr": "NOT_COMPUTED",
+  "parsed": true,
+  "raw_stdout_sha256": "077381fd4c46af162edfbb1c00ab6e493bd88c17a361f928126fbaa5283c7534",
+  "reported_ok": false,
+  "schema": "sneak.snyk-manifest-test.v1",
+  "signed": false,
+  "status": "OBSERVED",
+  "target_commit": "cd1b308e2aa10d3d8861fc581eaba34e98e601b7"
+}

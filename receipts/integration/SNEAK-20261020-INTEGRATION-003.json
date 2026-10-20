@@ -1,0 +1,25 @@
+{
+  "band_live": "NOT_TESTED",
+  "canonical_root": "NOT_COMPUTED",
+  "cognee_oss": "NOT_EXECUTED",
+  "id": "SNEAK-20261020-INTEGRATION-003",
+  "manifest": "requirements.txt, uv.lock, pyproject.toml",
+  "next_action": "Review installed-dependency requirement, provision isolated scanner environment; rescan exact target; run BAND HITL and Cognee OSS separately",
+  "observed_at_utc": "2026-10-20T19:20:09.657574+00:00",
+  "parent": "SNEAK-20261020-INTEGRATION-002",
+  "resolved_locked_requirements_count": 76,
+  "sast_exit": 1,
+  "sast_results": 8,
+  "sast_rule_counts": {
+    "javascript/PT": 1,
+    "python/HardcodedNonCryptoSecret/test": 3,
+    "python/PT": 4
+  },
+  "sast_sha256": "2b2942714891e6ccc2e1f2d85b1c6fedabd74e66cccbf3746efe87b0b78579ad",
+  "sca_exit": 2,
+  "sca_failure": "SNYK-CLI-0000 Missing required packages; dependencies not installed in isolated runtime",
+  "sca_report": "ABSENT",
+  "scanned_commit": "16f283374ce9da40b90b9e242f62c0568be35469",
+  "security_gate": "DENY",
+  "security_score": "NOT_COMPUTED"
+}
