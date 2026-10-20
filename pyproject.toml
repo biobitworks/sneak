@@ -12,6 +12,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+agent = ["band-sdk[langgraph]", "langchain-openai"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
