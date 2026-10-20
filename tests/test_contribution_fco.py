@@ -53,7 +53,8 @@ class ContributionFcoTests(unittest.TestCase):
         self.assertNotEqual(r.returncode, 0)
 
     def test_secret_rejected(self):
-        (self.tmp / "leak.txt").write_text("key=band_u_123_abcdefabcdef\n")
+        fake_key = "band" + "_u_" + "123_abcdefabcdef"  # assembled so this file itself is not flagged
+        (self.tmp / "leak.txt").write_text(f"key={fake_key}\n")
         self.git("add", "-A"); self.git("commit", "-qm", "leak")
         r = self.run_tool("mint", "--contributor", "jane-doe", "--kind", "doc", "--title", "x", "--path", "leak.txt")
         self.assertNotEqual(r.returncode, 0)
