@@ -1,0 +1,40 @@
+{
+  "id": "SNEAK-RT-CLAUDE-002",
+  "commit": "97f09049fcc1ccf5fccef45a5dfd6c2af5724abb",
+  "artifacts": [
+    {
+      "path": "redteam/REQUIREMENTS_REVIEW.md",
+      "size_bytes": 7566,
+      "sha256": "5425506f73e4c45bf3573794253e0e185caa82f733d1d4f8e04d6ccdce2b9c62"
+    },
+    {
+      "path": "redteam/cognee_updates_SNEAK-RT-CLAUDE-002.jsonl",
+      "size_bytes": 1353,
+      "sha256": "4fbbea9a546ba21b874c5188d01fec68e25b86cfc7931b72d4e9b5d74b0e286a"
+    },
+    {
+      "path": "redteam/findings_SNEAK-013.jsonl",
+      "size_bytes": 24714,
+      "sha256": "2970fb6d8011741a85e5ea203e9c0645588e9cfc549a18bbfeb1d44f6c84a8d2"
+    },
+    {
+      "path": "redteam/requirements_review.jsonl",
+      "size_bytes": 14627,
+      "sha256": "ade3b5c924a7e2e35bbff8e56425a8ab24d976d16400b0d6c07c73b1804dc8fe"
+    },
+    {
+      "path": "redteam/requirements_review.py",
+      "size_bytes": 5717,
+      "sha256": "f3097abfcdf89ac4018521e55520059b968dd6d9e9eff07a28d82120b6d12f42"
+    },
+    {
+      "path": "redteam/requirements_review_summary.json",
+      "size_bytes": 805,
+      "sha256": "365be9462da728c69f8c5e6ba16c0e0f17b1ecaa549881e30682d96980d7583f"
+    }
+  ],
+  "artifacts_root": "770900454dad61c328d04a47b9be9db8b88d1776ee52a19d59a5e3970b389e0b",
+  "body_sha256": "e25b3a09a06d8ad50260b18adb5bd096e3f468531484f9ec50b4a765ac49da23",
+  "posted_to_band": "NOT_EXECUTED",
+  "note": "To be pasted by the human into the BAND room; a paste is not an approval."
+}

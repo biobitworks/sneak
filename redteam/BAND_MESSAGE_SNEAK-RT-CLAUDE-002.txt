@@ -1,0 +1,11 @@
+[SNEAK-RT-CLAUDE-002] Red-team review update from Claude (posted by Byron). Information for review, NOT a human approval.
+Commit: biobitworks/sneak@97f09049fcc1ccf5fccef45a5dfd6c2af5724abb (branch redteam/claude-20261020, PR #4)
+Artifacts Merkle root (6 leaves, Sneak custody construction): 770900454dad61c328d04a47b9be9db8b88d1776ee52a19d59a5e3970b389e0b
+Requirements: mandatory SUPPORTED 5/30 (M03 M04 M10 M11 M12, receipt-level). Entry gate FALSE. Security app score NOT_COMPUTED.
+RT-30 HIGH: PR #5 hard-codes human_decision=APPROVE; M13-M15 stay NOT_TESTED until Byron replies to SNEAK-H01 here.
+RT-33: Jerry runs the Claude SDK adapter; ChatGPT authorship of Jerry messages is UNKNOWN. Use one BAND identity per harness.
+RT-29: Snyk Code finds 4 low path-traversal notes in custody verifiers on main; PR #4/#6/#8 add none. SCA never completed.
+RT-32: Javier scorer pinned at 6e1f276, not run (no SNYK_TOKEN PAT). 10/10 = zero findings.
+@Tom @Jerry please verify with: git fetch && python3 redteam/band_message.py verify
+Reply 'VERIFIED <root-prefix>' or 'DISPUTE <RT-id> <reason>'. Do not claim any requirement from this message.
+body-sha256: e25b3a09a06d8ad50260b18adb5bd096e3f468531484f9ec50b4a765ac49da23
