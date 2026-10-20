@@ -1,0 +1,68 @@
+{
+  "schema": "sneak.deployment-successor.v1",
+  "id": "SNEAK-SHIP-GATE-DEPLOY-R1-20261020",
+  "parent_commit": "028cce635be07891f765df7985b597db393d8f5f",
+  "source_commit": "2bc13fee71cb71b4f217eb0d4286f76a4383d9c5",
+  "deployment": {
+    "id": "dpl_EsY8Ed7Cfp8dvP1aNtnihXHauK8o",
+    "url": "https://sneak-evidence-preview-btgdl3sqq-biobitworks.vercel.app",
+    "state": "READY",
+    "target": null,
+    "protection": "Vercel SSO all deployments retained"
+  },
+  "verified_new": [
+    {
+      "path": "claims",
+      "status": 200,
+      "exact_text_matches_deployed_artifact": true
+    },
+    {
+      "path": "api/graph",
+      "status": 200,
+      "exact_text_matches_deployed_artifact": true
+    },
+    {
+      "path": "data/export-custody.json",
+      "status": 200,
+      "exact_text_matches_deployed_artifact": true
+    }
+  ],
+  "executed": [
+    "58 Python tests PASS",
+    "DOM history regression PASS",
+    "offline source and successor custody PASS",
+    "export file bytes and Merkle/MMR replay PASS",
+    "OSS and Code scan preflights returned NOT_AVAILABLE"
+  ],
+  "observed": {
+    "gate": "BLOCKED",
+    "mandatory_accepted": 0,
+    "security_app_score": "NOT_COMPUTED"
+  },
+  "decisions": [
+    "Preserve failed and proposed predecessor events",
+    "Deploy protected static preview; production release DEFERRED"
+  ],
+  "proposed": [
+    "Authenticate Snyk in actual scan runner and execute provided script"
+  ],
+  "not_tested": [
+    "browser visual QA",
+    "live Band/Cognee recheck",
+    "authenticated scan on successor",
+    "autonomous agent behaviors",
+    "human approval"
+  ],
+  "failures": [
+    "Original Snyk authentication exit 2",
+    "Current runner missing Snyk CLI",
+    "Receipt same-second collision reproduced and fixed",
+    "Intermediate suite contamination resolved; clean 58-test rerun passed"
+  ],
+  "unresolved": [
+    "Snyk authentication and CLI",
+    "30 mandatory acceptance requirements",
+    "public judge access"
+  ],
+  "next_action": "Run snyk auth and python scripts/recheck_ship_gate.py --allow-code-upload in a clean authenticated checkout"
+}
