@@ -88,6 +88,17 @@ python3 scripts/run_band_planner_runtime.py
 - Do not post as the human account for red-team status (SNEAK-H01 risk); use a dedicated agent after `band init`
 - Receipts: `SNEAK-027_*`
 
+## AoK MVP requirement ledger (REQ-AOK-M01–M20)
+
+```bash
+python3 scripts/verify_aok_mvp_ledger.py
+```
+
+- Successor only: does **not** rewrite `data/rules/atomic_acceptance_r5.jsonl`
+- Scores from receipts + live Band observation — never graph-link inference
+- Band Desktop atoms (M01, M16–M20) stay NOT_TESTED until Desktop is signed in
+- Receipts: `SNEAK-028_*`; JSONL: `data/verification/requirements_sneak_028.jsonl`
+
 ## LOMO × merkle breakpoint → @Data → Snyk + score
 
 Operator-approved path (SNEAK-016):
